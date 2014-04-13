@@ -13,6 +13,8 @@ nxManager.StaticView = Marionette.ItemView.extend({
 nxManager.addInitializer(function(options) {
 	var staticView = new nxManager.StaticView();
 	nxManager.mainRegion.show(staticView);
+
+	nxManager.vent.trigger("ventEvent", "addInitializer running!");
 });
 
 nxManager.on("initialize:before", function(options) {
@@ -25,11 +27,29 @@ nxManager.on("initialize:after", function(options) {
 
 nxManager.on("start", function(options){
 	console.log("start");
+	console.log("todoLists: ", nxManager.request("todoLists", "one"));
+	nxManager.execute("command", "command start");
 });
 
 nxManager.onInitializeBefore = function(options){
 	console.log("onInitializeBefore");
 };
+
+nxManager.vent.on("ventEvent", function(data){
+	console.log("vent event is running! data is ", data);
+});
+
+nxManager.todoLists = {
+	one: "oneList"
+};
+
+nxManager.reqres.setHandler("todoLists", function(type){
+	return nxManager.todoLists[type];
+});
+
+nxManager.commands.setHandler("command", function(type){
+	console.log("command [", type, "] is received!");
+});
 
 nxManager.start({
 	msg: "start up"
