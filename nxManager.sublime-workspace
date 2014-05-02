@@ -3,19 +3,63 @@
 	{
 		"selected_items":
 		[
+			[
+				"contet",
+				"contentView"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"Main",
+				"mainRegion"
+			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "assets/js/content.js",
+			"settings":
+			{
+				"buffer_size": 1437,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "assets/js/main.js",
+			"settings":
+			{
+				"buffer_size": 121,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 971,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 0.0,
+		"height": 392.0,
 		"selected_items":
 		[
+			[
+				"install",
+				"Package Control: Install Package"
+			]
 		],
-		"width": 0.0
+		"width": 416.0
 	},
 	"console":
 	{
@@ -35,6 +79,10 @@
 	},
 	"file_history":
 	[
+		"/C/Users/兆庆/Documents/GitHub/nxManager/index.html",
+		"/C/Users/兆庆/Documents/GitHub/nxManager/assets/js/content.js",
+		"/C/Users/兆庆/Documents/GitHub/nxManager/assets/js/main.js",
+		"/C/Users/兆庆/Documents/GitHub/nxManager/nxManager.sublime-project",
 		"/E/WorkSpace/Fortinet/implementation/js/all.js",
 		"/E/WorkSpace/Fortinet/implementation/js/libs/tracked/bower_components/uri.js/src/URI.js",
 		"/E/WorkSpace/Fortinet/implementation/js/libs/tracked/bower_components/uri.js/src/URI.fragmentURI.js",
@@ -59,7 +107,7 @@
 	],
 	"find":
 	{
-		"height": 34.0
+		"height": 23.0
 	},
 	"find_in_files":
 	{
@@ -74,6 +122,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"nxManager",
+			"contentView",
 			"Tim.Liu",
 			"nxd_streamer_start",
 			"nxweb_composite_stream_start",
@@ -99,8 +149,97 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "assets/js/content.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1437,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1173,
+								1173
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 495.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "assets/js/main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 121,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								44,
+								44
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 971,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								480,
+								480
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -151,6 +290,10 @@
 		"selected_items":
 		[
 			[
+				"main.js",
+				"assets\\js\\main.js"
+			],
+			[
 				"mon",
 				"mongoose-master\\mongoose.c"
 			],
@@ -174,6 +317,10 @@
 		"height": 500.0,
 		"selected_items":
 		[
+			[
+				"",
+				"E:\\WorkSpace\\Fortinet\\implementation\\implementation.sublime-project"
+			]
 		],
 		"width": 380.0
 	},
