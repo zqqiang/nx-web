@@ -3,19 +3,25 @@
 		'<div class="container">',
 		'<div class="row">',
 
-		'<div class="col-sm-4">',
+		'<div class="col-sm-3">',
+		'<a class="navbar-brand" href="index.html">',
+		'<img src="assets/img/logo.png" alt="Bootstrappin" width="120">',
+		'</a>',
+		'</div>',
+
+		'<div class="col-sm-3">',
 		'<h2>Welcome!</h2>',
 		'<p>Suspendisse et arcu felis ...</p>',
 		'<p><a class="btn btn-primary pull-left" href="#">See our portfolio</a></p>',
 		'</div>',
 
-		'<div class="col-sm-4">',
+		'<div class="col-sm-3">',
 		'<h2>Recent Updates</h2>',
 		'<p>Suspendisse et arcu felis ...</p>',
 		'<p><a class="btn btn-primary center-block" href="#">See what\'s new!</a></p>',
 		'</div>',
 
-		'<div class="col-sm-4">',
+		'<div class="col-sm-3">',
 		'<h2>Our Team</h2>',
 		'<p>Suspendisse et arcu felis ...</p>',
 		'<p><a class="btn btn-primary pull-right" href="#">Meet the team!</a></p>',
