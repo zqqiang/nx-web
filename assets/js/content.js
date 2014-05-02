@@ -1,12 +1,17 @@
 (function(app) {
 	var contentTemplate = [
+		'<div>',
 		'<div class="container">',
 		'<div class="row">',
 
 		'<div class="col-sm-3">',
-		'<a class="navbar-brand" href="index.html">',
-		'<img src="assets/img/logo.png" alt="Bootstrappin" width="120">',
-		'</a>',
+		'<p><span class="glyphicon glyphicon-home"></span> Home</p>',
+		'<p><span class="icon fa fa-group"></span> Team</p>',
+		'<p><span class="fa fa-arrow-circle-up green"></span><span class="green"> Bring Up</span></p>',
+		'<p><span class="fa fa-arrow-circle-down red"></span><span class="red"> Bring Down</span></p>',
+		'<p><a class="navbar-brand" href="index.html">',
+		'<img src="assets/css/images/logo.png" alt="Bootstrappin" width="120">',
+		'</a></p>',
 		'</div>',
 
 		'<div class="col-sm-3">',
@@ -28,7 +33,8 @@
 		'</div>',
 
 		'</div>',
-		'<div>',
+		'</div>',
+		'</div>',
 	];
 
 	app.ContentView = Marionette.ItemView.extend({
