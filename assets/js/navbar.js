@@ -1,15 +1,19 @@
 (function(app) {
 	var navbarTemplate = [
 		'<div>',
+		
+		'<nav id="navbar-region" class="navbar navbar-default" role="navigation">',
 		'<div class="container-fluid">',
 		'<div class="navbar-header">',
-		'<a class="navbar-brand" href="#">Brand</a>',
+		'<a class="navbar-brand" href="#">NxManager</a>',
 		'</div>',
 		'</div>',
+		'</nav>',
+
 		'</div>',
 	];
 
-	app.navbarView = Marionette.ItemView.extend({
+	app.NavbarView = Marionette.ItemView.extend({
 		template: navbarTemplate.join(''),
 	});
 
@@ -18,7 +22,7 @@
 	});
 
 	app.addInitializer(function(options) {
-		app.navbarRegion.show(new app.navbarView());
+		app.navbarRegion.show(new app.NavbarView());
 	});
 
 })(Application);
