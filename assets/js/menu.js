@@ -1,18 +1,58 @@
 (function(app) {
-	var menuTemplate = [
-		'<div>',
-		'<div>before menu</div>',
-		'<div id="start">Menu Tree</div>',
-		'<div>Menu div<span>Menu Span<span>Menu span span</span></span></div>',
-		'<div>one</div>',
-		'<div>two</div>',
-		'</div>',
-	];
 
-	app.MenuView = Marionette.ItemView.extend({
-		template: menuTemplate.join(''),
-		onRender: function() {
-			console.log(this.$el.find('#start ~ div'));
+	var TreeView = Backbone.Marionette.CompositeView.extend({
+		template: '#node-template',
+		tagName: "ul",
+		initialize: function() {
+			// grab the child collection from the parent model
+			// so that we can render the collection as children
+			// of this parent node
+			this.collection = this.model.nodes;
+		},
+		appendHtml: function(collectionView, itemView) {
+			// ensure we nest the child list inside of 
+			// the current list item
+			collectionView.$("li:first").append(itemView.el);
+		}
+	});
+
+	app.MenuView = Backbone.Marionette.CollectionView.extend({
+		itemView: TreeView,
+		initialize: function() {
+
+			var treeData = [{
+				nodeName: "Form",
+				nodes: [{
+					nodeName: "Editors",
+				}, {
+					nodeName: "Table",
+				}]
+			}, {
+				nodeName: "Graph",
+				nodes: [{
+					nodeName: "HighCharts",
+				}, {
+					nodeName: "3d",
+				}]
+			}];
+
+			var TreeNode = Backbone.Model.extend({
+				initialize: function() {
+					var nodes = this.get("nodes");
+					if (nodes) {
+						this.nodes = new TreeNodeCollection(nodes);
+						this.unset("nodes");
+					}
+				}
+			});
+
+			var TreeNodeCollection = Backbone.Collection.extend({
+				model: TreeNode
+			});
+
+			var tree = new TreeNodeCollection(treeData);
+
+			this.collection = tree;
 		}
 	});
 

@@ -4,6 +4,58 @@
 		"selected_items":
 		[
 			[
+				"json",
+				"json_string"
+			],
+			[
+				"sta",
+				"status"
+			],
+			[
+				"json_ob",
+				"json_object_set_new"
+			],
+			[
+				"eid",
+				"editorsOptions"
+			],
+			[
+				"con",
+				"contextName"
+			],
+			[
+				"json_object",
+				"json_object_set_new"
+			],
+			[
+				"json_obejct",
+				"json_object_set_new"
+			],
+			[
+				"json_objec",
+				"json_object_set_new"
+			],
+			[
+				"namesv",
+				"namesvr1"
+			],
+			[
+				"get",
+				"get_mkey"
+			],
+			[
+				"ta",
+				"table_item"
+			],
+			[
+				"mk",
+				"mkey"
+			],
+			[
+				"route",
+				"route_copy"
+			],
+			[
 				"contet",
 				"contentView"
 			],
@@ -24,34 +76,10 @@
 	"buffers":
 	[
 		{
-			"file": "assets/js/navbar.js",
-			"settings":
-			{
-				"buffer_size": 564,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "assets/js/content.js",
-			"settings":
-			{
-				"buffer_size": 1274,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "assets/js/main.js",
 			"settings":
 			{
-				"buffer_size": 123,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "assets/js/contentLayout.js",
-			"settings":
-			{
-				"buffer_size": 581,
+				"buffer_size": 544,
 				"line_ending": "Windows"
 			}
 		},
@@ -59,7 +87,7 @@
 			"file": "assets/js/menu.js",
 			"settings":
 			{
-				"buffer_size": 424,
+				"buffer_size": 1281,
 				"line_ending": "Windows"
 			}
 		}
@@ -79,7 +107,7 @@
 	},
 	"console":
 	{
-		"height": 0.0,
+		"height": 126.0,
 		"history":
 		[
 		]
@@ -95,48 +123,146 @@
 	},
 	"file_history":
 	[
+		"/E/WorkSpace/Fortinet/nxManager/assets/js/contentLayout.js",
+		"/E/WorkSpace/Fortinet/nxManager/index.html",
+		"/E/WorkSpace/Fortinet/nxManager/assets/template/handlebars.html",
+		"/C/Users/兆庆/Documents/GitHub/nxManager/assets/js/vendor/jquery.js",
+		"/C/Users/兆庆/Documents/GitHub/nxManager/assets/js/vendor/handlebars.runtime-v1.3.0.js",
+		"/C/Users/兆庆/Documents/GitHub/nxManager/assets/js/contentLayout.js",
+		"/C/Users/兆庆/Documents/GitHub/nxManager/assets/less/bootstrap/labels.less",
 		"/C/Users/兆庆/Documents/GitHub/nxManager/index.html",
-		"/C/Users/兆庆/Documents/GitHub/nxManager/assets/less/__main.less",
-		"/C/Users/兆庆/Documents/GitHub/nxManager/assets/js/content.js",
-		"/C/Users/兆庆/Documents/GitHub/nxManager/assets/js/navbar.js",
-		"/C/Users/兆庆/Documents/GitHub/nxManager/assets/less/_custom.less",
-		"/C/Users/兆庆/Documents/GitHub/nxManager/assets/less/_navbar.less",
-		"/C/Users/兆庆/Documents/GitHub/nxManager/assets/less/bootstrap/navbar.less",
-		"/C/Users/兆庆/Documents/GitHub/nxManager/nxManager.sublime-project",
-		"/C/Users/兆庆/Documents/GitHub/nxManager/assets/less/bootstrap/navs.less",
-		"/C/Users/兆庆/Documents/GitHub/nxManager/assets/js/main.js",
-		"/C/Users/兆庆/Documents/GitHub/nxManager/assets/less/_variables.less",
-		"/E/WorkSpace/Fortinet/implementation/js/all.js",
-		"/E/WorkSpace/Fortinet/implementation/js/libs/tracked/bower_components/uri.js/src/URI.js",
-		"/E/WorkSpace/Fortinet/implementation/js/libs/tracked/bower_components/uri.js/src/URI.fragmentURI.js",
-		"/E/WorkSpace/Fortinet/implementation/themes/default/css/include/highlight/arta.css",
-		"/E/WorkSpace/Fortinet/mongoose-master/mongoose.c",
-		"/E/WorkSpace/Fortinet/mongoose-master/mongoose.h",
-		"/E/WorkSpace/Fortinet/yarosla-nxweb-d626f8251cee/src/include/nxweb/nxweb.h",
-		"/E/WorkSpace/Fortinet/yarosla-nxweb-d626f8251cee/src/lib/http_subrequest.c",
-		"/E/WorkSpace/Fortinet/yarosla-nxweb-d626f8251cee/src/bin/modules/hello.c",
-		"/E/WorkSpace/Fortinet/yarosla-nxweb-d626f8251cee/src/lib/nxd_streamer.c",
-		"/E/WorkSpace/Fortinet/yarosla-nxweb-d626f8251cee/src/include/nxweb/misc.h",
-		"/E/WorkSpace/Fortinet/mongoose-master/examples/lua_dll.c",
-		"/E/WorkSpace/Fortinet/mongoose-master/unit_test.c",
-		"/E/WorkSpace/Fortinet/yarosla-nxweb-d626f8251cee/Makefile.am",
-		"/E/WorkSpace/Fortinet/yarosla-nxweb-d626f8251cee/nxweb.conf",
-		"/E/WorkSpace/Fortinet/yarosla-nxweb-d626f8251cee/NEWS",
-		"/E/WorkSpace/Fortinet/yarosla-nxweb-d626f8251cee/python/hello.py",
-		"/E/WorkSpace/Fortinet/mongoose-master/examples/multi_threaded.c",
-		"/E/WorkSpace/Fortinet/mongoose-master/examples/hello.c",
-		"/E/WorkSpace/Fortinet/mongoose-master/examples/file.c",
-		"/E/WorkSpace/Fortinet/mongoose-master/examples/chat.c"
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/dist/implementation/js/context/SystemTime.js",
+		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/sys_conf_settime.c",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/modules/ngx_http_cm_module/ngx_ncfg_modules/system_time.c",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/dist/implementation/index.html",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/modules/ngx_http_cm_module/ngx_ncfg_modules/_demo.c",
+		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/system_operation.c",
+		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/sysmt_shutdown.c",
+		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/sysadminprof.c",
+		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/success.c",
+		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/sys_backup_schedule.c",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/modules/ngx_http_cm_module/ngx_http_util.c",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/dist/implementation/js/context/FTPBackup.js",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/modules/ngx_http_cm_module/ngx_ncfg_modules/ftp_backup.c",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/modules/ngx_http_cm_module/ngx_http_ncfg.h",
+		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/sysmt_backup.c",
+		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/ngx_devel_kit-0.2.19/auto/build",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/dist/implementation/js/context/BackupRestore.js",
+		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/ngx_lua-0.9.7/src/ngx_http_lua_socket_udp.c",
+		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/log_trigger_policy.c",
+		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/set-misc-nginx-module-0.24/t/formatted-time.t",
+		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules.7z",
+		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/log_bot_analysis.c",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/dist/implementation/js/context/Settings.js",
+		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/ngx_devel_kit-0.2.19/docs/modules/set_var",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/dist/tools/node_modules/moment/test/moment/sod_eod.js",
+		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/rds-json-nginx-module-0.13/src/ngx_http_rds_json_filter_module.h",
+		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/rds-json-nginx-module-0.13/src/ngx_http_rds_json_filter_module.c",
+		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/nginx-1.5.12/src/os/unix/ngx_file_aio_read.c",
+		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/nginx-1.5.12/src/core/ngx_open_file_cache.h",
+		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/nginx-1.5.12/src/core/ngx_open_file_cache.c",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/conf/access/password_file",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/dist/implementation/js/context/AutoLearnProfile.js",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/dist/implementation/js/context/AccessProfile.js",
+		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/waf_autolearning_profile.c",
+		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/LuaJIT-2.1-20140423/doc/ext_profiler.html",
+		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/LuaJIT-2.1-20140423/src/lj_profile.h",
+		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/LuaJIT-2.1-20140423/src/lj_profile.c",
+		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/waf_profile_offline.c",
+		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/waf_profile_inline.c",
+		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/wvs_profile.c",
+		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/prot_server_farm.c",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/dist/implementation/js/context/ProtectedHostnames.js",
+		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/parse_log_record.c",
+		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/pcre_expression.c",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/dist/implementation/js/context/Advanced.js",
+		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/apache_cookie.h",
+		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/nginx-1.5.12/auto/cc/acc",
+		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/srcache-nginx-module-0.26/t/access.t",
+		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/waf_custom_access_policy.c",
+		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/sys_confadmin.c",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/modules/ngx_http_cm_module/ngx_ncfg_modules/administrators.c",
+		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/nginx-1.5.12/src/http/ngx_http_core_module.c",
+		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/array-var-nginx-module-0.03/src/ngx_http_array_var_module.c",
+		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/echo-nginx-module-0.53/src/ngx_http_echo_subrequest.c",
+		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/nginx-1.5.12/src/core/ngx_string.h",
+		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/nginx-1.5.12/src/core/ngx_string.c",
+		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/nginx-1.5.12/src/core/ngx_sha1.h",
+		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/ngx_lua-0.9.7/t/StapThread.pm",
+		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/ngx_devel_kit-0.2.19/src/ndk_string.c",
+		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/nginx-1.5.12/src/http/ngx_http_parse.c",
+		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/nginx-1.5.12/src/http/modules/ngx_http_xslt_filter_module.c",
+		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/nginx-1.5.12/src/http/ngx_http_script.c",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/dist/implementation/js/context/Administrators.js",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/dist/implementation/js/libs/dependencies.js",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/dist/tools/node_modules/cheerio/node_modules/htmlparser2/node_modules/domhandler/tests/04-unescaped_in_script.json",
+		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/set-misc-nginx-module-0.24/t/unescape-uri.t",
+		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/user_ntlm.c",
+		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/user_group.c",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/modules/ngx_http_cm_module/ngx_http_util.h",
+		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/header.h",
+		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/lua-resty-string-0.09/lib/resty/string.lua",
+		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/lua-5.1.5/etc/strict.lua",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/modules/ngx_http_cm_module/ngx_ncfg_modules/static_route.c",
+		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/nginx-1.5.12/src/http/ngx_http.h",
+		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/nginx-1.5.12/src/http/ngx_http_request.h",
+		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/cookie_wrap.c",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/copylib",
+		"/E/WorkSpace/Fortinet/centralManagement/centralManagement.sublime-project",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/modules/ngx_http_cm_module/ngx_ncfg_modules/route_port_list.c",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/modules/ngx_http_cm_module/ngx_ncfg_modules/raid.c",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/modules/ngx_http_cm_module/ngx_ncfg_modules/protected_hostnames_new_host.c",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/modules/ngx_http_cm_module/ngx_ncfg_modules/operation.c",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/modules/ngx_http_cm_module/ngx_ncfg_modules/fail_open.c",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/modules/ngx_http_cm_module/ngx_ncfg_modules/dns.c",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/modules/ngx_http_cm_module/ngx_ncfg_modules/advanced.c",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/dist/tools/node_modules/adm-zip/methods/index.js",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/dist/tools/node_modules/adm-zip/methods/inflater.js",
+		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/sysadminset.c",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/dist/implementation/js/context/AdminGroupEditUserGroupMember.js",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/dist/implementation/js/context/AdminGroup.js",
+		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/user_admin_group.c",
+		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/index.c",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/dist/tools/node_modules/fixmyjs/lib/rules/isNaN.js",
+		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/sys_global_advanced.c",
+		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/autolearn_data.c",
+		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/sys_raid.c",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/dist/implementation/js/context/Raid.js",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/reload.sh",
+		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/ngx_devel_kit-0.2.19/README_AUTO_LIB",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/dist/implementation/js/context/Operation.js",
+		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/rds-json-nginx-module-0.13/t/openresty.t",
+		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/nginx-1.5.12/auto/options",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/dist/implementation/js/context/ConfigSynchronization.js",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/dist/implementation/js/context/SynCookie.js",
+		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/sys_syn_cookie.c",
+		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/configure",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/dist/tools/node_modules/mkdirp/test/sync.js",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/dist/tools/node_modules/buildify/node_modules/mkdirp/test/sync.js",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/dist/implementation/js/context/FailOpen.js",
+		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/sysfailopen.c",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/dist/implementation/js/context/Dns.js",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/modules/ngx_http_cm_module/ngx_http_handler_common.c",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/modules/ngx_http_cm_module/ngx_ncfg_modules/protected_hostnames.c",
+		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/sys_dns.c",
+		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/fortiweb_zip_archive.c",
+		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/downloadfile.c",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/modules/ngx_http_cm_module/ngx_ncfg_modules/ngx_http_static_route.c",
+		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/redis-nginx-module-0.3.7/t/redis_db_not_set.t",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/dist/tools/node_modules/fixmyjs/lib/rules/dotNotation.js",
+		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/intf_db.c"
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 26.0
 	},
 	"find_in_files":
 	{
 		"height": 90.0,
 		"where_history":
 		[
+			"*.c,,E:\\WorkSpace\\Fortinet\\centralManagement\\ngx_openresty-1.5.12.1",
+			"*.c",
 			""
 		]
 	},
@@ -145,6 +271,26 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"GETURL(",
+			"apr",
+			"ngx_http_internal_redirect",
+			"ngx_string",
+			"internal_redirect",
+			"ngx_internal_redirect",
+			"ngx_unescape_uri",
+			"unescape",
+			"ap_unescape_url",
+			"ap_unescape_ur",
+			"ngx_unescape_url",
+			"mkey",
+			"ngx_unescape_uri",
+			"unescape",
+			"unescapse",
+			"hosts",
+			");",
+			"_type",
+			"tmp_ps",
+			"prot_protected_servers_dlg_handler",
 			"navbarView",
 			"navbar-inverse",
 			"default",
@@ -175,116 +321,30 @@
 		"reverse": false,
 		"show_context": true,
 		"use_buffer2": true,
-		"whole_word": true,
+		"whole_word": false,
 		"wrap": true
 	},
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "assets/js/navbar.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 564,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								276,
-								276
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "assets/js/content.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1274,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1274,
-								1274
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": -0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "assets/js/main.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 123,
+						"buffer_size": 544,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "assets/js/contentLayout.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 581,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								557,
-								557
+								20,
+								20
 							]
 						],
 						"settings":
@@ -300,20 +360,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 1,
 					"file": "assets/js/menu.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 424,
+						"buffer_size": 1281,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								395,
-								395
+								869,
+								869
 							]
 						],
 						"settings":
@@ -322,7 +382,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 54.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -333,7 +393,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 23.0
+		"height": 26.0
 	},
 	"input":
 	{
@@ -369,7 +429,7 @@
 	"project": "nxManager.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 48.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -380,6 +440,118 @@
 			[
 				"main.js",
 				"assets\\js\\main.js"
+			],
+			[
+				"systiem",
+				"fwb_modules\\sys_conf_settime.c"
+			],
+			[
+				"systime",
+				"nginxd\\dist\\implementation\\js\\context\\SystemTime.js"
+			],
+			[
+				"index",
+				"nginxd\\dist\\implementation\\index.html"
+			],
+			[
+				"backup",
+				"fwb_modules\\sys_backup_schedule.c"
+			],
+			[
+				"ftp",
+				"nginxd\\dist\\implementation\\js\\context\\FTPBackup.js"
+			],
+			[
+				"index.ht",
+				"nginxd\\dist\\implementation\\index.html"
+			],
+			[
+				"ngx_string",
+				"ngx_openresty-1.5.12.1\\bundle\\nginx-1.5.12\\src\\core\\ngx_string.h"
+			],
+			[
+				"admin",
+				"fwb_modules\\sys_confadmin.c"
+			],
+			[
+				"string",
+				"ngx_openresty-1.5.12.1\\bundle\\ngx_devel_kit-0.2.19\\src\\ndk_string.c"
+			],
+			[
+				"administrators",
+				"nginxd\\dist\\implementation\\js\\context\\Administrators.js"
+			],
+			[
+				"advance",
+				"fwb_modules\\sys_global_advanced.c"
+			],
+			[
+				"advan",
+				"nginxd\\dist\\implementation\\js\\context\\Advanced.js"
+			],
+			[
+				"raid.js",
+				"nginxd\\dist\\implementation\\js\\context\\Raid.js"
+			],
+			[
+				"raid",
+				"fwb_modules\\sys_raid.c"
+			],
+			[
+				"oper",
+				"nginxd\\dist\\implementation\\js\\context\\Operation.js"
+			],
+			[
+				"operation",
+				"fwb_modules\\system_operation.c"
+			],
+			[
+				"configsy",
+				"nginxd\\dist\\implementation\\js\\context\\ConfigSynchronization.js"
+			],
+			[
+				"failop",
+				"nginxd\\dist\\implementation\\js\\context\\FailOpen.js"
+			],
+			[
+				"inde",
+				"nginxd\\dist\\implementation\\index.html"
+			],
+			[
+				"dns.",
+				"nginxd\\dist\\implementation\\js\\context\\Dns.js"
+			],
+			[
+				"dns.js",
+				"nginxd\\dist\\implementation\\js\\context\\Dns.js"
+			],
+			[
+				"dns",
+				"fwb_modules\\sys_dns.c"
+			],
+			[
+				"prot",
+				"nginxd\\dist\\implementation\\js\\context\\ProtectedHostnames.js"
+			],
+			[
+				"pro",
+				"nginxd\\dist\\implementation\\js\\context\\ProtectedHostnames.js"
+			],
+			[
+				"prote",
+				"nginxd\\dist\\implementation\\js\\context\\ProtectedHostnames.js"
+			],
+			[
+				"ngx_http_util.h",
+				"nginxd\\modules\\ngx_http_cm_module\\ngx_http_util.h"
+			],
+			[
+				"ngx_http_util",
+				"nginxd\\modules\\ngx_http_cm_module\\ngx_http_util.c"
+			],
+			[
+				"protect",
+				"nginxd\\dist\\implementation\\js\\context\\ProtectedHostnames.js"
 			],
 			[
 				"nav",
@@ -423,18 +595,22 @@
 		[
 			[
 				"",
-				"E:\\WorkSpace\\Fortinet\\implementation\\implementation.sublime-project"
+				"D:\\BaiduYunDownload\\nginxd\\nginxd.sublime-project"
 			]
 		],
 		"width": 380.0
 	},
 	"select_symbol":
 	{
-		"height": 0.0,
+		"height": 392.0,
 		"selected_items":
 		[
+			[
+				"unescape",
+				"unescape"
+			]
 		],
-		"width": 0.0
+		"width": 608.0
 	},
 	"settings":
 	{
