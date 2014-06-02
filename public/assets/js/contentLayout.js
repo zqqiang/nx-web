@@ -22,7 +22,7 @@
 		var layout = new contentLayout();
 		app.mainRegion.show(layout);
 
-		layout.content.show(new app.ContentView());
+		layout.content.show(new app.GridView());
 		layout.menu.show(new app.MenuView());
 	});
 
