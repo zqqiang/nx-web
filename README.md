@@ -1,5 +1,6 @@
 #nxManager#
 >This repository is a next generation central manager framework.
+
 ##Start##
 * First download nxManager
 * unzip nxManager & cd nxManager
