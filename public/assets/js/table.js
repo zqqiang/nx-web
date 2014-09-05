@@ -8,6 +8,7 @@
 	// The grid view
 	app.GridView = Backbone.Marionette.CompositeView.extend({
 		tagName: "table",
+		className: 'table table-bordered',
 		template: "#grid-template",
 		itemView: GridRow,
 
