@@ -7,19 +7,17 @@ nxManager
 Table of Contents
 =================
 
-* [Prepare](#Prepare)
-* [Start](#Start)
-* [Libs](#Libs)
-* [Directory](#Directory)
-* [FAQ](#FAQ)
+* [Prepare](#prepare)
+* [Start](#start)
+* [Libs](#libs)
+* [Directory](#directory)
+* [FAQ](#faq)
 
 Prepare
 =======
 
 sudo apt-get install nodejs
-
 sudo apt-get install npm
-
 sudo npm install -g supervisor
 
 [Back to TOC](#table-of-contents)
@@ -59,7 +57,6 @@ FAQ
 ===
 
 1. when start with supervisor bin/www, an error occured "/usr/bin/env: is not found or a directory".
-
-A: if you use sudo apt-get install nodejs to install you node.js, you need use "sudo ln -s /usr/bin/nodejs /usr/bin/node" to link node with you nodejs.
+   if you use sudo apt-get install nodejs to install you node.js, you need use "sudo ln -s /usr/bin/nodejs /usr/bin/node" to link node with you nodejs.
 
 [Back to TOC](#table-of-contents)
