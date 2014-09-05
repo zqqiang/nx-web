@@ -17,7 +17,9 @@ Prepare
 =======
 
 sudo apt-get install nodejs
+
 sudo apt-get install npm
+
 sudo npm install -g supervisor
 
 [Back to TOC](#table-of-contents)
