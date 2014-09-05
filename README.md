@@ -1,5 +1,6 @@
 #nxManager#
 >This repository is a next generation central manager framework.
+>The target is to make cluster product development very easy and effective.
 
 ##Start##
 * First download nxManager
