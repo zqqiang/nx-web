@@ -17,20 +17,18 @@ Prepare
 =======
 
 sudo apt-get install nodejs
-
 sudo apt-get install npm
-
 sudo npm install -g supervisor
 
 [Back to TOC](#table-of-contents)
 
-Start
+Quick Start
 =====
 
-* First download nxManager
-* unzip nxManager & cd nxManager
-* supervisor bin/www
-* browse localhost:3000
+First download nxManager  
+unzip nxManager & cd nxManager  
+supervisor bin/www  
+browse localhost:3000  
 
 [Back to TOC](#table-of-contents)
 
