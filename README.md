@@ -16,9 +16,18 @@ Table of Contents
 Prepare
 =======
 
+Linux
+-----
+
 sudo apt-get install nodejs  
 sudo apt-get install npm  
 sudo npm install -g supervisor  
+
+Windows
+-------
+
+download nodejs from [http://nodejs.org/download/](http://nodejs.org/download/)  
+npm install -g supervisor  
 
 [Back to TOC](#table-of-contents)
 
