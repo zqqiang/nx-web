@@ -26,6 +26,4 @@
 
 	var appRouter = new Router();
 
-	Backbone.history.start();
-
 })(Application);

@@ -13,6 +13,7 @@ $(document).ready(function() {
 	Application.start({
 		msg: "start up"
 	});
+	Backbone.history.start();
 });
 
 //get template use ajax

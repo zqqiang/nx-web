@@ -35,6 +35,7 @@
 		app.navigateTo = function(context, options) {
 			layout.content.show(new contextMap[context](options));
 		};
+		
 	});
 
 })(Application);
