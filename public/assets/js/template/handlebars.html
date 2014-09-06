@@ -1,27 +1,25 @@
 <!--
-	author: zqqiang
+author: zqqiang
 -->
-
+<!-- menu node template -->
 <script id="node-template" type="text/x-handlebars-template">
-<li>{{nodeName}}</li>
+<li><a href="#{{nodeName}}">{{nodeName}}</a></li>
 </script>
-
 <!-- table template -->
 <script id="row-template" type="text/template">
-        <td>
-            {{username}}
-        </td>
-        <td>
-            {{fullname}}
-        </td>
+<td>
+    {{username}}
+</td>
+<td>
+    {{fullname}}
+</td>
 </script>
-
 <script id="grid-template" type="text/template">
-    <thead>        
-        <tr>
-            <th>Username</th>
-            <th>Full Name</th>
-        </tr>
-    </thead>
-    <tbody></tbody>
+<thead>
+    <tr>
+        <th>Username</th>
+        <th>Full Name</th>
+    </tr>
+</thead>
+<tbody></tbody>
 </script>

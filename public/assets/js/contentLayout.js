@@ -22,9 +22,19 @@
 		var layout = new contentLayout();
 		app.mainRegion.show(layout);
 
-		layout.content.show(new app.GridView());
 		layout.menu.show(new app.MenuView());
-	});
 
+		var contextMap = {
+			"Editors": app.DummyView,
+			"Table": app.TableView,
+			"HighCharts": app.DummyView,
+			"3d": app.DummyView,
+			"other": app.DummyView,
+		};
+
+		app.navigateTo = function(context, options) {
+			layout.content.show(new contextMap[context](options));
+		};
+	});
 
 })(Application);
