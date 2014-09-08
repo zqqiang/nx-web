@@ -80,10 +80,10 @@
 	"buffers":
 	[
 		{
-			"file": "public/assets/js/contentLayout.js",
+			"file": "public/assets/js/template/handlebars.html",
 			"settings":
 			{
-				"buffer_size": 622,
+				"buffer_size": 767,
 				"line_ending": "Windows"
 			}
 		},
@@ -91,44 +91,71 @@
 			"file": "public/assets/js/table.js",
 			"settings":
 			{
-				"buffer_size": 873,
+				"buffer_size": 874,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "public/assets/js/menu.js",
+			"file": "app.js",
 			"settings":
 			{
-				"buffer_size": 1300,
+				"buffer_size": 1445,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/index.jade",
+			"settings":
+			{
+				"buffer_size": 66,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "routes/editors.js",
+			"settings":
+			{
+				"buffer_size": 228,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "<!--\n	author: zqqiang\n-->\n\n<!-- menu node template -->\n<script id=\"node-template\" type=\"text/x-handlebars-template\">\n<li><a href=\"#{{href}}\">{{nodeName}}</a></li>\n</script>\n\n<!-- table template -->\n<script id=\"row-template\" type=\"text/template\">\n        <td>\n            {{username}}\n        </td>\n        <td>\n            {{fullname}}\n        </td>\n</script>\n\n<script id=\"grid-template\" type=\"text/template\">\n    <thead>        \n        <tr>\n            <th>Username</th>\n            <th>Full Name</th>\n        </tr>\n    </thead>\n    <tbody></tbody>\n</script>",
-			"file": "public/assets/js/template/handlebars.html",
-			"file_size": 587,
-			"file_write_time": 130544488082905467,
+			"file": "/E/WorkSpace/Fortinet/GitHub/backbone-login/public/app.js",
 			"settings":
 			{
-				"buffer_size": 560,
+				"buffer_size": 1141,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "Package Control Messages\n========================\n\nEmmet:\n-----\n\n  Thank you for installing Emmet -- a toolkit that can greatly improve your workflow. Note that this plugin automatically downloads and installs PyV8 binary (see status bar message). \n  \n  ******************************\n  Please restart editor \n  to finish installation process \n  after PyV8 was downloaded.\n  ******************************\n  \n  Tab key handler\n  ==========================\n  \n  By default, Emmet allows you to expand abbreviations with Tab key in HTML, XML, HAML and CSS/SASS/LESS/Stylus documents. As a side effect, you can’t use some of your ST2 snippets.\n  \n  Please read https://github.com/sergeche/emmet-sublime#tab-key-handler about how Tab handler works and how to tweak its behavior to match your needs.\n  \n  Enter key\n  ==========================\n  \n  In HTML and XML documents, Emmet overrides Enter key to insert formatted line breaks between opening and closing tags. In some cases it will break character input (for example, in Japanese language).\n  \n  To disable Enter key handler, simply add the following option in your user's Preferences file:\n  \n  \"disable_formatted_linebreak\": true\n  \n  Actions shortcuts\n  ==========================\n  \n  Emmet has a number of actions with keyboard shortcuts that may override ones you're using commonly (for example, Ctrl-E or Ctrl-Down). Please read the project main page to get list of available actions and keyboard shortcuts and how to disable them:\n  https://github.com/sergeche/emmet-sublime\n  \n  Documentation and examples:\n  http://emmet.io\n  \n  ------------------------------\n  Follow me on Twitter: @emmetio\n  ------------------------------\n  \n",
+			"file": "routes/index.js",
 			"settings":
 			{
-				"buffer_size": 1692,
-				"line_ending": "Windows",
-				"name": "Package Control Messages",
-				"scratch": true
+				"buffer_size": 199,
+				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "public/assets/js/router.js",
+			"file": "routes/users.js",
 			"settings":
 			{
-				"buffer_size": 233,
+				"buffer_size": 197,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/assets/js/contentLayout.js",
+			"settings":
+			{
+				"buffer_size": 815,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "public/assets/js/editors.js",
+			"settings":
+			{
+				"buffer_size": 651,
 				"line_ending": "Windows"
 			}
 		},
@@ -136,7 +163,39 @@
 			"file": "public/index.html",
 			"settings":
 			{
-				"buffer_size": 1162,
+				"buffer_size": 1318,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "public/assets/js/main.js",
+			"settings":
+			{
+				"buffer_size": 672,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "public/assets/js/menu.js",
+			"settings":
+			{
+				"buffer_size": 1281,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "public/assets/js/navbar.js",
+			"settings":
+			{
+				"buffer_size": 564,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "public/assets/js/router.js",
+			"settings":
+			{
+				"buffer_size": 576,
 				"line_ending": "Windows"
 			}
 		}
@@ -201,10 +260,30 @@
 		"/E/WorkSpace/Fortinet/GitHub/nxManager/public",
 		"/E/WorkSpace/Fortinet/GitHub/nxManager/public/assets",
 		"/E/WorkSpace/Fortinet/GitHub/nxManager/public/assets/js",
-		"/E/WorkSpace/Fortinet/GitHub/nxManager/public/assets/js/template"
+		"/E/WorkSpace/Fortinet/GitHub/nxManager/public/assets/js/template",
+		"/E/WorkSpace/Fortinet/GitHub/nxManager/routes",
+		"/E/WorkSpace/Fortinet/GitHub/nxManager/views",
+		"/E/WorkSpace/Fortinet/GitHub/backbone-login/public",
+		"/E/WorkSpace/Fortinet/GitHub/backbone-login/public/models"
 	],
 	"file_history":
 	[
+		"/E/WorkSpace/Fortinet/GitHub/nxManager/routes/editors.js",
+		"/E/WorkSpace/Fortinet/GitHub/backbone-login/server.js",
+		"/E/WorkSpace/Fortinet/GitHub/nxManager/app.js",
+		"/E/WorkSpace/Fortinet/GitHub/nxManager/public/index.html",
+		"/E/WorkSpace/Fortinet/GitHub/nxManager/public/assets/js/main.js",
+		"/E/WorkSpace/Fortinet/GitHub/nxManager/public/assets/js/contentLayout.js",
+		"/E/WorkSpace/Fortinet/GitHub/nxManager/public/assets/js/dummy.js",
+		"/E/WorkSpace/Fortinet/GitHub/nxManager/public/assets/js/menu.js",
+		"/E/WorkSpace/Fortinet/GitHub/nxManager/public/assets/js/template/handlebars.html",
+		"/E/WorkSpace/Fortinet/GitHub/nxManager/public/assets/js/router.js",
+		"/E/WorkSpace/Fortinet/GitHub/nxManager/public/assets/js/table.js",
+		"/E/WorkSpace/Fortinet/GitHub/nxManager/public/assets/js/editors.js",
+		"/E/WorkSpace/Fortinet/GitHub/nxManager/public/assets/js/content.js",
+		"/C/Users/Zhaoqing Qiang/AppData/Roaming/Sublime Text 3/Packages/HTMLBeautify/HTMLBeautify.sublime-settings",
+		"/C/Users/Zhaoqing Qiang/AppData/Roaming/Sublime Text 3/Packages/User/HTMLBeautify.sublime-settings",
+		"/C/Users/Zhaoqing Qiang/AppData/Roaming/Sublime Text 3/Packages/Emmet/Default (Windows).sublime-keymap",
 		"/E/WorkSpace/Fortinet/GitHub/nxManager/README.md",
 		"/home/zhaoqing/Workspace/github/nxManager/public/assets/js/template/handlebars.html",
 		"/home/zhaoqing/Workspace/github/nxManager/public/assets/js/table.js",
@@ -212,11 +291,7 @@
 		"/home/zhaoqing/Workspace/github/nxManager/public/index.html",
 		"/home/zhaoqing/Workspace/github/nxManager/README.md",
 		"/home/zhaoqing/.config/sublime-text-3/Packages/Markdown Preview/MarkdownPreview.sublime-settings",
-		"/E/WorkSpace/Fortinet/GitHub/nxManager/public/assets/js/menu.js",
 		"/E/WorkSpace/Fortinet/GitHub/nxManager/nxManager.sublime-project",
-		"/E/WorkSpace/Fortinet/GitHub/nxManager/public/assets/js/main.js",
-		"/E/WorkSpace/Fortinet/GitHub/nxManager/public/index.html",
-		"/E/WorkSpace/Fortinet/GitHub/nxManager/public/assets/js/template/handlebars.html",
 		"/C/Users/兆庆/Downloads/backbone.marionette-master/readme.md",
 		"/E/WorkSpace/Fortinet/GitHub/nxManager/app/app.js",
 		"/E/WorkSpace/Fortinet/GitHub/nxManager/server/app/app.js",
@@ -320,23 +395,11 @@
 		"/E/WorkSpace/Fortinet/centralManagement/nginxd/modules/ngx_http_cm_module/ngx_ncfg_modules/advanced.c",
 		"/E/WorkSpace/Fortinet/centralManagement/nginxd/dist/tools/node_modules/adm-zip/methods/index.js",
 		"/E/WorkSpace/Fortinet/centralManagement/nginxd/dist/tools/node_modules/adm-zip/methods/inflater.js",
-		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/sysadminset.c",
-		"/E/WorkSpace/Fortinet/centralManagement/nginxd/dist/implementation/js/context/AdminGroupEditUserGroupMember.js",
-		"/E/WorkSpace/Fortinet/centralManagement/nginxd/dist/implementation/js/context/AdminGroup.js",
-		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/user_admin_group.c",
-		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/index.c",
-		"/E/WorkSpace/Fortinet/centralManagement/nginxd/dist/tools/node_modules/fixmyjs/lib/rules/isNaN.js",
-		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/sys_global_advanced.c",
-		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/autolearn_data.c",
-		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/sys_raid.c",
-		"/E/WorkSpace/Fortinet/centralManagement/nginxd/dist/implementation/js/context/Raid.js",
-		"/E/WorkSpace/Fortinet/centralManagement/nginxd/reload.sh",
-		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/ngx_devel_kit-0.2.19/README_AUTO_LIB",
-		"/E/WorkSpace/Fortinet/centralManagement/nginxd/dist/implementation/js/context/Operation.js"
+		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/sysadminset.c"
 	],
 	"find":
 	{
-		"height": 34.0
+		"height": 46.0
 	},
 	"find_in_files":
 	{
@@ -353,6 +416,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			")\n",
 			"GETURL(",
 			"apr",
 			"ngx_http_internal_redirect",
@@ -409,53 +473,53 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 9,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "public/assets/js/contentLayout.js",
+					"file": "public/assets/js/template/handlebars.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 622,
+						"buffer_size": 767,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								519,
-								529
+								646,
+								646
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
 					"file": "public/assets/js/table.js",
-					"semi_transient": true,
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 873,
+						"buffer_size": 874,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								320,
-								320
+								656,
+								660
 							]
 						],
 						"settings":
@@ -463,7 +527,7 @@
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0.0,
+						"translation.x": -0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -472,19 +536,77 @@
 				},
 				{
 					"buffer": 2,
-					"file": "public/assets/js/menu.js",
+					"file": "app.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1300,
+						"buffer_size": 1445,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								996,
-								996
+								913,
+								913
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 225.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "views/index.jade",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 66,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "routes/editors.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 228,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								228,
+								228
 							]
 						],
 						"settings":
@@ -493,32 +615,32 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 90.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "public/assets/js/template/handlebars.html",
+					"buffer": 5,
+					"file": "/E/WorkSpace/Fortinet/GitHub/backbone-login/public/app.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 560,
+						"buffer_size": 1141,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								409,
-								409
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
@@ -526,52 +648,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 6,
+					"file": "routes/index.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1692,
+						"buffer_size": 199,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1692,
-								1692
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 225.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "public/assets/js/router.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 233,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								233,
-								233
+								0,
+								0
 							]
 						],
 						"settings":
@@ -582,24 +676,110 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "public/index.html",
+					"buffer": 7,
+					"file": "routes/users.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1162,
+						"buffer_size": 197,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1093,
-								1093
+								130,
+								166
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "public/assets/js/contentLayout.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 815,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								470,
+								470
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "public/assets/js/editors.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 651,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								624,
+								624
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "public/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1318,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								917,
+								917
 							]
 						],
 						"settings":
@@ -612,7 +792,123 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "public/assets/js/main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 672,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "public/assets/js/menu.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1281,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								600,
+								600
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 270.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "public/assets/js/navbar.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 564,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "public/assets/js/router.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 576,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
 					"type": "text"
 				}
 			]

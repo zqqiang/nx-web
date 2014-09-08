@@ -8,18 +8,28 @@ author: zqqiang
 <!-- table template -->
 <script id="row-template" type="text/template">
 <td>
-    {{username}}
+	{{username}}
 </td>
 <td>
-    {{fullname}}
+	{{fullname}}
 </td>
 </script>
 <script id="grid-template" type="text/template">
 <thead>
-    <tr>
-        <th>Username</th>
-        <th>Full Name</th>
-    </tr>
+	<tr>
+		<th>Username</th>
+		<th>Full Name</th>
+	</tr>
 </thead>
 <tbody></tbody>
+</script>
+<script id="editors-template" type="text/javascript">
+<form role="form">
+<div class="form-group">
+	<label for="{{id}}" class="{{layout.label}}">{{label}}</label>
+	<div class="{{layout.field}}">
+	<input type="{{type}}" class="form-control" id="{{id}}" placeholder="{{placeholder}}">
+	</div>
+</div>
+</form>
 </script>

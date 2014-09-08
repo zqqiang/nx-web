@@ -19,13 +19,19 @@
 	});
 
 	app.addInitializer(function(options) {
+		app.session.checkAuth({
+			complete: function() {
+				Backbone.history.start();
+			}
+		});
+
 		var layout = new contentLayout();
 		app.mainRegion.show(layout);
 
 		layout.menu.show(new app.MenuView());
 
 		var contextMap = {
-			"Editors": app.DummyView,
+			"Editors": app.editorsView,
 			"Table": app.TableView,
 			"HighCharts": app.DummyView,
 			"3d": app.DummyView,
@@ -35,7 +41,7 @@
 		app.navigateTo = function(context, options) {
 			layout.content.show(new contextMap[context](options));
 		};
-		
+
 	});
 
 })(Application);
