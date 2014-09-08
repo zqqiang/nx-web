@@ -3,7 +3,10 @@ var router = express.Router();
 
 router.get('/', function(req, res) {
 	res.json({
-		user: 'Admin'
+		id: 1,
+		username: 'admin',
+		name: 'admin',
+		email: 'admin@qq.com'
 	});
 });
 

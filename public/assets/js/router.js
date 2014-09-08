@@ -1,11 +1,15 @@
 (function(app) {
 	var Router = Backbone.Router.extend({
 		routes: {
+			"": "index",
 			"Editors": "showEditors",
 			"Table": "showTable",
 			"HighCharts": "showHighCharts",
 			"3d": "show3d",
 			"*other": "defaultRouter",
+		},
+		index: function() {
+			$('#main-region').html('<div>Login Page</div>');
 		},
 		showEditors: function() {
 			app.navigateTo("Editors");
