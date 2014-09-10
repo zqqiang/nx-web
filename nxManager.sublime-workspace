@@ -4,10 +4,6 @@
 		"selected_items":
 		[
 			[
-				"conte",
-				"content"
-			],
-			[
 				"json",
 				"json_string"
 			],
@@ -79,140 +75,16 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "public/models/session.js",
-			"settings":
-			{
-				"buffer_size": 779,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/E/WorkSpace/Fortinet/GitHub/backbone-login/public/models/UserModel.js",
-			"settings":
-			{
-				"buffer_size": 499,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "public/assets/js/main.js",
-			"settings":
-			{
-				"buffer_size": 645,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "public/assets/js/contentLayout.js",
-			"settings":
-			{
-				"buffer_size": 909,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "routes/auth.js",
-			"settings":
-			{
-				"buffer_size": 220,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app.js",
-			"settings":
-			{
-				"buffer_size": 1506,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/E/WorkSpace/Fortinet/GitHub/backbone-login/public/main.js",
-			"settings":
-			{
-				"buffer_size": 1420,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "public/assets/js/router.js",
-			"settings":
-			{
-				"buffer_size": 671,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/E/WorkSpace/Fortinet/GitHub/backbone-login/public/router.js",
-			"settings":
-			{
-				"buffer_size": 2539,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/E/WorkSpace/Fortinet/GitHub/backbone-login/public/views/LoginPageView.js",
-			"settings":
-			{
-				"buffer_size": 3900,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/E/WorkSpace/Fortinet/GitHub/backbone-login/public/models/SessionModel.js",
-			"settings":
-			{
-				"buffer_size": 4645,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/E/WorkSpace/Fortinet/GitHub/backbone-login/server.js",
-			"settings":
-			{
-				"buffer_size": 6218,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "public/models/user.js",
-			"settings":
-			{
-				"buffer_size": 194,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "public/index.html",
-			"settings":
-			{
-				"buffer_size": 1419,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 58.0,
+		"height": 392.0,
 		"selected_items":
 		[
 			[
-				"install",
-				"Package Control: Install Package"
-			],
-			[
 				"makr",
 				"Markdown Preview: Preview in Browser"
-			],
-			[
-				"make",
-				"Markdown Preview: Preview in Browser"
-			],
-			[
-				"Package Control: insta",
-				"Package Control: Install Package"
 			],
 			[
 				"mar",
@@ -223,18 +95,21 @@
 				"Markdown Preview: Preview in Browser"
 			],
 			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
 				"remove",
 				"Package Control: Remove Package"
 			]
 		],
-		"width": 416.0
+		"width": 467.0
 	},
 	"console":
 	{
 		"height": 126.0,
 		"history":
 		[
-			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
 		]
 	},
 	"distraction_free":
@@ -248,52 +123,34 @@
 	},
 	"expanded_folders":
 	[
-		"/E/WorkSpace/Fortinet/GitHub/nxManager",
-		"/E/WorkSpace/Fortinet/GitHub/nxManager/public",
-		"/E/WorkSpace/Fortinet/GitHub/nxManager/public/assets",
-		"/E/WorkSpace/Fortinet/GitHub/nxManager/public/assets/js",
-		"/E/WorkSpace/Fortinet/GitHub/nxManager/public/models",
-		"/E/WorkSpace/Fortinet/GitHub/nxManager/routes",
-		"/E/WorkSpace/Fortinet/GitHub/nxManager/views",
-		"/E/WorkSpace/Fortinet/GitHub/backbone-login",
-		"/E/WorkSpace/Fortinet/GitHub/backbone-login/public",
-		"/E/WorkSpace/Fortinet/GitHub/backbone-login/public/models",
-		"/E/WorkSpace/Fortinet/GitHub/backbone-login/public/views",
-		"/E/WorkSpace/Fortinet/GitHub/backbone-login/views"
+		"/home/zhaoqing/Workspace/github/nxManager",
+		"/home/zhaoqing/Workspace/github/nxManager/public",
+		"/home/zhaoqing/Workspace/github/nxManager/public/assets",
+		"/home/zhaoqing/Workspace/github/nxManager/public/assets/css",
+		"/home/zhaoqing/Workspace/github/nxManager/public/assets/js",
+		"/home/zhaoqing/Workspace/github/nxManager/public/assets/js/template",
+		"/home/zhaoqing/Workspace/github/nxManager/public/assets/less",
+		"/home/zhaoqing/Workspace/github/nxManager/routes",
+		"/home/zhaoqing/Workspace/github/nxManager/E:\\WorkSpace\\Fortinet\\GitHub\\backbone-login"
 	],
 	"file_history":
 	[
-		"/E/WorkSpace/Fortinet/GitHub/backbone-login/views/index.html",
-		"/E/WorkSpace/Fortinet/GitHub/nxManager/public/index.html",
-		"/E/WorkSpace/Fortinet/GitHub/nxManager/public/assets/js/router.js",
-		"/E/WorkSpace/Fortinet/GitHub/nxManager/public/assets/js/navbar.js",
-		"/E/WorkSpace/Fortinet/GitHub/nxManager/public/assets/js/menu.js",
-		"/E/WorkSpace/Fortinet/GitHub/nxManager/public/assets/js/main.js",
-		"/E/WorkSpace/Fortinet/GitHub/nxManager/public/assets/js/editors.js",
-		"/E/WorkSpace/Fortinet/GitHub/nxManager/public/assets/js/contentLayout.js",
-		"/E/WorkSpace/Fortinet/GitHub/nxManager/routes/users.js",
-		"/E/WorkSpace/Fortinet/GitHub/nxManager/routes/index.js",
-		"/E/WorkSpace/Fortinet/GitHub/backbone-login/public/models/SessionModel.js",
-		"/E/WorkSpace/Fortinet/GitHub/nxManager/public/assets/js/template/handlebars.html",
-		"/E/WorkSpace/Fortinet/GitHub/nxManager/public/assets/js/table.js",
-		"/E/WorkSpace/Fortinet/GitHub/nxManager/app.js",
-		"/E/WorkSpace/Fortinet/GitHub/backbone-login/server.js",
-		"/E/WorkSpace/Fortinet/GitHub/nxManager/public/models/session.js",
-		"/E/WorkSpace/Fortinet/GitHub/backbone-login/public/app.js",
-		"/E/WorkSpace/Fortinet/GitHub/nxManager/routes/editors.js",
-		"/E/WorkSpace/Fortinet/GitHub/nxManager/public/assets/js/dummy.js",
-		"/E/WorkSpace/Fortinet/GitHub/nxManager/public/assets/js/content.js",
-		"/C/Users/Zhaoqing Qiang/AppData/Roaming/Sublime Text 3/Packages/HTMLBeautify/HTMLBeautify.sublime-settings",
-		"/C/Users/Zhaoqing Qiang/AppData/Roaming/Sublime Text 3/Packages/User/HTMLBeautify.sublime-settings",
-		"/C/Users/Zhaoqing Qiang/AppData/Roaming/Sublime Text 3/Packages/Emmet/Default (Windows).sublime-keymap",
-		"/E/WorkSpace/Fortinet/GitHub/nxManager/README.md",
-		"/home/zhaoqing/Workspace/github/nxManager/public/assets/js/template/handlebars.html",
+		"/home/zhaoqing/Workspace/github/nxManager/package.json",
+		"/home/zhaoqing/Workspace/github/nxManager/public/assets/js/content.js",
 		"/home/zhaoqing/Workspace/github/nxManager/public/assets/js/table.js",
+		"/home/zhaoqing/Workspace/github/nxManager/public/assets/less/_custom.less",
+		"/home/zhaoqing/Workspace/github/nxManager/public/assets/js/navbar.js",
+		"/home/zhaoqing/Workspace/github/nxManager/public/assets/js/template/handlebars.html",
 		"/home/zhaoqing/Workspace/github/nxManager/public/assets/js/contentLayout.js",
 		"/home/zhaoqing/Workspace/github/nxManager/public/index.html",
 		"/home/zhaoqing/Workspace/github/nxManager/README.md",
 		"/home/zhaoqing/.config/sublime-text-3/Packages/Markdown Preview/MarkdownPreview.sublime-settings",
+		"/E/WorkSpace/Fortinet/GitHub/nxManager/public/assets/js/menu.js",
 		"/E/WorkSpace/Fortinet/GitHub/nxManager/nxManager.sublime-project",
+		"/E/WorkSpace/Fortinet/GitHub/nxManager/README.md",
+		"/E/WorkSpace/Fortinet/GitHub/nxManager/public/assets/js/main.js",
+		"/E/WorkSpace/Fortinet/GitHub/nxManager/public/index.html",
+		"/E/WorkSpace/Fortinet/GitHub/nxManager/public/assets/js/template/handlebars.html",
 		"/C/Users/兆庆/Downloads/backbone.marionette-master/readme.md",
 		"/E/WorkSpace/Fortinet/GitHub/nxManager/app/app.js",
 		"/E/WorkSpace/Fortinet/GitHub/nxManager/server/app/app.js",
@@ -390,18 +247,32 @@
 		"/E/WorkSpace/Fortinet/centralManagement/centralManagement.sublime-project",
 		"/E/WorkSpace/Fortinet/centralManagement/nginxd/modules/ngx_http_cm_module/ngx_ncfg_modules/route_port_list.c",
 		"/E/WorkSpace/Fortinet/centralManagement/nginxd/modules/ngx_http_cm_module/ngx_ncfg_modules/raid.c",
-		"/E/WorkSpace/Fortinet/centralManagement/nginxd/modules/ngx_http_cm_module/ngx_ncfg_modules/protected_hostnames_new_host.c"
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/modules/ngx_http_cm_module/ngx_ncfg_modules/protected_hostnames_new_host.c",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/modules/ngx_http_cm_module/ngx_ncfg_modules/operation.c",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/modules/ngx_http_cm_module/ngx_ncfg_modules/fail_open.c",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/modules/ngx_http_cm_module/ngx_ncfg_modules/dns.c",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/modules/ngx_http_cm_module/ngx_ncfg_modules/advanced.c",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/dist/tools/node_modules/adm-zip/methods/index.js",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/dist/tools/node_modules/adm-zip/methods/inflater.js",
+		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/sysadminset.c",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/dist/implementation/js/context/AdminGroupEditUserGroupMember.js",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/dist/implementation/js/context/AdminGroup.js",
+		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/user_admin_group.c",
+		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/index.c",
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/dist/tools/node_modules/fixmyjs/lib/rules/isNaN.js",
+		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/sys_global_advanced.c",
+		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/autolearn_data.c",
+		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/sys_raid.c"
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 25.0
 	},
 	"find_in_files":
 	{
 		"height": 90.0,
 		"where_history":
 		[
-			"E:\\WorkSpace\\Fortinet\\GitHub",
 			"*.c,,E:\\WorkSpace\\Fortinet\\centralManagement\\ngx_openresty-1.5.12.1",
 			"*.c",
 			""
@@ -412,8 +283,6 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"postAuth",
-			")\n",
 			"GETURL(",
 			"apr",
 			"ngx_http_internal_redirect",
@@ -470,429 +339,14 @@
 	"groups":
 	[
 		{
-			"selected": 9,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "public/models/session.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 779,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								166,
-								175
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/E/WorkSpace/Fortinet/GitHub/backbone-login/public/models/UserModel.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 499,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								384,
-								384
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 13,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "public/assets/js/main.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 645,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								323,
-								323
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 12,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "public/assets/js/contentLayout.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 909,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								327,
-								327
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 90.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "routes/auth.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 220,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								122,
-								122
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "app.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1506,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								636,
-								636
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "/E/WorkSpace/Fortinet/GitHub/backbone-login/public/main.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1420,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								960,
-								960
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 135.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "public/assets/js/router.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 671,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								519,
-								519
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "/E/WorkSpace/Fortinet/GitHub/backbone-login/public/router.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2539,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2440,
-								2453
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 540.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "/E/WorkSpace/Fortinet/GitHub/backbone-login/public/views/LoginPageView.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3900,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3104,
-								3104
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": -0.0,
-						"translation.y": 945.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "/E/WorkSpace/Fortinet/GitHub/backbone-login/public/models/SessionModel.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4645,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4160,
-								4168
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1395.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "/E/WorkSpace/Fortinet/GitHub/backbone-login/server.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6218,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2530,
-								2543
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 855.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "public/models/user.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 194,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								194,
-								194
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"file": "public/index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1419,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								325,
-								325
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 23.0
+		"height": 25.0
 	},
 	"input":
 	{
@@ -928,7 +382,7 @@
 	"project": "nxManager.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 46.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1123,7 +577,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 290.0,
+	"side_bar_width": 367.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
