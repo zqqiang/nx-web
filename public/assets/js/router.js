@@ -9,7 +9,11 @@
 			"*other": "defaultRouter",
 		},
 		index: function() {
-			$('#main-region').html('<div>Login Page</div>');
+			if (app.session.get('logged_in')) {
+				app.layout.menu.show(new app.MenuView());
+			} else {
+				$('#main-region').html('<div>Login Page</div>');
+			}
 		},
 		showEditors: function() {
 			app.navigateTo("Editors");

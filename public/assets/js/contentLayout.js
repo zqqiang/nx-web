@@ -25,10 +25,8 @@
 			}
 		});
 
-		var layout = new contentLayout();
-		app.mainRegion.show(layout);
-
-		layout.menu.show(new app.MenuView());
+		app.layout = new contentLayout();
+		app.mainRegion.show(app.layout);
 
 		var contextMap = {
 			"Editors": app.editorsView,
@@ -39,7 +37,7 @@
 		};
 
 		app.navigateTo = function(context, options) {
-			layout.content.show(new contextMap[context](options));
+			app.layout.content.show(new contextMap[context](options));
 		};
 
 	});
