@@ -11,6 +11,7 @@ require.config({
         'bootstrap': 'assets/lib/bootstrap',
         'marionette': 'assets/lib/backbone.marionette',
         'handlebars': 'assets/lib/handlebars',
+        'text': 'assets/lib/text',
     },
 
     // non-AMD lib

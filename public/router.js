@@ -10,7 +10,7 @@ define(['backbone', 'app', 'views/menu'], function(Backbone, app, Menu) {
 		},
 		index: function() {
 			// if (app.session.get('logged_in')) {
-			app.layout.menu.show(new Menu());
+			// app.layout.menu.show(new Menu());
 			// } else {
 			// $('#main-region').html('<div>Login Page</div>');
 			// }

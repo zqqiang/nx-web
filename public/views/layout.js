@@ -1,13 +1,7 @@
-define(['marionette'], function(Marionette) {
-	var layoutTemplate = [
-		'<div>',
-		'<div id="menu" class="col-sm-2">Todo: menu</div>',
-		'<div id="content" class="col-sm-10">Todo: content</div>',
-		'</div>',
-	];
+define(['marionette', 'text!templates/layout.html'], function(Marionette, LayoutTpl) {
 
 	var Layout = Marionette.Layout.extend({
-		template: layoutTemplate.join(''),
+		template: LayoutTpl,
 		regions: {
 			menu: '#menu',
 			content: '#content'
