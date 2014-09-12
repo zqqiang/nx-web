@@ -75,6 +75,46 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "public/config.js",
+			"settings":
+			{
+				"buffer_size": 966,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/main.js",
+			"settings":
+			{
+				"buffer_size": 510,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/assets/js/contentLayout.js",
+			"settings":
+			{
+				"buffer_size": 876,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/assets/js/table.js",
+			"settings":
+			{
+				"buffer_size": 874,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/layout.js",
+			"settings":
+			{
+				"buffer_size": 351,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -124,25 +164,31 @@
 	"expanded_folders":
 	[
 		"/home/zhaoqing/Workspace/github/nxManager",
+		"/home/zhaoqing/Workspace/github/nxManager/bin",
 		"/home/zhaoqing/Workspace/github/nxManager/public",
-		"/home/zhaoqing/Workspace/github/nxManager/public/assets",
-		"/home/zhaoqing/Workspace/github/nxManager/public/assets/css",
-		"/home/zhaoqing/Workspace/github/nxManager/public/assets/js",
-		"/home/zhaoqing/Workspace/github/nxManager/public/assets/js/template",
-		"/home/zhaoqing/Workspace/github/nxManager/public/assets/less",
-		"/home/zhaoqing/Workspace/github/nxManager/routes",
-		"/home/zhaoqing/Workspace/github/nxManager/E:\\WorkSpace\\Fortinet\\GitHub\\backbone-login"
+		"/home/zhaoqing/Workspace/github/nxManager/public/assets/js/template"
 	],
 	"file_history":
 	[
+		"/home/zhaoqing/Workspace/github/nxManager/public/assets/js/contentLayout.js",
+		"/home/zhaoqing/Workspace/github/nxManager/public/app.js",
+		"/home/zhaoqing/Workspace/github/nxManager/public/assets/js/main.js",
+		"/home/zhaoqing/Workspace/github/nxManager/public/index.html",
+		"/home/zhaoqing/Workspace/github/nxManager/views/index.html",
+		"/home/zhaoqing/Workspace/github/nxManager/public/config.js",
+		"/home/zhaoqing/Workspace/github/nxManager/public/main.js",
+		"/home/zhaoqing/Workspace/github/nxManager/public/contentLayout.js",
+		"/home/zhaoqing/Workspace/github/nxManager/app.js",
+		"/home/zhaoqing/Workspace/github/nxManager/public/models/user.js",
+		"/home/zhaoqing/Workspace/github/nxManager/public/models/session.js",
+		"/home/zhaoqing/Workspace/github/nxManager/routes/auth.js",
+		"/home/zhaoqing/Workspace/github/nxManager/public/assets/js/router.js",
 		"/home/zhaoqing/Workspace/github/nxManager/package.json",
 		"/home/zhaoqing/Workspace/github/nxManager/public/assets/js/content.js",
 		"/home/zhaoqing/Workspace/github/nxManager/public/assets/js/table.js",
 		"/home/zhaoqing/Workspace/github/nxManager/public/assets/less/_custom.less",
 		"/home/zhaoqing/Workspace/github/nxManager/public/assets/js/navbar.js",
 		"/home/zhaoqing/Workspace/github/nxManager/public/assets/js/template/handlebars.html",
-		"/home/zhaoqing/Workspace/github/nxManager/public/assets/js/contentLayout.js",
-		"/home/zhaoqing/Workspace/github/nxManager/public/index.html",
 		"/home/zhaoqing/Workspace/github/nxManager/README.md",
 		"/home/zhaoqing/.config/sublime-text-3/Packages/Markdown Preview/MarkdownPreview.sublime-settings",
 		"/E/WorkSpace/Fortinet/GitHub/nxManager/public/assets/js/menu.js",
@@ -251,18 +297,7 @@
 		"/E/WorkSpace/Fortinet/centralManagement/nginxd/modules/ngx_http_cm_module/ngx_ncfg_modules/operation.c",
 		"/E/WorkSpace/Fortinet/centralManagement/nginxd/modules/ngx_http_cm_module/ngx_ncfg_modules/fail_open.c",
 		"/E/WorkSpace/Fortinet/centralManagement/nginxd/modules/ngx_http_cm_module/ngx_ncfg_modules/dns.c",
-		"/E/WorkSpace/Fortinet/centralManagement/nginxd/modules/ngx_http_cm_module/ngx_ncfg_modules/advanced.c",
-		"/E/WorkSpace/Fortinet/centralManagement/nginxd/dist/tools/node_modules/adm-zip/methods/index.js",
-		"/E/WorkSpace/Fortinet/centralManagement/nginxd/dist/tools/node_modules/adm-zip/methods/inflater.js",
-		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/sysadminset.c",
-		"/E/WorkSpace/Fortinet/centralManagement/nginxd/dist/implementation/js/context/AdminGroupEditUserGroupMember.js",
-		"/E/WorkSpace/Fortinet/centralManagement/nginxd/dist/implementation/js/context/AdminGroup.js",
-		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/user_admin_group.c",
-		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/index.c",
-		"/E/WorkSpace/Fortinet/centralManagement/nginxd/dist/tools/node_modules/fixmyjs/lib/rules/isNaN.js",
-		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/sys_global_advanced.c",
-		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/autolearn_data.c",
-		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/sys_raid.c"
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/modules/ngx_http_cm_module/ngx_ncfg_modules/advanced.c"
 	],
 	"find":
 	{
@@ -283,6 +318,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"Application",
+			"lib",
 			"GETURL(",
 			"apr",
 			"ngx_http_internal_redirect",
@@ -339,8 +376,155 @@
 	"groups":
 	[
 		{
+			"selected": 4,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "public/config.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 966,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								805,
+								805
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "public/main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 510,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								497,
+								497
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "public/assets/js/contentLayout.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 876,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								455,
+								455
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "public/assets/js/table.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 874,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								321,
+								321
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "public/layout.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 351,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								351,
+								351
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
