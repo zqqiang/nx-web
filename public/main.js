@@ -1,11 +1,13 @@
 require(
 	[
 		'backbone', 'handlebars', 'jquery', 'app', 'views/layout', 'views/navbar', 'views/menu', 'router',
-		'views/editor',
+		'views/editor', 'views/table'
 	],
-	function(Backbone, Handlebars, $, app, Layout, Navbar, Menu, Router, Editor) {
+	function(Backbone, Handlebars, $, app, Layout, Navbar, Menu, Router,
+		Editor, Table) {
 		Backbone.Marionette.TemplateCache.prototype.compileTemplate = function(rawTemplate) {
 			// use Handlebars.js to compile the template
+			console.log(rawTemplate);
 			return Handlebars.compile(rawTemplate);
 		}
 
@@ -19,7 +21,7 @@ require(
 
 		var contextMap = {
 			"Editors": Editor,
-			"Table": app.TableView,
+			"Table": Table,
 			"HighCharts": app.DummyView,
 			"3d": app.DummyView,
 			"other": app.DummyView,
