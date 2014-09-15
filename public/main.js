@@ -1,6 +1,9 @@
 require(
-	['backbone', 'handlebars', 'jquery', 'app', 'views/layout', 'views/navbar', 'views/menu', 'router'],
-	function(Backbone, Handlebars, $, app, Layout, Navbar, Menu, Router) {
+	[
+		'backbone', 'handlebars', 'jquery', 'app', 'views/layout', 'views/navbar', 'views/menu', 'router',
+		'views/editor',
+	],
+	function(Backbone, Handlebars, $, app, Layout, Navbar, Menu, Router, Editor) {
 		Backbone.Marionette.TemplateCache.prototype.compileTemplate = function(rawTemplate) {
 			// use Handlebars.js to compile the template
 			return Handlebars.compile(rawTemplate);
@@ -13,6 +16,18 @@ require(
 		});
 
 		app.router = new Router();
+
+		var contextMap = {
+			"Editors": Editor,
+			"Table": app.TableView,
+			"HighCharts": app.DummyView,
+			"3d": app.DummyView,
+			"other": app.DummyView,
+		};
+
+		app.navigateTo = function(context, options) {
+			app.layout.content.show(new contextMap[context](options));
+		};
 
 		app.addInitializer(function(options) {
 			app.addRegions({
