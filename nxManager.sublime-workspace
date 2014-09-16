@@ -84,34 +84,18 @@
 	"buffers":
 	[
 		{
-			"file": "public/assets/js/contentLayout.js",
+			"file": "app.js",
 			"settings":
 			{
-				"buffer_size": 876,
+				"buffer_size": 1506,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "public/app.js",
+			"file": "routes/index.js",
 			"settings":
 			{
-				"buffer_size": 103,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "public/assets/js/router.js",
-			"settings":
-			{
-				"buffer_size": 774,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "public/router.js",
-			"settings":
-			{
-				"buffer_size": 806,
+				"buffer_size": 152,
 				"line_ending": "Windows"
 			}
 		},
@@ -119,39 +103,23 @@
 			"file": "public/main.js",
 			"settings":
 			{
-				"buffer_size": 1177,
+				"buffer_size": 967,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "public/assets/js/table.js",
+			"file": "db/settings.js",
 			"settings":
 			{
-				"buffer_size": 874,
+				"buffer_size": 93,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "public/views/table.js",
+			"file": "db/db.js",
 			"settings":
 			{
-				"buffer_size": 1002,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "public/templates/row.html",
-			"settings":
-			{
-				"buffer_size": 56,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "public/templates/node.html",
-			"settings":
-			{
-				"buffer_size": 81,
+				"buffer_size": 250,
 				"line_ending": "Windows"
 			}
 		}
@@ -204,34 +172,34 @@
 	"expanded_folders":
 	[
 		"/C/Users/Administrator/Documents/project/nxManager",
-		"/C/Users/Administrator/Documents/project/nxManager/public",
-		"/C/Users/Administrator/Documents/project/nxManager/public/assets",
-		"/C/Users/Administrator/Documents/project/nxManager/public/assets/js",
-		"/C/Users/Administrator/Documents/project/nxManager/public/assets/js/template",
-		"/C/Users/Administrator/Documents/project/nxManager/public/models",
-		"/C/Users/Administrator/Documents/project/nxManager/public/templates",
-		"/C/Users/Administrator/Documents/project/nxManager/public/views"
+		"/C/Users/Administrator/Documents/project/nxManager/db",
+		"/C/Users/Administrator/Documents/project/nxManager/public"
 	],
 	"file_history":
 	[
+		"/C/Users/Administrator/Documents/project/nxManager/package.json",
+		"/C/Users/Administrator/Documents/project/nxManager/public/assets/js/contentLayout.js",
+		"/C/Users/Administrator/Documents/project/nxManager/public/app.js",
+		"/C/Users/Administrator/Documents/project/nxManager/public/assets/js/router.js",
+		"/C/Users/Administrator/Documents/project/nxManager/public/router.js",
+		"/C/Users/Administrator/Documents/project/nxManager/public/main.js",
+		"/C/Users/Administrator/Documents/project/nxManager/public/assets/js/table.js",
+		"/C/Users/Administrator/Documents/project/nxManager/public/views/table.js",
+		"/C/Users/Administrator/Documents/project/nxManager/public/templates/row.html",
 		"/C/Users/Administrator/Documents/project/nxManager/public/templates/table.html",
 		"/C/Users/Administrator/Documents/project/nxManager/public/assets/js/template/handlebars.html",
 		"/C/Users/Administrator/Documents/project/nxManager/public/views/editor.js",
 		"/C/Users/Administrator/Documents/project/nxManager/public/assets/js/editors.js",
-		"/C/Users/Administrator/Documents/project/nxManager/public/templates/row.html",
 		"/C/Users/Administrator/Documents/project/nxManager/public/templates/editor.html",
 		"/C/Users/Administrator/Documents/project/nxManager/public/index.html",
 		"/C/Users/Administrator/Documents/project/nxManager/public/templates/layout.html",
 		"/C/Users/Administrator/Documents/project/nxManager/public/templates/navbar.html",
 		"/C/Users/Administrator/Documents/project/nxManager/public/templates/node.html",
 		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/Default (Windows).sublime-keymap",
-		"/C/Users/Administrator/Documents/project/nxManager/public/main.js",
 		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
 		"/C/Users/Administrator/Documents/project/nxManager/public/views/navbar.js",
 		"/C/Users/Administrator/Documents/project/nxManager/public/views/menu.js",
 		"/C/Users/Administrator/Documents/project/nxManager/public/views/layout.js",
-		"/C/Users/Administrator/Documents/project/nxManager/public/router.js",
-		"/C/Users/Administrator/Documents/project/nxManager/public/assets/js/contentLayout.js",
 		"/C/Users/Administrator/Documents/project/nxManager/public/assets/js/navbar.js",
 		"/C/Users/Administrator/Documents/project/nxManager/public/config.js",
 		"/home/zhaoqing/Workspace/github/nxManager/public/layout.js",
@@ -336,12 +304,7 @@
 		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/nginx-1.5.12/src/core/ngx_string.c",
 		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/nginx-1.5.12/src/core/ngx_sha1.h",
 		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/ngx_lua-0.9.7/t/StapThread.pm",
-		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/ngx_devel_kit-0.2.19/src/ndk_string.c",
-		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/nginx-1.5.12/src/http/ngx_http_parse.c",
-		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/nginx-1.5.12/src/http/modules/ngx_http_xslt_filter_module.c",
-		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/nginx-1.5.12/src/http/ngx_http_script.c",
-		"/E/WorkSpace/Fortinet/centralManagement/nginxd/dist/implementation/js/context/Administrators.js",
-		"/E/WorkSpace/Fortinet/centralManagement/nginxd/dist/implementation/js/libs/dependencies.js"
+		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/ngx_devel_kit-0.2.19/src/ndk_string.c"
 	],
 	"find":
 	{
@@ -362,6 +325,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"qiangzhaoqing",
 			"Backbone.Marionette.",
 			"'",
 			"',",
@@ -425,81 +389,83 @@
 	"groups":
 	[
 		{
-			"selected": 7,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "public/assets/js/contentLayout.js",
+					"file": "app.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 876,
+						"buffer_size": 1506,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								490,
-								490
+								708,
+								713
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 0.0,
-						"translation.y": 75.0,
+						"translation.x": -0.0,
+						"translation.y": 45.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "public/app.js",
+					"file": "routes/index.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 103,
+						"buffer_size": 152,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								152,
+								152
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "public/assets/js/router.js",
-					"semi_transient": false,
+					"file": "public/main.js",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 774,
+						"buffer_size": 967,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								687,
-								687
+								660,
+								660
 							]
 						],
 						"settings":
@@ -507,28 +473,28 @@
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.x": -0.0,
+						"translation.y": 90.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "public/router.js",
+					"file": "db/settings.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 806,
+						"buffer_size": 93,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								506,
-								516
+								93,
+								93
 							]
 						],
 						"settings":
@@ -537,64 +503,6 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "public/main.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1177,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								400,
-								400
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": -0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "public/assets/js/table.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 874,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								16,
-								858
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": -0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -602,20 +510,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "public/views/table.js",
+					"buffer": 4,
+					"file": "db/db.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1002,
+						"buffer_size": 250,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								533,
-								533
+								250,
+								250
 							]
 						],
 						"settings":
@@ -623,69 +531,11 @@
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": -0.0,
-						"translation.y": 45.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "public/templates/row.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 56,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								56,
-								56
-							]
-						],
-						"settings":
-						{
-							"is_xml": false,
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "public/templates/node.html",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 81,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"is_xml": false,
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -924,7 +774,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 214.0,
+	"side_bar_width": 392.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
