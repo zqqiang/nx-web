@@ -1,16 +1,12 @@
 require(
 	[
 		'backbone', 'handlebars', 'jquery', 'app', 'views/layout', 'views/navbar', 'views/menu', 'router',
-		'views/editor', 'views/table'
+		'views/editor', 'views/table', 'views/dummy'
 	],
-	function(Backbone, Handlebars, $, app, Layout, Navbar, Menu, Router,
-		Editor, Table) {
-		Backbone.Marionette.TemplateCache.prototype.compileTemplate = function(rawTemplate) {
-			// use Handlebars.js to compile the template
-			console.log(rawTemplate);
-			return Handlebars.compile(rawTemplate);
-		}
-
+	function(
+		Backbone, Handlebars, $, app, Layout, Navbar, Menu, Router,
+		Editor, Table, Dummy
+	) {
 		$(document).ready(function() {
 			app.start({
 				msg: "start up"
@@ -22,9 +18,9 @@ require(
 		var contextMap = {
 			"Editors": Editor,
 			"Table": Table,
-			"HighCharts": app.DummyView,
-			"3d": app.DummyView,
-			"other": app.DummyView,
+			"HighCharts": Dummy,
+			"3d": Dummy,
+			"other": Dummy,
 		};
 
 		app.navigateTo = function(context, options) {

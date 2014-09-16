@@ -1,7 +1,7 @@
-define(['app', 'marionette', 'text!templates/navbar.html'], function(app, Marionette, NavbarTpl) {
+define(['app', 'marionette', 'templates/compiled'], function(app, Marionette, JST) {
 
 	var Navbar = Marionette.ItemView.extend({
-		template: NavbarTpl,
+		template: JST.NavbarTemplate,
 	});
 
 	return Navbar;

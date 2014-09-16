@@ -1,10 +1,10 @@
 define(
-	['marionette', 'backbone', 'text!templates/row.html', 'text!templates/table.html'],
-	function(Marionette, Backbone, RowTpl, TableTpl) {
+	['marionette', 'backbone', 'templates/compiled'],
+	function(Marionette, Backbone, JST) {
 
 		// A Grid Row
 		var GridRow = Marionette.ItemView.extend({
-			template: RowTpl,
+			template: JST.RowTemplate,
 			tagName: "tr"
 		});
 
@@ -12,7 +12,7 @@ define(
 		var Table = Marionette.CompositeView.extend({
 			tagName: "table",
 			className: 'table table-bordered',
-			template: TableTpl,
+			template: JST.TableTemplate,
 			itemView: GridRow,
 
 			appendHtml: function(collectionView, itemView) {

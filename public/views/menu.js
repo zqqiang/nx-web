@@ -1,8 +1,7 @@
-define(['backbone', 'marionette', 'text!templates/node.html'], function(Backbone, Marionette,NodeTpl) {
+define(['backbone', 'marionette', 'templates/compiled'], function(Backbone, Marionette, JST) {
 
 	var TreeView = Marionette.CompositeView.extend({
-		// template: Handlebars.compile(NodeTpl),
-		template: NodeTpl,
+		template: JST.NodeTemplate,
 		tagName: "ul",
 		initialize: function() {
 			// grab the child collection from the parent model

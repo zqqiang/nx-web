@@ -1,6 +1,6 @@
-define(['marionette', 'backbone', 'underscore', 'text!templates/editor.html'], function(Marionette, Backbone, _, EditorTpl) {
+define(['marionette', 'backbone', 'underscore', 'templates/compiled'], function(Marionette, Backbone, _, JST) {
 	var Editor = Marionette.ItemView.extend({
-		template: EditorTpl,
+		template: JST.EditorTemplate,
 		initialize: function() {
 			var EditorsModel = Backbone.Model.extend({});
 

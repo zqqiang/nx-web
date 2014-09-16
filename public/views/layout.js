@@ -1,7 +1,7 @@
-define(['marionette', 'text!templates/layout.html'], function(Marionette, LayoutTpl) {
+define(['marionette', 'templates/compiled'], function(Marionette, JST) {
 
 	var Layout = Marionette.Layout.extend({
-		template: LayoutTpl,
+		template: JST.LayoutTemplate,
 		regions: {
 			menu: '#menu',
 			content: '#content'

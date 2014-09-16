@@ -14,6 +14,7 @@ define(['backbone', 'app', 'views/menu'], function(Backbone, app, Menu) {
 			// } else {
 			// $('#main-region').html('<div>Login Page</div>');
 			// }
+			app.navigateTo("other");
 		},
 		showEditors: function() {
 			app.navigateTo("Editors");
