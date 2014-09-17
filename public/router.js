@@ -14,8 +14,6 @@ define(
 			},
 			index: function() {
 				if (app.session.get('logged_in')) {
-					app.navbarRegion.show(new Navbar());
-
 					app.layout = new Layout();
 					app.mainRegion.show(app.layout);
 

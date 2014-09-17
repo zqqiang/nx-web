@@ -1,16 +1,30 @@
 define(['marionette', 'backbone', 'templates/compiled'], function(Marionette, Backbone, JST) {
-	var Login = Marionette.ItemView.extend({
-		template: JST.LoginTemplate,
-		initialize: function() {
-			var LoginModel = Backbone.Model.extend({});
+	var Item = Marionette.ItemView.extend({
+		template: JST.EditorTemplate,
+		className: 'form-group'
+	});
 
-			this.model = new LoginModel({
-				id: _.unique('editor-'),
+	var Login = Marionette.CollectionView.extend({
+		tagName: 'form',
+		itemView: Item,
+		initialize: function() {
+			var editors = [{
 				type: 'text',
-				label: 'UserName',
-				placeholder: 'Please enter username...'
+				label: 'Username'
+			}, {
+				type: 'text',
+				label: 'Password'
+			}];
+
+			var Editor = Backbone.Model.extend({});
+
+			var EditorCol = Backbone.Collection.extend({
+				model: Editor
 			});
+
+			this.collection = new EditorCol(editors);
 		}
 	});
+
 	return Login;
 });

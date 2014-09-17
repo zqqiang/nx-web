@@ -1,6 +1,7 @@
 define(['marionette', 'backbone', 'underscore', 'templates/compiled'], function(Marionette, Backbone, _, JST) {
 	var Editor = Marionette.ItemView.extend({
 		template: JST.EditorTemplate,
+		className: 'form-group'
 		initialize: function() {
 			var EditorsModel = Backbone.Model.extend({});
 

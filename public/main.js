@@ -34,6 +34,8 @@ require(
 				mainRegion: "#main-region",
 			});
 
+			app.navbarRegion.show(new Navbar());
+
 			app.session.checkAuth({
 				complete: function() {
 					Backbone.history.start();
