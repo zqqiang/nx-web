@@ -7,6 +7,7 @@ define(
 		'text!templates/layout.html',
 		'text!templates/node.html',
 		'text!templates/navbar.html',
+		'text!templates/login.html',
 	],
 	function(
 		Handlebars,
@@ -15,7 +16,8 @@ define(
 		EditorTpl,
 		LayoutTpl,
 		NodeTpl,
-		NavbarTpl
+		NavbarTpl,
+		LoginTpl
 	) {
 		return {
 			TableTemplate: Handlebars.compile(TableTpl),
@@ -24,6 +26,7 @@ define(
 			LayoutTemplate: Handlebars.compile(LayoutTpl),
 			NodeTemplate: Handlebars.compile(NodeTpl),
 			NavbarTemplate: Handlebars.compile(NavbarTpl),
+			LoginTemplate: Handlebars.compile(LoginTpl),
 		};
 	}
 );

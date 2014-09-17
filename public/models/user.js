@@ -1,5 +1,5 @@
-(function(app) {
-	app.userModel = Backbone.Model.extend({
+define(['backbone'], function(Backbone) {
+	var UserModel = Backbone.Model.extend({
 		defaults: {
 			id: 0,
 			username: '',
@@ -10,4 +10,5 @@
 			return '/User';
 		}
 	});
-})(Application);
+	return UserModel;
+});

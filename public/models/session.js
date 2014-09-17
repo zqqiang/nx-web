@@ -1,11 +1,11 @@
-(function(app) {
+define(['backbone', 'models/user'], function(Backbone, UserModel) {
 	var SessionModel = Backbone.Model.extend({
 		defaults: {
 			logged_in: false,
 			user_id: ''
 		},
 		initialize: function() {
-			this.user = new app.userModel();
+			this.user = new UserModel();
 		},
 		url: function() {
 			return '/auth';
@@ -33,5 +33,5 @@
 		}
 	});
 
-	app.session = new SessionModel();
-})(Application);
+	return SessionModel;
+});
