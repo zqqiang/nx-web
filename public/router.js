@@ -1,8 +1,8 @@
 define(
 	[
-		'backbone', 'app', 'views/menu', 'views/navbar', 'views/layout', 'views/login', 'views/panel'
+		'backbone', 'app', 'views/menu', 'views/navbar', 'views/layout', 'views/panel'
 	],
-	function(Backbone, app, Menu, Navbar, Layout, Login, Panel) {
+	function(Backbone, app, Menu, Navbar, Layout, Panel) {
 		var Router = Backbone.Router.extend({
 			routes: {
 				"": "index",

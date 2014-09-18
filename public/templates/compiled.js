@@ -7,7 +7,6 @@ define(
 		'text!templates/layout.html',
 		'text!templates/node.html',
 		'text!templates/navbar.html',
-		'text!templates/login.html',
 		'text!templates/panel.html',
 	],
 	function(
@@ -18,7 +17,6 @@ define(
 		LayoutTpl,
 		NodeTpl,
 		NavbarTpl,
-		LoginTpl,
 		PanelTpl
 	) {
 		return {
@@ -28,7 +26,6 @@ define(
 			LayoutTemplate: Handlebars.compile(LayoutTpl),
 			NodeTemplate: Handlebars.compile(NodeTpl),
 			NavbarTemplate: Handlebars.compile(NavbarTpl),
-			LoginTemplate: Handlebars.compile(LoginTpl),
 			PanelTemplate: Handlebars.compile(PanelTpl),
 		};
 	}
