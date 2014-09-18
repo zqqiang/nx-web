@@ -1,8 +1,8 @@
 define(
 	[
-		'backbone', 'app', 'views/menu', 'views/navbar', 'views/layout', 'views/login'
+		'backbone', 'app', 'views/menu', 'views/navbar', 'views/layout', 'views/login', 'views/panel'
 	],
-	function(Backbone, app, Menu, Navbar, Layout, Login) {
+	function(Backbone, app, Menu, Navbar, Layout, Login, Panel) {
 		var Router = Backbone.Router.extend({
 			routes: {
 				"": "index",
@@ -20,8 +20,7 @@ define(
 					app.menu = new Menu();
 					app.layout.menu.show(app.menu);
 				} else {
-					app.login = new Login();
-					app.mainRegion.show(app.login);
+					app.mainRegion.show(new Panel());
 				}
 			},
 			showEditors: function() {
