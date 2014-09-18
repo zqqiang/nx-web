@@ -1,10 +1,13 @@
-define(['marionette', 'handlebars', 'templates/compiled'], function(Marionette, Handlebars, JST) {
+define(['backbone', 'marionette', 'handlebars', 'templates/compiled'], function(Backbone, Marionette, Handlebars, JST) {
 	var PanelHeading = Marionette.ItemView.extend({
-		// template: Handlebars.compile('<strong>{{}}</strong>'),
-		template: '<strong>Hello</strong>',
+		template: Handlebars.compile('<strong>{{header}}</strong>'),
 		tagName: 'h2',
-		initialize: function() {
-			console.log('panel heading is start!');
+		initialize: function(options) {
+			var Header = Backbone.Model.extend({});
+
+			this.model = new Header({
+				header: options.header
+			});
 		},
 	});
 
@@ -17,7 +20,12 @@ define(['marionette', 'handlebars', 'templates/compiled'], function(Marionette, 
 			footer: '#footer',
 		},
 		initialize: function(options) {
-
+			this.header = options.heading;
+		},
+		onShow: function() {
+			this.heading.show(new PanelHeading({
+				header: this.header,
+			}));
 		},
 	});
 

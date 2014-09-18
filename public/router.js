@@ -20,7 +20,9 @@ define(
 					app.menu = new Menu();
 					app.layout.menu.show(app.menu);
 				} else {
-					app.mainRegion.show(new Panel());
+					app.mainRegion.show(new Panel({
+						heading: 'Login'
+					}));
 				}
 			},
 			showEditors: function() {
