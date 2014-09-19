@@ -21,7 +21,30 @@ define(
 					app.layout.menu.show(app.menu);
 				} else {
 					app.mainRegion.show(new Panel({
-						heading: 'Login'
+						heading: 'Login',
+						body: [{
+							id: _.uniqueId('editor-'),
+							type: 'text',
+							name: 'username',
+							label: 'Username',
+							placeholder: 'Enter username',
+							help: 'Please enter your username...',
+							layout: {
+								label: 'col-md-3',
+								field: 'col-md-9',
+							}
+						}, {
+							id: _.uniqueId('editor-'),
+							type: 'password',
+							name: 'password',
+							label: 'Password',
+							placeholder: 'Enter password',
+							help: 'Please enter your password...',
+							layout: {
+								label: 'col-md-3',
+								field: 'col-md-9',
+							}
+						}]
 					}));
 				}
 			},
