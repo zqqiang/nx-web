@@ -44,6 +44,12 @@ define(
 								label: 'col-md-3',
 								field: 'col-md-9',
 							}
+						}],
+						footerBtn: [{
+							icon: 'fa fa-dot-circle-o',
+							label: 'Submit',
+							btnClass: 'btn btn-sm btn-primary',
+							btnType: 'submit',
 						}]
 					}));
 				}

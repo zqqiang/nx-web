@@ -29,9 +29,29 @@ define(
 			}
 		});
 
-		// var Footer = Marionette.CollectionView.extend({
-		// 	itemView: 
-		// });
+		var ButtonView = Marionette.ItemView.extend({
+			template: Handlebars.compile('<i class="{{icon}}"></i> {{label}}'),
+			tagName: 'button',
+			initialize: function(options) {
+				this.btnClass = options.model.get('btnClass');
+				this.btnType = options.model.get('btnType');
+			},
+			onShow: function() {
+				this.$el.attr('type', this.btnType);
+				this.$el.attr('class', this.btnClass);
+			}
+		});
+
+		var Footer = Marionette.CollectionView.extend({
+			itemView: ButtonView,
+			initialize: function(options) {
+				var Model = Backbone.Model.extend({});
+				var Col = Backbone.Collection.extend({
+					model: Model,
+				});
+				this.collection = new Col(options);
+			}
+		});
 
 		var Panel = Marionette.Layout.extend({
 			template: JST.PanelTemplate,
@@ -44,12 +64,14 @@ define(
 			initialize: function(options) {
 				this.header = options.heading;
 				this.bodyEditors = options.body;
+				this.footerBtn = options.footerBtn;
 			},
 			onShow: function() {
 				this.heading.show(new PanelHeading({
 					header: this.header,
 				}));
 				this.body.show(new Body(this.bodyEditors));
+				this.footer.show(new Footer(this.footerBtn));
 			},
 		});
 
