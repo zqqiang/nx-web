@@ -30,16 +30,22 @@ define(
 		});
 
 		var ButtonView = Marionette.ItemView.extend({
-			template: Handlebars.compile('<i class="{{icon}}"></i> {{label}}'),
+			template: Handlebars.compile('<i class="click {{icon}}"></i> {{label}}'),
 			tagName: 'button',
 			initialize: function(options) {
 				this.btnClass = options.model.get('btnClass');
 				this.btnType = options.model.get('btnType');
 			},
+			events: {
+				'click': 'clickButton',
+			},
 			onShow: function() {
 				this.$el.attr('type', this.btnType);
 				this.$el.attr('class', this.btnClass);
-			}
+			},
+			clickButton: function() {
+				console.log('button click');
+			},
 		});
 
 		var Footer = Marionette.CollectionView.extend({

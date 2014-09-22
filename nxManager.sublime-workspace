@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"cli",
+				"clickButton"
+			],
+			[
 				"footer",
 				"footerBtn"
 			],
@@ -123,7 +127,7 @@
 			"file": "public/views/panel.js",
 			"settings":
 			{
-				"buffer_size": 2027,
+				"buffer_size": 2149,
 				"line_ending": "Unix"
 			}
 		},
@@ -450,8 +454,8 @@
 						"selection":
 						[
 							[
-								1239,
-								1239
+								1380,
+								1380
 							]
 						],
 						"settings":
@@ -460,7 +464,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 216.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -472,15 +476,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2027,
+						"buffer_size": 2149,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								688,
-								688
+								1164,
+								1164
 							]
 						],
 						"settings":
@@ -488,8 +492,8 @@
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.x": -0.0,
+						"translation.y": 216.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
