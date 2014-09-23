@@ -119,7 +119,7 @@
 			"file": "public/router.js",
 			"settings":
 			{
-				"buffer_size": 1757,
+				"buffer_size": 1778,
 				"line_ending": "Unix"
 			}
 		},
@@ -127,7 +127,7 @@
 			"file": "public/views/panel.js",
 			"settings":
 			{
-				"buffer_size": 2149,
+				"buffer_size": 2225,
 				"line_ending": "Unix"
 			}
 		},
@@ -361,7 +361,7 @@
 	],
 	"find":
 	{
-		"height": 35.0
+		"height": 26.0
 	},
 	"find_in_files":
 	{
@@ -447,15 +447,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1757,
+						"buffer_size": 1778,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1380,
-								1380
+								1264,
+								1264
 							]
 						],
 						"settings":
@@ -476,15 +476,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2149,
+						"buffer_size": 2225,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1164,
-								1164
+								2219,
+								2219
 							]
 						],
 						"settings":
@@ -492,8 +492,8 @@
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": -0.0,
-						"translation.y": 216.0,
+						"translation.x": 0.0,
+						"translation.y": 648.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,

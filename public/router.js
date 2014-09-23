@@ -46,6 +46,7 @@ define(
 							}
 						}],
 						footerBtn: [{
+							id: 'submit',
 							icon: 'fa fa-dot-circle-o',
 							label: 'Submit',
 							btnClass: 'btn btn-sm btn-primary',

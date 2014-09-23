@@ -26,25 +26,21 @@ define(
 					model: Model,
 				});
 				this.collection = new Col(options);
-			}
+			},
 		});
 
 		var ButtonView = Marionette.ItemView.extend({
-			template: Handlebars.compile('<i class="click {{icon}}"></i> {{label}}'),
+			template: Handlebars.compile('<i class="{{icon}}"></i> {{label}}'),
 			tagName: 'button',
 			initialize: function(options) {
 				this.btnClass = options.model.get('btnClass');
 				this.btnType = options.model.get('btnType');
-			},
-			events: {
-				'click': 'clickButton',
+				this.id = options.model.get('id');
 			},
 			onShow: function() {
 				this.$el.attr('type', this.btnType);
 				this.$el.attr('class', this.btnClass);
-			},
-			clickButton: function() {
-				console.log('button click');
+				this.$el.attr('id', this.id);
 			},
 		});
 
@@ -67,6 +63,9 @@ define(
 				body: '#body',
 				footer: '#footer',
 			},
+			events: {
+				'click #submit': 'onSubmit',
+			},
 			initialize: function(options) {
 				this.header = options.heading;
 				this.bodyEditors = options.body;
@@ -79,6 +78,9 @@ define(
 				this.body.show(new Body(this.bodyEditors));
 				this.footer.show(new Footer(this.footerBtn));
 			},
+			onSubmit: function() {
+				console.log(this.body.currentView);
+			}
 		});
 
 		return Panel;
