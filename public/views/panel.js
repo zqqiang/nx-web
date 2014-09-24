@@ -1,9 +1,9 @@
 define(
 	[
-		'backbone', 'marionette', 'handlebars', 'templates/compiled',
+		'backbone', 'marionette', 'underscore', 'handlebars', 'templates/compiled',
 		'views/editor'
 	],
-	function(Backbone, Marionette, Handlebars, JST, Editor) {
+	function(Backbone, Marionette, _, Handlebars, JST, Editor) {
 		var PanelHeading = Marionette.ItemView.extend({
 			template: Handlebars.compile('<strong>{{header}}</strong>'),
 			tagName: 'h2',
@@ -26,6 +26,13 @@ define(
 					model: Model,
 				});
 				this.collection = new Col(options);
+			},
+			getValues: function() {
+				var formData = {};
+				this.children.each(function(view) {
+					formData[view.model.get('name')] = view.getValue();
+				});
+				return formData;
 			},
 		});
 
@@ -79,7 +86,8 @@ define(
 				this.footer.show(new Footer(this.footerBtn));
 			},
 			onSubmit: function() {
-				console.log(this.body.currentView);
+				var values = this.body.currentView.getValues();
+				console.log(values);
 			}
 		});
 
