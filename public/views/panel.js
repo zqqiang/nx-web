@@ -1,9 +1,9 @@
 define(
 	[
 		'backbone', 'marionette', 'underscore', 'handlebars', 'templates/compiled',
-		'views/editor'
+		'views/editor', 'app'
 	],
-	function(Backbone, Marionette, _, Handlebars, JST, Editor) {
+	function(Backbone, Marionette, _, Handlebars, JST, Editor, app) {
 		var PanelHeading = Marionette.ItemView.extend({
 			template: Handlebars.compile('<strong>{{header}}</strong>'),
 			tagName: 'h2',
@@ -77,6 +77,16 @@ define(
 				this.header = options.heading;
 				this.bodyEditors = options.body;
 				this.footerBtn = options.footerBtn;
+
+				this.setupUser();
+			},
+			setupUser: function() {
+				var UserModel = Backbone.Model.extend({});
+				var UserCollection = Backbone.Collection.extend({
+					model: UserModel,
+					url: '/Login',
+				});
+				this.users = new UserCollection();
 			},
 			onShow: function() {
 				this.heading.show(new PanelHeading({
@@ -87,7 +97,13 @@ define(
 			},
 			onSubmit: function() {
 				var values = this.body.currentView.getValues();
-				console.log(values);
+				this.users.create(values, {
+					success: function(model, response, options) {
+						app.session.updateSessionUser({
+							logged_in: true,
+						});
+					}
+				});
 			}
 		});
 

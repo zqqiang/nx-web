@@ -6,6 +6,7 @@ define(
 		var Router = Backbone.Router.extend({
 			routes: {
 				"": "index",
+				"index": "index",
 				"Editors": "showEditors",
 				"Table": "showTable",
 				"HighCharts": "showHighCharts",
