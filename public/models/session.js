@@ -11,8 +11,7 @@ define(['backbone', 'models/user'], function(Backbone, UserModel) {
 			return '/auth';
 		},
 		updateSessionUser: function(userData) {
-			// this.user.set(_.pick(userData, _.keys(this.user.defaults)));
-			console.log(this.get('logged_in'));
+			this.set(userData);
 		},
 		checkAuth: function(callback) {
 			var self = this;

@@ -103,7 +103,6 @@ define(
 							logged_in: true,
 						});
 						app.navigateTo('');
-						console.log(app.session.get('logged_in'));
 					}
 				});
 			}

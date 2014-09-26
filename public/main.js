@@ -1,11 +1,11 @@
 require(
 	[
 		'backbone', 'handlebars', 'jquery', 'app', 'views/layout', 'views/navbar', 'views/menu', 'router',
-		'views/editor', 'views/table', 'views/dummy', 'models/session', 'views/panel'
+		'views/table', 'views/dummy', 'models/session', 'views/panel'
 	],
 	function(
 		Backbone, Handlebars, $, app, Layout, Navbar, Menu, Router,
-		Editor, Table, Dummy, SessionModel, Panel
+		Table, Dummy, SessionModel, Panel
 	) {
 		$(document).ready(function() {
 			app.start({
@@ -14,7 +14,7 @@ require(
 		});
 
 		var contextMap = {
-			"Editors": Editor,
+			"Editors": Dummy,
 			"Table": Table,
 			"HighCharts": Dummy,
 			"3d": Dummy,
@@ -56,7 +56,6 @@ require(
 		};
 
 		app.navigateTo = function(context, options) {
-			console.log(app.session.get('logged_in'));
 			if (app.session.get('logged_in')) {
 				if ('' === context) {
 					app.layout = new Layout();
