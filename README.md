@@ -69,3 +69,10 @@ FAQ
    if you use sudo apt-get install nodejs to install you node.js, you need use "sudo ln -s /usr/bin/nodejs /usr/bin/node" to link node with you nodejs.
 
 [Back to TOC](#table-of-contents)
+
+TODO List
+=========
+
+* Add cookies support for login user.
+
+[Back to TOC](#table-of-contents)
