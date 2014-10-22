@@ -5,17 +5,14 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var routes = require('./routes');
-
 var users = require('./routes/users');
 var auth = require('./routes/auth');
 var editors = require('./routes/editors');
 var login = require('./routes/login');
 
-var app = express();
+var android = require('./routes/android');
 
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
+var app = express();
 
 app.use(favicon());
 app.use(logger('dev'));
@@ -28,6 +25,9 @@ app.use('/users', users);
 app.use('/auth', auth);
 app.use('/Editors', editors);
 app.use('/Login', login);
+
+//android routes
+app.use('/Android', android);
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
