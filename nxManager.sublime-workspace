@@ -4,68 +4,12 @@
 		"selected_items":
 		[
 			[
-				"user",
-				"userData"
+				"Row",
+				"RowTpl"
 			],
 			[
-				"log",
-				"logged_in"
-			],
-			[
-				"nava",
-				"navigateTo"
-			],
-			[
-				"mode",
-				"Model"
-			],
-			[
-				"form",
-				"formData"
-			],
-			[
-				"from",
-				"formData"
-			],
-			[
-				"cli",
-				"clickButton"
-			],
-			[
-				"footer",
-				"footerBtn"
-			],
-			[
-				"mar",
-				"Marionette"
-			],
-			[
-				"Panel",
-				"Panel"
-			],
-			[
-				"Pan",
-				"PanelHeading"
-			],
-			[
-				"edito",
-				"editor"
-			],
-			[
-				"Ite",
-				"ItemView"
-			],
-			[
-				"Login",
-				"LoginModel"
-			],
-			[
-				"User",
-				"UserModel"
-			],
-			[
-				"back",
-				"Backbone"
+				"menu",
+				"Menu"
 			],
 			[
 				"json",
@@ -140,66 +84,34 @@
 	"buffers":
 	[
 		{
-			"file": "public/views/menu.js",
-			"settings":
-			{
-				"buffer_size": 1334,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/router.js",
-			"settings":
-			{
-				"buffer_size": 852,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "README.md",
-			"settings":
-			{
-				"buffer_size": 1423,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "app.js",
 			"settings":
 			{
-				"buffer_size": 1514,
-				"line_ending": "Unix"
+				"buffer_size": 1500,
+				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "routes/index.js",
+			"file": "routes/android.js",
 			"settings":
 			{
-				"buffer_size": 76,
-				"line_ending": "Unix"
+				"buffer_size": 603,
+				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "public/main.js",
+			"file": "db/settings.js",
 			"settings":
 			{
-				"buffer_size": 2069,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/models/session.js",
-			"settings":
-			{
-				"buffer_size": 759,
-				"line_ending": "Unix"
+				"buffer_size": 93,
+				"line_ending": "Windows"
 			}
 		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 54.0,
+		"height": 58.0,
 		"selected_items":
 		[
 			[
@@ -223,7 +135,7 @@
 				"Package Control: Remove Package"
 			]
 		],
-		"width": 575.0
+		"width": 512.0
 	},
 	"console":
 	{
@@ -243,63 +155,61 @@
 	},
 	"expanded_folders":
 	[
-		"/home/zhaoqing/Workspace/github/nxManager",
-		"/home/zhaoqing/Workspace/github/nxManager/bin",
-		"/home/zhaoqing/Workspace/github/nxManager/public",
-		"/home/zhaoqing/Workspace/github/nxManager/public/assets",
-		"/home/zhaoqing/Workspace/github/nxManager/public/assets/lib",
-		"/home/zhaoqing/Workspace/github/nxManager/public/models",
-		"/home/zhaoqing/Workspace/github/nxManager/public/templates",
-		"/home/zhaoqing/Workspace/github/nxManager/public/views",
-		"/home/zhaoqing/Workspace/github/nxManager/routes"
+		"/C/Users/Administrator/Documents/project/nxManager",
+		"/C/Users/Administrator/Documents/project/nxManager/db",
+		"/C/Users/Administrator/Documents/project/nxManager/routes"
 	],
 	"file_history":
 	[
-		"/home/zhaoqing/Workspace/github/nxManager/routes/login.js",
-		"/home/zhaoqing/Workspace/github/nxManager/public/models/user.js",
-		"/home/zhaoqing/Workspace/github/nxManager/public/models/session.js",
-		"/home/zhaoqing/Workspace/github/nxManager/public/views/panel.js",
-		"/home/zhaoqing/Workspace/github/nxManager/public/router.js",
-		"/home/zhaoqing/Workspace/github/nxManager/public/views/editor.js",
-		"/home/zhaoqing/Workspace/github/nxManager/public/views/form.js",
-		"/home/zhaoqing/Workspace/github/nxManager/public/main.js",
-		"/home/zhaoqing/Workspace/github/nxManager/public/views/menu.js",
-		"/home/zhaoqing/Workspace/github/nxManager/app.js",
-		"/home/zhaoqing/Workspace/github/nxManager/public/templates/compiled.js",
-		"/home/zhaoqing/Workspace/github/nxManager/public/templates/layout.html",
-		"/home/zhaoqing/Workspace/github/nxManager/public/templates/panel.html",
-		"/home/zhaoqing/Workspace/github/nxManager/public/templates/editor.html",
-		"/home/zhaoqing/Workspace/github/nxManager/public/views/table.js",
-		"/home/zhaoqing/Workspace/github/nxManager/routes/auth.js",
-		"/home/zhaoqing/Workspace/github/nxManager/public/index.html",
-		"/home/zhaoqing/Workspace/github/nxManager/public/views/login.js",
-		"/home/zhaoqing/Workspace/github/nxManager/public/views/layout.js",
-		"/home/zhaoqing/Workspace/github/nxManager/public/assets/lib/backbone.marionette.js",
-		"/home/zhaoqing/Workspace/github/nxManager/public/templates/login.html",
-		"/home/zhaoqing/Workspace/github/nxManager/public/views/dummy.js",
-		"/home/zhaoqing/Workspace/github/nxManager/public/templates/dummy.html",
-		"/home/zhaoqing/Workspace/github/nxManager/public/templates/table.html",
-		"/home/zhaoqing/Workspace/github/nxManager/public/templates/row.html",
-		"/home/zhaoqing/Workspace/github/nxManager/public/templates/node.html",
-		"/home/zhaoqing/Workspace/github/nxManager/public/templates/navbar.html",
-		"/home/zhaoqing/Workspace/github/nxManager/public/views/navbar.js",
-		"/home/zhaoqing/Workspace/github/nxManager/public/app.js",
-		"/home/zhaoqing/Workspace/github/nxManager/public/config.js",
-		"/home/zhaoqing/Workspace/github/nxManager/public/assets/js/template/handlebars.html",
-		"/home/zhaoqing/Workspace/github/nxManager/public/assets/js/menu.js",
-		"/home/zhaoqing/Workspace/github/nxManager/public/views/Navbar.js",
+		"/C/Users/Administrator/Documents/project/nxManager/db/settings.js",
+		"/C/Users/Administrator/Documents/project/nxManager/db/db.js",
+		"/C/Users/Administrator/Documents/project/nxManager/routes/index.js",
+		"/C/Users/Administrator/Documents/project/nxManager/app.js",
+		"/C/Users/Administrator/Documents/project/nxManager/package.json",
+		"/C/Users/Administrator/Documents/project/nxManager/public/assets/js/contentLayout.js",
+		"/C/Users/Administrator/Documents/project/nxManager/public/app.js",
+		"/C/Users/Administrator/Documents/project/nxManager/public/assets/js/router.js",
+		"/C/Users/Administrator/Documents/project/nxManager/public/router.js",
+		"/C/Users/Administrator/Documents/project/nxManager/public/main.js",
+		"/C/Users/Administrator/Documents/project/nxManager/public/assets/js/table.js",
+		"/C/Users/Administrator/Documents/project/nxManager/public/views/table.js",
+		"/C/Users/Administrator/Documents/project/nxManager/public/templates/row.html",
+		"/C/Users/Administrator/Documents/project/nxManager/public/templates/table.html",
+		"/C/Users/Administrator/Documents/project/nxManager/public/assets/js/template/handlebars.html",
+		"/C/Users/Administrator/Documents/project/nxManager/public/views/editor.js",
+		"/C/Users/Administrator/Documents/project/nxManager/public/assets/js/editors.js",
+		"/C/Users/Administrator/Documents/project/nxManager/public/templates/editor.html",
+		"/C/Users/Administrator/Documents/project/nxManager/public/index.html",
+		"/C/Users/Administrator/Documents/project/nxManager/public/templates/layout.html",
+		"/C/Users/Administrator/Documents/project/nxManager/public/templates/navbar.html",
+		"/C/Users/Administrator/Documents/project/nxManager/public/templates/node.html",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/Default (Windows).sublime-keymap",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
+		"/C/Users/Administrator/Documents/project/nxManager/public/views/navbar.js",
+		"/C/Users/Administrator/Documents/project/nxManager/public/views/menu.js",
+		"/C/Users/Administrator/Documents/project/nxManager/public/views/layout.js",
+		"/C/Users/Administrator/Documents/project/nxManager/public/assets/js/navbar.js",
+		"/C/Users/Administrator/Documents/project/nxManager/public/config.js",
 		"/home/zhaoqing/Workspace/github/nxManager/public/layout.js",
-		"/home/zhaoqing/Workspace/github/nxManager/public/Navbar.js",
-		"/home/zhaoqing/Workspace/github/nxManager/public/assets/js/navbar.js",
 		"/home/zhaoqing/Workspace/github/nxManager/public/assets/js/contentLayout.js",
+		"/home/zhaoqing/Workspace/github/nxManager/public/config.js",
+		"/home/zhaoqing/Workspace/github/nxManager/public/main.js",
+		"/home/zhaoqing/Workspace/github/nxManager/public/index.html",
+		"/home/zhaoqing/Workspace/github/nxManager/public/app.js",
 		"/home/zhaoqing/Workspace/github/nxManager/public/assets/js/main.js",
 		"/home/zhaoqing/Workspace/github/nxManager/views/index.html",
 		"/home/zhaoqing/Workspace/github/nxManager/public/contentLayout.js",
+		"/home/zhaoqing/Workspace/github/nxManager/app.js",
+		"/home/zhaoqing/Workspace/github/nxManager/public/models/user.js",
+		"/home/zhaoqing/Workspace/github/nxManager/public/models/session.js",
+		"/home/zhaoqing/Workspace/github/nxManager/routes/auth.js",
 		"/home/zhaoqing/Workspace/github/nxManager/public/assets/js/router.js",
 		"/home/zhaoqing/Workspace/github/nxManager/package.json",
 		"/home/zhaoqing/Workspace/github/nxManager/public/assets/js/content.js",
 		"/home/zhaoqing/Workspace/github/nxManager/public/assets/js/table.js",
 		"/home/zhaoqing/Workspace/github/nxManager/public/assets/less/_custom.less",
+		"/home/zhaoqing/Workspace/github/nxManager/public/assets/js/navbar.js",
+		"/home/zhaoqing/Workspace/github/nxManager/public/assets/js/template/handlebars.html",
 		"/home/zhaoqing/Workspace/github/nxManager/README.md",
 		"/home/zhaoqing/.config/sublime-text-3/Packages/Markdown Preview/MarkdownPreview.sublime-settings",
 		"/E/WorkSpace/Fortinet/GitHub/nxManager/public/assets/js/menu.js",
@@ -378,15 +288,11 @@
 		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/nginx-1.5.12/src/http/ngx_http_core_module.c",
 		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/array-var-nginx-module-0.03/src/ngx_http_array_var_module.c",
 		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/echo-nginx-module-0.53/src/ngx_http_echo_subrequest.c",
-		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/nginx-1.5.12/src/core/ngx_string.h",
-		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/nginx-1.5.12/src/core/ngx_string.c",
-		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/nginx-1.5.12/src/core/ngx_sha1.h",
-		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/ngx_lua-0.9.7/t/StapThread.pm",
-		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/ngx_devel_kit-0.2.19/src/ndk_string.c"
+		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/nginx-1.5.12/src/core/ngx_string.h"
 	],
 	"find":
 	{
-		"height": 35.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -403,7 +309,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"app.DummyView",
+			"qiangzhaoqing",
+			"Backbone.Marionette.",
+			"'",
+			"',",
+			",",
+			"'",
 			"Application",
 			"lib",
 			"GETURL(",
@@ -452,7 +363,6 @@
 		"regex": false,
 		"replace_history":
 		[
-			""
 		],
 		"reverse": false,
 		"show_context": true,
@@ -463,110 +373,24 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "public/views/menu.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1334,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								796,
-								796
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": -0.0,
-						"translation.y": 54.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "public/router.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 852,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								789,
-								789
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "README.md",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1423,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1423,
-								1423
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 540.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
 					"file": "app.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1514,
+						"buffer_size": 1500,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								747,
-								747
+								423,
+								423
 							]
 						],
 						"settings":
@@ -575,20 +399,49 @@
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
+						"translation.x": -0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "routes/android.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 603,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								390,
+								390
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "routes/index.js",
-					"semi_transient": false,
+					"buffer": 2,
+					"file": "db/settings.js",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 76,
+						"buffer_size": 93,
 						"regions":
 						{
 						},
@@ -601,72 +454,13 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "public/main.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2069,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								558,
-								558
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 864.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "public/models/session.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 759,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								550,
-								550
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -674,7 +468,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 26.0
+		"height": 25.0
 	},
 	"input":
 	{
@@ -710,7 +504,7 @@
 	"project": "nxManager.sublime-project",
 	"replace":
 	{
-		"height": 48.0
+		"height": 46.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -905,7 +699,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 367.0,
+	"side_bar_width": 392.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
