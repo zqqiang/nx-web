@@ -21,20 +21,25 @@ router.get('/', function(req, res) {
 
 router.post('/', function(req, res) {
 	console.log('body: ', req.body);
-	console.log('body.name: ', req.body.name);
 
-	var kitty = new Cat(req.body);
-	kitty.save(function(err) {
-		if (err) {
-			console.error(err);
-		} else {
-			Cat.find({
-				name: req.body.name
-			}, function(err, cat) {
-				if (err) console.error(err);
-				res.json(cat);
-			});
-		}
+	Cat.create(req.body, function(err, cat) {
+		if (err) console.error(err);
+		res.json(cat);
+	});
+});
+
+router.put('/:id', function(req, res) {
+	console.log('body: ', req.body);
+	console.log('id: ', req.params.id);
+
+	Cat.findOneAndUpdate({
+		_id: req.params.id
+	}, req.body, {}, function(err) {
+		if (err) console.error(err);
+		// req.json(cat);
+		req.json({
+			message: 'success',
+		});
 	});
 });
 
