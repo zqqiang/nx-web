@@ -1,8 +1,6 @@
 var express = require('express');
+var mongoose = require('../db/db');
 var router = express.Router();
-
-var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/test');
 
 router.use(function(req, res, next) {
 	console.log(req.originalUrl);
@@ -10,7 +8,7 @@ router.use(function(req, res, next) {
 	next();
 });
 
-router.get('/', function(req, res) {
+router.use('/', function(req, res) {
 	var Cat = mongoose.model('Cat', {
 		name: String
 	});
@@ -23,6 +21,9 @@ router.get('/', function(req, res) {
 		if (err) {
 			console.log(err);
 		} else {
+			res.json({
+				message: 'insert kitty success!'
+			});
 			console.log('suceess');
 		}
 	});
