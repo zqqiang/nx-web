@@ -1,7 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
-var mongodb = require('../db/db');
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/test');
 
 router.use(function(req, res, next) {
 	console.log(req.originalUrl);
@@ -10,26 +11,20 @@ router.use(function(req, res, next) {
 });
 
 router.get('/', function(req, res) {
-	mongodb.open(function(err, db) {
+	var Cat = mongoose.model('Cat', {
+		name: String
+	});
+
+	var kitty = new Cat({
+		name: 'Zildjian'
+	});
+
+	kitty.save(function(err) {
 		if (err) {
-			console.log('open mongodb failed!');
-			res.json({
-				error: 'open mongodb failed!'
-			});
-			return;
+			console.log(err);
+		} else {
+			console.log('suceess');
 		}
-
-		var collection = db.collection('Android');
-
-		collection.find({}).toArray(function(err, docs) {
-			if (err) {
-				res.json({
-					error: 'collection find failed!'
-				});
-			} else {
-				res.json(docs);
-			}
-		});
 	});
 });
 
