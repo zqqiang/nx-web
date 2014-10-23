@@ -13,11 +13,14 @@ router.get('/', function(req, res) {
 	mongodb.open(function(err, db) {
 		if (err) {
 			console.log('open mongodb failed!');
+			res.json({
+				error: 'open mongodb failed!'
+			});
 			return;
 		}
 
 		var collection = db.collection('Android');
-		
+
 		collection.find({}).toArray(function(err, docs) {
 			if (err) {
 				res.json({
