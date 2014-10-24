@@ -143,22 +143,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "app.js",
-			"settings":
-			{
-				"buffer_size": 1500,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "routes/android.js",
-			"settings":
-			{
-				"buffer_size": 807,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -208,15 +192,18 @@
 	"expanded_folders":
 	[
 		"/home/zhaoqing/Workspace/github/nxManager",
-		"/home/zhaoqing/Workspace/github/nxManager/db"
+		"/home/zhaoqing/Workspace/github/nxManager/model"
 	],
 	"file_history":
 	[
-		"/home/zhaoqing/Workspace/github/nxManager/db/db.js",
-		"/home/zhaoqing/Workspace/github/nxManager/db/settings.js",
-		"/home/zhaoqing/Workspace/github/nxManager/bin/www",
 		"/home/zhaoqing/Workspace/github/nxManager/app.js",
 		"/home/zhaoqing/Workspace/github/nxManager/routes/android.js",
+		"/home/zhaoqing/Workspace/github/nxManager/model/models.js",
+		"/home/zhaoqing/Workspace/github/nxManager/model/cat.js",
+		"/home/zhaoqing/Workspace/github/nxManager/bin/www",
+		"/home/zhaoqing/Workspace/github/nxManager/bin/mobile",
+		"/home/zhaoqing/Workspace/github/nxManager/db/db.js",
+		"/home/zhaoqing/Workspace/github/nxManager/db/settings.js",
 		"/home/zhaoqing/Workspace/github/nxManager/public/models/session.js",
 		"/home/zhaoqing/Workspace/github/nxManager/public/main.js",
 		"/home/zhaoqing/Workspace/github/nxManager/routes/index.js",
@@ -336,14 +323,11 @@
 		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/srcache-nginx-module-0.26/t/access.t",
 		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/waf_custom_access_policy.c",
 		"/E/WorkSpace/Fortinet/centralManagement/fwb_modules/sys_confadmin.c",
-		"/E/WorkSpace/Fortinet/centralManagement/nginxd/modules/ngx_http_cm_module/ngx_ncfg_modules/administrators.c",
-		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/nginx-1.5.12/src/http/ngx_http_core_module.c",
-		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/array-var-nginx-module-0.03/src/ngx_http_array_var_module.c",
-		"/E/WorkSpace/Fortinet/centralManagement/ngx_openresty-1.5.12.1/bundle/echo-nginx-module-0.53/src/ngx_http_echo_subrequest.c"
+		"/E/WorkSpace/Fortinet/centralManagement/nginxd/modules/ngx_http_cm_module/ngx_ncfg_modules/administrators.c"
 	],
 	"find":
 	{
-		"height": 35.0
+		"height": 26.0
 	},
 	"find_in_files":
 	{
@@ -360,6 +344,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"module",
 			"app.DummyView",
 			"Application",
 			"lib",
@@ -420,68 +405,8 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "app.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1500,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								789,
-								789
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "routes/android.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 807,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								682,
-								682
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],

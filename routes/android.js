@@ -1,10 +1,7 @@
 var express = require('express');
 var mongoose = require('../db/db');
+var Models = require('../model/models');
 var router = express.Router();
-
-var Cat = mongoose.model('Cat', {
-	name: String
-});
 
 router.use(function(req, res, next) {
 	console.log('originalUrl: ', req.originalUrl);
@@ -12,33 +9,49 @@ router.use(function(req, res, next) {
 	next();
 });
 
-router.get('/', function(req, res) {
-	Cat.find(function(err, cats) {
+router.get('/:model', function(req, res) {
+	console.log('model: ', req.params.model);
+
+	var Model = Models[req.params.model];
+	Model.find(function(err, cats) {
 		if (err) console.error(err);
 		res.json(cats);
 	});
 });
 
-router.post('/', function(req, res) {
+router.post('/:model', function(req, res) {
 	console.log('body: ', req.body);
 
-	Cat.create(req.body, function(err, cat) {
+	var Model = Models[req.params.model];
+	Model.create(req.body, function(err, model) {
 		if (err) console.error(err);
-		res.json(cat);
+		res.json(model);
 	});
 });
 
-router.put('/:id', function(req, res) {
+router.put('/:model/:id', function(req, res) {
 	console.log('body: ', req.body);
 	console.log('id: ', req.params.id);
 
-	Cat.findOneAndUpdate({
+	var Model = Models[req.params.model];
+	Model.findOneAndUpdate({
 		_id: req.params.id
-	}, req.body, {}, function(err) {
+	}, req.body, function(err, model) {
 		if (err) console.error(err);
-		// req.json(cat);
-		req.json({
-			message: 'success',
+		res.json(model);
+	});
+});
+
+router.delete('/:model/:id', function(req, res) {
+	console.log('id: ', req.params.id);
+
+	var Model = Models[req.params.model];
+	Model.remove({
+		_id: req.params.id
+	}, function(err) {
+		if (err) console.error(err);
+		res.json({
+			affected: true
 		});
 	});
 });
