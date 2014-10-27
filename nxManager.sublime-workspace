@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"req",
+				"require"
+			],
+			[
 				"conne",
 				"connect"
 			],
@@ -143,6 +147,49 @@
 	},
 	"buffers":
 	[
+		{
+			"contents": "var express = require('express');\nvar router = express.Router();\nvar Modules = require('../model/models');\n\nrouter.use(function(req, res, next) {\n	console.log('originalUrl: ', req.originalUrl);\n	console.log('method: ', req.method);\n	next();\n});\n\nrouter.get('/:model', function(req, res) {\n	console.log('model: ', req.params.model);\n\n	var Model = Modules[req.params.model];\n	Model.find(function(err, models) {\n		if (err) console.error(err);\n		res.json(models);\n	});\n});\n\nrouter.post('/:model', function(req, res) {\n	console.log('model: ', req.params.model);\n	console.log('body: ', req.body);\n\n	var Model = Modules[req.params.model];\n	Model.create(req.body, function(err, model) {\n		if (err) console.error(err);\n		res.json(model);\n	});\n});\n\nrouter.put('/:model/:id', function(req, res) {\n	console.log('model: ', req.params.model);\n	console.log('id: ', req.params.id);\n	console.log('body: ', req.body);\n\n	var Model = Modules[req.params.model];\n	Model.findOneAndUpdate({\n		_id: req.params.id\n	}, req.body, function(err, model) {\n		if (err) console.error(err);\n		res.json(model);\n	});\n});\n\nrouter.delete('/:model/:id', function(req, res) {\n	console.log('model: ', req.params.model);\n	console.log('id: ', req.params.id);\n\n	var Model = Modules[req.params.model];\n	Model.remove({\n		_id: req.params.id\n	}, function(err) {\n		if (err) console.error(err);\n		res.json({\n			affected: true\n		});\n	});\n});\n\nmodule.exports = router;",
+			"file": "routes/android.js",
+			"file_size": 1416,
+			"file_write_time": 130588477915371027,
+			"settings":
+			{
+				"buffer_size": 1415,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "model/models.js",
+			"settings":
+			{
+				"buffer_size": 88,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "model/tour.js",
+			"settings":
+			{
+				"buffer_size": 114,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "db/db.js",
+			"settings":
+			{
+				"buffer_size": 291,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app.js",
+			"settings":
+			{
+				"buffer_size": 1500,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -192,14 +239,16 @@
 	"expanded_folders":
 	[
 		"/home/zhaoqing/Workspace/github/nxManager",
-		"/home/zhaoqing/Workspace/github/nxManager/model"
+		"/home/zhaoqing/Workspace/github/nxManager/bin",
+		"/home/zhaoqing/Workspace/github/nxManager/model",
+		"/home/zhaoqing/Workspace/github/nxManager/routes"
 	],
 	"file_history":
 	[
-		"/home/zhaoqing/Workspace/github/nxManager/app.js",
-		"/home/zhaoqing/Workspace/github/nxManager/routes/android.js",
 		"/home/zhaoqing/Workspace/github/nxManager/model/models.js",
 		"/home/zhaoqing/Workspace/github/nxManager/model/cat.js",
+		"/home/zhaoqing/Workspace/github/nxManager/app.js",
+		"/home/zhaoqing/Workspace/github/nxManager/routes/android.js",
 		"/home/zhaoqing/Workspace/github/nxManager/bin/www",
 		"/home/zhaoqing/Workspace/github/nxManager/bin/mobile",
 		"/home/zhaoqing/Workspace/github/nxManager/db/db.js",
@@ -327,7 +376,7 @@
 	],
 	"find":
 	{
-		"height": 26.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -405,8 +454,154 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "routes/android.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1415,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								591,
+								591
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "model/models.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 88,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								62,
+								62
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "model/tour.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 114,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								90,
+								90
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "db/db.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 291,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1500,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								787,
+								787
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
 			]
 		}
 	],

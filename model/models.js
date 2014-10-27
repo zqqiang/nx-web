@@ -1,7 +1,7 @@
-var cat = require('./cat');
+var Tour = require('./tour');
 
-var Models = {
-	Cat: cat,
+var Modules = {
+	Tour: Tour
 };
 
-module.exports = Models;
+module.exports = Modules;
