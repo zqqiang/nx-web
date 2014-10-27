@@ -11,6 +11,7 @@ var editors = require('./routes/editors');
 var login = require('./routes/login');
 
 var android = require('./routes/android');
+var parser = require('./routes/parser');
 
 var app = express();
 
@@ -28,6 +29,7 @@ app.use('/Login', login);
 
 //android routes
 app.use('/Android', android);
+app.use('/Parser', parser);
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
