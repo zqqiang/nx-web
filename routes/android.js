@@ -10,7 +10,7 @@ router.use(function(req, res, next) {
 
 router.get('/:model', function(req, res) {
 	console.log('model: ', req.params.model);
-	
+
 	var Model = Modules[req.params.model];
 	Model.find(function(err, models) {
 		if (err) console.error(err);
