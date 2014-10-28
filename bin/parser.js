@@ -1,18 +1,6 @@
 var http = require('http');
 var cheerio = require('cheerio');
 
-// http.get('http://www.dianping.com/search/category/2/30/g139', function(res) {
-// 	res.on('data', function(chunk) {
-// 		// console.log('BODY: ' + chunk);
-// 		var $ = cheerio.load(chunk);
-
-// 		console.log($('a').attr('href'));
-
-// 	});
-// }).on('error', function(e) {
-// 	console.log('Error message: ', e.message);
-// });
-
 var options = {
 	hostname: 'www.dianping.com',
 	path: '/search/category/2/30/g139',
