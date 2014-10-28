@@ -12,6 +12,8 @@ Table of Contents
 * [Libs](#libs)
 * [Directory](#directory)
 * [FAQ](#faq)
+* [Todo List](#todo-list)
+* [Features](#features)
 
 Prepare
 =======
@@ -35,7 +37,8 @@ Quick Start
 =====
 
 First download nxManager  
-unzip nxManager & cd nxManager  
+unzip nxManager & cd nxManager
+run "npm install" in console to get all the node_modules
 supervisor bin/www  
 browse localhost:3000  
 
@@ -46,19 +49,20 @@ Libs
 
 * Backbones.js Marionette.js Underscore.js Handlebars.js
 * Bootstraps CSS3 HTML5
-* Node.js Express.js MongoDB
-* openresty(nginx) lua
+* Node.js Express.js MongoDB Cheerio.js
+* TODO: openresty(nginx) lua
 
 [Back to TOC](#table-of-contents)
 
 Directory
 =========
 
-* bin
-* node_modules
-* public: GUI
-* routes
-* views
+* bin: node start file
+* db: use mongoose to connect mongodb, some configuration
+* model: mongoose model
+* node_modules (After run "npm install"): all node modules
+* public: Server GUI
+* routes: 
 
 [Back to TOC](#table-of-contents)
 
@@ -70,9 +74,15 @@ FAQ
 
 [Back to TOC](#table-of-contents)
 
-TODO List
+Todo List
 =========
 
 * Add cookies support for login user.
+* Add node html parser tool in bin/parser.js.
+
+Features
+========
+
+* Support Android CRUD Operation with mongoosejs
 
 [Back to TOC](#table-of-contents)
