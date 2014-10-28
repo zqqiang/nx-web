@@ -37,8 +37,8 @@ Quick Start
 =====
 
 First download nxManager  
-unzip nxManager & cd nxManager
-run "npm install" in console to get all the node_modules
+unzip nxManager & cd nxManager  
+run "npm install" in console to get all the node_modules  
 supervisor bin/www  
 browse localhost:3000  
 
