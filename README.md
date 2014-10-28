@@ -3,6 +3,7 @@ nxManager
 
 * This repository is a next generation central manager framework.
 * The target is to make cluster product development very easy and effective.
+* Also be used as Android Central Server.
 
 Table of Contents
 =================
@@ -38,7 +39,7 @@ Quick Start
 
 First download nxManager  
 unzip nxManager & cd nxManager  
-run "npm install" in console to get all the node_modules  
+npm install to get all node_modules  
 supervisor bin/www  
 browse localhost:3000  
 
@@ -49,7 +50,7 @@ Libs
 
 * Backbones.js Marionette.js Underscore.js Handlebars.js
 * Bootstraps CSS3 HTML5
-* Node.js Express.js MongoDB Cheerio.js
+* Node.js Express.js MongoDB Mongoose.js Cheerio.js
 * TODO: openresty(nginx) lua
 
 [Back to TOC](#table-of-contents)

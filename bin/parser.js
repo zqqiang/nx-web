@@ -1,11 +1,39 @@
 var http = require('http');
+var cheerio = require('cheerio');
 
-http.get('http://www.baidu.com', function(res) {
-	console.log('badiu RES: ', res.statusCode);
-	console.log('HEADERS: ' + JSON.stringify(res.headers));
+// http.get('http://www.dianping.com/search/category/2/30/g139', function(res) {
+// 	res.on('data', function(chunk) {
+// 		// console.log('BODY: ' + chunk);
+// 		var $ = cheerio.load(chunk);
+
+// 		console.log($('a').attr('href'));
+
+// 	});
+// }).on('error', function(e) {
+// 	console.log('Error message: ', e.message);
+// });
+
+var options = {
+	hostname: 'www.dianping.com',
+	path: '/search/category/2/30/g139',
+	headers: {
+		'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.111 Safari/537.36'
+	}
+};
+
+var req = http.request(options, function(res) {
+	// console.log('STATUS: ' + res.statusCode);
+	// console.log('HEADERS: ' + JSON.stringify(res.headers));
+	res.setEncoding('utf8');
 	res.on('data', function(chunk) {
-		// console.log('BODY: ' + chunk);
+		console.log('BODY: ' + chunk);
+		var $ = cheerio.load(chunk);
+		console.log($('a[class="shopname"]').attr('title'));
 	});
-}).on('error', function(e) {
-	console.log('Error message: ', e.message);
 });
+
+req.on('error', function(e) {
+	console.log('problem with request: ' + e.message);
+});
+
+req.end();
