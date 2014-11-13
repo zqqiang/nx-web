@@ -8,6 +8,7 @@ define(
 		'text!templates/node.html',
 		'text!templates/navbar.html',
 		'text!templates/panel.html',
+		'text!templates/dianping.html',
 	],
 	function(
 		Handlebars,
@@ -17,7 +18,8 @@ define(
 		LayoutTpl,
 		NodeTpl,
 		NavbarTpl,
-		PanelTpl
+		PanelTpl,
+		DianpingTpl
 	) {
 		return {
 			TableTemplate: Handlebars.compile(TableTpl),
@@ -27,6 +29,7 @@ define(
 			NodeTemplate: Handlebars.compile(NodeTpl),
 			NavbarTemplate: Handlebars.compile(NavbarTpl),
 			PanelTemplate: Handlebars.compile(PanelTpl),
+			DianpingTemplate: Handlebars.compile(DianpingTpl),
 		};
 	}
 );

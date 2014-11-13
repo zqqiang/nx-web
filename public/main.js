@@ -1,11 +1,11 @@
 require(
 	[
 		'backbone', 'handlebars', 'jquery', 'app', 'views/layout', 'views/navbar', 'views/menu', 'router',
-		'views/table', 'views/dummy', 'models/session', 'views/panel'
+		'views/table', 'views/dianping', 'views/dummy', 'models/session', 'views/panel'
 	],
 	function(
 		Backbone, Handlebars, $, app, Layout, Navbar, Menu, Router,
-		Table, Dummy, SessionModel, Panel
+		Table, DianpingTuan, Dummy, SessionModel, Panel
 	) {
 		$(document).ready(function() {
 			app.start({
@@ -16,6 +16,7 @@ require(
 		var contextMap = {
 			"Editors": Dummy,
 			"Table": Table,
+			"DianpingTuan": DianpingTuan,
 			"HighCharts": Dummy,
 			"3d": Dummy,
 			"other": Dummy,

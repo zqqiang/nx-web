@@ -26,6 +26,8 @@ define(['backbone', 'marionette', 'templates/compiled'], function(Backbone, Mari
 					nodeName: "Editors",
 				}, {
 					nodeName: "Table",
+				}, {
+					nodeName: "DianpingTuan",
 				}]
 			}, {
 				nodeName: "Graph",
