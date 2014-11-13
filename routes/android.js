@@ -11,11 +11,37 @@ router.use(function(req, res, next) {
 router.get('/:model', function(req, res) {
 	console.log('model: ', req.params.model);
 
+	var start = req.query.start;
+	var size = req.query.size;
+
+	console.log('start: ', start);
+	console.log('size: ', size);
+
 	var Model = Modules[req.params.model];
-	Model.find(function(err, models) {
-		if (err) console.error(err);
-		res.json(models);
-	});
+
+	if (start && size) {
+		Model.find({}, null, {
+				skip: (start - 1) * size,
+				limit: size
+			},
+			function(err, models) {
+				if (err) console.error(err);
+				res.json(models);
+			});
+	} else {
+		Model.count({}, function(err, count) {
+			console.log('count [%d]', count);
+			if (err) console.error(err);
+			if (count > 40) console.error('more than 40 items, just return first 40');
+		});
+
+		Model.find({}, null, {
+			limit: 40
+		}, function(err, models) {
+			if (err) console.error(err);
+			res.json(models);
+		});
+	}
 });
 
 router.post('/:model', function(req, res) {

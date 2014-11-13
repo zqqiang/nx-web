@@ -1,5 +1,10 @@
+/*
+ Get information from www.dianping.com 
+ */
+
 var http = require('http');
 var crypto = require('crypto');
+var Modules = require('../model/models');
 
 function getSign(params) {
 	var appkey = '721651879';
@@ -37,8 +42,6 @@ function getBatchDealsById(deal_ids) {
 		path: '/v1/deal/get_batch_deals_by_id?appkey=721651879&sign=' + sign + '&deal_ids=' + deal_ids.toString(),
 	}
 
-	// console.log(batchDealsOptions);
-
 	var req = http.request(batchDealsOptions, function(res) {
 		var bodyChunk = '';
 
@@ -56,7 +59,14 @@ function getBatchDealsById(deal_ids) {
 			} else {
 				console.log('count: ', payload.count);
 				console.log('deals.length: ', payload.deals.length);
-				console.log('first deals: ', payload.deals[0]);
+				// console.log('first deals: ', payload.deals[0]);
+
+				for (var i = 0; i < payload.deals.length; ++i) {
+					var Model = Modules['DianpingTuan'];
+					Model.create(payload.deals[i], function(err, model) {
+						if (err) console.error(err);
+					});
+				}
 			}
 		});
 	});
@@ -84,14 +94,11 @@ var sign = getSign(params);
 
 var idListOptions = {
 	hostname: 'api.dianping.com',
-	// path: '/v1/deal/get_all_id_list?appkey=721651879&sign=' + sign + '&city=%E5%8C%97%E4%BA%AC',
 	path: '/v1/deal/get_all_id_list?appkey=721651879&sign=4A68DE9911EF25401D0D09875EE4CEC3CA595D73&city=%E5%8C%97%E4%BA%AC',
 };
 
 var req = http.request(idListOptions, function(res) {
 	var bodyChunk = '';
-
-	// console.log(idListOptions.path);
 
 	res.on('data', function(chunk) {
 		// console.log('got %d bytes of data', chunk.length);

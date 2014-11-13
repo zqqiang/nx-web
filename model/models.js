@@ -1,7 +1,7 @@
-var Tour = require('./tour');
+var DianpingTuan = require('./dianpingTuan');
 
 var Modules = {
-	Tour: Tour
+	DianpingTuan: DianpingTuan
 };
 
 module.exports = Modules;
