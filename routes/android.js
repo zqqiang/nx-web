@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 var Modules = require('../model/models');
+var _ = require('underscore');
+var S = require('string');
 
 router.use(function(req, res, next) {
 	console.log('originalUrl: ', req.originalUrl);
@@ -14,13 +16,19 @@ router.get('/:model', function(req, res) {
 	var start = req.query.start;
 	var size = req.query.size;
 
+	var filter = null;
+	if (req.query.filter) {
+		console.log('filter: ', S(req.query.filter).replaceAll(',', ' ').s);
+		filter = S(req.query.filter).replaceAll(',', ' ').s;
+	}
+
 	console.log('start: ', start);
 	console.log('size: ', size);
 
 	var Model = Modules[req.params.model];
 
 	if (start && size) {
-		Model.find({}, null, {
+		Model.find({}, filter, {
 				skip: (start - 1) * size,
 				limit: size
 			},
@@ -35,7 +43,7 @@ router.get('/:model', function(req, res) {
 			if (count > 40) console.error('more than 40 items, just return first 40');
 		});
 
-		Model.find({}, null, {
+		Model.find({}, filter, {
 			limit: 40
 		}, function(err, models) {
 			if (err) console.error(err);
