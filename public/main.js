@@ -5,7 +5,7 @@ require(
 	],
 	function(
 		Backbone, Handlebars, $, app, Layout, Navbar, Menu, Router,
-		Table, DianpingTuan, Dummy, SessionModel, Panel
+		Table, Dianping, Dummy, SessionModel, Panel
 	) {
 		$(document).ready(function() {
 			app.start({
@@ -16,7 +16,7 @@ require(
 		var contextMap = {
 			"Editors": Dummy,
 			"Table": Table,
-			"DianpingTuan": DianpingTuan,
+			"Dianping": Dianping,
 			"HighCharts": Dummy,
 			"3d": Dummy,
 			"other": Dummy,

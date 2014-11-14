@@ -9,7 +9,7 @@ define(
 				"Login": "showLogin",
 				"Editors": "showEditors",
 				"Table": "showTable",
-				"DianpingTuan": "showDianpingTuan",
+				"Dianping": "showDianping",
 				"HighCharts": "showHighCharts",
 				"3d": "show3d",
 				"*other": "defaultRouter",
@@ -23,8 +23,8 @@ define(
 			showTable: function() {
 				app.navigateTo("Table");
 			},
-			showDianpingTuan: function() {
-				app.navigateTo("DianpingTuan");
+			showDianping: function() {
+				app.navigateTo("Dianping");
 			},
 			showHighCharts: function() {
 				app.navigateTo("HighCharts");

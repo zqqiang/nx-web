@@ -62,7 +62,7 @@ function getBatchDealsById(deal_ids) {
 				// console.log('first deals: ', payload.deals[0]);
 
 				for (var i = 0; i < payload.deals.length; ++i) {
-					var Model = Modules['DianpingTuan'];
+					var Model = Modules['Dianping'];
 					Model.create(payload.deals[i], function(err, model) {
 						if (err) console.error(err);
 					});

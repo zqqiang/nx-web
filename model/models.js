@@ -1,7 +1,7 @@
-var DianpingTuan = require('./dianpingTuan');
+var Dianping = require('./dianping');
 
 var Modules = {
-	DianpingTuan: DianpingTuan
+	Dianping: Dianping
 };
 
 module.exports = Modules;

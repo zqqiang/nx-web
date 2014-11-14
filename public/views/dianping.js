@@ -1,13 +1,19 @@
 define(['marionette', 'templates/compiled'], function(Marionette, JST) {
-	var Dianping = Marionette.ItemView.extend({
+	var DianpingItem = Marionette.ItemView.extend({
 		template: JST.DianpingTemplate,
-		initialize: function(options) {
-			var Item = Backbone.Model.extend({});
+		className: 'col-sm-6 col-md-4',
+	});
 
-			this.model = new Item({
-				image_url: '/assets/css/images/logo.png',
-				title: '北京首科商务酒店'
+	var Dianping = Marionette.CollectionView.extend({
+		itemView: DianpingItem,
+		initialize: function(options) {
+			var Model = Backbone.Model.extend({});
+			var Collection = Backbone.Collection.extend({
+				model: Model,
+				url: '/Android/Dianping'
 			});
+			this.collection = new Collection();
+			this.collection.fetch();
 		}
 	});
 

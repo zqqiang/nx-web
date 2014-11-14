@@ -1,6 +1,6 @@
 var mongoose = require('../db/db');
 
-var DianpingTuan = mongoose.model('DianpingTuan', {
+var Dianping = mongoose.model('Dianping', {
 	deal_id: String,
 	title: String,
 	description: String,
@@ -39,4 +39,4 @@ var DianpingTuan = mongoose.model('DianpingTuan', {
 	}]
 });
 
-module.exports = DianpingTuan;
+module.exports = Dianping;
