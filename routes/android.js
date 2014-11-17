@@ -10,8 +10,26 @@ router.use(function(req, res, next) {
 	next();
 });
 
+router.get('/:model/:id', function(req, res) {
+	var id = req.params.id;
+	console.log('id: ', id);
+
+	var model = req.params.model;
+	console.log('model: ', model);
+
+	var Model = Modules[model];
+
+	Model.findOne({
+		_id: id,
+	}, function(err, model) {
+		if (err) console.error(err);
+		res.json(model);
+	});
+});
+
 router.get('/:model', function(req, res) {
-	console.log('model: ', req.params.model);
+	var model = req.params.model;
+	console.log('model: ', model);
 
 	var start = req.query.start;
 	var size = req.query.size;
@@ -25,7 +43,7 @@ router.get('/:model', function(req, res) {
 	console.log('start: ', start);
 	console.log('size: ', size);
 
-	var Model = Modules[req.params.model];
+	var Model = Modules[model];
 
 	if (start && size) {
 		Model.find({}, filter, {
