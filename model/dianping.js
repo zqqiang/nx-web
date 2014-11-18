@@ -35,8 +35,9 @@ var Dianping = mongoose.model('Dianping', {
 		latitude: Number,
 		longitude: Number,
 		url: String,
-		h5_url: String
-	}]
+		h5_url: String,
+		telephone: String
+	}],
 });
 
 module.exports = Dianping;
