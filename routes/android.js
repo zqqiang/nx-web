@@ -3,6 +3,7 @@ var router = express.Router();
 var Modules = require('../model/models');
 var _ = require('underscore');
 var S = require('string');
+var tool = require('../bin/tools');
 
 router.use(function(req, res, next) {
 	console.log('originalUrl: ', req.originalUrl);
@@ -34,6 +35,10 @@ router.get('/:model', function(req, res) {
 	var start = req.query.start;
 	var size = req.query.size;
 
+	var lat = req.query.lat;
+	var lon = req.query.lon;
+	var radius = req.query.radius;
+
 	var filter = null;
 	if (req.query.filter) {
 		console.log('filter: ', S(req.query.filter).replaceAll(',', ' ').s);
@@ -45,7 +50,33 @@ router.get('/:model', function(req, res) {
 
 	var Model = Modules[model];
 
-	if (start && size) {
+	if (lat && lon && radius) {
+		console.log('radius [%s]', radius);
+		var radiusArray = S(radius).parseCSV(',', null)
+
+		console.log(radiusArray);
+
+		Model.find({}, filter,
+			function(err, models) {
+				if (err) console.error(err);
+				var matchModels = [];
+				for (var i = 0; i < models.length; ++i) {
+					var latM = models[i].businesses[0].latitude;
+					var lonM = models[i].businesses[0].longitude;
+					var latU = lat;
+					var lonU = lon;
+
+					var distance = tool.getDistance(latM, lonM, latU, lonU);
+					// console.log('distance: [%d] km', distance);
+					if (distance >= radiusArray[0] && distance < radiusArray[1]) {
+						console.log('match distance: [%d] km', distance);
+						matchModels.push(models[i]);
+					}
+				}
+				console.log('matchModels.length: [%d]', matchModels.length);
+				res.json(matchModels);
+			});
+	} else if (start && size) {
 		Model.find({}, filter, {
 				skip: (start - 1) * size,
 				limit: size
