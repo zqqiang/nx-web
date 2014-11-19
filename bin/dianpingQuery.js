@@ -10,8 +10,10 @@ var _ = require('underscore');
 function createTuanGouModule(deal) {
 	var business = deal.businesses;
 
+	// console.log('business.length: [%d]', business.length);
+
 	var idArray = [];
-	for (var i = 0; i < business.length; ++i) {
+	for (var i = 0; i < (business.length < 40 ? business.length : 40); ++i) {
 		idArray.push(business[i].id);
 	};
 
@@ -67,7 +69,7 @@ function startGetTuanGou(start, end, array) {
 	if (start < end) {
 		setTimeout(function() {
 			startGetTuanGou(start, end, array);
-		}, 200);
+		}, 1000);
 	}
 };
 
@@ -121,7 +123,8 @@ function getBatchDeals(start, end, array) {
 
 var idListOptions = {
 	hostname: 'api.dianping.com',
-	path: '/v1/deal/get_all_id_list?appkey=721651879&sign=4A68DE9911EF25401D0D09875EE4CEC3CA595D73&city=%E5%8C%97%E4%BA%AC',
+	// path: '/v1/deal/get_all_id_list?appkey=721651879&sign=4A68DE9911EF25401D0D09875EE4CEC3CA595D73&city=%E5%8C%97%E4%BA%AC', //Beijing
+	path: '/v1/deal/get_all_id_list?appkey=721651879&sign=C89B0D17B3E952375B7C8040D6CAC1E5FB34AA6C&city=%E6%B7%B1%E5%9C%B3', //Shenzhen
 };
 
 var req = http.request(idListOptions, function(res) {
