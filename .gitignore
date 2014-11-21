@@ -1,3 +1,5 @@
 node_modules/
 nxManager.sublime-project
 nxManager.sublime-workspace
+data/
+public/data

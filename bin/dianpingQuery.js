@@ -3,9 +3,33 @@
  */
 
 var http = require('http');
+var fs = require('fs');
 var Modules = require('../model/models');
 var tool = require('./tools');
 var _ = require('underscore');
+
+function SaveDealImage(url, path, filename) {
+	console.log('url [%s]', url);
+	console.log('path [%s]', path);
+	console.log('filename [%s]', filename);
+
+	var req = http.get(url, function(res) {
+		var imagedata = ''
+		res.setEncoding('binary')
+
+		res.on('data', function(chunk) {
+			imagedata += chunk
+		})
+
+		res.on('end', function() {
+			console.log('save image file: [%s]', path + filename);
+			fs.writeFile(path + filename, imagedata, 'binary', function(err) {
+				if (err) throw err
+				console.log('File saved.')
+			})
+		})
+	});
+};
 
 function createTuanGouModule(deal) {
 	var business = deal.businesses;
@@ -48,6 +72,10 @@ function createTuanGouModule(deal) {
 				for (var i = 0; i < payload.businesses.length; ++i) {
 					deal.businesses[i].telephone = payload.businesses[i].telephone;
 				}
+
+				var filename = _.uniqueId('image_');
+				SaveDealImage(deal.image_url, './public/data/images/', filename);
+				deal.image_url = '/data/images/' + filename;
 
 				Model.create(deal, function(err, model) {
 					if (err) console.error(err);

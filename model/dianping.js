@@ -38,6 +38,10 @@ var Dianping = mongoose.model('Dianping', {
 		h5_url: String,
 		telephone: String
 	}],
+	loc: {
+		type: String,
+		coordinates: [Number]
+	},
 });
 
 module.exports = Dianping;
