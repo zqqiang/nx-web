@@ -37,7 +37,8 @@ router.get('/:model', function(req, res) {
 
 	var lat = req.query.lat;
 	var lon = req.query.lon;
-	var radius = req.query.radius;
+	var minDistance = req.query.minDistance;
+	var maxDistance = req.query.maxDistance;
 
 	var find = {};
 
@@ -47,56 +48,54 @@ router.get('/:model', function(req, res) {
 		filter = S(req.query.filter).replaceAll(',', ' ').s;
 	}
 
-	if (lat && lon && radius) {
-		start = 1;
-		size = undefined;
-		filter = null;
-
-		console.log('radius [%s]', radius);
-		var radiusArray = S(radius).parseCSV(',', null)
-		console.log('radiusArray: ', radiusArray);
-	}
-
 	if (req.query.find) {
 		var findArray = S(req.query.find).parseCSV(',', null);
 		for (var i = 0; i + 1 < findArray.length; i += 2) {
 			find[findArray[i]] = findArray[i + 1];
 		}
-		console.log('find: ', find);
 	}
 
 	console.log('start: ', start);
 	console.log('size: ', size);
 	console.log('lat: ', lat);
 	console.log('lon: ', lon);
+	console.log('find: ', find);
 
 	var Model = Modules[model];
 
-	Model.find(find, filter, {
-		skip: (start - 1) * size,
-		limit: size
-	}, function(err, models) {
-		if (err) console.error(err);
-		var matchModels = [];
-		if (lat && lon && radius) {
-			for (var i = 0; i < models.length; ++i) {
-				var latM = models[i].businesses[0].latitude;
-				var lonM = models[i].businesses[0].longitude;
-				var latU = lat;
-				var lonU = lon;
+	if (lat && lon && minDistance && maxDistance) {
+		var minSet = [];
+		var maxSet = [];
 
-				var distance = tool.getDistance(latM, lonM, latU, lonU);
-				if (distance >= radiusArray[0] && distance < radiusArray[1]) {
-					console.log('match distance: [%d] km', distance);
-					matchModels.push(models[i]);
-				}
-			}
-			console.log('matchModels.length: ', matchModels.length);
-		} else {
-			matchModels = models;
-		}
-		res.json(matchModels);
-	});
+		Model.where('loc').near({
+			center: [lon, lat],
+			maxDistance: minDistance,
+			spherical: true
+		}).find({}, function(err, models) {
+			if (err) console.error(err);
+			minSet = models;
+		});
+
+		Model.where('loc').near({
+			center: [lon, lat],
+			maxDistance: maxDistance,
+			spherical: true
+		}).find({}, function(err, models) {
+			if (err) console.error(err);
+			maxSet = models;
+			console.log('min: ', minSet.length);
+			console.log('max: ', maxSet.length);
+			res.json(_.difference(maxSet, minSet));
+		});
+	} else {
+		Model.find(find, filter, {
+			skip: (start - 1) * size,
+			limit: size
+		}, function(err, models) {
+			if (err) console.error(err);
+			res.json(models);
+		});
+	}
 });
 
 router.post('/:model', function(req, res) {

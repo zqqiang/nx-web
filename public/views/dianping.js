@@ -10,7 +10,7 @@ define(['marionette', 'templates/compiled'], function(Marionette, JST) {
 			var Model = Backbone.Model.extend({});
 			var Collection = Backbone.Collection.extend({
 				model: Model,
-				url: '/Android/Dianping'
+				url: '/Android/Business'
 			});
 			this.collection = new Collection();
 			this.collection.fetch();
