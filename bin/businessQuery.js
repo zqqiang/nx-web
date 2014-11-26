@@ -8,6 +8,7 @@ var tool = require('./tools');
 var _ = require('underscore');
 var async = require('async');
 var mongoose = require('mongoose');
+var utf8 = require('utf8');
 
 require('../model/business.js')();
 
@@ -46,24 +47,22 @@ function saveToDb(businesses) {
 	});
 };
 
-function getBusinesses(page) {
+function getBusinesses(category, city, page) {
 	var params = {};
-	params['category'] = "景点郊游";
-	params['city'] = "深圳";
+	params['category'] = category;
+	params['city'] = city;
 	params['limit'] = "40";
 	params['page'] = page;
 
 	var sign = tool.getSign(params);
 
-	// console.log('sign [%s]', sign);
-
 	var url = 'http://api.dianping.com/v1/business/find_businesses?' +
 		'appkey=721651879' +
-		'&sign=7ADF5CA5A595E53CCC8E65B938DEAF7E19BCA147' +
-		'&category=%E6%99%AF%E7%82%B9%E9%83%8A%E6%B8%B8' +
-		'&city=%E6%B7%B1%E5%9C%B3' +
+		'&sign=' + sign +
+		'&category=' + escape(utf8.encode(params['category'])) +
+		'&city=' + escape(utf8.encode(params['city'])) +
 		'&limit=40' +
-		'&page=1';
+		'&page=' + page;
 
 	var req = http.get(url, function(res) {
 		var bodyChunk = '';
@@ -93,4 +92,4 @@ function getBusinesses(page) {
 	req.end();
 };
 
-getBusinesses(1);
+getBusinesses('景点郊游', '深圳', 1);

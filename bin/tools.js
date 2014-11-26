@@ -1,6 +1,8 @@
 var crypto = require('crypto');
 var http = require('http');
 var fs = require('fs');
+var _ = require('underscore');
+var utf8 = require('utf8');
 
 var dianpingTool = {};
 
@@ -23,7 +25,7 @@ dianpingTool.getSign = function(params) {
 	paramArray.push(secret);
 
 	var shaSource = paramArray.join("");
-	var sha1 = crypto.createHash('sha1').update(shaSource).digest('hex');
+	var sha1 = crypto.createHash('sha1').update(utf8.encode(shaSource)).digest('hex');
 	var sign = new String(sha1).toUpperCase();
 
 	return sign;
