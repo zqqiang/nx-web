@@ -95,4 +95,3 @@ function getBusinesses(category, city, page) {
 };
 
 getBusinesses('景点郊游', '深圳', 1);
-// getBusinesses('美食', '深圳', 1);
