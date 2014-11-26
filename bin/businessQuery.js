@@ -96,5 +96,8 @@ function getBusinesses(category, city, page) {
 	req.end();
 };
 
-// getBusinesses('景点郊游', '深圳', 1);
-getBusinesses('景点郊游', '北京', 1);
+console.log(process.argv);
+
+var argv = process.argv;
+
+getBusinesses(argv[2], argv[3], argv[4]);
