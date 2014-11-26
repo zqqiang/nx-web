@@ -83,9 +83,8 @@ router.get('/:model', function(req, res) {
 		}).find({}, function(err, models) {
 			if (err) console.error(err);
 			maxSet = models;
-			console.log('min: ', minSet.length);
-			console.log('max: ', maxSet.length);
-			res.json(_.difference(maxSet, minSet));
+			var diff = _.difference(maxSet, minSet); //todo: not working
+			res.json(diff);
 		});
 	} else {
 		Model.find(find, filter, {

@@ -4,9 +4,47 @@
 
 var http = require('http');
 var fs = require('fs');
-var Modules = require('../model/models');
 var tool = require('./tools');
 var _ = require('underscore');
+var async = require('async');
+var mongoose = require('mongoose');
+
+require('../model/business.js')();
+
+function processPayload(businesses) {
+	for (var i = 0; i < businesses.length; ++i) {
+		var business = businesses[i];
+
+		var filename = _.uniqueId('image_');
+		tool.saveImage(business.photo_url, './public/data/images/', filename);
+		business.photo_url = '/data/images/' + filename;
+
+		filename = _.uniqueId('s_image_');
+		tool.saveImage(business.s_photo_url, './public/data/images/', filename);
+		business.s_photo_url = '/data/images/' + filename;
+
+		business.loc = {};
+		business.loc.type = 'Point';
+		business.loc.coordinates = [business.longitude, business.latitude];
+	}
+};
+
+function saveToDb(businesses) {
+	var Business = mongoose.model('Business');
+	mongoose.connect('mongodb://localhost/test', function(err) {
+		if (err) throw err;
+		Business.on('index', function(err) {
+			if (err) throw err;
+			async.each(businesses, function(item, cb) {
+				Business.create(item, cb);
+			}, function(err) {
+				if (err) throw err;
+				console.log('async create finished!');
+				mongoose.disconnect();
+			});
+		});
+	});
+};
 
 function getBusinesses(page) {
 	var params = {};
@@ -42,24 +80,8 @@ function getBusinesses(page) {
 				console.log('errorMessage: ', payload.error.errorMessage);
 			} else {
 				console.log('count: ', payload.count);
-
-				var Model = Modules['Business'];
-
-				for (var i = 0; i < payload.count; ++i) {
-					var business = payload.businesses[i];
-
-					var filename = _.uniqueId('image_');
-					tool.saveImage(business.photo_url, './public/data/images/', filename);
-					business.photo_url = '/data/images/' + filename;
-
-					filename = _.uniqueId('s_image_');
-					tool.saveImage(business.s_photo_url, './public/data/images/', filename);
-					business.s_photo_url = '/data/images/' + filename;
-				}
-
-				Model.create(payload.businesses, function(err, model) {
-					if (err) console.error(err);
-				});
+				processPayload(payload.businesses);
+				saveToDb(payload.businesses);
 			}
 		});
 	});

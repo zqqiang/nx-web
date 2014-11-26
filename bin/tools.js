@@ -47,9 +47,9 @@ dianpingTool.getDistance = function(lat1, lng1, lat2, lng2) {
 }
 
 dianpingTool.saveImage = function(url, path, filename) {
-	console.log('url [%s]', url);
-	console.log('path [%s]', path);
-	console.log('filename [%s]', filename);
+	// console.log('url [%s]', url);
+	// console.log('path [%s]', path);
+	// console.log('filename [%s]', filename);
 
 	var req = http.get(url, function(res) {
 		var imagedata = ''
@@ -60,10 +60,9 @@ dianpingTool.saveImage = function(url, path, filename) {
 		})
 
 		res.on('end', function() {
-			console.log('save image file: [%s]', path + filename);
+			// console.log('save image file: [%s]', path + filename);
 			fs.writeFile(path + filename, imagedata, 'binary', function(err) {
 				if (err) throw err
-				console.log('File saved.')
 			})
 		})
 	});
