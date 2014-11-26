@@ -16,13 +16,15 @@ require('../model/business.js')();
 function processPayload(businesses) {
 	for (var i = 0; i < businesses.length; ++i) {
 		var business = businesses[i];
-		business.name = S(business.name).strip('(这是一条测试商户数据，仅用于测试开发，开发完成后请申请正式数据...)');
 
-		var filename = _.uniqueId('image_');
+		var skip = S(business.name).between('(', ')');
+		business.name = S(business.name).strip('(' + skip + ')');
+
+		var filename = 'image_' + business.business_id;
 		tool.saveImage(business.photo_url, './public/data/images/', filename);
 		business.photo_url = '/data/images/' + filename;
 
-		filename = _.uniqueId('s_image_');
+		filename = 's_image_' + business.business_id;
 		tool.saveImage(business.s_photo_url, './public/data/images/', filename);
 		business.s_photo_url = '/data/images/' + filename;
 
@@ -94,4 +96,5 @@ function getBusinesses(category, city, page) {
 	req.end();
 };
 
-getBusinesses('景点郊游', '深圳', 1);
+// getBusinesses('景点郊游', '深圳', 1);
+getBusinesses('景点郊游', '北京', 1);
