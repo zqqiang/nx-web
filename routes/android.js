@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
-var Modules = require('../model/models');
 var _ = require('underscore');
 var S = require('string');
 var tool = require('../bin/tools');
+var Models = require('../model/models');
 
 router.use(function(req, res, next) {
 	console.log('originalUrl: ', req.originalUrl);
@@ -18,7 +18,7 @@ router.get('/:model/:id', function(req, res) {
 	var model = req.params.model;
 	console.log('model: ', model);
 
-	var Model = Modules[model];
+	var Model = Models[model];
 
 	Model.findOne({
 		_id: id,
@@ -55,53 +55,42 @@ router.get('/:model', function(req, res) {
 		}
 	}
 
+	if (lat && lon && minDistance && maxDistance) {
+		var coords = {
+			type: 'Point',
+			coordinates: [lon, lat]
+		};
+
+		find.loc = {
+			$near: coords,
+			$minDistance: Number(minDistance),
+			$maxDistance: Number(maxDistance),
+		};
+	}
+
 	console.log('start: ', start);
 	console.log('size: ', size);
 	console.log('lat: ', lat);
 	console.log('lon: ', lon);
 	console.log('find: ', find);
 
-	var Model = Modules[model];
+	var Model = Models[model];
 
-	if (lat && lon && minDistance && maxDistance) {
-		var minSet = [];
-		var maxSet = [];
-
-		Model.where('loc').near({
-			center: [lon, lat],
-			maxDistance: minDistance,
-			spherical: true
-		}).find({}, function(err, models) {
-			if (err) console.error(err);
-			minSet = models;
-		});
-
-		Model.where('loc').near({
-			center: [lon, lat],
-			maxDistance: maxDistance,
-			spherical: true
-		}).find({}, function(err, models) {
-			if (err) console.error(err);
-			maxSet = models;
-			var diff = _.difference(maxSet, minSet); //todo: not working
-			res.json(diff);
-		});
-	} else {
-		Model.find(find, filter, {
-			skip: (start - 1) * size,
-			limit: size
-		}, function(err, models) {
-			if (err) console.error(err);
-			res.json(models);
-		});
-	}
+	Model.find(find, filter, {
+		skip: (start - 1) * size,
+		limit: size
+	}, function(err, models) {
+		if (err) console.error(err);
+		console.log('match count: ', models.length);
+		res.json(models);
+	});
 });
 
 router.post('/:model', function(req, res) {
 	console.log('model: ', req.params.model);
 	console.log('body: ', req.body);
 
-	var Model = Modules[req.params.model];
+	var Model = Models[req.params.model];
 	Model.create(req.body, function(err, model) {
 		if (err) console.error(err);
 		res.json(model);
@@ -113,7 +102,7 @@ router.put('/:model/:id', function(req, res) {
 	console.log('id: ', req.params.id);
 	console.log('body: ', req.body);
 
-	var Model = Modules[req.params.model];
+	var Model = Models[req.params.model];
 	Model.findOneAndUpdate({
 		_id: req.params.id
 	}, req.body, function(err, model) {
@@ -126,7 +115,7 @@ router.delete('/:model/:id', function(req, res) {
 	console.log('model: ', req.params.model);
 	console.log('id: ', req.params.id);
 
-	var Model = Modules[req.params.model];
+	var Model = Models[req.params.model];
 	Model.remove({
 		_id: req.params.id
 	}, function(err) {

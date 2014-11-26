@@ -1,7 +1,9 @@
-var Dianping = require('./dianping');
+var mongoose = require('../db/db');
 
-var Modules = {
-	Dianping: Dianping,
+require('../model/business.js')();
+
+var Models = {
+	Business: mongoose.model('Business'),
 };
 
-module.exports = Modules;
+module.exports = Models;
