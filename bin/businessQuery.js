@@ -9,12 +9,14 @@ var _ = require('underscore');
 var async = require('async');
 var mongoose = require('mongoose');
 var utf8 = require('utf8');
+var S = require('string');
 
 require('../model/business.js')();
 
 function processPayload(businesses) {
 	for (var i = 0; i < businesses.length; ++i) {
 		var business = businesses[i];
+		business.name = S(business.name).strip('(这是一条测试商户数据，仅用于测试开发，开发完成后请申请正式数据...)');
 
 		var filename = _.uniqueId('image_');
 		tool.saveImage(business.photo_url, './public/data/images/', filename);
@@ -93,3 +95,4 @@ function getBusinesses(category, city, page) {
 };
 
 getBusinesses('景点郊游', '深圳', 1);
+// getBusinesses('美食', '深圳', 1);
