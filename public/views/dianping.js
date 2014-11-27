@@ -17,5 +17,9 @@ define(['marionette', 'templates/compiled'], function(Marionette, JST) {
 		}
 	});
 
+	// var Business = Marionette.Layout.extend({
+
+	// });
+
 	return Dianping;
 });
