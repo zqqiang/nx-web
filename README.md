@@ -25,12 +25,14 @@ Linux
 sudo apt-get install nodejs  
 sudo apt-get install npm  
 sudo npm install -g supervisor  
+sudo npm install -g bower  
 
 Windows
 -------
 
 download nodejs from [http://nodejs.org/download/](http://nodejs.org/download/)  
 npm install -g supervisor  
+npm install -g bower  
 
 [Back to TOC](#table-of-contents)
 
@@ -39,7 +41,10 @@ Quick Start
 
 First download nxManager  
 unzip nxManager & cd nxManager  
-npm install to get all node_modules  
+npm install  
+cd public  
+bower install  
+cd ../  
 supervisor bin/www  
 browse localhost:3000  
 
