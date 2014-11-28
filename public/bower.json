@@ -1,0 +1,28 @@
+{
+  "name": "nxManager",
+  "version": "0.0.0",
+  "homepage": "https://github.com/zqqiang/nxManager",
+  "authors": [
+    "= <=>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "backbone.marionette": "~2.2.2",
+    "bootstrap": "~3.3.1",
+    "backbone": "~1.1.2",
+    "handlebars": "~2.0.0",
+    "jquery-ui": "~1.11.2",
+    "jquery": "~2.1.1",
+    "json": "*",
+    "require": "*",
+    "text": "~2.0.12",
+    "underscore": "1.6.0"
+  }
+}
