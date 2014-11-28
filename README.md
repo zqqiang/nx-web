@@ -78,12 +78,13 @@ FAQ
 Todo List
 =========
 
-* Add cookies support for login user.
-* Add node html parser tool in bin/parser.js.
+* Add cookies support for login user
+* Add bower to manage gui dependence
 
 Features
 ========
 
-* Support Android CRUD Operation with mongoosejs
+* Support Android CRUD Operation with mongoose.js
+* Add dianping api query script for get business infomation to mongodb
 
 [Back to TOC](#table-of-contents)
