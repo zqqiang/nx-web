@@ -87,6 +87,7 @@ Todo List
 =========
 
 * Add cookies support for login user
+* Add release version support for client js
 
 Features
 ========

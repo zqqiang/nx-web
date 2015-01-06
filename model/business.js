@@ -57,6 +57,5 @@ module.exports = function() {
     loc: '2dsphere'
   });
 
-  // mongoose.model('725_1419566183', BusinessSchema);
   mongoose.model('Business', BusinessSchema);
 };

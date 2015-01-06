@@ -1,6 +1,5 @@
 var express = require('express');
 var path = require('path');
-var favicon = require('static-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
@@ -16,7 +15,6 @@ var parser = require('./routes/parser');
 
 var app = express();
 
-app.use(favicon());
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
@@ -26,11 +24,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/users', users);
 app.use('/auth', auth);
 app.use('/Editors', editors);
-app.use('/Login', login);
 
 //android routes
 app.use('/Android', android);
 app.use('/Dashboard', dashboard);
+app.use('/Login', login);
 app.use('/Parser', parser);
 
 /// catch 404 and forward to error handler

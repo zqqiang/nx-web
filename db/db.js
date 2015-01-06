@@ -1,6 +1,5 @@
 var mongoose = require('mongoose');
 
-// var url = 'mongodb://qyP7lHql1vFBTIIWCSmqYxo0:3zqYaRkQZjfPEBBf6wewhXB3AKdf03wb@mongo.duapp.com:8908/qMYQVShgnToPSSQWIYyz';
 var url = 'mongodb://localhost/test';
 
 mongoose.connect(url);
