@@ -20,14 +20,6 @@ function processPayload(businesses) {
 		var skip = S(business.name).between('(', ')');
 		business.name = S(business.name).strip('(' + skip + ')');
 
-		var filename = 'image_' + business.business_id;
-		tool.saveImage(business.photo_url, './public/data/images/', filename);
-		business.photo_url = '/data/images/' + filename;
-
-		filename = 's_image_' + business.business_id;
-		tool.saveImage(business.s_photo_url, './public/data/images/', filename);
-		business.s_photo_url = '/data/images/' + filename;
-
 		business.loc = {};
 		business.loc.type = 'Point';
 		business.loc.coordinates = [business.longitude, business.latitude];
@@ -96,8 +88,10 @@ function getBusinesses(category, city, page) {
 	req.end();
 };
 
-console.log(process.argv);
+console.log('process.argv: %s', process.argv);
 
 var argv = process.argv;
+
+if (5 != argv.length) return console.error('argv need category, city, page!');
 
 getBusinesses(argv[2], argv[3], argv[4]);

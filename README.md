@@ -78,13 +78,15 @@ FAQ
 1. when start with supervisor bin/www, an error occured "/usr/bin/env: is not found or a directory".
    if you use sudo apt-get install nodejs to install you node.js, you need use "sudo ln -s /usr/bin/nodejs /usr/bin/node" to link node with you nodejs.
 
+2. Cannot read property '__MODULE_PATH__' of undefined?
+   if you catch this error. Please make sure you use "bower install requirejs" not "...require". they are different dependence.
+
 [Back to TOC](#table-of-contents)
 
 Todo List
 =========
 
 * Add cookies support for login user
-* Add bower to manage gui dependence
 
 Features
 ========

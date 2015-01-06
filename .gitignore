@@ -2,5 +2,3 @@ node_modules/
 public/bower_components/
 nxManager.sublime-project
 nxManager.sublime-workspace
-data/
-public/data/
