@@ -5,13 +5,13 @@ require.config({
     baseUrl: '/',
 
     paths: {
-        'jquery': 'assets/lib/jquery',
-        'underscore': 'assets/lib/underscore',
-        'backbone': 'assets/lib/backbone',
-        'bootstrap': 'assets/lib/bootstrap',
-        'marionette': 'assets/lib/backbone.marionette',
-        'handlebars': 'assets/lib/handlebars',
-        'text': 'assets/lib/text',
+        'jquery': 'bower_components/jquery/dist/jquery',
+        'underscore': 'bower_components/underscore/underscore',
+        'backbone': 'bower_components/backbone/backbone',
+        'bootstrap': 'bower_components/bootstrap/dist/js/bootstrap',
+        'marionette': 'bower_components/backbone.marionette/lib/backbone.marionette',
+        'handlebars': 'bower_components/handlebars/handlebars',
+        'text': 'bower_components/text/text',
     },
 
     // non-AMD lib
