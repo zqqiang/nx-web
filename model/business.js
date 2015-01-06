@@ -50,11 +50,13 @@ module.exports = function() {
       },
       coordinates: []
     },
+    days: Number
   });
 
   BusinessSchema.index({
     loc: '2dsphere'
   });
 
+  // mongoose.model('725_1419566183', BusinessSchema);
   mongoose.model('Business', BusinessSchema);
 };

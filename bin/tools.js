@@ -7,8 +7,10 @@ var utf8 = require('utf8');
 var dianpingTool = {};
 
 dianpingTool.getSign = function(params) {
-	var appkey = '721651879';
-	var secret = 'c4fb48f5052d4ef2bea3f4b7c664b1de';
+	// var appkey = '721651879';
+	// var secret = 'c4fb48f5052d4ef2bea3f4b7c664b1de';
+	var appkey = '591602686';
+	var secret = '73cf31ad186643349a9e495c02678a27';
 
 	var array = new Array();
 	for (var key in params) {

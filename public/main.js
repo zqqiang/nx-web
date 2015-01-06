@@ -1,11 +1,11 @@
 require(
 	[
-		'backbone', 'handlebars', 'jquery', 'app', 'views/layout', 'views/navbar', 'views/menu', 'router',
-		'views/table', 'views/dianping', 'views/dummy', 'models/session', 'views/panel'
+		'backbone', 'handlebars', 'jquery', 'app', 'views/layout', 'views/navbar', 'router',
+		'views/table', 'views/dianping', 'views/dashboard', 'views/dummy', 'models/session', 'views/panel'
 	],
 	function(
-		Backbone, Handlebars, $, app, Layout, Navbar, Menu, Router,
-		Table, Dianping, Dummy, SessionModel, Panel
+		Backbone, Handlebars, $, app, Layout, Navbar, Router,
+		Table, Dianping, Dashboard, Dummy, SessionModel, Panel
 	) {
 		$(document).ready(function() {
 			app.start({
@@ -17,6 +17,7 @@ require(
 			"Editors": Dummy,
 			"Table": Table,
 			"Dianping": Dianping,
+			"Dashboard": Dashboard,
 			"HighCharts": Dummy,
 			"3d": Dummy,
 			"other": Dummy,
@@ -61,8 +62,6 @@ require(
 				if ('' === context) {
 					app.layout = new Layout();
 					app.mainRegion.show(app.layout);
-					app.menu = new Menu();
-					app.layout.menu.show(app.menu);
 				} else if ('Login' === context) {
 					app.mainRegion.show(new Panel(LoginEditors));
 				} else {

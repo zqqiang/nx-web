@@ -2,8 +2,12 @@ var express = require('express');
 var router = express.Router();
 var _ = require('underscore');
 var S = require('string');
-var tool = require('../bin/tools');
 var Models = require('../model/models');
+
+var sevenCityMap = {
+	'北京': ['深圳'],
+	'深圳': ['北京'],
+};
 
 router.use(function(req, res, next) {
 	console.log('originalUrl: ', req.originalUrl);
@@ -37,8 +41,8 @@ router.get('/:model', function(req, res) {
 
 	var lat = req.query.lat;
 	var lon = req.query.lon;
-	var minDistance = req.query.minDistance;
-	var maxDistance = req.query.maxDistance;
+	// var minDistance = req.query.minDistance;
+	// var maxDistance = req.query.maxDistance;
 
 	var find = {};
 
@@ -53,9 +57,15 @@ router.get('/:model', function(req, res) {
 		for (var i = 0; i + 1 < findArray.length; i += 2) {
 			find[findArray[i]] = findArray[i + 1];
 		}
+		if (find.days == 7) {
+			find.city = {
+				$in: sevenCityMap[find.city]
+			}
+			delete find.days;
+		}
 	}
 
-	if (lat && lon && minDistance && maxDistance) {
+	if (lat && lon) {
 		var coords = {
 			type: 'Point',
 			coordinates: [lon, lat]
@@ -63,8 +73,8 @@ router.get('/:model', function(req, res) {
 
 		find.loc = {
 			$near: coords,
-			$minDistance: Number(minDistance),
-			$maxDistance: Number(maxDistance),
+			// $minDistance: Number(minDistance),
+			// $maxDistance: Number(maxDistance),
 		};
 	}
 

@@ -1,7 +1,7 @@
 define(['marionette', 'templates/compiled'], function(Marionette, JST) {
 	var DianpingItem = Marionette.ItemView.extend({
 		template: JST.DianpingTemplate,
-		className: 'col-sm-6 col-md-4',
+		className: 'col-sm-6 col-md-3',
 	});
 
 	var Dianping = Marionette.CollectionView.extend({

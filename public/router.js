@@ -10,6 +10,7 @@ define(
 				"Editors": "showEditors",
 				"Table": "showTable",
 				"Dianping": "showDianping",
+				"Dashboard": "showDashboard",
 				"HighCharts": "showHighCharts",
 				"3d": "show3d",
 				"*other": "defaultRouter",
@@ -25,6 +26,9 @@ define(
 			},
 			showDianping: function() {
 				app.navigateTo("Dianping");
+			},
+			showDashboard: function() {
+				app.navigateTo("Dashboard");
 			},
 			showHighCharts: function() {
 				app.navigateTo("HighCharts");
