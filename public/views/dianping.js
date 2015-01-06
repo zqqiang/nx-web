@@ -2,6 +2,9 @@ define(['marionette', 'templates/compiled'], function(Marionette, JST) {
 	var DianpingItem = Marionette.ItemView.extend({
 		template: JST.DianpingTemplate,
 		className: 'col-sm-6 col-md-3',
+		onRender: function() {
+			this.$el.find('.thumbnail').height(500);
+		}
 	});
 
 	var Dianping = Marionette.CollectionView.extend({
