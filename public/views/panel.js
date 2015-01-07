@@ -62,7 +62,7 @@ define(
 			}
 		});
 
-		var Panel = Marionette.Layout.extend({
+		var Panel = Marionette.LayoutView.extend({
 			template: JST.PanelTemplate,
 			className: 'panel panel-default',
 			regions: {

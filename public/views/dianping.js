@@ -8,7 +8,7 @@ define(['marionette', 'templates/compiled'], function(Marionette, JST) {
 	});
 
 	var Dianping = Marionette.CollectionView.extend({
-		itemView: DianpingItem,
+		childView: DianpingItem,
 		initialize: function(options) {
 			var Model = Backbone.Model.extend({});
 			var Collection = Backbone.Collection.extend({
