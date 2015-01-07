@@ -1,10 +1,10 @@
 require(
 	[
-		'backbone', 'handlebars', 'jquery', 'app', 'views/layout', 'views/navbar', 'router',
-		'views/table', 'views/dianping', 'views/dashboard', 'views/dummy', 'models/session', 'views/panel'
+		'jquery', 'app', 'views/layout', 'views/navbar', 'router',
+		'views/table', 'views/dianping', 'views/dashboard', 'views/dummy', 'models/session', 'views/panel', 'bootstrap'
 	],
 	function(
-		Backbone, Handlebars, $, app, Layout, Navbar, Router,
+		$, app, Layout, Navbar, Router,
 		Table, Dianping, Dashboard, Dummy, SessionModel, Panel
 	) {
 		$(document).ready(function() {

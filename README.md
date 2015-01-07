@@ -78,8 +78,12 @@ FAQ
 1. when start with supervisor bin/www, an error occured "/usr/bin/env: is not found or a directory".
    if you use sudo apt-get install nodejs to install you node.js, you need use "sudo ln -s /usr/bin/nodejs /usr/bin/node" to link node with you nodejs.
 
-2. Cannot read property '__MODULE_PATH__' of undefined?
+2. cannot read property '__MODULE_PATH__' of undefined?
    if you catch this error. Please make sure you use "bower install requirejs" not "...require". they are different dependence.
+
+3. can not trigger bootstrap javascript plugins, eg: dropdown
+   please refrence http://getfishtank.ca/blog/how-to-use-bootstrap-3-with-requirejs.
+   bootstrap Must appear at the end. eg: require(['jquery', 'bootstrap'], function($){...});
 
 [Back to TOC](#table-of-contents)
 
