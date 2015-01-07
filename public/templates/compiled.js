@@ -10,6 +10,8 @@ define(
 		'text!templates/panel.html',
 		'text!templates/dianping.html',
 		'text!templates/dashboard.html',
+		'text!templates/business.html',
+		'text!templates/page.html',
 	],
 	function(
 		Handlebars,
@@ -21,7 +23,9 @@ define(
 		NavbarTpl,
 		PanelTpl,
 		DianpingTpl,
-		DashboardTpl
+		DashboardTpl,
+		BusinessTpl,
+		PageTpl
 	) {
 		return {
 			TableTemplate: Handlebars.compile(TableTpl),
@@ -33,6 +37,8 @@ define(
 			PanelTemplate: Handlebars.compile(PanelTpl),
 			DianpingTemplate: Handlebars.compile(DianpingTpl),
 			DashboardTemplate: Handlebars.compile(DashboardTpl),
+			BusinessTemplate: Handlebars.compile(BusinessTpl),
+			PageTemplate: Handlebars.compile(PageTpl),
 		};
 	}
 );
