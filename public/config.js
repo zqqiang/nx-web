@@ -12,6 +12,7 @@ require.config({
         'marionette': 'bower_components/backbone.marionette/lib/backbone.marionette',
         'handlebars': 'bower_components/handlebars/handlebars',
         'text': 'bower_components/text/text',
+        'highcharts': 'bower_components/highcharts/highcharts',
     },
 
     // non-AMD lib
@@ -33,6 +34,9 @@ require.config({
         'handlebars': {
             exports: 'Handlebars'
         },
+        'highcharts': {
+            exports: 'Highcharts'
+        }
     },
 });
 

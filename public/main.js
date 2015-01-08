@@ -1,7 +1,7 @@
 require(
 	[
 		'jquery', 'app', 'views/layout', 'views/navbar', 'router',
-		'views/table', 'views/dianping', 'views/dashboard', 'views/dummy', 'models/session', 'views/panel', 'bootstrap'
+		'views/table', 'views/dianping', 'views/dashboard', 'views/dummy', 'models/session', 'views/panel', 'bootstrap', 'highcharts', 'marionette'
 	],
 	function(
 		$, app, Layout, Navbar, Router,

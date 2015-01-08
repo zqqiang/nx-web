@@ -13,7 +13,7 @@ define(['marionette', 'templates/compiled'], function(Marionette, JST) {
 			var Model = Backbone.Model.extend({});
 			var Collection = Backbone.Collection.extend({
 				model: Model,
-				url: '/Android/Business'
+				url: '/Android/Business?start=' + options.start + '&size=40'
 			});
 			this.collection = new Collection();
 			this.collection.fetch();
@@ -28,6 +28,10 @@ define(['marionette', 'templates/compiled'], function(Marionette, JST) {
 			this.model = new Pages({
 				pages: _.range(1, size)
 			});
+		},
+		onRender: function() {
+			this.$el.find('#before').prop('disabled', true);
+			this.$el.find('#next').prop('disabled', true);
 		}
 	});
 
@@ -37,8 +41,13 @@ define(['marionette', 'templates/compiled'], function(Marionette, JST) {
 			body: '#content',
 			footer: '#footer',
 		},
+		events: {
+			'click li>a': 'onClickPage'
+		},
 		onShow: function() {
-			this.body.show(new Dianping());
+			this.body.show(new Dianping({
+				start: 1
+			}));
 
 			var self = this
 			$.ajax({
@@ -46,6 +55,11 @@ define(['marionette', 'templates/compiled'], function(Marionette, JST) {
 			}).success(function(data, textStatus, jqXHR) {
 				self.footer.show(new Page(data));
 			});
+		},
+		onClickPage: function(args) {
+			this.body.show(new Dianping({
+				start: args.target.id
+			}));
 		}
 	});
 

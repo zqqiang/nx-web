@@ -1,4 +1,4 @@
-define(['backbone', 'marionette', 'templates/compiled'], function(Backbone, Marionette, JST) {
+define(['marionette', 'templates/compiled'], function(Marionette, JST) {
 
 	var TreeView = Marionette.CompositeView.extend({
 		template: JST.NodeTemplate,
