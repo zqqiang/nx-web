@@ -8,6 +8,7 @@ var users = require('./routes/users');
 var auth = require('./routes/auth');
 var editors = require('./routes/editors');
 var login = require('./routes/login');
+var account = require('./routes/account');
 
 var android = require('./routes/android');
 var dashboard = require('./routes/dashboard');
@@ -29,6 +30,7 @@ app.use('/Editors', editors);
 app.use('/Android', android);
 app.use('/Dashboard', dashboard);
 app.use('/Login', login);
+app.use('/Account', account);
 app.use('/Parser', parser);
 
 /// catch 404 and forward to error handler

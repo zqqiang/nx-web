@@ -6,7 +6,7 @@ define(['marionette', 'templates/compiled'], function(Marionette, JST) {
 			$.ajax({
 				url: 'Dashboard',
 			}).success(function(data, textStatus, jqXHR) {
-				self.$el.find('#container').highcharts({
+				self.$el.find('#count-chart').highcharts({
 					title: {
 						text: 'Mongodb Statics Dashboard',
 						x: -20 //center

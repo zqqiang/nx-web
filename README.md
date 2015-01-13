@@ -85,6 +85,9 @@ FAQ
    please refrence http://getfishtank.ca/blog/how-to-use-bootstrap-3-with-requirejs.
    bootstrap Must appear at the end. eg: require(['jquery', 'bootstrap'], function($){...});
 
+4. what's the relationship for itemview and template custom tag, or how to remove duplicate itemview tag html?
+   todo:
+
 [Back to TOC](#table-of-contents)
 
 Todo List
