@@ -13,6 +13,7 @@ require.config({
         'handlebars': 'bower_components/handlebars/handlebars',
         'text': 'bower_components/text/text',
         'highcharts': 'bower_components/highcharts/highcharts',
+        'bootbox': 'bower_components/bootbox/bootbox',
     },
 
     // non-AMD lib

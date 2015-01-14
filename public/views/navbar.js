@@ -1,4 +1,4 @@
-define(['app', 'marionette', 'templates/compiled'], function(app, Marionette, JST) {
+define(['app', 'marionette', 'bootbox', 'templates/compiled'], function(app, Marionette, bootbox, JST) {
 	var Navbar = Marionette.ItemView.extend({
 		template: JST.NavbarTemplate,
 		className: 'container',
@@ -17,9 +17,13 @@ define(['app', 'marionette', 'templates/compiled'], function(app, Marionette, JS
 					Authorization: username + ':' + password
 				}
 			}).success(function(data, textStatus, jqXHR) {
-				self.$el.find('div[class="form-group"]').html('<strong style="color:#FFFFFF"> Welcome : ' + username + ' </strong>');
+				var html = '<strong style="color:#FFFFFF"> Welcome : ' + username + ' </strong>';
+				self.$el.find('div[class="form-group"]').html(html);
 			}).fail(function(jqXHR, textStatus, errorThrown) {
-				console.log(textStatus);
+				bootbox.dialog({
+					title: 'Submit',
+					message: '<div class="alert alert-danger" role="alert">' + jqXHR.status + ':' + jqXHR.statusText + '</div>'
+				});
 			});
 		},
 		onSignIn: function() {
@@ -37,9 +41,15 @@ define(['app', 'marionette', 'templates/compiled'], function(app, Marionette, JS
 				contentType: 'application/json; charset=utf-8',
 				dataType: 'json'
 			}).success(function(data, textStatus, jqXHR) {
-				console.log(data);
+				bootbox.dialog({
+					title: 'Sign In',
+					message: '<div class="alert alert-success" role="alert">' + jqXHR.status + ':' + jqXHR.statusText + '</div>'
+				});
 			}).fail(function(jqXHR, textStatus, errorThrown) {
-				console.log(textStatus);
+				bootbox.dialog({
+					title: 'Sign In',
+					message: '<div class="alert alert-danger" role="alert">' + jqXHR.responseJSON.message + '</div>'
+				});
 			});
 		}
 	});
