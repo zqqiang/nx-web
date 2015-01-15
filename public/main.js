@@ -2,11 +2,11 @@ require(
 	[
 		'jquery', 'app', 'views/layout', 'views/navbar', 'router',
 		'views/table', 'views/dianping', 'views/dashboard', 'views/dummy',
-		'models/session', 'views/panel', 'bootstrap', 'highcharts'
+		'models/session', 'views/panel', 'mobile-detect', 'bootstrap', 'highcharts'
 	],
 	function(
 		$, app, Layout, Navbar, Router,
-		Table, Dianping, Dashboard, Dummy, SessionModel, Panel
+		Table, Dianping, Dashboard, Dummy, SessionModel, Panel, MobileDetect
 	) {
 		$(document).ready(function() {
 			app.start({
@@ -78,6 +78,9 @@ require(
 		};
 
 		app.addInitializer(function(options) {
+			var md = new MobileDetect(window.navigator.userAgent);
+			console.log(md);
+
 			app.router = new Router();
 			app.session = new SessionModel();
 

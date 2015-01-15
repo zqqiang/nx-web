@@ -14,6 +14,7 @@ require.config({
         'text': 'bower_components/text/text',
         'highcharts': 'bower_components/highcharts/highcharts',
         'bootbox': 'bower_components/bootbox/bootbox',
+        'mobile-detect': 'bower_components/mobile-detect/mobile-detect',
     },
 
     // non-AMD lib
