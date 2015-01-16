@@ -3,7 +3,7 @@ define(['marionette', 'templates/compiled'], function(Marionette, JST) {
 		template: JST.DianpingTemplate,
 		className: 'col-sm-6 col-md-3',
 		onRender: function() {
-			this.$el.find('.thumbnail').height(550);
+			this.$el.find('.thumbnail').height(450);
 		}
 	});
 

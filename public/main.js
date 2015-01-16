@@ -66,11 +66,7 @@ require(
 				} else if ('Login' === context) {
 					app.mainRegion.show(new Panel(LoginEditors));
 				} else {
-					if (_.isUndefined(app.layout)) {
-						app.layout = new Layout();
-						app.mainRegion.show(app.layout);
-					}
-					app.layout.content.show(new contextMap[context](options));
+					app.mainRegion.show(new contextMap[context](options));
 				}
 			} else {
 				app.mainRegion.show(new Panel(LoginEditors));
@@ -79,7 +75,6 @@ require(
 
 		app.addInitializer(function(options) {
 			var md = new MobileDetect(window.navigator.userAgent);
-			console.log(md);
 
 			app.router = new Router();
 			app.session = new SessionModel();

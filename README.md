@@ -88,6 +88,10 @@ FAQ
 4. what's the relationship for itemview and template custom tag, or how to remove duplicate itemview tag html?
    todo:
 
+5. why twitter bootstrap navbar fixed top overlapping site?
+   if you use .navbar-fixed-top Make sure to include { padding-top: 70px; } after the core Bootstrap CSS.
+   http://stackoverflow.com/questions/11124777/twitter-bootstrap-navbar-fixed-top-overlapping-site
+
 [Back to TOC](#table-of-contents)
 
 Todo List
