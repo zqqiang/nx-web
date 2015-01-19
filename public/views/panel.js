@@ -17,7 +17,7 @@ define(
 		});
 
 		var Body = Marionette.CollectionView.extend({
-			itemView: Editor,
+			childView: Editor,
 			tagName: 'form',
 			className: 'form-horizontal',
 			initialize: function(options) {
@@ -52,7 +52,7 @@ define(
 		});
 
 		var Footer = Marionette.CollectionView.extend({
-			itemView: ButtonView,
+			childView: ButtonView,
 			initialize: function(options) {
 				var Model = Backbone.Model.extend({});
 				var Col = Backbone.Collection.extend({
@@ -82,9 +82,10 @@ define(
 			},
 			setupUser: function() {
 				var UserModel = Backbone.Model.extend({});
+				var url = window.location.hash.replace(/#/, '/');
 				var UserCollection = Backbone.Collection.extend({
 					model: UserModel,
-					url: '/Login',
+					url: url,
 				});
 				this.users = new UserCollection();
 			},

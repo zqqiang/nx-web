@@ -1,11 +1,7 @@
 define(['app', 'marionette', 'bootbox', 'templates/compiled'], function(app, Marionette, bootbox, JST) {
 	var Navbar = Marionette.ItemView.extend({
 		template: JST.NavbarTemplate,
-		className: 'container',
-		events: {
-			'click #login': 'onSubmit',
-			'click #signIn': 'onSignIn'
-		},
+		className: 'container-fluid',
 		onSubmit: function() {
 			var username = this.$el.find('#username').val();
 			var password = this.$el.find('#password').val();

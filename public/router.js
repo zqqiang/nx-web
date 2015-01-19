@@ -6,7 +6,7 @@ define(
 		var Router = Backbone.Router.extend({
 			routes: {
 				"": "showIndex",
-				"Login": "showLogin",
+				"SignIn": "showSignIn",
 				"Editors": "showEditors",
 				"Table": "showTable",
 				"Dianping": "showDianping",
@@ -36,8 +36,8 @@ define(
 			show3d: function() {
 				app.navigateTo("3d");
 			},
-			showLogin: function() {
-				app.navigateTo("Login");
+			showSignIn: function() {
+				app.navigateTo("SignIn");
 			},
 			defaultRouter: function(other) {
 				app.navigateTo("other");
