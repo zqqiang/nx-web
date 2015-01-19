@@ -2,11 +2,11 @@ require(
 	[
 		'jquery', 'app', 'views/layout', 'views/navbar', 'router',
 		'views/table', 'views/dianping', 'views/dashboard', 'views/dummy',
-		'models/session', 'views/panel', 'mobile-detect', 'mobile/views/mobileNavbar', 'bootstrap', 'highcharts'
+		'models/session', 'views/panel', 'bootstrap', 'highcharts'
 	],
 	function(
 		$, app, Layout, Navbar, Router,
-		Table, Dianping, Dashboard, Dummy, SessionModel, Panel, MobileDetect, MobileNavbar
+		Table, Dianping, Dashboard, Dummy, SessionModel, Panel
 	) {
 		$(document).ready(function() {
 			app.start({
@@ -59,27 +59,21 @@ require(
 		};
 
 		app.navigateTo = function(context, options) {
-			if ('AndroidOS' === app.md.os()) {
-
-			} else {
-				if (app.session.get('logged_in')) {
-					if ('' === context) {
-						app.layout = new Layout();
-						app.mainRegion.show(app.layout);
-					} else if ('Login' === context) {
-						app.mainRegion.show(new Panel(LoginEditors));
-					} else {
-						app.mainRegion.show(new contextMap[context](options));
-					}
-				} else {
+			if (app.session.get('logged_in')) {
+				if ('' === context) {
+					app.layout = new Layout();
+					app.mainRegion.show(app.layout);
+				} else if ('Login' === context) {
 					app.mainRegion.show(new Panel(LoginEditors));
+				} else {
+					app.mainRegion.show(new contextMap[context](options));
 				}
+			} else {
+				app.mainRegion.show(new Panel(LoginEditors));
 			}
 		};
 
 		app.addInitializer(function(options) {
-			app.md = new MobileDetect(window.navigator.userAgent);
-
 			app.router = new Router();
 			app.session = new SessionModel();
 
@@ -88,11 +82,7 @@ require(
 				mainRegion: "#main-region",
 			});
 
-			if ('AndroidOS' === app.md.os()) {
-				app.navbarRegion.show(new MobileNavbar());
-			} else {
-				app.navbarRegion.show(new Navbar());
-			}
+			app.navbarRegion.show(new Navbar());
 
 			app.session.checkAuth({
 				complete: function() {
