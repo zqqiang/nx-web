@@ -2,11 +2,11 @@ require(
 	[
 		'jquery', 'app', 'views/layout', 'views/navbar', 'router',
 		'views/table', 'views/dianping', 'views/dashboard', 'views/dummy',
-		'models/session', 'views/panel', 'bootstrap', 'highcharts'
+		'models/session', 'views/panel', 'views/signin', 'bootstrap', 'highcharts'
 	],
 	function(
 		$, app, Layout, Navbar, Router,
-		Table, Dianping, Dashboard, Dummy, SessionModel, Panel
+		Table, Dianping, Dashboard, Dummy, SessionModel, Panel, SignIn
 	) {
 		$(document).ready(function() {
 			app.start({
@@ -21,6 +21,7 @@ require(
 			"Dashboard": Dashboard,
 			"HighCharts": Dummy,
 			"3d": Dummy,
+			"SignIn": SignIn,
 			"other": Dummy,
 		};
 
