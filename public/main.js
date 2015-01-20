@@ -2,11 +2,11 @@ require(
 	[
 		'jquery', 'app', 'views/layout', 'views/navbar', 'router',
 		'views/table', 'views/dianping', 'views/dashboard', 'views/dummy',
-		'models/session', 'views/panel', 'views/signin', 'bootstrap', 'highcharts'
+		'models/session', 'views/panel', 'mobile-detect', 'bootstrap', 'highcharts'
 	],
 	function(
 		$, app, Layout, Navbar, Router,
-		Table, Dianping, Dashboard, Dummy, SessionModel, Panel, SignIn
+		Table, Dianping, Dashboard, Dummy, SessionModel, Panel, MobileDetect
 	) {
 		$(document).ready(function() {
 			app.start({
@@ -15,64 +15,23 @@ require(
 		});
 
 		var contextMap = {
+			"": Layout,
 			"Editors": Dummy,
 			"Table": Table,
 			"Dianping": Dianping,
 			"Dashboard": Dashboard,
 			"HighCharts": Dummy,
 			"3d": Dummy,
-			"SignIn": SignIn,
 			"other": Dummy,
 		};
 
-		var LoginEditors = {
-			heading: 'Login',
-			body: [{
-				id: _.uniqueId('editor-'),
-				type: 'text',
-				name: 'user',
-				label: 'Username',
-				placeholder: 'Enter username',
-				help: 'Please enter your username...',
-				layout: {
-					label: 'col-md-3',
-					field: 'col-md-9',
-				}
-			}, {
-				id: _.uniqueId('editor-'),
-				type: 'password',
-				name: 'password',
-				label: 'Password',
-				placeholder: 'Enter password',
-				help: 'Please enter your password...',
-				layout: {
-					label: 'col-md-3',
-					field: 'col-md-9',
-				}
-			}],
-			footerBtn: [{
-				id: 'submit',
-				icon: 'fa fa-dot-circle-o',
-				label: 'Submit',
-				btnClass: 'btn btn-sm btn-primary',
-				btnType: 'submit',
-			}]
-		};
-
 		app.navigateTo = function(context, options) {
-			if (app.session.get('logged_in')) {
-				if ('' === context) {
-					app.layout = new Layout();
-					app.mainRegion.show(app.layout);
-				} else {
-					app.mainRegion.show(new contextMap[context](options));
-				}
-			} else {
-				app.mainRegion.show(new Panel(LoginEditors));
-			}
+			app.mainRegion.show(new contextMap[context](options));
 		};
 
 		app.addInitializer(function(options) {
+			app.md = new MobileDetect(window.navigator.userAgent);
+
 			app.router = new Router();
 			app.session = new SessionModel();
 

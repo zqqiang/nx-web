@@ -12,7 +12,6 @@ define(
 		'text!templates/dashboard.html',
 		'text!templates/business.html',
 		'text!templates/page.html',
-		'text!templates/signin.html',
 	],
 	function(
 		Handlebars,
@@ -41,7 +40,6 @@ define(
 			DashboardTemplate: Handlebars.compile(DashboardTpl),
 			BusinessTemplate: Handlebars.compile(BusinessTpl),
 			PageTemplate: Handlebars.compile(PageTpl),
-			SignInTemplate: Handlebars.compile(SignInTpl),
 		};
 	}
 );

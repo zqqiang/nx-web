@@ -1,7 +1,16 @@
-define(['marionette', 'templates/compiled'], function(Marionette, JST) {
+define(['marionette', 'templates/compiled', 'views/dianping', 'views/dashboard'], function(Marionette, JST, Business, Dashboard) {
 	var Layout = Marionette.LayoutView.extend({
 		template: JST.LayoutTemplate,
-		className: 'page-header',
+		className: 'col-md-12',
+		regions: {
+			header: '#header',
+			business: '#business',
+			dashboard: '#dashboard',
+		},
+		onRender: function() {
+			this.business.show(new Business());
+			this.dashboard.show(new Dashboard());
+		}
 	});
 	return Layout;
 });
