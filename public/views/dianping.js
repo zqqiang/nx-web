@@ -20,13 +20,12 @@ define(['marionette', 'templates/compiled'], function(Marionette, JST) {
 		}
 	});
 
-	var Page = Marionette.ItemView.extend({
+	var Paginator = Marionette.ItemView.extend({
 		template: JST.PageTemplate,
 		initialize: function(options) {
 			var Pages = Backbone.Model.extend({});
-			var size = Math.floor(options.data.all_count / options.size);
 			this.model = new Pages({
-				pages: _.range(1, size)
+				pages: _.range(1, options.totalPages > 5 ? 5 : options.totalPages)
 			});
 		},
 		onRender: function() {
@@ -47,7 +46,7 @@ define(['marionette', 'templates/compiled'], function(Marionette, JST) {
 		initialize: function() {
 			this.size = 8;
 		},
-		onShow: function() {
+		onRender: function() {
 			this.body.show(new Dianping({
 				start: 1,
 				size: this.size
@@ -57,9 +56,10 @@ define(['marionette', 'templates/compiled'], function(Marionette, JST) {
 			$.ajax({
 				url: '/Dashboard',
 			}).success(function(data, textStatus, jqXHR) {
-				self.footer.show(new Page({
-					data: data,
-					size: self.size
+				var totalPages = Math.floor(data.all_count / self.size);
+				self.footer.show(new Paginator({
+					currentPage: 1,
+					totalPages: totalPages,
 				}));
 			});
 		},
