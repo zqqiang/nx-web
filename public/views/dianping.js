@@ -22,6 +22,8 @@ define(['marionette', 'templates/compiled'], function(Marionette, JST) {
 
 	var Paginator = Marionette.ItemView.extend({
 		template: JST.PageTemplate,
+		tagName: 'nav',
+		className: 'text-center',
 		initialize: function(options) {
 			var Pages = Backbone.Model.extend({});
 			this.model = new Pages({
