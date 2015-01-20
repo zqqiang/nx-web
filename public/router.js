@@ -12,6 +12,7 @@ define(
 				"Dashboard": "showDashboard",
 				"HighCharts": "showHighCharts",
 				"3d": "show3d",
+				"SignIn": "showSignIn",
 				"*other": "defaultRouter",
 			},
 			showIndex: function() {
@@ -34,6 +35,9 @@ define(
 			},
 			show3d: function() {
 				app.navigateTo("3d");
+			},
+			showSignIn: function() {
+				app.navigateTo("SignIn");
 			},
 			defaultRouter: function(other) {
 				app.navigateTo("other");
