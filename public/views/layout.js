@@ -7,7 +7,7 @@ define(['marionette', 'templates/compiled', 'views/dianping', 'views/dashboard']
 			business: '#business',
 			dashboard: '#dashboard',
 		},
-		onRender: function() {
+		onShow: function() {
 			this.business.show(new Business());
 			this.dashboard.show(new Dashboard());
 		}
