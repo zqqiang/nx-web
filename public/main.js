@@ -2,11 +2,11 @@ require(
 	[
 		'jquery', 'app', 'views/layout', 'views/navbar', 'router',
 		'views/table', 'views/dianping', 'views/dashboard', 'views/dummy',
-		'models/session', 'views/panel', 'mobile-detect', 'views/signin', 'bootstrap', 'highcharts'
+		'models/session', 'views/panel', 'mobile-detect', 'views/signin', 'views/homepage', 'bootstrap', 'highcharts'
 	],
 	function(
 		$, app, Layout, Navbar, Router,
-		Table, Dianping, Dashboard, Dummy, SessionModel, Panel, MobileDetect, SignIn
+		Table, Dianping, Dashboard, Dummy, SessionModel, Panel, MobileDetect, SignIn, Homepage
 
 	) {
 		$(document).ready(function() {
@@ -17,6 +17,7 @@ require(
 
 		var contextMap = {
 			"": Layout,
+			"Homepage": Homepage,
 			"Editors": Dummy,
 			"Table": Table,
 			"Dianping": Dianping,
@@ -38,8 +39,8 @@ require(
 			app.session = new SessionModel();
 
 			app.addRegions({
-				navbarRegion: '#navbar-region',
-				mainRegion: "#main-region",
+				navbarRegion: 'header[role="banner"]',
+				mainRegion: 'main[role="main"]',
 			});
 
 			app.navbarRegion.show(new Navbar());

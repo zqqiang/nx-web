@@ -26,6 +26,7 @@ sudo apt-get install nodejs
 sudo apt-get install npm  
 sudo npm install -g supervisor  
 sudo npm install -g bower  
+sudo npm install -g less  
 
 Windows
 -------
@@ -33,6 +34,7 @@ Windows
 download nodejs from [http://nodejs.org/download/](http://nodejs.org/download/)  
 npm install -g supervisor  
 npm install -g bower  
+npm install -g less  
 
 [Back to TOC](#table-of-contents)
 

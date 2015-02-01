@@ -1,7 +1,11 @@
 define(['app', 'backbone', 'marionette', 'bootbox', 'templates/compiled'], function(app, Backbone, Marionette, bootbox, JST) {
 	var Navbar = Marionette.ItemView.extend({
 		template: JST.NavbarTemplate,
-		className: 'container-fluid',
+		tagName: 'nav',
+		className: 'navbar navbar-static-top navbar-default',
+		attributes: {
+			role: 'navigation'
+		},
 		modelEvents: {
 			"change": "modelChanged"
 		},
