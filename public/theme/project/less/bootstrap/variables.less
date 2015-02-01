@@ -86,7 +86,7 @@
 
 //** Load fonts from this directory.
 // @icon-font-path:          "../fonts/";
-@bootstrap-path: "../../../bower_components/bootstrap/";
+@bootstrap-path: "../../../../bower_components/bootstrap/";
 @icon-font-path:          "@{bootstrap-path}fonts/";
 //** File name for all font files.
 @icon-font-name:          "glyphicons-halflings-regular";
@@ -328,7 +328,8 @@
 @grid-gutter-width:         30px;
 // Navbar collapse
 //** Point at which the navbar becomes uncollapsed.
-@grid-float-breakpoint:     @screen-sm-min;
+// @grid-float-breakpoint:     @screen-sm-min;
+@grid-float-breakpoint:     @screen-md-min;
 //** Point at which the navbar begins collapsing.
 @grid-float-breakpoint-max: (@grid-float-breakpoint - 1);
 

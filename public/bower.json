@@ -26,6 +26,7 @@
     "backbone.marionette": "~2.3.0",
     "highcharts": "~4.0.4",
     "bootbox": "~4.3.0",
-    "mobile-detect": "hgoebl/mobile-detect.js#~0.4.3"
+    "mobile-detect": "hgoebl/mobile-detect.js#~0.4.3",
+    "font-awesome": "~4.3.0"
   }
 }
