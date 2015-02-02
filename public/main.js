@@ -2,11 +2,12 @@ require(
 	[
 		'jquery', 'app', 'views/layout', 'views/navbar', 'router',
 		'views/table', 'views/dianping', 'views/dashboard', 'views/dummy',
-		'models/session', 'views/panel', 'mobile-detect', 'views/signin', 'views/homepage', 'bootstrap', 'highcharts'
+		'models/session', 'views/panel', 'mobile-detect', 'views/signin', 'views/homepage', 'views/footer',
+		'bootstrap', 'highcharts'
 	],
 	function(
 		$, app, Layout, Navbar, Router,
-		Table, Dianping, Dashboard, Dummy, SessionModel, Panel, MobileDetect, SignIn, Homepage
+		Table, Dianping, Dashboard, Dummy, SessionModel, Panel, MobileDetect, SignIn, Homepage, Footer
 
 	) {
 		$(document).ready(function() {
@@ -39,11 +40,13 @@ require(
 			app.session = new SessionModel();
 
 			app.addRegions({
-				navbarRegion: 'header[role="banner"]',
+				headerRegion: 'header[role="banner"]',
 				mainRegion: 'main[role="main"]',
+				footerRegion: 'footer[role="contentinfo"]',
 			});
 
-			app.navbarRegion.show(new Navbar());
+			app.headerRegion.show(new Navbar());
+			app.footerRegion.show(new Footer());
 
 			app.session.checkAuth({
 				complete: function() {
