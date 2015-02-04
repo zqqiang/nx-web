@@ -28,8 +28,8 @@
 @gray-lightest:          #ededed;
 @off-white:              #fafafa;
 
-@brand-primary:         #c1ba62;
-@brand-feature:         #c60004;
+@brand-primary:          #3e7dbd; // edited blue
+@brand-feature:          #c60004; // added new red
 
 //== Scaffolding
 //
@@ -41,11 +41,18 @@
 @text-color:            @gray-dark;
 
 //** Global textual link color.
-@link-color:            @brand-primary;
+// @link-color:            @brand-primary;
 //** Link hover color set via `darken()` function.
-@link-hover-color:      darken(@link-color, 15%);
+// @link-hover-color:      darken(@link-color, 15%);
+
+// Links
+// -------------------------
+@link-color:            @brand-primary;
+@link-hover-color:      lighten(@link-color, 15%);
+
 //** Link hover decoration.
 @link-hover-decoration: underline;
+
 
 
 //== Typography
