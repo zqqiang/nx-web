@@ -6036,7 +6036,9 @@ button.close {
 .panel-body:before,
 .panel-body:after,
 .modal-footer:before,
-.modal-footer:after {
+.modal-footer:after,
+.grid-options .options-list:before,
+.grid-options .options-list:after {
   content: " ";
   display: table;
 }
@@ -6054,7 +6056,8 @@ button.close {
 .navbar-collapse:after,
 .pager:after,
 .panel-body:after,
-.modal-footer:after {
+.modal-footer:after,
+.grid-options .options-list:after {
   clear: both;
 }
 .center-block {
@@ -8248,10 +8251,347 @@ fieldset[disabled] .btn-feature.active {
 .pagination-wrap {
   text-align: center;
 }
+.grid-options {
+  padding-top: 12px;
+  padding-bottom: 24px;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  border-color: #dddddd;
+  max-width: 480px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.grid-options > .list-group,
+.grid-options > .panel-collapse > .list-group {
+  margin-bottom: 0;
+}
+.grid-options > .list-group .list-group-item,
+.grid-options > .panel-collapse > .list-group .list-group-item {
+  border-width: 1px 0;
+  border-radius: 0;
+}
+.grid-options > .list-group:first-child .list-group-item:first-child,
+.grid-options > .panel-collapse > .list-group:first-child .list-group-item:first-child {
+  border-top: 0;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+}
+.grid-options > .list-group:last-child .list-group-item:last-child,
+.grid-options > .panel-collapse > .list-group:last-child .list-group-item:last-child {
+  border-bottom: 0;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.grid-options > .table,
+.grid-options > .table-responsive > .table,
+.grid-options > .panel-collapse > .table {
+  margin-bottom: 0;
+}
+.grid-options > .table caption,
+.grid-options > .table-responsive > .table caption,
+.grid-options > .panel-collapse > .table caption {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.grid-options > .table:first-child,
+.grid-options > .table-responsive:first-child > .table:first-child {
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+}
+.grid-options > .table:first-child > thead:first-child > tr:first-child,
+.grid-options > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child,
+.grid-options > .table:first-child > tbody:first-child > tr:first-child,
+.grid-options > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.grid-options > .table:first-child > thead:first-child > tr:first-child td:first-child,
+.grid-options > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child td:first-child,
+.grid-options > .table:first-child > tbody:first-child > tr:first-child td:first-child,
+.grid-options > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child td:first-child,
+.grid-options > .table:first-child > thead:first-child > tr:first-child th:first-child,
+.grid-options > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child th:first-child,
+.grid-options > .table:first-child > tbody:first-child > tr:first-child th:first-child,
+.grid-options > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:first-child {
+  border-top-left-radius: 3px;
+}
+.grid-options > .table:first-child > thead:first-child > tr:first-child td:last-child,
+.grid-options > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child td:last-child,
+.grid-options > .table:first-child > tbody:first-child > tr:first-child td:last-child,
+.grid-options > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child td:last-child,
+.grid-options > .table:first-child > thead:first-child > tr:first-child th:last-child,
+.grid-options > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child th:last-child,
+.grid-options > .table:first-child > tbody:first-child > tr:first-child th:last-child,
+.grid-options > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:last-child {
+  border-top-right-radius: 3px;
+}
+.grid-options > .table:last-child,
+.grid-options > .table-responsive:last-child > .table:last-child {
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.grid-options > .table:last-child > tbody:last-child > tr:last-child,
+.grid-options > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child,
+.grid-options > .table:last-child > tfoot:last-child > tr:last-child,
+.grid-options > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.grid-options > .table:last-child > tbody:last-child > tr:last-child td:first-child,
+.grid-options > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child td:first-child,
+.grid-options > .table:last-child > tfoot:last-child > tr:last-child td:first-child,
+.grid-options > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child td:first-child,
+.grid-options > .table:last-child > tbody:last-child > tr:last-child th:first-child,
+.grid-options > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child th:first-child,
+.grid-options > .table:last-child > tfoot:last-child > tr:last-child th:first-child,
+.grid-options > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:first-child {
+  border-bottom-left-radius: 3px;
+}
+.grid-options > .table:last-child > tbody:last-child > tr:last-child td:last-child,
+.grid-options > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child td:last-child,
+.grid-options > .table:last-child > tfoot:last-child > tr:last-child td:last-child,
+.grid-options > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child td:last-child,
+.grid-options > .table:last-child > tbody:last-child > tr:last-child th:last-child,
+.grid-options > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child th:last-child,
+.grid-options > .table:last-child > tfoot:last-child > tr:last-child th:last-child,
+.grid-options > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:last-child {
+  border-bottom-right-radius: 3px;
+}
+.grid-options > .panel-body + .table,
+.grid-options > .panel-body + .table-responsive,
+.grid-options > .table + .panel-body,
+.grid-options > .table-responsive + .panel-body {
+  border-top: 1px solid #dddddd;
+}
+.grid-options > .table > tbody:first-child > tr:first-child th,
+.grid-options > .table > tbody:first-child > tr:first-child td {
+  border-top: 0;
+}
+.grid-options > .table-bordered,
+.grid-options > .table-responsive > .table-bordered {
+  border: 0;
+}
+.grid-options > .table-bordered > thead > tr > th:first-child,
+.grid-options > .table-responsive > .table-bordered > thead > tr > th:first-child,
+.grid-options > .table-bordered > tbody > tr > th:first-child,
+.grid-options > .table-responsive > .table-bordered > tbody > tr > th:first-child,
+.grid-options > .table-bordered > tfoot > tr > th:first-child,
+.grid-options > .table-responsive > .table-bordered > tfoot > tr > th:first-child,
+.grid-options > .table-bordered > thead > tr > td:first-child,
+.grid-options > .table-responsive > .table-bordered > thead > tr > td:first-child,
+.grid-options > .table-bordered > tbody > tr > td:first-child,
+.grid-options > .table-responsive > .table-bordered > tbody > tr > td:first-child,
+.grid-options > .table-bordered > tfoot > tr > td:first-child,
+.grid-options > .table-responsive > .table-bordered > tfoot > tr > td:first-child {
+  border-left: 0;
+}
+.grid-options > .table-bordered > thead > tr > th:last-child,
+.grid-options > .table-responsive > .table-bordered > thead > tr > th:last-child,
+.grid-options > .table-bordered > tbody > tr > th:last-child,
+.grid-options > .table-responsive > .table-bordered > tbody > tr > th:last-child,
+.grid-options > .table-bordered > tfoot > tr > th:last-child,
+.grid-options > .table-responsive > .table-bordered > tfoot > tr > th:last-child,
+.grid-options > .table-bordered > thead > tr > td:last-child,
+.grid-options > .table-responsive > .table-bordered > thead > tr > td:last-child,
+.grid-options > .table-bordered > tbody > tr > td:last-child,
+.grid-options > .table-responsive > .table-bordered > tbody > tr > td:last-child,
+.grid-options > .table-bordered > tfoot > tr > td:last-child,
+.grid-options > .table-responsive > .table-bordered > tfoot > tr > td:last-child {
+  border-right: 0;
+}
+.grid-options > .table-bordered > thead > tr:first-child > td,
+.grid-options > .table-responsive > .table-bordered > thead > tr:first-child > td,
+.grid-options > .table-bordered > tbody > tr:first-child > td,
+.grid-options > .table-responsive > .table-bordered > tbody > tr:first-child > td,
+.grid-options > .table-bordered > thead > tr:first-child > th,
+.grid-options > .table-responsive > .table-bordered > thead > tr:first-child > th,
+.grid-options > .table-bordered > tbody > tr:first-child > th,
+.grid-options > .table-responsive > .table-bordered > tbody > tr:first-child > th {
+  border-bottom: 0;
+}
+.grid-options > .table-bordered > tbody > tr:last-child > td,
+.grid-options > .table-responsive > .table-bordered > tbody > tr:last-child > td,
+.grid-options > .table-bordered > tfoot > tr:last-child > td,
+.grid-options > .table-responsive > .table-bordered > tfoot > tr:last-child > td,
+.grid-options > .table-bordered > tbody > tr:last-child > th,
+.grid-options > .table-responsive > .table-bordered > tbody > tr:last-child > th,
+.grid-options > .table-bordered > tfoot > tr:last-child > th,
+.grid-options > .table-responsive > .table-bordered > tfoot > tr:last-child > th {
+  border-bottom: 0;
+}
+.grid-options > .table-responsive {
+  border: 0;
+  margin-bottom: 0;
+}
+.grid-options > .panel-heading {
+  color: #454545;
+  background-color: #f5f5f5;
+  border-color: #dddddd;
+}
+.grid-options > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #dddddd;
+}
+.grid-options > .panel-heading .badge {
+  color: #f5f5f5;
+  background-color: #454545;
+}
+.grid-options > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: #dddddd;
+}
+.grid-options > h2 {
+  margin-top: 0;
+  font-size: 25.5px;
+  line-height: 1.2;
+  color: #454545;
+}
+.grid-options > h3 {
+  font-size: 17px;
+  line-height: 1.2;
+  margin-top: 12px;
+  color: #454545;
+}
+.grid-options .options-list {
+  margin-left: -15px;
+  margin-right: -15px;
+  list-style-type: none;
+  padding-left: 0;
+}
+.grid-options .options-list li {
+  position: relative;
+  float: left;
+  width: 50%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media screen and (max-width: 767px) {
+  .grid-options .options-list li {
+    position: relative;
+    float: left;
+    width: 33.33333333%;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+.grid-options .options-list li a {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 5px 10px;
+  font-size: 13px;
+  line-height: 1.5;
+  border-radius: 3px;
+  padding-left: 0;
+  padding-right: 0;
+  color: #777777;
+}
+.grid-options .options-list li a:focus,
+.grid-options .options-list li a:active:focus,
+.grid-options .options-list li a.active:focus,
+.grid-options .options-list li a.focus,
+.grid-options .options-list li a:active.focus,
+.grid-options .options-list li a.active.focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.grid-options .options-list li a:hover,
+.grid-options .options-list li a:focus,
+.grid-options .options-list li a.focus {
+  color: #777777;
+  text-decoration: none;
+}
+.grid-options .options-list li a:active,
+.grid-options .options-list li a.active {
+  outline: 0;
+  background-image: none;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.grid-options .options-list li a.disabled,
+.grid-options .options-list li a[disabled],
+fieldset[disabled] .grid-options .options-list li a {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.grid-options .options-list li a:hover,
+.grid-options .options-list li a:focus,
+.grid-options .options-list li a:active,
+.active .grid-options .options-list li a {
+  color: #3e7dbd;
+}
+.grid-options .options-list li a:before {
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f096";
+  width: 1.28571429em;
+  text-align: center;
+}
+.grid-options .options-list li a:hover:before,
+.grid-options .options-list li a:focus:before,
+.grid-options .options-list li a:active:before,
+.active .grid-options .options-list li a:before {
+  content: "\f046";
+}
+.choose-clearance {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 12px;
+  white-space: normal;
+  position: relative;
+}
+.choose-clearance h3 {
+  font-weight: normal;
+  color: #fff;
+  padding-top: 4px;
+  margin: 6px;
+}
+.choose-clearance p {
+  margin: 6px 20px;
+  line-height: 1.2;
+}
+.choose-clearance .icon {
+  position: absolute;
+  top: 0;
+  right: 2px;
+}
 .product-item {
-  padding-bottom: 32px;
   height: 360px;
   overflow: hidden;
+  padding-bottom: 32px;
 }
 .product-item img {
   width: 100%;
@@ -8267,4 +8607,12 @@ fieldset[disabled] .btn-feature.active {
   font-size: 13px;
   line-height: 1.3;
   color: #777777;
+}
+@media (min-width: 768px) {
+  .options-panel {
+    display: block;
+  }
+  .options-panel-toggle {
+    display: none;
+  }
 }
