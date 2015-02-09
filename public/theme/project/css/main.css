@@ -8133,6 +8133,34 @@ main {
 .content-tertiary {
   font-size: 13px;
 }
+#welcome {
+  height: 300px;
+  background-color: #191919;
+  color: #fff;
+}
+#welcome .btn {
+  margin-top: 16px;
+}
+@media (max-width: 991px) {
+  #welcome {
+    background: #191919 url('../img/subway-906x600.jpg') center center no-repeat;
+  }
+}
+@media (min-width: 768px) {
+  #welcome {
+    height: 480px;
+  }
+}
+@media (min-width: 992px) {
+  #welcome {
+    height: 540px;
+    background: #191919 url('../img/subway-1600x1060.jpg') center center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
 ul.social {
   margin: 0;
   padding: 0;

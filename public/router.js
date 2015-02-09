@@ -15,6 +15,7 @@ define(
 				"SignIn": "showSignIn",
 				"Homepage": "showHomepage",
 				"Products": "showProducts",
+				"Marketing": "showMarketing",
 				"*other": "defaultRouter",
 			},
 			showIndex: function() {
@@ -46,6 +47,9 @@ define(
 			},
 			showProducts: function() {
 				app.navigateTo("Products");
+			},
+			showMarketing: function() {
+				app.navigateTo("Marketing");
 			},
 			defaultRouter: function(other) {
 				app.navigateTo("other");

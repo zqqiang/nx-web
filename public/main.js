@@ -3,13 +3,13 @@ require(
 		'jquery', 'app', 'views/layout', 'views/navbar', 'router',
 		'views/table', 'views/dianping', 'views/dashboard', 'views/dummy',
 		'models/session', 'views/panel', 'mobile-detect', 'views/signin',
-		'views/homepage', 'views/products', 'views/footer',
+		'views/homepage', 'views/products', 'views/footer', 'views/marketing',
 		'bootstrap', 'highcharts'
 	],
 	function(
 		$, app, Layout, Navbar, Router,
 		Table, Dianping, Dashboard, Dummy, SessionModel, Panel, MobileDetect,
-		SignIn, Homepage, Products, Footer
+		SignIn, Homepage, Products, Footer, Marketing
 	) {
 		$(document).ready(function() {
 			app.start({
@@ -21,6 +21,7 @@ require(
 			"": Layout,
 			"Homepage": Homepage,
 			"Products": Products,
+			"Marketing": Marketing,
 			"Editors": Dummy,
 			"Table": Table,
 			"Dianping": Dianping,
