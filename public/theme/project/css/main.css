@@ -8188,6 +8188,54 @@ main {
     right: 50%;
   }
 }
+#features .features-item {
+  text-align: center;
+  padding: 20px;
+  height: 270px;
+}
+#features .features-item .icon {
+  font-size: 90px;
+}
+@media (max-width: 767px) {
+  #features .features-item {
+    max-width: 320px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+#impact .hreview {
+  position: relative;
+  padding: 0 10px;
+  border: none;
+}
+#impact .hreview .caption {
+  position: absolute;
+  top: auto;
+  left: 10px;
+  right: 10px;
+  bottom: 0;
+  line-height: 1.1;
+  background: rgba(26, 26, 26, 0.55);
+}
+#impact .hreview .caption blockquote,
+#impact .hreview .caption .reviewer {
+  margin: 0 6px;
+  padding: 0;
+}
+#impact .hreview .caption blockquote {
+  margin-top: 4px;
+  border: none;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 17px;
+  color: #fff;
+}
+#impact .hreview .caption .reviewer {
+  margin-top: 2px;
+  margin-bottom: 4px;
+  text-align: right;
+  color: #cccccc;
+}
 ul.social {
   margin: 0;
   padding: 0;
