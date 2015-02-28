@@ -4,7 +4,7 @@ require(
 		'views/table', 'views/dianping', 'views/dashboard', 'views/dummy',
 		'models/session', 'views/panel', 'mobile-detect', 'views/signin',
 		'views/homepage', 'views/products', 'views/footer', 'views/marketing',
-		'bootstrap', 'highcharts'
+		'bootstrap', 'highcharts',
 	],
 	function(
 		$, app, Layout, Navbar, Router,

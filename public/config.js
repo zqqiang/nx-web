@@ -15,6 +15,7 @@ require.config({
         'highcharts': 'bower_components/highcharts/highcharts',
         'bootbox': 'bower_components/bootbox/bootbox',
         'mobile-detect': 'bower_components/mobile-detect/mobile-detect',
+        'masonry': 'bower_components/masonry/dist/masonry.pkgd',
     },
 
     // non-AMD lib
@@ -38,7 +39,7 @@ require.config({
         },
         'highcharts': {
             exports: 'Highcharts'
-        }
+        },
     },
 });
 

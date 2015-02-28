@@ -8236,6 +8236,22 @@ main {
   text-align: right;
   color: #cccccc;
 }
+#impact .review-item-4 .caption {
+  top: 0;
+  left: 62%;
+  right: 10px;
+  bottom: auto;
+}
+#impact .review-item-4 .caption .reviewer {
+  margin-top: 6px;
+  text-align: left;
+}
+#impact .review-item-5 .caption {
+  top: 0;
+  left: 17%;
+  right: 10px;
+  bottom: auto;
+}
 ul.social {
   margin: 0;
   padding: 0;
