@@ -133,4 +133,24 @@ main {
         right: 10px;
         bottom: auto;
     }
+    @media (min-width: @screen-md-min) {
+        .review-item-4 {
+            display: none;
+        }
+    }
+    @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+        .review-item-5 {
+            height: 474px;
+            overflow: hidden;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    @media (max-width: @screen-xs-max) {
+        .reviews {
+            max-width: 400px;
+            .center-block();
+        }
+    }
 }

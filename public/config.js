@@ -30,10 +30,6 @@ require.config({
             deps: ['underscore', 'jquery'],
             exports: 'Backbone'
         },
-        'marionette': {
-            deps: ['jquery', 'underscore', 'backbone'],
-            exports: 'Marionette'
-        },
         'handlebars': {
             exports: 'Handlebars'
         },
