@@ -101,12 +101,13 @@ Todo List
 
 * Add cookies support for login user
 * Add release version support for client js
-* Add mobile gui support
+* Add stock hack module
 
 Features
 ========
 
 * Support Android CRUD Operation with mongoose.js
 * Add dianping api query script for get business infomation to mongodb
+* Use bootstrap to support mobile GUI
 
 [Back to TOC](#table-of-contents)

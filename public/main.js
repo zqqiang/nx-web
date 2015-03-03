@@ -4,12 +4,13 @@ require(
 		'views/table', 'views/dianping', 'views/dashboard', 'views/dummy',
 		'models/session', 'views/panel', 'mobile-detect', 'views/signin',
 		'views/homepage', 'views/products', 'views/footer', 'views/marketing',
+		'views/stock',
 		'bootstrap', 'highcharts',
 	],
 	function(
 		$, app, Layout, Navbar, Router,
 		Table, Dianping, Dashboard, Dummy, SessionModel, Panel, MobileDetect,
-		SignIn, Homepage, Products, Footer, Marketing
+		SignIn, Homepage, Products, Footer, Marketing, Stock
 	) {
 		$(document).ready(function() {
 			app.start({
@@ -18,10 +19,12 @@ require(
 		});
 
 		var contextMap = {
-			"": Layout,
+			"": Homepage,
 			"Homepage": Homepage,
 			"Products": Products,
 			"Marketing": Marketing,
+			"Tour": Layout,
+			"Stock": Stock,
 			"Editors": Dummy,
 			"Table": Table,
 			"Dianping": Dianping,

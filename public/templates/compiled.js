@@ -17,6 +17,7 @@ define(
 		'text!templates/footer.html',
 		'text!templates/products.html',
 		'text!templates/marketing.html',
+		'text!templates/stock.html',
 	],
 	function(
 		Handlebars,
@@ -35,7 +36,8 @@ define(
 		HomepageTpl,
 		FooterTpl,
 		ProductsTpl,
-		MarketingTpl
+		MarketingTpl,
+		StockTpl
 	) {
 		return {
 			TableTemplate: Handlebars.compile(TableTpl),
@@ -54,6 +56,7 @@ define(
 			FooterTemplate: Handlebars.compile(FooterTpl),
 			ProductsTemplate: Handlebars.compile(ProductsTpl),
 			MarketingTemplate: Handlebars.compile(MarketingTpl),
+			StockTemplate: Handlebars.compile(StockTpl),
 		};
 	}
 );
