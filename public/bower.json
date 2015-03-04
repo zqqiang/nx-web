@@ -24,10 +24,10 @@
     "requirejs": "~2.1.15",
     "jquery": "2.1.0",
     "backbone.marionette": "~2.3.0",
-    "highcharts": "~4.0.4",
     "bootbox": "~4.3.0",
     "mobile-detect": "hgoebl/mobile-detect.js#~0.4.3",
     "font-awesome": "~4.3.0",
-    "masonry": "~3.2.2"
+    "masonry": "~3.2.2",
+    "highstock": "~3.0.1"
   }
 }

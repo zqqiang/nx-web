@@ -1,8 +1,8 @@
 define(
 	[
-		'backbone', 'app', 'views/menu', 'views/navbar', 'views/layout'
+		'backbone', 'app'
 	],
-	function(Backbone, app, Menu, Navbar, Layout) {
+	function(Backbone, app) {
 		var Router = Backbone.Router.extend({
 			routes: {
 				"": "showIndex",
@@ -16,6 +16,7 @@ define(
 				"Homepage": "showHomepage",
 				"Products": "showProducts",
 				"Marketing": "showMarketing",
+				"Tour": "showTour",
 				"Stock": "showStock",
 				"*other": "defaultRouter",
 			},
@@ -51,6 +52,9 @@ define(
 			},
 			showMarketing: function() {
 				app.navigateTo("Marketing");
+			},
+			showTour: function() {
+				app.navigateTo("Tour");
 			},
 			showStock: function() {
 				app.navigateTo("Stock");

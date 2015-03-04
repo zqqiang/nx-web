@@ -1,14 +1,14 @@
 require(
 	[
-		'jquery', 'app', 'views/layout', 'views/navbar', 'router',
+		'jquery', 'app', 'views/tour', 'views/navbar', 'router',
 		'views/table', 'views/dianping', 'views/dashboard', 'views/dummy',
 		'models/session', 'views/panel', 'mobile-detect', 'views/signin',
 		'views/homepage', 'views/products', 'views/footer', 'views/marketing',
 		'views/stock',
-		'bootstrap', 'highcharts',
+		'bootstrap', 'highcharts'
 	],
 	function(
-		$, app, Layout, Navbar, Router,
+		$, app, Tour, Navbar, Router,
 		Table, Dianping, Dashboard, Dummy, SessionModel, Panel, MobileDetect,
 		SignIn, Homepage, Products, Footer, Marketing, Stock
 	) {
@@ -23,7 +23,7 @@ require(
 			"Homepage": Homepage,
 			"Products": Products,
 			"Marketing": Marketing,
-			"Tour": Layout,
+			"Tour": Tour,
 			"Stock": Stock,
 			"Editors": Dummy,
 			"Table": Table,

@@ -1,6 +1,6 @@
 define(['marionette', 'templates/compiled', 'views/dianping', 'views/dashboard'], function(Marionette, JST, Business, Dashboard) {
-	var Layout = Marionette.LayoutView.extend({
-		template: JST.LayoutTemplate,
+	var Tour = Marionette.LayoutView.extend({
+		template: JST.TourTemplate,
 		className: 'col-md-12',
 		regions: {
 			header: '#header',
@@ -12,5 +12,5 @@ define(['marionette', 'templates/compiled', 'views/dianping', 'views/dashboard']
 			this.dashboard.show(new Dashboard());
 		}
 	});
-	return Layout;
+	return Tour;
 });

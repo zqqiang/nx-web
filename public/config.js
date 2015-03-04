@@ -12,7 +12,7 @@ require.config({
         'marionette': 'bower_components/backbone.marionette/lib/backbone.marionette',
         'handlebars': 'bower_components/handlebars/handlebars',
         'text': 'bower_components/text/text',
-        'highcharts': 'bower_components/highcharts/highcharts',
+        'highcharts': 'bower_components/highstock/js/highstock.src',
         'bootbox': 'bower_components/bootbox/bootbox',
         'mobile-detect': 'bower_components/mobile-detect/mobile-detect',
         'masonry': 'bower_components/masonry/dist/masonry.pkgd',
@@ -32,9 +32,6 @@ require.config({
         },
         'handlebars': {
             exports: 'Handlebars'
-        },
-        'highcharts': {
-            exports: 'Highcharts'
         },
     },
 });
