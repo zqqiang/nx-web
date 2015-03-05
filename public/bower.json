@@ -28,6 +28,6 @@
     "mobile-detect": "hgoebl/mobile-detect.js#~0.4.3",
     "font-awesome": "~4.3.0",
     "masonry": "~3.2.2",
-    "highstock": "~3.0.1"
+    "highstock-release": "~2.1.3"
   }
 }
