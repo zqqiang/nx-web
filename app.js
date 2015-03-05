@@ -13,6 +13,7 @@ var account = require('./routes/account');
 var android = require('./routes/android');
 var dashboard = require('./routes/dashboard');
 var parser = require('./routes/parser');
+var stock = require('./routes/stock');
 
 var app = express();
 
@@ -32,6 +33,7 @@ app.use('/Dashboard', dashboard);
 app.use('/Login', login);
 app.use('/Account', account);
 app.use('/Parser', parser);
+app.use('/Stock', stock);
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
