@@ -3,17 +3,17 @@ define(['marionette', 'templates/compiled'], function(Marionette, JST) {
 		template: JST.StockTemplate,
 		onShow: function() {
 			$.ajax({
-				url: 'Stock'
+				url: 'Stock',
 			}).success(function(data, textStatus, jqXHR) {
 				$('#container').highcharts('StockChart', {
 					rangeSelector: {
 						selected: 1
 					},
 					title: {
-						text: 'AAPL Stock Price'
+						text: '平安银行(000001.sz) Stock Price'
 					},
 					series: [{
-						name: 'AAPL',
+						name: '平安银行(000001.sz)',
 						data: data,
 						tooltip: {
 							valueDecimals: 2

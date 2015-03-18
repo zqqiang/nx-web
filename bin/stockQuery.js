@@ -11,10 +11,7 @@ function saveToDb(col) {
 	var Stock = mongoose.model('Stock');
 	mongoose.connect('mongodb://localhost/test', function(err) {
 		if (err) throw err;
-		async.each(col, function(item, cb) {
-			console.log('stock create => [%s]', item.date);
-			Stock.create(item, cb);
-		}, function(err) {
+		Stock.create(_.sortBy(col, 'date'), function(err) {
 			if (err) throw err;
 			console.log('async create finished!');
 			mongoose.disconnect();
