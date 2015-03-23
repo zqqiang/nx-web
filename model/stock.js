@@ -6,6 +6,7 @@ var Schema = mongoose.Schema;
 
 module.exports = function() {
 	var StockSchema = new Schema({
+		id: String,
 		date: String,
 		open: Number,
 		high: Number,

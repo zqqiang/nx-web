@@ -101,7 +101,6 @@ Todo List
 
 * Add cookies support for login user
 * Add release version support for client js
-* Add stock hack module
 
 Features
 ========
@@ -109,5 +108,6 @@ Features
 * Support Android CRUD Operation with mongoose.js
 * Add dianping api query script for get business infomation to mongodb
 * Use bootstrap to support mobile GUI
+* Add High-Stock to analysis stock price
 
 [Back to TOC](#table-of-contents)

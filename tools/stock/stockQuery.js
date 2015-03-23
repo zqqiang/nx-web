@@ -4,7 +4,7 @@ var async = require('async');
 var mongoose = require('mongoose');
 var S = require('string');
 
-require('../model/stock.js')();
+require('../../model/stock.js')();
 
 function saveToDb(col) {
 	console.log('start save to db => col.size[%d]', col.length);
@@ -19,10 +19,11 @@ function saveToDb(col) {
 	});
 };
 
-function preprocessStock(col) {
+function preprocessStock(col, id) {
 	var result = [];
 	_.each(col, function(elem) {
 		var item = {};
+		item.id = id;
 		item.date = elem[0];
 		item.open = elem[1];
 		item.high = elem[2];
@@ -47,7 +48,7 @@ function getStock(id) {
 		res.on('end', function() {
 			//1991-01-02,67.41,67.41,67.41,67.41,3007100,0.22\n
 			var stock = S(data).parseCSV(',', '"', '"', '\n');
-			var result = preprocessStock(stock);
+			var result = preprocessStock(stock, id);
 			saveToDb(result);
 		});
 	}).on('error', function(e) {

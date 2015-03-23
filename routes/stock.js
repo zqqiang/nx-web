@@ -5,8 +5,17 @@ var router = express.Router();
 var Models = require('../model/models');
 
 router.get('/', function(req, res) {
+	var find = {};
+
+	if (req.query.find) {
+		var findArray = S(req.query.find).parseCSV(',', null);
+		for (var i = 0; i + 1 < findArray.length; i += 2) {
+			find[findArray[i]] = findArray[i + 1];
+		}
+	}
+
 	var Model = Models['Stock'];
-	Model.find({}, null, {}, function(err, models) {
+	Model.find(find, null, {}, function(err, models) {
 		if (err) console.error(err);
 		console.log('match count: ', models.length);
 		var data = [];
