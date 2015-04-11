@@ -18,6 +18,7 @@ define(
 				"Marketing": "showMarketing",
 				"Tour": "showTour",
 				"Stock": "showStock",
+				"Admin": "showAdmin",
 				"*other": "defaultRouter",
 			},
 			showIndex: function() {
@@ -58,6 +59,9 @@ define(
 			},
 			showStock: function() {
 				app.navigateTo("Stock");
+			},
+			showAdmin: function() {
+				app.navigateTo("Admin");
 			},
 			defaultRouter: function(other) {
 				app.navigateTo("other");
