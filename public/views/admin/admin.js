@@ -1,4 +1,4 @@
-define(['marionette', 'templates/compiled', 'views/admin/topbar'], function(Marionette, JST, TopBarView) {
+define(['marionette', 'templates/compiled', 'views/admin/topbar', 'views/admin/bottom'], function(Marionette, JST, TopBarView, BottomView) {
 	var Admin = Marionette.LayoutView.extend({
 		template: JST.AdminTemplate,
 		className: 'wrapper',
@@ -8,6 +8,7 @@ define(['marionette', 'templates/compiled', 'views/admin/topbar'], function(Mari
 		},
 		onShow: function() {
 			this.getRegion('top').show(new TopBarView());
+			this.getRegion('bottom').show(new BottomView());
 		}
 	});
 	return Admin;

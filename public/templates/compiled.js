@@ -20,6 +20,8 @@ define(
 		'text!templates/stock.html',
 		'text!templates/admin/admin.html',
 		'text!templates/admin/topbar.html',
+		'text!templates/admin/bottom.html',
+		'text!templates/admin/menu.html',
 	],
 	function(
 		Handlebars,
@@ -41,7 +43,9 @@ define(
 		MarketingTpl,
 		StockTpl,
 		AdminTpl,
-		TopbarTpl
+		TopbarTpl,
+		BottomTpl,
+		MenuTpl
 	) {
 		return {
 			TableTemplate: Handlebars.compile(TableTpl),
@@ -63,6 +67,8 @@ define(
 			StockTemplate: Handlebars.compile(StockTpl),
 			AdminTemplate: Handlebars.compile(AdminTpl),
 			TopbarTemplate: Handlebars.compile(TopbarTpl),
+			BottomTemplate: Handlebars.compile(BottomTpl),
+			MenuTemplate: Handlebars.compile(MenuTpl),
 		};
 	}
 );
