@@ -1,0 +1,106 @@
+<div class="row">
+    <div class="col-md-4 ">
+        <ul class="breadcrumb">
+            <li><i class="fa fa-home"></i><a href="javascript:void(0);">Home</a></li>
+            <li class="active">Dashboard</li>
+        </ul>
+    </div>
+    <div class="col-md-8 ">
+        <div class="top-content">
+            <ul class="list-inline mini-stat">
+                <li>
+                    <h5>LIKES <span class="stat-value stat-color-orange"><i class="fa fa-plus-circle"></i> 81,450</span></h5>
+                    <span id="mini-bar-chart1" class="mini-bar-chart"><canvas width="53" height="25" style="display: inline-block; vertical-align: top; width: 53px; height: 25px;"></canvas></span>
+                </li>
+                <li>
+                    <h5>SUBSCRIBERS <span class="stat-value stat-color-blue"><i class="fa fa-plus-circle"></i> 150,743</span></h5>
+                    <span id="mini-bar-chart2" class="mini-bar-chart"><canvas width="53" height="25" style="display: inline-block; vertical-align: top; width: 53px; height: 25px;"></canvas></span>
+                </li>
+                <li>
+                    <h5>CUSTOMERS <span class="stat-value stat-color-seagreen"><i class="fa fa-plus-circle"></i> 43,748</span></h5>
+                    <span id="mini-bar-chart3" class="mini-bar-chart"><canvas width="53" height="25" style="display: inline-block; vertical-align: top; width: 53px; height: 25px;"></canvas></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="content">
+    <div class="main-header">
+        <h2>DASHBOARD</h2>
+        <em>the first priority information</em>
+    </div>
+    <div class="main-content">
+        <div class="row">
+            <div class="col-md-9">
+                <!-- WIDGET NO HEADER -->
+                <div class="widget widget-hide-header">
+                    <div class="widget-header hide">
+                        <h3>Summary Info</h3>
+                    </div>
+                    <div class="widget-content">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="easy-pie-chart green" data-percent="70">
+                                    <span class="percent">70</span>
+                                    <canvas height="110" width="110"></canvas>
+                                </div>
+                                <p class="text-center">Task Completion</p>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="easy-pie-chart red" data-percent="22">
+                                    <span class="percent">22</span>
+                                    <canvas height="110" width="110"></canvas>
+                                </div>
+                                <p class="text-center">Overall Project Completion</p>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="easy-pie-chart yellow" data-percent="65">
+                                    <span class="percent">65</span>
+                                    <canvas height="110" width="110"></canvas>
+                                </div>
+                                <p class="text-center">Disk Space Used</p>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="easy-pie-chart red" data-percent="87">
+                                    <span class="percent">87</span>
+                                    <canvas height="110" width="110"></canvas>
+                                </div>
+                                <p class="text-center">Bandwidth Used</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- WIDGET NO HEADER -->
+            </div>
+            <div class="col-md-3">
+                <!-- WIDGET REMINDER -->
+                <div class="widget widget-hide-header widget-reminder">
+                    <div class="widget-header hide">
+                        <h3>Today's Reminder</h3>
+                    </div>
+                    <div class="widget-content">
+                        <div class="today-reminder">
+                            <h4 class="reminder-title">Project Meeting</h4>
+                            <p class="reminder-time"><i class="fa fa-clock-o"></i> 9:00 AM</p>
+                            <p class="reminder-place">War Room</p>
+                            <em class="reminder-notes">Bring weekly report summary</em>
+                            <i class="fa fa-bell"></i>
+                            <div class="btn-group btn-group-xs">
+                                <button type="button" class="btn btn-warning"><i class="fa fa-cloud-upload"></i> Sync</button>
+                                <div class="btn-group  btn-group-xs">
+                                    <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">Remind Me <span class="caret"></span></button>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="#">15 minutes later</a></li>
+                                        <li><a href="#">30 minutes later</a></li>
+                                        <li><a href="#">1 hour later</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END WIDGET REMINDER -->
+            </div>
+        </div>
+    </div>
+</div>

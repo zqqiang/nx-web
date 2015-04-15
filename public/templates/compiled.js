@@ -22,6 +22,7 @@ define(
 		'text!templates/admin/topbar.html',
 		'text!templates/admin/bottom.html',
 		'text!templates/admin/menu.html',
+		'text!templates/admin/customer.html',
 	],
 	function(
 		Handlebars,
@@ -45,7 +46,8 @@ define(
 		AdminTpl,
 		TopbarTpl,
 		BottomTpl,
-		MenuTpl
+		MenuTpl,
+		CustomerTpl
 	) {
 		return {
 			TableTemplate: Handlebars.compile(TableTpl),
@@ -69,6 +71,7 @@ define(
 			TopbarTemplate: Handlebars.compile(TopbarTpl),
 			BottomTemplate: Handlebars.compile(BottomTpl),
 			MenuTemplate: Handlebars.compile(MenuTpl),
+			CustomerTemplate: Handlebars.compile(CustomerTpl),
 		};
 	}
 );

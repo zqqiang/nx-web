@@ -152,3 +152,194 @@ ul.main-menu>li.active>a {
     font-weight: 700;
     background-color: #dfdfdf;
 }
+
+.breadcrumb {
+    background-color: inherit;
+    padding-left: 0;
+}
+
+.breadcrumb a {
+    color: #555;
+}
+
+.breadcrumb .active {
+    font-weight: 300;
+}
+
+.bottom .container .content-wrapper {
+    background-color: #f1f1f1;
+    border-left: 1px solid #e4e4e4;
+}
+
+.content-wrapper {
+    padding: 15px 30px;
+}
+
+.top-content {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.top-content ul.mini-stat {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 0;
+}
+
+.top-content ul.mini-stat > li:first-child {
+    border-left: none;
+}
+
+.top-content ul.mini-stat h5 {
+    float: left;
+    margin: 0;
+    text-align: left;
+    font-size: 0.85em;
+    color: #888888;
+}
+
+.top-content .mini-bar-chart {
+    display: block;
+    float: right;
+    margin: 6px 0 0 20px;
+}
+
+.top-content ul.mini-stat h5 .stat-value.stat-color-orange {
+    color: #CE7B11;
+}
+
+.top-content ul.mini-stat h5 .stat-value {
+    display: block;
+    font-size: 1.5em;
+    margin-top: 3px;
+}
+
+.top-content ul.mini-stat h5 .stat-value.stat-color-blue {
+    color: #1D92AF;
+}
+
+.top-content ul.mini-stat h5 .stat-value.stat-color-seagreen {
+    color: #3F7577;
+}
+
+.main-header {
+    margin-bottom: 50px;
+    h2 {
+        display: inline-block;
+        vertical-align: middle;
+        border-right: 1px solid #ccc;
+        margin: 0;
+        padding-right: 10px;
+        margin-right: 10px;
+    }
+    em {
+        color: #bbbbbb;
+    }
+}
+
+.main-content {
+    padding-bottom: 30px;
+}
+
+.widget {
+    border-width: 1px;
+    border-style: solid;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    border-color: lightgray;
+    .widget-hide-header {
+        border: none;
+        background: none;
+        h3 {
+            display: inline-block;
+            vertical-align: middle;
+            font-family: "latobold";
+            font-size: 1.1em;
+            margin: 0;
+            line-height: 35px;
+            float: left;
+        }
+    }
+    .widget-content {
+        padding: 20px 10px;
+        h4 {
+            font-size: 14px;
+        }
+    }
+    .widget-header {
+        padding: 0 10px;
+        height: 35px;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: lightgray;
+        background-color: #eeeeee;
+    }
+}
+
+.today-reminder {
+    .reminder-title {
+        border-bottom: 1px solid #a4c0cc;
+        padding-bottom: 5px;
+    }
+    .reminder-time {
+        font-size: 2.5em;
+        margin-bottom: 0;
+    }
+    .reminder-place {
+        font-size: 1.5em;
+    }
+    .reminder-notes {
+        font-size: 0.9em;
+    }
+    > i {
+        // filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=10);
+        opacity: 0.1;
+        position: absolute;
+        top: 5px;
+        right: -15px;
+        font-size: 12em;
+        -webkit-animation: ring 8s .5s ease-in-out 3;
+        -webkit-transform-origin: 50% 4px;
+        -moz-animation: ring 8s .5s ease-in-out 3;
+        -moz-transform-origin: 50% 4px;
+        animation: ring 8s .5s ease-in-out 3;
+        transform-origin: 50% 4px;
+    }
+    > .btn-group {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+
+.widget-header.hide {
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    background-color: #6393A7;
+    color: #fff;
+}
+
+.hide {
+    display: none !important;
+}
+
+.easy-pie-chart {
+    position: relative;
+    width: 110px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    text-align: center;
+    .percent {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 110px;
+        z-index: 2;
+    }
+    canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
