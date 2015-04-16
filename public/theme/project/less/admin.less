@@ -292,7 +292,6 @@ ul.main-menu>li.active>a {
         font-size: 0.9em;
     }
     > i {
-        // filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=10);
         opacity: 0.1;
         position: absolute;
         top: 5px;
@@ -336,10 +335,23 @@ ul.main-menu>li.active>a {
         vertical-align: middle;
         line-height: 110px;
         z-index: 2;
+        :after {
+            content: '%';
+            margin-left: 0.1em;
+            font-size: .8em;
+        }
     }
     canvas {
         position: absolute;
         top: 0;
         left: 0;
     }
+}
+
+.widget-reminder .widget-content {
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    background-color: #6393A7;
+    color: #fff;
 }

@@ -9071,8 +9071,20 @@ ul.main-menu > li.active > a {
   line-height: 110px;
   z-index: 2;
 }
+.easy-pie-chart .percent :after {
+  content: '%';
+  margin-left: 0.1em;
+  font-size: .8em;
+}
 .easy-pie-chart canvas {
   position: absolute;
   top: 0;
   left: 0;
+}
+.widget-reminder .widget-content {
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  background-color: #6393A7;
+  color: #fff;
 }
