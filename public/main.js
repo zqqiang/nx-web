@@ -4,13 +4,13 @@ require(
 		'views/table', 'views/dianping', 'views/dashboard', 'views/dummy',
 		'models/session', 'views/panel', 'mobile-detect', 'views/signin',
 		'views/homepage', 'views/products', 'views/footer', 'views/marketing',
-		'views/stock', 'views/admin/admin',
+		'views/stock', 'views/admin/admin', 'views/cloud',
 		'bootstrap', 'highcharts'
 	],
 	function(
 		$, app, Tour, Navbar, Router,
 		Table, Dianping, Dashboard, Dummy, SessionModel, Panel, MobileDetect,
-		SignIn, Homepage, Products, Footer, Marketing, Stock, Admin
+		SignIn, Homepage, Products, Footer, Marketing, Stock, Admin, Cloud
 	) {
 		$(document).ready(function() {
 			app.start({
@@ -26,6 +26,7 @@ require(
 			"Tour": Tour,
 			"Stock": Stock,
 			"Admin": Admin,
+			"Cloud": Cloud,
 			"Editors": Dummy,
 			"Table": Table,
 			"Dianping": Dianping,

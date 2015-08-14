@@ -20,6 +20,7 @@ define(
 				"Stock": "showStock",
 				"Admin": "showAdmin",
 				"Admin/Market": "showAdminMarket",
+				"Cloud": "showCloud",
 				"*other": "defaultRouter",
 			},
 			showIndex: function() {
@@ -66,6 +67,9 @@ define(
 			},
 			showAdminMarket: function() {
 
+			},
+			showCloud: function() {
+				app.navigateTo("Cloud");
 			},
 			defaultRouter: function(other) {
 				app.navigateTo("other");
