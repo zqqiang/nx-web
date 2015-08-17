@@ -9,15 +9,17 @@ capwap.on('listening', function() {
 
 capwap.on('message', function(message, remote) {
 	console.log(remote.address + ':' + remote.port + ' - ' + 'message len [' + message.length + ']');
-	// parser.extract("b8{version: b4, type: b4}", function(header) {
-	// 	console.log(header);
-	// });
-	// parser.parse(message[0]);
-});
 
-// parser.extract("length: b16, address: b32, name: b8z", function(object) {
-// 	console.log(object.length, object.address, object.name);
-// });
-// parser.parse([0x01, 0xFF, 0x01, 0x00, 0x00, 0x00, 0x01, 0x02, 0x00]);
+	parser.extract("b8{b4 => version, b4 => type}, \
+		            b56{b5 => headerLength, b5 => radioId, b5 => wirelessBindId, b9 => headerFlags, b16 => fragmentId, b13 => fragmentOffset, b3 => reserved}, \
+		            b32 => messageType, \
+		            b8 => sequneceNumber, \
+		            b16 => messageElementLength, \
+		            b8 => flags",
+		function(record) {
+			console.log(record);
+		});
+	parser.parse(message);
+});
 
 module.exports = capwap;
