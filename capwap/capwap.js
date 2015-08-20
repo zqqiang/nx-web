@@ -9,7 +9,9 @@ capwap.on('listening', function() {
 
 capwap.on('message', function(message, remote) {
 	console.log(remote.address + ':' + remote.port + ' - ' + 'message len [' + message.length + ']');
-	decoder.parse(message);
+	decoder.parse(message, function(object) {
+		console.log(object);
+	});
 });
 
 module.exports = capwap;
