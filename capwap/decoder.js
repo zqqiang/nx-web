@@ -13,17 +13,42 @@ var parseTlv = function(tlv, elementLength, success) {
 	parser.extract('x16, b16 => length', function(tlvObj) {
 		parseTlvValue(tlv, tlvObj.length);
 		var len = tlvObj.length + 4;
-		if (elementLength != len) {
-			// parseTlv(tlv + len, elementLength - len);
+		if (elementLength > len) {
+			parseTlv(tlv.slice(len, elementLength), elementLength - len);
 		}
+		if (elementLength === len) console.log(object);
 	});
 	parser.parse(tlv);
+}
+
+var parseTlvValueObject = function(tlv) {
+	var obj = {};
+	obj.length = tlv.length;
+	if (tlv.type === 20) {
+		obj.type = 'Discover Type (20)';
+		if (tlv.value[0] === 1) {
+			obj.value = 'Discover Type: Static Configuration (1)';
+		}
+	} else if (tlv.type === 37) {
+		obj.type = 'Vendor Specific Payload (37)';
+		obj.value = {};
+		if (tlv.value[0] === 0x00 && tlv.value[1] === 0x00 && tlv.value[2] === 0x30 && tlv.value[3] === 0x44) {
+			obj.value.venderIdentifier = 'Fortinet, Inc. (12356)';
+		}
+		if (tlv.value[4] === 0x00 && tlv.value[5] === 0xa1) {
+			obj.value.venderElementId = 'MGMT VLAN Tag (161)';
+		}
+		obj.value.venderData = 'MGMT VLAN Tag: 0x0000 (0)';
+	}
+	return obj;
 }
 
 var parseTlvValue = function(tlv, length) {
 	parser.extract('b16 => type, b16 => length, b8[' + length + '] => value', function(tlv) {
 		console.log(tlv);
-		object.messageElement.push(tlv);
+		var tlvObj = parseTlvValueObject(tlv);
+		console.log(tlvObj);
+		object.messageElement.push(tlvObj);
 	});
 	parser.parse(tlv);
 }
