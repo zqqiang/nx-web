@@ -21,6 +21,36 @@ var parseTlv = function(tlv, elementLength, success) {
 	parser.parse(tlv);
 }
 
+var getVenderIdentifier = function(value) {
+	var identifier = (value[0] << 24 | value[1] << 16 | value[2] << 8 | value[3]);
+	if (identifier === 0x3044) return 'Fortinet, Inc. (' + identifier + ')';
+	return 'error';
+}
+
+var getVenderElementId = function(value) {
+	var elementId = (value[4] << 8 | value[5]);
+	if (elementId === 0xa1) {
+		return 'MGMT VLAN Tag (' + elementId + ')';
+	} else if (elementId === 0xc0) {
+		return 'WTP Capabilities (' + elementId + ')';
+	}
+	return 'error';
+}
+
+var getVenderData = function(value) {
+	var elementId = (value[4] << 8 | value[5]);
+	var data = {};
+	if (elementId === 0xa1) {
+		data.mgmtVlanTag = (value[6] << 8 | value[7]);
+	} else if (elementId === 0xc0) {
+		data.version = (value[6] << 8 | value[7]);
+		data.radioId = value[8];
+		data.wtpCapFlags = value[9];
+		data.reserved = value.slice(9, value.length);
+	}
+	return data;
+}
+
 var parseTlvValueObject = function(tlv) {
 	var obj = {};
 	obj.length = tlv.length;
@@ -32,13 +62,9 @@ var parseTlvValueObject = function(tlv) {
 	} else if (tlv.type === 37) {
 		obj.type = 'Vendor Specific Payload (37)';
 		obj.value = {};
-		if (tlv.value[0] === 0x00 && tlv.value[1] === 0x00 && tlv.value[2] === 0x30 && tlv.value[3] === 0x44) {
-			obj.value.venderIdentifier = 'Fortinet, Inc. (12356)';
-		}
-		if (tlv.value[4] === 0x00 && tlv.value[5] === 0xa1) {
-			obj.value.venderElementId = 'MGMT VLAN Tag (161)';
-		}
-		obj.value.venderData = 'MGMT VLAN Tag: 0x0000 (0)';
+		obj.value.venderIdentifier = getVenderIdentifier(tlv.value);
+		obj.value.venderElementId = getVenderElementId(tlv.value);
+		obj.value.venderData = getVenderData(tlv.value);
 	}
 	return obj;
 }
