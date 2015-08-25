@@ -1,6 +1,7 @@
 var dgram = require('dgram');
 var capwap = dgram.createSocket('udp4');
 var decoder = require('./decoder');
+var control = require('./control');
 
 capwap.on('listening', function() {
 	var address = capwap.address();
@@ -8,9 +9,13 @@ capwap.on('listening', function() {
 });
 
 capwap.on('message', function(message, remote) {
-	console.log(remote.address + ':' + remote.port + ' - ' + 'message len [' + message.length + ']');
-	decoder.parse(message, function(object) {
-		console.log(object);
+	decoder.parse(message, function(request) {
+		if (1 == request.controlHeader.messageType) {
+			var response = control.discoverRequestProcess(request);
+			capwap.send(response, 0, response.length, 5246, '172.16.94.161' /* error callback */ );
+		} else {
+			console.log('unknow message [%d]', request.controlHeader.messageType);
+		}
 	});
 });
 

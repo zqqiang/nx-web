@@ -1,22 +1,23 @@
 var parser = require('packet').createParser();
 var object = {};
+var callback;
 
-var parseMessageElement = function(message, elementLength, success) {
+var parseMessageElement = function(message, elementLength) {
 	parser.extract('x128, b8[' + elementLength + '] => messageElement', function(element) {
 		object.messageElement = [];
-		parseTlv(element.messageElement, elementLength, success);
+		parseTlv(element.messageElement, elementLength);
 	});
 	parser.parse(message);
 }
 
-var parseTlv = function(tlv, elementLength, success) {
+var parseTlv = function(tlv, elementLength) {
 	parser.extract('x16, b16 => length', function(tlvObj) {
 		parseTlvValue(tlv, tlvObj.length);
 		var len = tlvObj.length + 4;
 		if (elementLength > len) {
 			parseTlv(tlv.slice(len, elementLength), elementLength - len);
 		}
-		if (elementLength === len) console.log(object);
+		if (elementLength === len) callback(object);
 	});
 	parser.parse(tlv);
 }
@@ -95,26 +96,27 @@ var parseHeader = function(header) {
 	parser.parse(header);
 }
 
-var parseControlHeader = function(message, controlHeader, success) {
+var parseControlHeader = function(message, controlHeader) {
 	parser.extract('b32 => messageType, \
 					b8 => sequneceNumber, \
 					b16 => messageElementLength, \
 					b8 => flags', function(controlHeader) {
 		console.log(controlHeader);
 		object.controlHeader = controlHeader;
-		parseMessageElement(message, controlHeader.messageElementLength, success);
+		parseMessageElement(message, controlHeader.messageElementLength);
 	});
 	parser.parse(controlHeader);
 }
 
 exports.parse = function(message, success) {
+	callback = success;
 	parser.extract('b8[1] => preamble, \
 		            b8[7] => header, \
 		            b8[8] => controlHeader', function(capwap) {
 		console.log(capwap);
 		parsePreamble(capwap.preamble);
 		parseHeader(capwap.header);
-		parseControlHeader(message, capwap.controlHeader, success);
+		parseControlHeader(message, capwap.controlHeader);
 	});
 	parser.parse(message);
 }
