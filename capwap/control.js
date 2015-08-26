@@ -1,6 +1,18 @@
 var encoder = require('./encoder');
 var serializer = require("packet").createSerializer();
 
+var buildTlv = function(serializer, type, length) {
+	var buf = new Buffer(length);
+	serializer.write(buf, 0, buf.length);
+
+	var tlv = {
+		type: type,
+		length: length,
+		value: buf.toJSON().data
+	};
+	return tlv;
+}
+
 var buildAcDescriptor = function() {
 	var hVersion = '1.0.0';
 	var sVersion = '2.0.0';
@@ -27,21 +39,40 @@ var buildAcDescriptor = function() {
 	});
 
 	var len = 28 + hVersion.length + sVersion.length;
-	var buf = new Buffer(len);
-	serializer.write(buf, 0, buf.length);
+	return buildTlv(serializer, 1, len);
+}
 
-	var acDes = {
-		type: 1,
-		length: len,
-		value: buf.toJSON().data
-	};
+var buildAcName = function() {
+	var name = 'FortiCloud Wireless Controller';
 
-	return acDes;
+	serializer.serialize('b8[' + name.length + ']z|str("ascii") => acName', {
+		acName: name
+	});
+
+	var len = name.length;
+	return buildTlv(serializer, 4, len);
+}
+
+var buildVspWtpAllow = function(sn) {
+	serializer.serialize('b32 => identifier, \
+		                  b16 => elementId, \
+		                  b8[' + sn.length + ']z|str("ascii") => wtpSN, \
+		                  b8 => allow', {
+		identifier: 12356,
+		elementId: 0x22,
+		wtpSN: sn,
+		allow: 0
+	});
+
+	var len = 7 + sn.length;
+	return buildTlv(serializer, 37, len);
 }
 
 exports.discoverRequestProcess = function(request) {
 	var acDescriptor = buildAcDescriptor();
-	var elementLength = 4 + acDescriptor.length;
+	var acName = buildAcName();
+	var vspWtpAllow = buildVspWtpAllow(request.messageElement.wtpBoardData.wtpSerialNumber.value);
+	var elementLength = 4 * 3 + acDescriptor.length + acName.length + vspWtpAllow.length;
 
 	var res = encoder.encode({
 		preamble: {
@@ -63,7 +94,11 @@ exports.discoverRequestProcess = function(request) {
 			messageElementLength: elementLength,
 			flags: 0
 		},
-		tlv: [acDescriptor]
+		tlv: [
+			acDescriptor,
+			acName,
+			vspWtpAllow
+		]
 	});
 
 	return res;

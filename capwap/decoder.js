@@ -2,9 +2,13 @@ var parser = require('packet').createParser();
 var object = {};
 var callback;
 
+var bin2String = function(array) {
+	return String.fromCharCode.apply(String, array);
+}
+
 var parseMessageElement = function(message, elementLength) {
 	parser.extract('x128, b8[' + elementLength + '] => messageElement', function(element) {
-		object.messageElement = [];
+		object.messageElement = {};
 		parseTlv(element.messageElement, elementLength);
 	});
 	parser.parse(message);
@@ -29,13 +33,7 @@ var getVenderIdentifier = function(value) {
 }
 
 var getVenderElementId = function(value) {
-	var elementId = (value[4] << 8 | value[5]);
-	if (elementId === 0xa1) {
-		return 'MGMT VLAN Tag (' + elementId + ')';
-	} else if (elementId === 0xc0) {
-		return 'WTP Capabilities (' + elementId + ')';
-	}
-	return 'error';
+	return (value[4] << 8 | value[5]);
 }
 
 var getVenderData = function(value) {
@@ -52,20 +50,54 @@ var getVenderData = function(value) {
 	return data;
 }
 
+var getWtpBoardData = function(tlv, start) {
+	var data = {};
+	data.type = (tlv[start] << 8 | tlv[start + 1]);
+	data.length = (tlv[start + 2] << 8 | tlv[start + 3]);
+	var valueArray = tlv.slice(start + 4, start + 4 + data.length);
+	if (data.type === 4) { //Base mac address
+		data.value = valueArray;
+	} else {
+		data.value = bin2String(valueArray);
+	}
+	return data;
+}
+
 var parseTlvValueObject = function(tlv) {
 	var obj = {};
+	obj.type = tlv.type;
 	obj.length = tlv.length;
 	if (tlv.type === 20) {
-		obj.type = 'Discover Type (20)';
+		// 'Discover Type (20)';
 		if (tlv.value[0] === 1) {
 			obj.value = 'Discover Type: Static Configuration (1)';
 		}
 	} else if (tlv.type === 37) {
-		obj.type = 'Vendor Specific Payload (37)';
+		// 'Vendor Specific Payload (37)';
 		obj.value = {};
 		obj.value.venderIdentifier = getVenderIdentifier(tlv.value);
 		obj.value.venderElementId = getVenderElementId(tlv.value);
 		obj.value.venderData = getVenderData(tlv.value);
+	} else if (tlv.type === 38) {
+		// 	WTP Board Data (38)
+		obj.wtpBoardDataVendor = getVenderIdentifier(tlv.value);
+		var data;
+		for (var i = 4; i < tlv.length; i += (data.length + 4)) {
+			data = getWtpBoardData(tlv.value, i);
+			if (data.type === 0) {
+				obj.wtpModelNumber = data;
+			} else if (data.type === 1) {
+				obj.wtpSerialNumber = data;
+			} else if (data.type === 2) {
+				obj.wtpBoardId = data;
+			} else if (data.type === 3) {
+				obj.wtpBoardRevision = data;
+			} else if (data.type === 4) {
+				obj.wtpBaseMacAddress = data;
+			}
+		}
+	} else {
+		console.error('unknown tlv type [%d]', tlv.type);
 	}
 	return obj;
 }
@@ -73,7 +105,21 @@ var parseTlvValueObject = function(tlv) {
 var parseTlvValue = function(tlv, length) {
 	parser.extract('b16 => type, b16 => length, b8[' + length + '] => value', function(tlv) {
 		var tlvObj = parseTlvValueObject(tlv);
-		object.messageElement.push(tlvObj);
+		if (tlvObj.type === 20) {
+			object.messageElement.discoverType = tlvObj;
+		} else if (tlvObj.type === 37) {
+			if (tlvObj.value.venderElementId === 161) {
+				object.messageElement.vspMgmtVlanTag = tlvObj;
+			} else if (tlvObj.value.venderElementId === 192) {
+				object.messageElement.vspWtpCapabilities = tlvObj;
+			} else {
+				console.error('unknown vsp element id [%d]', tlvObj.value.venderElementId);
+			}
+		} else if (tlvObj.type === 38) {
+			object.messageElement.wtpBoardData = tlvObj;
+		} else {
+			console.error('unknown tlv type [%d]', tlvObj.type);
+		}
 	});
 	parser.parse(tlv);
 }
