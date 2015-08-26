@@ -10,11 +10,14 @@ capwap.on('listening', function() {
 
 capwap.on('message', function(message, remote) {
 	decoder.parse(message, function(request) {
-		if (1 == request.controlHeader.messageType) {
+		var type = request.controlHeader.messageType;
+		if (1 == type) {
+			console.log('receive Discover Request');
 			var response = control.discoverRequestProcess(request);
 			capwap.send(response, 0, response.length, 5246, '172.16.94.161' /* error callback */ );
+			console.log('send Discover Response');
 		} else {
-			console.log('unknow message [%d]', request.controlHeader.messageType);
+			console.log('unknow message [%d]', type);
 		}
 	});
 });

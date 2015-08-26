@@ -72,9 +72,7 @@ var parseTlvValueObject = function(tlv) {
 
 var parseTlvValue = function(tlv, length) {
 	parser.extract('b16 => type, b16 => length, b8[' + length + '] => value', function(tlv) {
-		console.log(tlv);
 		var tlvObj = parseTlvValueObject(tlv);
-		console.log(tlvObj);
 		object.messageElement.push(tlvObj);
 	});
 	parser.parse(tlv);
@@ -82,7 +80,6 @@ var parseTlvValue = function(tlv, length) {
 
 var parsePreamble = function(preamble) {
 	parser.extract('b8{b4 => version, b4 => type}', function(preamble) {
-		console.log(preamble);
 		object.preamble = preamble;
 	});
 	parser.parse(preamble);
@@ -90,7 +87,6 @@ var parsePreamble = function(preamble) {
 
 var parseHeader = function(header) {
 	parser.extract('b56{b5 => headerLength, b5 => radioId, b5 => wirelessBindId, b9 => headerFlags, b16 => fragmentId, b13 => fragmentOffset, b3 => reserved}', function(header) {
-		console.log(header);
 		object.header = header;
 	});
 	parser.parse(header);
@@ -101,7 +97,6 @@ var parseControlHeader = function(message, controlHeader) {
 					b8 => sequneceNumber, \
 					b16 => messageElementLength, \
 					b8 => flags', function(controlHeader) {
-		console.log(controlHeader);
 		object.controlHeader = controlHeader;
 		parseMessageElement(message, controlHeader.messageElementLength);
 	});
@@ -113,7 +108,6 @@ exports.parse = function(message, success) {
 	parser.extract('b8[1] => preamble, \
 		            b8[7] => header, \
 		            b8[8] => controlHeader', function(capwap) {
-		console.log(capwap);
 		parsePreamble(capwap.preamble);
 		parseHeader(capwap.header);
 		parseControlHeader(message, capwap.controlHeader);
