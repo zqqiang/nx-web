@@ -16,6 +16,7 @@ require.config({
         'bootbox': 'bower_components/bootbox/bootbox',
         'mobile-detect': 'bower_components/mobile-detect/mobile-detect',
         'masonry': 'bower_components/masonry/dist/masonry.pkgd',
+        'd3': 'bower_components/d3/d3'
     },
 
     // non-AMD lib
@@ -32,7 +33,7 @@ require.config({
         },
         'handlebars': {
             exports: 'Handlebars'
-        },
+        }
     },
 });
 
