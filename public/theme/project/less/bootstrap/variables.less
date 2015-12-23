@@ -202,9 +202,11 @@
 
 @btn-link-disabled-color:        @gray-light;
 
-@btn-feature-color:              #fff;
-@btn-feature-bg:                 @brand-feature;
-@btn-feature-border:             darken(@btn-feature-bg, 5%);
+// Allows for customizing button radius independently from global border radius
+@btn-border-radius-base:         @border-radius-base;
+@btn-border-radius-large:        @border-radius-large;
+@btn-border-radius-small:        @border-radius-small;
+
 
 //== Forms
 //
@@ -532,6 +534,7 @@
 @jumbotron-bg:                   @gray-lighter;
 @jumbotron-heading-color:        inherit;
 @jumbotron-font-size:            ceil((@font-size-base * 1.5));
+@jumbotron-heading-font-size:    ceil((@font-size-base * 4.5));
 
 
 //== Form states and alerts
