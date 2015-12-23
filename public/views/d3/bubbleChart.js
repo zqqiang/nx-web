@@ -1,6 +1,6 @@
 define(['marionette', 'd3', 'templates/compiled'], function(Marionette, d3, JST) {
 	var D3 = Marionette.ItemView.extend({
-		template: JST.D3Template,
+		template: JST.BubbleChartTemplate,
 		className: 'D3',
 		onShow: function() {
 			this.drawBubble();

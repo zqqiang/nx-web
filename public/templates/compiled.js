@@ -24,7 +24,7 @@ define(
 		'text!templates/admin/menu.html',
 		'text!templates/admin/customer.html',
 		'text!templates/cloud.html',
-		'text!templates/d3.html',
+		'text!templates/d3/bubbleChart.html',
 	],
 	function(
 		Handlebars,
@@ -51,7 +51,7 @@ define(
 		MenuTpl,
 		CustomerTpl,
 		CloudTpl,
-		D3Tpl
+		BubbleChartTpl
 	) {
 		return {
 			TableTemplate: Handlebars.compile(TableTpl),
@@ -77,7 +77,7 @@ define(
 			MenuTemplate: Handlebars.compile(MenuTpl),
 			CustomerTemplate: Handlebars.compile(CustomerTpl),
 			CloudTemplate: Handlebars.compile(CloudTpl),
-			D3Template: Handlebars.compile(D3Tpl),
+			BubbleChartTemplate: Handlebars.compile(BubbleChartTpl),
 		};
 	}
 );

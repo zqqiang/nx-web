@@ -21,7 +21,7 @@ define(
 				"Admin": "showAdmin",
 				"Admin/Market": "showAdminMarket",
 				"Cloud": "showCloud",
-				"D3": "showD3",
+				"BubbleChart": "showBubbleChart",
 				"*other": "defaultRouter",
 			},
 			showIndex: function() {
@@ -72,8 +72,8 @@ define(
 			showCloud: function() {
 				app.navigateTo("Cloud");
 			},
-			showD3: function() {
-				app.navigateTo("D3");
+			showBubbleChart: function() {
+				app.navigateTo("BubbleChart");
 			},
 			defaultRouter: function(other) {
 				app.navigateTo("other");
