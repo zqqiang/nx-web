@@ -58,6 +58,7 @@ Libs
 * Backbones.js Marionette.js Underscore.js Handlebars.js D3.js
 * Bootstraps CSS3 HTML5
 * Node.js Express.js MongoDB Mongoose.js Cheerio.js
+* IndexedDB
 
 [Back to TOC](#table-of-contents)
 
