@@ -1,9 +1,24 @@
 define(['marionette', 'd3', 'templates/compiled'], function(Marionette, d3, JST) {
+	const customerData = [{
+		ssn: "444-44-4444",
+		name: "Bill",
+		age: 35,
+		email: "bill@company.com"
+	}, {
+		ssn: "555-55-5555",
+		name: "Donna",
+		age: 32,
+		email: "donna@home.org"
+	}];
+
 	var D3 = Marionette.ItemView.extend({
 		template: JST.BubbleChartTemplate,
 		className: 'D3',
+
 		onShow: function() {
 			this.drawBubble();
+			this.indexedDbInit();
+			this.indexedDbQuery();
 		},
 		drawBubble: function() {
 			var diameter = 960,
@@ -77,6 +92,49 @@ define(['marionette', 'd3', 'templates/compiled'], function(Marionette, d3, JST)
 			}
 
 			d3.select(self.frameElement).style("height", diameter + "px");
+		},
+		initialize: function() {
+			this.request = window.indexedDB.open("MyTestDatabase", 3);
+		},
+		indexedDbInit: function() {
+			this.request.onerror = function(event) {
+				console.log("Database error: " + event.target.errorCode);
+			};
+			this.request.onsuccess = function(event) {
+				console.log('Database success!');
+			};
+			var self = this;
+			this.request.onupgradeneeded = function(event) {
+				console.log('Database upgrade needed!');
+
+				var db = event.target.result;
+
+				var objectStore = db.createObjectStore("customers", {
+					keyPath: "ssn"
+				});
+
+				objectStore.createIndex("name", "name", {
+					unique: false
+				});
+
+				objectStore.createIndex("email", "email", {
+					unique: true
+				});
+
+				objectStore.transaction.oncomplete = function(event) {
+					var customerObjectStore = db.transaction("customers", "readwrite").objectStore("customers");
+					for (var i in customerData) {
+						customerObjectStore.add(customerData[i]);
+					}
+				};
+
+				self.db = db;
+			};
+		},
+		indexedDbQuery: function() {
+			this.db.transaction("customers").objectStore("customers").get("444-44-4444").onsuccess = function(event) {
+				console.log("Name for SSN 444-44-4444 is " + event.target.result.name);
+			};
 		}
 	});
 	return D3;
