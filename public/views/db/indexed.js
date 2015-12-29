@@ -19,16 +19,16 @@ define(['marionette', 'templates/compiled'], function(Marionette, JST) {
 		template: JST.IndexedTemplate,
 		className: 'indexed',
 		ui: {
-			'chart': '.indexed-db'
+			'message': '.message'
 		},
 		events: {
-			'click @ui.chart': 'clickChart'
+			'click @ui.message': 'clickMessage'
 		},
 		initialize: function() {
 			this.openDB();
 		},
 		appendMessage: function(message) {
-			this.$el.find('div.message').append(message + ' => ');
+			this.$el.find('div.message').append('<pre>' + message + '</pre>');
 		},
 		openDB: function() {
 			var req = indexedDB.open(DB_NAME, DB_VERSION);
@@ -75,7 +75,7 @@ define(['marionette', 'templates/compiled'], function(Marionette, JST) {
 				self.appendMessage("Name for SSN 444-44-4444 is " + event.target.result.name);
 			};
 		},
-		clickChart: function() {
+		clickMessage: function() {
 			this.queryDB();
 		}
 	});
