@@ -11,14 +11,24 @@ define(['marionette', 'd3', 'templates/compiled'], function(Marionette, d3, JST)
 		email: "donna@home.org"
 	}];
 
+	const DB_NAME = 'flareDb';
+	const DB_VERSION = 1;
+	var db;
+
 	var D3 = Marionette.ItemView.extend({
 		template: JST.BubbleChartTemplate,
 		className: 'D3',
-
+		ui: {
+			'chart': '.d3-bubble-chart'
+		},
+		events: {
+			'click @ui.chart': 'clickChart'
+		},
+		initialize: function() {
+			this.openDB();
+		},
 		onShow: function() {
 			this.drawBubble();
-			this.indexedDbInit();
-			this.indexedDbQuery();
 		},
 		drawBubble: function() {
 			var diameter = 960,
@@ -93,23 +103,26 @@ define(['marionette', 'd3', 'templates/compiled'], function(Marionette, d3, JST)
 
 			d3.select(self.frameElement).style("height", diameter + "px");
 		},
-		initialize: function() {
-			this.request = window.indexedDB.open("MyTestDatabase", 3);
-		},
-		indexedDbInit: function() {
-			this.request.onerror = function(event) {
+		openDB: function() {
+			var req = indexedDB.open(DB_NAME, DB_VERSION);
+
+			req.onerror = function(event) {
 				console.log("Database error: " + event.target.errorCode);
 			};
-			this.request.onsuccess = function(event) {
-				console.log('Database success!');
+
+			req.onsuccess = function(event) {
+				// Better use "this" than "req" to get the result to avoid problems with garbage collection.
+				// db = req.result;
+				db = this.result;
+				console.log("openDb DONE");
 			};
-			var self = this;
-			this.request.onupgradeneeded = function(event) {
-				console.log('Database upgrade needed!');
 
-				var db = event.target.result;
+			req.onupgradeneeded = function(event) {
+				console.log("openDb.onupgradeneeded");
 
-				var objectStore = db.createObjectStore("customers", {
+				var result = event.target.result;
+
+				var objectStore = result.createObjectStore("customers", {
 					keyPath: "ssn"
 				});
 
@@ -122,19 +135,23 @@ define(['marionette', 'd3', 'templates/compiled'], function(Marionette, d3, JST)
 				});
 
 				objectStore.transaction.oncomplete = function(event) {
-					var customerObjectStore = db.transaction("customers", "readwrite").objectStore("customers");
+					var customerObjectStore = result.transaction("customers", "readwrite").objectStore("customers");
 					for (var i in customerData) {
 						customerObjectStore.add(customerData[i]);
 					}
 				};
-
-				self.db = db;
 			};
 		},
-		indexedDbQuery: function() {
-			this.db.transaction("customers").objectStore("customers").get("444-44-4444").onsuccess = function(event) {
-				console.log("Name for SSN 444-44-4444 is " + event.target.result.name);
+		queryDB: function() {
+			var store = db.transaction("customers").objectStore("customers");
+
+			store.get("444-44-4444").onsuccess = function(event) {
+				// console.log("Name for SSN 444-44-4444 is " + event.target.result.name);
+				console.log(event.target);
 			};
+		},
+		clickChart: function() {
+			this.queryDB();
 		}
 	});
 	return D3;
