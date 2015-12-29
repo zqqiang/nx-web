@@ -5,15 +5,22 @@ define(['marionette', 'pouchdb', 'templates/compiled'], function(Marionette, Pou
 		ui: {
 			'add': '#add',
 			'show': '#show',
-			'clear': '#clear'
+			'clear': '#clear',
+			'sync': '#sync'
 		},
 		events: {
 			'click @ui.add': 'addTodo',
 			'click @ui.show': 'showTodos',
-			'click @ui.clear': 'clearTodos'
+			'click @ui.clear': 'clearTodos',
+			'click @ui.sync': 'syncTodos'
 		},
 		initialize: function() {
 			this.db = new PouchDB('todos');
+			this.remoteCouch = 'http://user:pass@nietsnie.iriscouch.com/todos';
+			this.db.changes({
+				since: 'now',
+				live: true
+			}).on('change', this.changeTodos);
 		},
 		addTodo: function() {
 			var text = this.$el.find('input').val();
@@ -29,6 +36,9 @@ define(['marionette', 'pouchdb', 'templates/compiled'], function(Marionette, Pou
 					console.log('Error: %s', err);
 				}
 			});
+		},
+		changeTodos: function() {
+			console.log('changeTodos');
 		},
 		showTodos: function() {
 			var self = this;
@@ -54,6 +64,16 @@ define(['marionette', 'pouchdb', 'templates/compiled'], function(Marionette, Pou
 					self.db.remove(elem.doc);
 				})
 			});
+		},
+		syncTodos: function() {
+			var opts = {
+				live: true
+			};
+			this.db.replicate.to(this.remoteCouch, opts, this.syncError);
+			this.db.replicate.from(this.remoteCouch, opts, this.syncError);
+		},
+		syncError: function() {
+			console.log('syncError');
 		}
 	});
 	return Pouch;
