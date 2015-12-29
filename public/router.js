@@ -23,6 +23,7 @@ define(
 				"Cloud": "showCloud",
 				"BubbleChart": "showBubbleChart",
 				"Indexed": "showIndexed",
+				"Pouch": "showPouch",
 				"*other": "defaultRouter",
 			},
 			showIndex: function() {
@@ -78,6 +79,9 @@ define(
 			},
 			showIndexed: function() {
 				app.navigateTo("Indexed");
+			},
+			showPouch: function() {
+				app.navigateTo("Pouch");
 			},
 			defaultRouter: function(other) {
 				app.navigateTo("other");
