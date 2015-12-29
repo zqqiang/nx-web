@@ -16,7 +16,8 @@ require.config({
         'bootbox': 'bower_components/bootbox/bootbox',
         'mobile-detect': 'bower_components/mobile-detect/mobile-detect',
         'masonry': 'bower_components/masonry/dist/masonry.pkgd',
-        'd3': 'bower_components/d3/d3'
+        'd3': 'bower_components/d3/d3',
+        'pouchdb': 'bower_components/pouchdb/dist/pouchdb'
     },
 
     // non-AMD lib
