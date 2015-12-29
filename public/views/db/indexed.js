@@ -17,7 +17,7 @@ define(['marionette', 'templates/compiled'], function(Marionette, JST) {
 
 	var Indexed = Marionette.ItemView.extend({
 		template: JST.IndexedTemplate,
-		className: 'indexed',
+		className: 'container indexed',
 		ui: {
 			'message': '.message'
 		},

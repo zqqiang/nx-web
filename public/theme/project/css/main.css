@@ -9762,11 +9762,6 @@ ul.main-menu > li.active > a {
   background-color: #6393A7;
   color: #fff;
 }
-.center-block {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
 svg.bubble {
   display: block;
   margin-left: auto;

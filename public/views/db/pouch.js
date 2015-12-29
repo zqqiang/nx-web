@@ -1,7 +1,7 @@
 define(['marionette', 'pouchdb', 'templates/compiled'], function(Marionette, PouchDB, JST) {
 	var Pouch = Marionette.ItemView.extend({
 		template: JST.PouchTemplate,
-		className: 'pouch',
+		className: 'container',
 		ui: {
 			'add': '#add',
 			'show': '#show',
