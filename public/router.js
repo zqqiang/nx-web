@@ -22,6 +22,7 @@ define(
 				"Admin/Market": "showAdminMarket",
 				"Cloud": "showCloud",
 				"BubbleChart": "showBubbleChart",
+				"Indexed": "showIndexed",
 				"*other": "defaultRouter",
 			},
 			showIndex: function() {
@@ -74,6 +75,9 @@ define(
 			},
 			showBubbleChart: function() {
 				app.navigateTo("BubbleChart");
+			},
+			showIndexed: function() {
+				app.navigateTo("Indexed");
 			},
 			defaultRouter: function(other) {
 				app.navigateTo("other");

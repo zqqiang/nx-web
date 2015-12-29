@@ -5,12 +5,14 @@ require(
 		'models/session', 'views/panel', 'mobile-detect', 'views/signin',
 		'views/homepage', 'views/products', 'views/footer', 'views/marketing',
 		'views/stock', 'views/admin/admin', 'views/cloud', 'views/d3/bubbleChart',
+		'views/db/indexed',
 		'bootstrap', 'highcharts'
 	],
 	function(
 		$, app, Tour, Navbar, Router,
 		Table, Dianping, Dashboard, Dummy, SessionModel, Panel, MobileDetect,
-		SignIn, Homepage, Products, Footer, Marketing, Stock, Admin, Cloud, BubbleChart
+		SignIn, Homepage, Products, Footer, Marketing, Stock, Admin, Cloud, BubbleChart,
+		Indexed
 	) {
 		$(document).ready(function() {
 			app.start({
@@ -28,6 +30,7 @@ require(
 			"Admin": Admin,
 			"Cloud": Cloud,
 			"BubbleChart": BubbleChart,
+			"Indexed": Indexed,
 			"Editors": Dummy,
 			"Table": Table,
 			"Dianping": Dianping,

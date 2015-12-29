@@ -25,6 +25,7 @@ define(
 		'text!templates/admin/customer.html',
 		'text!templates/cloud.html',
 		'text!templates/d3/bubbleChart.html',
+		'text!templates/db/indexed.html',
 	],
 	function(
 		Handlebars,
@@ -51,7 +52,8 @@ define(
 		MenuTpl,
 		CustomerTpl,
 		CloudTpl,
-		BubbleChartTpl
+		BubbleChartTpl,
+		IndexedTpl
 	) {
 		return {
 			TableTemplate: Handlebars.compile(TableTpl),
@@ -78,6 +80,7 @@ define(
 			CustomerTemplate: Handlebars.compile(CustomerTpl),
 			CloudTemplate: Handlebars.compile(CloudTpl),
 			BubbleChartTemplate: Handlebars.compile(BubbleChartTpl),
+			IndexedTemplate: Handlebars.compile(IndexedTpl),
 		};
 	}
 );
