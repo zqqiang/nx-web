@@ -24,6 +24,7 @@ define(
 				"BubbleChart": "showBubbleChart",
 				"Indexed": "showIndexed",
 				"Pouch": "showPouch",
+				"Creative": "showCreative",
 				"*other": "defaultRouter",
 			},
 			showIndex: function() {
@@ -82,6 +83,9 @@ define(
 			},
 			showPouch: function() {
 				app.navigateTo("Pouch");
+			},
+			showCreative: function() {
+				app.navigateTo("Creative");
 			},
 			defaultRouter: function(other) {
 				app.navigateTo("other");
