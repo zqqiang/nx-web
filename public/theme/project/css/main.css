@@ -9770,6 +9770,14 @@ svg.bubble {
 .creative .no-padding {
   padding: 0;
 }
+.creative hr {
+  border-color: #F05F40;
+  border-width: 3px;
+  max-width: 50px;
+}
+.creative hr.light {
+  border-color: white;
+}
 .creative section {
   padding: 100px 0;
 }
