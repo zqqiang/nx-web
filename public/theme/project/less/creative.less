@@ -1,5 +1,11 @@
 @import "mixins.less";
 .creative {
+    .no-padding {
+        padding: 0;
+    }
+    section {
+        padding: 100px 0;
+    }
     // Homepage Header
     header {
         position: relative;
@@ -119,5 +125,9 @@
                 }
             }
         }
+    }
+    .no-gutter > [class*='col-'] {
+        padding-right: 0;
+        padding-left: 0;
     }
 }
