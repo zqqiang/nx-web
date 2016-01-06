@@ -27,6 +27,7 @@ define(
 		'text!templates/d3/bubbleChart.html',
 		'text!templates/db/indexed.html',
 		'text!templates/db/pouch.html',
+		'text!templates/db/localForage.html',
 		'text!templates/themes/creative.html',
 	],
 	function(
@@ -57,6 +58,7 @@ define(
 		BubbleChartTpl,
 		IndexedTpl,
 		PouchTpl,
+		LocalForageTpl,
 		CreativeTpl
 	) {
 		return {
@@ -86,6 +88,7 @@ define(
 			BubbleChartTemplate: Handlebars.compile(BubbleChartTpl),
 			IndexedTemplate: Handlebars.compile(IndexedTpl),
 			PouchTemplate: Handlebars.compile(PouchTpl),
+			LocalForageTemplate: Handlebars.compile(LocalForageTpl),
 			CreativeTemplate: Handlebars.compile(CreativeTpl),
 		};
 	}

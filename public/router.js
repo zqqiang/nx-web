@@ -24,6 +24,7 @@ define(
 				"BubbleChart": "showBubbleChart",
 				"Indexed": "showIndexed",
 				"Pouch": "showPouch",
+				"LocalForage": "showLocalForage",
 				"Creative": "showCreative",
 				"*other": "defaultRouter",
 			},
@@ -83,6 +84,9 @@ define(
 			},
 			showPouch: function() {
 				app.navigateTo("Pouch");
+			},
+			showLocalForage: function() {
+				app.navigateTo("LocalForage");
 			},
 			showCreative: function() {
 				app.navigateTo("Creative");

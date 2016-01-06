@@ -5,14 +5,14 @@ require(
 		'models/session', 'views/panel', 'mobile-detect', 'views/signin',
 		'views/homepage', 'views/products', 'views/footer', 'views/marketing',
 		'views/stock', 'views/admin/admin', 'views/cloud', 'views/d3/bubbleChart',
-		'views/db/indexed', 'views/db/pouch', 'views/themes/creative',
+		'views/db/indexed', 'views/db/pouch', 'views/db/localForage', 'views/themes/creative',
 		'bootstrap', 'highcharts'
 	],
 	function(
 		$, app, Tour, Navbar, Router,
 		Table, Dianping, Dashboard, Dummy, SessionModel, Panel, MobileDetect,
 		SignIn, Homepage, Products, Footer, Marketing, Stock, Admin, Cloud, BubbleChart,
-		Indexed, Pouch, Creative
+		Indexed, Pouch, LocalForage, Creative
 	) {
 		$(document).ready(function() {
 			app.start({
@@ -32,6 +32,7 @@ require(
 			"BubbleChart": BubbleChart,
 			"Indexed": Indexed,
 			"Pouch": Pouch,
+			"LocalForage": LocalForage,
 			"Creative": Creative,
 			"Editors": Dummy,
 			"Table": Table,

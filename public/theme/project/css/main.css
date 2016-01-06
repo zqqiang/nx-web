@@ -10025,6 +10025,11 @@ svg.bubble {
   margin-left: auto;
   margin-right: auto;
 }
+.local-forage > div {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 .creative .no-padding {
   padding: 0;
 }
