@@ -9,6 +9,12 @@ define(['app', 'backbone', 'marionette', 'bootbox', 'templates/compiled'], funct
 		modelEvents: {
 			"change": "modelChanged"
 		},
+		ui: {
+			'collapse': '.dropdown-menu li a'
+		},
+		events: {
+			'click @ui.collapse': 'clickCollapse'
+		},
 		initialize: function() {
 			var Model = Backbone.Model.extend({});
 			this.model = new Model({
@@ -18,6 +24,9 @@ define(['app', 'backbone', 'marionette', 'bootbox', 'templates/compiled'], funct
 		modelChanged: function() {
 			this.render();
 		},
+		clickCollapse: function() {
+			$('.navbar-toggle:visible').click();
+		}
 	});
 
 	return Navbar;
