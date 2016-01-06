@@ -10036,8 +10036,37 @@ svg.bubble {
 .creative hr.light {
   border-color: white;
 }
+.creative a {
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s;
+  color: #F05F40;
+}
+.creative a:hover,
+.creative a:focus {
+  color: #eb3812;
+}
+.creative h1,
+.creative h2,
+.creative h3,
+.creative h4,
+.creative h5,
+.creative h6 {
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+.creative p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
 .creative section {
   padding: 100px 0;
+}
+.creative .bg-primary {
+  background-color: #F05F40;
+}
+.creative .text-faded {
+  color: rgba(255, 255, 255, 0.7);
 }
 .creative header {
   position: relative;
@@ -10372,4 +10401,7 @@ fieldset[disabled] .creative .btn-primary.active {
 }
 .creative .btn-xl {
   padding: 15px 30px;
+}
+.creative .text-primary {
+  color: #F05F40;
 }
