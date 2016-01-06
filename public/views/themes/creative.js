@@ -1,4 +1,4 @@
-define(['marionette', 'templates/compiled', 'jquery.easing'], function(Marionette, JST) {
+define(['marionette', 'templates/compiled', 'jquery.easing', 'jquery.fittext'], function(Marionette, JST) {
 	var Creative = Marionette.ItemView.extend({
 		template: JST.CreativeTemplate,
 		className: 'creative',
@@ -8,8 +8,13 @@ define(['marionette', 'templates/compiled', 'jquery.easing'], function(Marionett
 		events: {
 			'click @ui.more': 'clickMore'
 		},
-		onRender: function() {
-
+		onShow: function() {
+			this.$el.find('h1').fitText(
+				1.2, {
+					minFontSize: '35px',
+					maxFontSize: '65px'
+				}
+			);
 		},
 		clickMore: function(event) {
 			$('html, body').animate({

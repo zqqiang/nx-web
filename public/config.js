@@ -7,6 +7,7 @@ require.config({
     paths: {
         'jquery': 'bower_components/jquery/dist/jquery',
         'jquery.easing': 'bower_components/jquery.easing/js/jquery.easing',
+        'jquery.fittext': 'bower_components/FitText.js/jquery.fittext',
         'bootstrap': 'bower_components/bootstrap/dist/js/bootstrap',
         'underscore': 'bower_components/underscore/underscore',
         'backbone': 'bower_components/backbone/backbone',
@@ -37,7 +38,8 @@ require.config({
         'handlebars': {
             exports: 'Handlebars'
         },
-        'jquery.easing': ['jquery']
+        'jquery.easing': ['jquery'],
+        'jquery.fittext': ['jquery']
     },
 });
 
