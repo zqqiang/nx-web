@@ -6,6 +6,7 @@ require.config({
 
     paths: {
         'jquery': 'bower_components/jquery/dist/jquery',
+        'jquery.easing': 'bower_components/jquery.easing/js/jquery.easing',
         'bootstrap': 'bower_components/bootstrap/dist/js/bootstrap',
         'underscore': 'bower_components/underscore/underscore',
         'backbone': 'bower_components/backbone/backbone',
@@ -18,7 +19,7 @@ require.config({
         'masonry': 'bower_components/masonry/dist/masonry.pkgd',
         'd3': 'bower_components/d3/d3',
         'pouchdb': 'bower_components/pouchdb/dist/pouchdb',
-        'localforage':'bower_components/localforage/dist/localforage'
+        'localforage': 'bower_components/localforage/dist/localforage'
     },
 
     // non-AMD lib
@@ -35,7 +36,8 @@ require.config({
         },
         'handlebars': {
             exports: 'Handlebars'
-        }
+        },
+        'jquery.easing': ['jquery']
     },
 });
 

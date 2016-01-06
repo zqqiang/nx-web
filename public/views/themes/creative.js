@@ -1,4 +1,4 @@
-define(['marionette', 'templates/compiled'], function(Marionette, JST) {
+define(['marionette', 'templates/compiled', 'jquery.easing'], function(Marionette, JST) {
 	var Creative = Marionette.ItemView.extend({
 		template: JST.CreativeTemplate,
 		className: 'creative',
@@ -12,8 +12,8 @@ define(['marionette', 'templates/compiled'], function(Marionette, JST) {
 
 		},
 		clickMore: function(event) {
-			this.$el.find('.creative').stop().animate({
-				scrollTop: (this.$el.find('a.page-scroll').offset().top - 50)
+			$('html, body').animate({
+				scrollTop: (this.$el.find('#about').offset().top)
 			}, 1250, 'easeInOutExpo');
 			event.preventDefault();
 		}
