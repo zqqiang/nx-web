@@ -20,7 +20,7 @@ require.config({
         'masonry': 'bower_components/masonry/dist/masonry.pkgd',
         'd3': 'bower_components/d3/d3',
         'pouchdb': 'bower_components/pouchdb/dist/pouchdb',
-        'localforage': 'bower_components/localforage/dist/localforage'
+        'localforage': 'bower_components/localforage/dist/localforage',
     },
 
     // non-AMD lib
@@ -39,7 +39,7 @@ require.config({
             exports: 'Handlebars'
         },
         'jquery.easing': ['jquery'],
-        'jquery.fittext': ['jquery']
+        'jquery.fittext': ['jquery'],
     },
 });
 

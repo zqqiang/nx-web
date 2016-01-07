@@ -15,6 +15,8 @@ define(['marionette', 'templates/compiled', 'jquery.easing', 'jquery.fittext'], 
 					maxFontSize: '65px'
 				}
 			);
+			// Initialize WOW.js Scrolling Animations
+			new WOW().init();
 		},
 		clickMore: function(event) {
 			$('html, body').animate({
