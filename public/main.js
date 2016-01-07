@@ -1,6 +1,6 @@
 require(
 	[
-		'jquery', 'app', 'views/tour', 'views/navbar', 'router',
+		'jquery', 'app', 'views/tour', 'views/header', 'router',
 		'views/table', 'views/dianping', 'views/dashboard', 'views/dummy',
 		'models/session', 'views/panel', 'mobile-detect', 'views/signin',
 		'views/homepage', 'views/products', 'views/footer', 'views/marketing',
@@ -9,7 +9,7 @@ require(
 		'bootstrap', 'highcharts'
 	],
 	function(
-		$, app, Tour, Navbar, Router,
+		$, app, Tour, Header, Router,
 		Table, Dianping, Dashboard, Dummy, SessionModel, Panel, MobileDetect,
 		SignIn, Homepage, Products, Footer, Marketing, Stock, Admin, Cloud, BubbleChart,
 		Indexed, Pouch, LocalForage, Creative
@@ -55,12 +55,12 @@ require(
 			app.session = new SessionModel();
 
 			app.addRegions({
-				headerRegion: 'header[role="banner"]',
+				headerRegion: 'header[class="main-header"]',
 				mainRegion: 'main[role="main"]',
 				footerRegion: 'footer[role="contentinfo"]',
 			});
 
-			app.headerRegion.show(new Navbar());
+			app.headerRegion.show(new Header());
 			app.footerRegion.show(new Footer());
 
 			app.session.checkAuth({
