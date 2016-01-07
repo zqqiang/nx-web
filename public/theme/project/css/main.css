@@ -10026,6 +10026,9 @@ svg.bubble {
   margin-left: auto;
   margin-right: auto;
 }
+.creative {
+  font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
+}
 .creative .no-padding {
   padding: 0;
 }
