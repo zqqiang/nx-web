@@ -1,3 +1,9 @@
+.main-header {
+    position: relative;
+    max-height: 100px;
+    z-index: 1030;
+}
+
 .main-header .logo {
     -webkit-transition: width 0.3s ease-in-out;
     -o-transition: width 0.3s ease-in-out;
@@ -21,4 +27,11 @@
 
 .main-header .logo .logo-mini {
     display: none;
+}
+
+.main-header .logo {
+    /* Fix for IE */
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
 }
