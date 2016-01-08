@@ -58,7 +58,7 @@ Libs
 * Backbones.js Marionette.js Underscore.js Handlebars.js D3.js
 * Bootstraps CSS3 HTML5
 * Node.js Express.js MongoDB Mongoose.js Cheerio.js
-* IndexedDB pouchdb
+* IndexedDB pouchdb localforage  
 
 [Back to TOC](#table-of-contents)
 
@@ -84,7 +84,6 @@ Todo List
 =========
 
 * Cookies  
-* Select a new DB  
 
 Features
 ========
