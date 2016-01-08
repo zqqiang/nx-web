@@ -1,3 +1,5 @@
+// var WOW = require('wow');
+
 define(['marionette', 'templates/compiled', 'jquery.easing', 'jquery.fittext'], function(Marionette, JST) {
 	var Creative = Marionette.ItemView.extend({
 		template: JST.CreativeTemplate,
