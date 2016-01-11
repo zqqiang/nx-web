@@ -4,9 +4,9 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-@import "../../../bower_components/font-awesome/css/font-awesome.min.css";
-@import "../../../bower_components/wow/css/libs/animate.css";
-@import "../css/_all-skins.min.css";
+@import '../../../bower_components/font-awesome/css/font-awesome.min.css';
+@import '../../../bower_components/wow/css/libs/animate.css';
+@import '../css/_all-skins.min.css';
 @import url('http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800');
 @import url('http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic');
 html {
