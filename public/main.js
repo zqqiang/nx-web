@@ -61,7 +61,7 @@ require(
 			});
 
 			app.headerRegion.show(new Header());
-			// app.footerRegion.show(new Footer());
+			app.footerRegion.show(new Footer());
 
 			app.session.checkAuth({
 				complete: function() {
