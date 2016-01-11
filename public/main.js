@@ -6,13 +6,14 @@ require(
 		'views/homepage', 'views/products', 'views/footer', 'views/marketing',
 		'views/stock', 'views/admin/admin', 'views/cloud', 'views/d3/bubbleChart',
 		'views/db/indexed', 'views/db/pouch', 'views/db/localForage', 'views/themes/creative',
+		'views/sidebar',
 		'bootstrap', 'highcharts'
 	],
 	function(
 		$, app, Tour, Header, Router,
 		Table, Dianping, Dashboard, Dummy, SessionModel, Panel, MobileDetect,
 		SignIn, Homepage, Products, Footer, Marketing, Stock, Admin, Cloud, BubbleChart,
-		Indexed, Pouch, LocalForage, Creative
+		Indexed, Pouch, LocalForage, Creative, Sidebar
 	) {
 		$(document).ready(function() {
 			app.start({
@@ -56,11 +57,13 @@ require(
 
 			app.addRegions({
 				headerRegion: 'header[class="main-header"]',
+				sidebarRegion: 'aside[class="main-sidebar"]',
 				mainRegion: 'main[role="main"]',
 				footerRegion: 'footer[role="contentinfo"]',
 			});
 
 			app.headerRegion.show(new Header());
+			app.sidebarRegion.show(new Sidebar());
 			app.footerRegion.show(new Footer());
 
 			app.session.checkAuth({

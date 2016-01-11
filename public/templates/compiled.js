@@ -29,6 +29,7 @@ define(
 		'text!templates/db/pouch.html',
 		'text!templates/db/localForage.html',
 		'text!templates/themes/creative.html',
+		'text!templates/sidebar.html',
 	],
 	function(
 		Handlebars,
@@ -59,7 +60,8 @@ define(
 		IndexedTpl,
 		PouchTpl,
 		LocalForageTpl,
-		CreativeTpl
+		CreativeTpl,
+		SidebarTpl
 	) {
 		return {
 			TableTemplate: Handlebars.compile(TableTpl),
@@ -90,6 +92,7 @@ define(
 			PouchTemplate: Handlebars.compile(PouchTpl),
 			LocalForageTemplate: Handlebars.compile(LocalForageTpl),
 			CreativeTemplate: Handlebars.compile(CreativeTpl),
+			SidebarTemplate: Handlebars.compile(SidebarTpl),
 		};
 	}
 );
