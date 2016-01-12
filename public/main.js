@@ -22,6 +22,7 @@ var Marionette = require('backbone.marionette');
 var Creative = require('./views/themes/creative.js');
 var app = require('./app.js');
 var Router = require('./router.js');
+var Header = require('./views/header.js');
 
 $(document).ready(function() {
 	app.start({
@@ -70,7 +71,7 @@ app.addInitializer(function(options) {
 		footerRegion: 'footer[role="contentinfo"]',
 	});
 
-	// app.headerRegion.show(new Header());
+	app.headerRegion.show(new Header());
 	// app.sidebarRegion.show(new Sidebar());
 	// app.footerRegion.show(new Footer());
 

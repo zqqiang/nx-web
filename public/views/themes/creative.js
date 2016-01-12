@@ -1,10 +1,10 @@
 // define(['marionette', 'templates/compiled', 'jquery.easing', 'jquery.fittext'], function(Marionette, JST) {
-var Marionette = require('backbone.marionette');
 var $ = require('jquery');
-// var JST = require('../../templates/compiled.js');
+var Marionette = require('backbone.marionette');
+var CreativeHbs = require('../../templates/themes/creative.html');
 
 var Creative = Marionette.ItemView.extend({
-	template: '<div>Creative</div>',
+	template: CreativeHbs,
 	className: 'creative',
 	ui: {
 		'more': 'a.page-scroll'
