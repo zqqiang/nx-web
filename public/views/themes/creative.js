@@ -1,4 +1,3 @@
-// define(['marionette', 'templates/compiled', 'jquery.easing', 'jquery.fittext'], function(Marionette, JST) {
 var $ = require('jquery');
 require('jquery.easing');
 var Marionette = require('backbone.marionette');
@@ -32,4 +31,3 @@ var Creative = Marionette.ItemView.extend({
 });
 
 module.exports = Creative;
-// });

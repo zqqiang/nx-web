@@ -24,6 +24,8 @@ var app = require('./app.js');
 var Router = require('./router.js');
 var Header = require('./views/header.js');
 var Sidebar = require('./views/sidebar.js');
+var LocalForage = require('./views/db/localForage.js');
+var Homepage = require('./views/homepage.js');
 
 $(document).ready(function() {
 	app.start({
@@ -33,7 +35,7 @@ $(document).ready(function() {
 
 var contextMap = {
 	"": Creative,
-	// "Homepage": Homepage,
+	"Homepage": Homepage,
 	// "Products": Products,
 	// "Marketing": Marketing,
 	// "Tour": Tour,
@@ -43,7 +45,7 @@ var contextMap = {
 	// "BubbleChart": BubbleChart,
 	// "Indexed": Indexed,
 	// "Pouch": Pouch,
-	// "LocalForage": LocalForage,
+	"LocalForage": LocalForage,
 	"Creative": Creative,
 	// "Editors": Dummy,
 	// "Table": Table,
@@ -63,12 +65,11 @@ app.addInitializer(function(options) {
 	// app.md = new MobileDetect(window.navigator.userAgent);
 
 	app.router = new Router();
-	// app.session = new SessionModel();
 
 	app.addRegions({
 		headerRegion: 'header[class="main-header"]',
 		sidebarRegion: 'aside[class="main-sidebar"]',
-		mainRegion: 'main[role="main"]',
+		mainRegion: 'div[class="content-wrapper"]',
 		footerRegion: 'footer[role="contentinfo"]',
 	});
 
@@ -77,12 +78,6 @@ app.addInitializer(function(options) {
 	// app.footerRegion.show(new Footer());
 
 	Backbone.history.start();
-
-	// app.session.checkAuth({
-	// 	complete: function() {
-	// 		Backbone.history.start();
-	// 	}
-	// });
 });
 // 	}
 // );
