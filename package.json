@@ -25,7 +25,6 @@
     "string": "~2.2.0",
     "underscore": "~1.7.0",
     "utf8": "~2.0.0",
-    "wow": "git+https://github.com/matthieua/WOW.git"
-  },
-  "devDependencies": {}
+    "wow": "git://github.com/matthieua/WOW"
+  }
 }

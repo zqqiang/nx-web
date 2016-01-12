@@ -16,7 +16,7 @@
 // 		Indexed, Pouch, LocalForage, Creative, Sidebar
 // 	) {
 
-var $ = require('jquery');
+var $ = global.jQuery = require('jquery');
 var Backbone = require('backbone');
 var Marionette = require('backbone.marionette');
 var Creative = require('./views/themes/creative.js');
@@ -44,7 +44,7 @@ var contextMap = {
 	// "Indexed": Indexed,
 	// "Pouch": Pouch,
 	// "LocalForage": LocalForage,
-	// "Creative": Creative,
+	"Creative": Creative,
 	// "Editors": Dummy,
 	// "Table": Table,
 	// "Dianping": Dianping,
