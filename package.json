@@ -17,6 +17,7 @@
     "handlebars": "^4.0.5",
     "hbsfy": "^2.4.1",
     "jquery": "^2.2.0",
+    "jquery.easing": "^1.3.2",
     "mongodb": ">=0.9.9",
     "mongoose": "~3.8.19",
     "morgan": "~1.4.1",

@@ -23,6 +23,7 @@ var Creative = require('./views/themes/creative.js');
 var app = require('./app.js');
 var Router = require('./router.js');
 var Header = require('./views/header.js');
+var Sidebar = require('./views/sidebar.js');
 
 $(document).ready(function() {
 	app.start({
@@ -72,7 +73,7 @@ app.addInitializer(function(options) {
 	});
 
 	app.headerRegion.show(new Header());
-	// app.sidebarRegion.show(new Sidebar());
+	app.sidebarRegion.show(new Sidebar());
 	// app.footerRegion.show(new Footer());
 
 	Backbone.history.start();

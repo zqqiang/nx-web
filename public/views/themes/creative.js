@@ -13,12 +13,12 @@ var Creative = Marionette.ItemView.extend({
 		'click @ui.more': 'clickMore'
 	},
 	onShow: function() {
-		// this.$el.find('h1').fitText(
-		// 	1.2, {
-		// 		minFontSize: '35px',
-		// 		maxFontSize: '65px'
-		// 	}
-		// );
+		this.$el.find('h1').fitText(
+			1.2, {
+				minFontSize: '35px',
+				maxFontSize: '65px'
+			}
+		);
 		// Initialize WOW.js Scrolling Animations
 		new WOW().init();
 	},
