@@ -25,7 +25,7 @@ Linux
 sudo apt-get install nodejs  
 sudo apt-get install npm  
 sudo npm install -g supervisor  
-sudo npm install -g bower  
+sudo npm install -g browserify  
 sudo npm install -g less  
 
 Windows
@@ -48,7 +48,7 @@ cd public
 bower install  
 cd ../  
 supervisor app.js  
-watchify public\main.js -o public\bundle.js -t [ hbsfy -e html,htm ] --debug  
+watchify public\main.js -o public\bundle.js -t [ hbsfy -e html,htm ] --debug -v  
 browse localhost:3000  
 
 [Back to TOC](#table-of-contents)
@@ -60,6 +60,7 @@ Libs
 * Bootstraps CSS3 HTML5
 * Node.js Express.js MongoDB Mongoose.js Cheerio.js
 * IndexedDB pouchdb localforage  
+* AdminLTE Creative  
 
 [Back to TOC](#table-of-contents)
 
