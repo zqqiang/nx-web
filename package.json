@@ -28,5 +28,8 @@
     "underscore": "~1.7.0",
     "utf8": "~2.0.0",
     "wow": "git://github.com/matthieua/WOW"
+  },
+  "browser": {
+    "slimscroll": "./node_modules/jquery-slimscroll/jquery.slimscroll.min.js"
   }
 }

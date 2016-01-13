@@ -33,7 +33,7 @@ Windows
 
 download nodejs from [http://nodejs.org/download/](http://nodejs.org/download/)  
 npm install -g supervisor  
-npm install -g bower  
+npm install -g browserify  
 npm install -g less  
 
 [Back to TOC](#table-of-contents)
@@ -48,6 +48,7 @@ cd public
 bower install  
 cd ../  
 supervisor app.js  
+watchify public\main.js -o public\bundle.js -t [ hbsfy -e html,htm ] --debug  
 browse localhost:3000  
 
 [Back to TOC](#table-of-contents)
