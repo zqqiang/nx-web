@@ -27,6 +27,7 @@ var Sidebar = require('./views/sidebar.js');
 var LocalForage = require('./views/db/localForage.js');
 var Homepage = require('./views/homepage.js');
 var ControlPanel = require('./views/controlPanel.js');
+var Dummy = require('./views/dummy.js');
 
 $(document).ready(function() {
 	app.start({
@@ -36,7 +37,7 @@ $(document).ready(function() {
 
 var contextMap = {
 	"": Creative,
-	// "Homepage": Homepage,
+	"Homepage": Dummy,
 	// "Products": Products,
 	// "Marketing": Marketing,
 	// "Tour": Tour,
@@ -55,7 +56,7 @@ var contextMap = {
 	// "HighCharts": Dummy,
 	// "3d": Dummy,
 	// "SignIn": SignIn,
-	// "other": Dummy,
+	"other": Dummy,
 };
 
 app.navigateTo = function(context, options) {
