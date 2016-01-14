@@ -3,3 +3,4 @@ public/bower_components/
 nxManager.sublime-project
 nxManager.sublime-workspace
 npm-debug.log
+public/bundle.js
