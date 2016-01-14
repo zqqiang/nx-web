@@ -29,6 +29,7 @@ var Router = Backbone.Router.extend({
 		"Pouch": "showPouch",
 		"LocalForage": "showLocalForage",
 		"Creative": "showCreative",
+		"ControlPanel": "showControlPanel",
 		"*other": "defaultRouter",
 	},
 	showIndex: function() {
@@ -93,6 +94,9 @@ var Router = Backbone.Router.extend({
 	},
 	showCreative: function() {
 		app.navigateTo("Creative");
+	},
+	showControlPanel: function() {
+		app.navigateTo("ControlPanel");
 	},
 	defaultRouter: function(other) {
 		app.navigateTo("other");
