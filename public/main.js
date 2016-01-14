@@ -26,6 +26,7 @@ var Header = require('./views/header.js');
 var Sidebar = require('./views/sidebar.js');
 var LocalForage = require('./views/db/localForage.js');
 var Homepage = require('./views/homepage.js');
+var ControlPanel = require('./views/controlPanel.js');
 
 $(document).ready(function() {
 	app.start({
@@ -40,7 +41,7 @@ var contextMap = {
 	// "Marketing": Marketing,
 	// "Tour": Tour,
 	// "Stock": Stock,
-	// "Admin": Admin,
+	"ControlPanel": ControlPanel,
 	// "Cloud": Cloud,
 	// "BubbleChart": BubbleChart,
 	// "Indexed": Indexed,
