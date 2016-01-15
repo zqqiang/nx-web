@@ -27,6 +27,7 @@ var Sidebar = require('./views/sidebar.js');
 var LocalForage = require('./views/db/localForage.js');
 var ControlPanel = require('./views/controlPanel.js');
 var Ecommerce = require('./views/ecommerce.js');
+var Marketing = require('./views/marketing.js');
 var Dummy = require('./views/dummy.js');
 
 $(document).ready(function() {
@@ -37,7 +38,7 @@ $(document).ready(function() {
 
 var contextMap = {
 	"": Creative,
-	// "Marketing": Marketing,
+	"Marketing": Marketing,
 	// "Tour": Tour,
 	// "Stock": Stock,
 	"ControlPanel": ControlPanel,
