@@ -37,7 +37,7 @@ $(document).ready(function() {
 
 var contextMap = {
 	"": Creative,
-	"Homepage": Dummy,
+	"Homepage": Homepage,
 	// "Products": Products,
 	// "Marketing": Marketing,
 	// "Tour": Tour,
