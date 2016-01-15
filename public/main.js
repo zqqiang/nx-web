@@ -25,7 +25,6 @@ var Router = require('./router.js');
 var Header = require('./views/header.js');
 var Sidebar = require('./views/sidebar.js');
 var LocalForage = require('./views/db/localForage.js');
-var Homepage = require('./views/homepage.js');
 var ControlPanel = require('./views/controlPanel.js');
 var Dummy = require('./views/dummy.js');
 
@@ -37,7 +36,6 @@ $(document).ready(function() {
 
 var contextMap = {
 	"": Creative,
-	"Homepage": Homepage,
 	// "Products": Products,
 	// "Marketing": Marketing,
 	// "Tour": Tour,
