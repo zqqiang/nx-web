@@ -9507,6 +9507,9 @@ a:focus {
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
+.ecommerce {
+  padding-top: 15px;
+}
 .ecommerce .slide-image {
   width: 100%;
 }
