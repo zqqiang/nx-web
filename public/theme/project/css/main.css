@@ -9502,3 +9502,43 @@ a:focus {
   display: inline-block;
   margin-top: -20px;
 }
+/*!
+ * Start Bootstrap - Shop Homepage HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+.ecommerce .slide-image {
+  width: 100%;
+}
+.ecommerce .carousel-holder {
+  margin-bottom: 30px;
+}
+.ecommerce .carousel-control,
+.ecommerce .item {
+  border-radius: 4px;
+}
+.ecommerce .caption {
+  height: 130px;
+  overflow: hidden;
+}
+.ecommerce .caption h4 {
+  white-space: nowrap;
+}
+.ecommerce .thumbnail img {
+  width: 100%;
+}
+.ecommerce .ratings {
+  padding-right: 10px;
+  padding-left: 10px;
+  color: #d17581;
+}
+.ecommerce .thumbnail {
+  padding: 0;
+}
+.ecommerce .thumbnail .caption-full {
+  padding: 9px;
+  color: #333;
+}
+.ecommerce footer {
+  margin: 50px 0;
+}
