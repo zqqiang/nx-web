@@ -1,3 +1,5 @@
+@brand-secondary: #5cb85c;
+@brand-tertiary: #d9534f;
 .marketing {
     .content-primary {
         font-size: @font-size-large;
@@ -167,6 +169,76 @@
             .reviews {
                 max-width: 400px;
                 .center-block();
+            }
+        }
+    }
+    #signup {
+        table {
+            boarder: 1px solid @table-border-color;
+            thead th {
+                text-align: center;
+                background-color: @gray-light;
+                color: #fff;
+                padding-top: 12px;
+                padding-bottom: 32px;
+                h2 {
+                    text-transform: uppercase;
+                }
+            }
+            tbody {
+                td {
+                    padding-left: 16px;
+                    padding-right: 16px;
+                }
+            }
+            .price {
+                font-size: 7em;
+                line-height: 1;
+                margin-left: -0.25em;
+                span {
+                    font-size: .5em;
+                    vertical-align: super;
+                }
+            }
+            a.btn {
+                .btn-lg;
+                display: block;
+                width: 100%;
+                background-color: @gray-light;
+                color: #fff;
+            }
+        }
+        .package-basic table {
+            thead th {
+                background-color: @brand-primary;
+            }
+            .btn {
+                .button-variant(#fff;
+                @brand-primary;
+                darken(@brand-primary,
+                5%));
+            }
+        }
+        .package-premium table {
+            thead th {
+                background-color: @brand-secondary;
+            }
+            .btn {
+                .button-variant(#fff;
+                @brand-secondary;
+                darken(@brand-secondary,
+                5%));
+            }
+        }
+        .package-pro table {
+            thead th {
+                background-color: @brand-tertiary;
+            }
+            .btn {
+                .button-variant(#fff;
+                @brand-tertiary;
+                darken(@brand-tertiary,
+                5%));
             }
         }
     }
