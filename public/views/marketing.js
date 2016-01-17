@@ -7,9 +7,15 @@ var Marketing = Marionette.ItemView.extend({
 	template: MarketingHbs,
 	className: 'marketing',
 	onShow: function() {
-		new Masonry('.reviews', {
-			itemSelector: '.hreview'
-		});
+		// var msnry = new Masonry('.reviews', {
+		// 	itemSelector: '.hreview'
+		// });
+
+		// msnry.on('layoutComplete', function(items) {
+		// 	console.log(items.length);
+		// });
+
+		// msnry.layout();
 	}
 });
 
