@@ -13,8 +13,8 @@ var ReactContext = Marionette.ItemView.extend({
 		$(".content-wrapper, .right-side").css('min-height', window_height - neg);
 
 		ReactDOM.render(
-		  <h1>Hello, world!</h1>,
-		  document.getElementById('react-content')
+			<div>Hello, React World!</div>,
+			document.getElementById('react-content')
 		);
 	}
 });
