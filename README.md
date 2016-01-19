@@ -48,7 +48,7 @@ cd public
 bower install  
 cd ../  
 supervisor app.js  
-watchify public\main.js -o public\bundle.js -t [ hbsfy -e html,htm ] -t [ babelify --presets [ react ] ] --debug -v  
+run.bat  
 browse localhost:3000  
 
 [Back to TOC](#table-of-contents)

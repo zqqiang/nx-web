@@ -50,7 +50,7 @@ var contextMap = {
 	"LocalForage": LocalForage,
 	"Creative": Creative,
 	'Ecommerce': Ecommerce,
-	'reactContext': ReactContext,
+	'ReactContext': ReactContext,
 	// "Editors": Dummy,
 	// "Table": Table,
 	// "Dianping": Dianping,
