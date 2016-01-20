@@ -1,9 +1,9 @@
 nxManager
 =========
 
-* This repository is a next generation central manager framework.
-* The target is to make cluster product development very easy and effective.
-* Also be used as Android Central Server.
+* This repository is a next generation central manager framework.  
+* The target is to make cloud product development very easy and effective.  
+* Also support mobile device management.  
 
 Table of Contents
 =================
@@ -45,7 +45,6 @@ First download nxManager
 unzip nxManager & cd nxManager  
 npm install  
 cd public  
-bower install  
 cd ../  
 supervisor app.js  
 run.bat  
@@ -58,8 +57,8 @@ Libs
 
 * Backbones.js Marionette.js Underscore.js Handlebars.js D3.js
 * Bootstraps CSS3 HTML5
-* Node.js Express.js MongoDB Mongoose.js Cheerio.js
-* IndexedDB pouchdb localforage  
+* Node.js Express.js Cheerio.js
+* MongoDB Mongoose.js IndexedDB pouchdb localforage  
 * AdminLTE Creative  
 
 [Back to TOC](#table-of-contents)
@@ -69,7 +68,6 @@ Directory
 
 * db: use mongoose to connect mongodb, some configuration
 * model: mongoose model
-* node_modules (After run "npm install"): all node modules
 * public: Server GUI
 * routes: 
 
@@ -86,7 +84,6 @@ Todo List
 =========
 
 * Cookies  
-* React.js
 
 Features
 ========
