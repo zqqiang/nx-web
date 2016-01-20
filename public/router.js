@@ -17,7 +17,6 @@ var Router = Backbone.Router.extend({
 		"3d": "show3d",
 		"SignIn": "showSignIn",
 		"Ecommerce": "showEcommerce",
-		"Marketing": "showMarketing",
 		"Tour": "showTour",
 		"Stock": "showStock",
 		"Admin": "showAdmin",
@@ -58,9 +57,6 @@ var Router = Backbone.Router.extend({
 	},
 	showEcommerce: function() {
 		app.navigateTo("Ecommerce");
-	},
-	showMarketing: function() {
-		app.navigateTo("Marketing");
 	},
 	showTour: function() {
 		app.navigateTo("Tour");
