@@ -27,6 +27,7 @@ var Sidebar = require('./views/sidebar.js');
 var LocalForage = require('./views/db/localForage.js');
 var ControlPanel = require('./views/controlPanel.js');
 var Ecommerce = require('./views/ecommerce.js');
+var QuickStart = require('./views/quickstart.js');
 var Dummy = require('./views/dummy.js');
 
 $(document).ready(function() {
@@ -54,6 +55,7 @@ var contextMap = {
 	// "HighCharts": Dummy,
 	// "3d": Dummy,
 	// "SignIn": SignIn,
+	"QuickStart": QuickStart,
 	"other": Dummy,
 };
 

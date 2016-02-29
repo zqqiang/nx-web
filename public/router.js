@@ -28,6 +28,7 @@ var Router = Backbone.Router.extend({
 		"LocalForage": "showLocalForage",
 		"Creative": "showCreative",
 		"ControlPanel": "showControlPanel",
+		"QuickStart": "showQuickStart",
 		"*other": "defaultRouter",
 	},
 	showIndex: function() {
@@ -89,6 +90,9 @@ var Router = Backbone.Router.extend({
 	},
 	showControlPanel: function() {
 		app.navigateTo("ControlPanel");
+	},
+	showQuickStart: function() {
+		app.navigateTo("QuickStart");
 	},
 	defaultRouter: function(other) {
 		app.navigateTo("other");
