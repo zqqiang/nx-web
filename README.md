@@ -60,6 +60,7 @@ Libs
 * Node.js Express.js Cheerio.js
 * MongoDB Mongoose.js IndexedDB pouchdb localforage  
 * AdminLTE Creative  
+* React.js  
 
 [Back to TOC](#table-of-contents)
 
