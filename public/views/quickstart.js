@@ -1,6 +1,7 @@
 var $ = require('jquery');
 var Marionette = require('backbone.marionette');
 var React = require('react');
+var ReactDom = require('react-dom');
 
 var Paragraph = require('../components/quickstart.react');
 
@@ -21,7 +22,7 @@ var QuickStart = Marionette.ItemView.extend({
             content: '[Prepare](#prepare)'
         }];
 
-        React.render(
+        ReactDom.render(
             <Paragraph articles={Articles}/>,
             document.getElementById('quick-start')
         );
