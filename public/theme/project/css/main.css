@@ -9545,527 +9545,396 @@ a:focus {
 .ecommerce footer {
   margin: 50px 0;
 }
-.marketing .content-primary {
-  font-size: 18px;
+.alumni {
+  font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
 }
-.marketing .content-tertiary {
-  font-size: 12px;
-}
-.marketing #welcome {
-  height: 300px;
-  background-color: #191919;
-  color: #fff;
-  position: relative;
-}
-.marketing #welcome .btn {
-  margin-top: 16px;
-}
-.marketing #welcome .welcome-message {
-  background-color: rgba(3, 3, 3, 0.4);
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 30px 40px;
-}
-.marketing #welcome .welcome-message strong {
-  font-size: 1.5em;
-  text-transform: uppercase;
-}
-@media (max-width: 991px) {
-  .marketing #welcome {
-    background: #191919 url('../img/subway-906x600.jpg') center center no-repeat;
-  }
-}
-@media (min-width: 768px) {
-  .marketing #welcome {
-    height: 480px;
-  }
-  .marketing #welcome .container {
-    position: relative;
-  }
-  .marketing #welcome .welcome-message {
-    right: 20%;
-    bottom: auto;
-  }
-  .marketing #welcome .welcome-message strong {
-    display: block;
-  }
-}
-@media (min-width: 992px) {
-  .marketing #welcome {
-    height: 540px;
-    background: #191919 url('../img/subway-1600x1060.jpg') center center no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-  .marketing #welcome .welcome-message {
-    right: 50%;
-  }
-}
-.marketing #features .features-item {
-  text-align: center;
-  padding: 20px;
-  height: 270px;
-}
-.marketing #features .features-item .icon {
-  font-size: 90px;
-}
-@media (max-width: 767px) {
-  .marketing #features .features-item {
-    max-width: 320px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-.marketing #impact .hreview {
-  position: relative;
-  padding: 0 10px;
-  border: none;
-}
-.marketing #impact .hreview .caption {
-  position: absolute;
-  top: auto;
-  left: 10px;
-  right: 10px;
-  bottom: 0;
-  line-height: 1.1;
-  background: rgba(26, 26, 26, 0.55);
-}
-.marketing #impact .hreview .caption blockquote,
-.marketing #impact .hreview .caption .reviewer {
-  margin: 0 6px;
+.alumni .no-padding {
   padding: 0;
 }
-.marketing #impact .hreview .caption blockquote {
-  margin-top: 4px;
-  border: none;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 18px;
-  color: #fff;
+.alumni hr {
+  border-color: #F05F40;
+  border-width: 3px;
+  max-width: 50px;
 }
-.marketing #impact .hreview .caption .reviewer {
-  margin-top: 2px;
-  margin-bottom: 4px;
-  text-align: right;
-  color: #eeeeee;
+.alumni hr.light {
+  border-color: white;
 }
-.marketing #impact .review-item-1 .caption {
-  top: 0;
-  left: 10px;
-  right: 17%;
-  bottom: auto;
+.alumni a {
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s;
+  color: #F05F40;
 }
-.marketing #impact .review-item-3 .caption {
-  top: 80%;
-  left: 17%;
-  right: 10px;
-  bottom: auto;
+.alumni a:hover,
+.alumni a:focus {
+  color: #eb3812;
 }
-.marketing #impact .review-item-4 .caption {
-  top: 0;
-  left: 62%;
-  right: 10px;
-  bottom: auto;
+.alumni h1,
+.alumni h2,
+.alumni h3,
+.alumni h4,
+.alumni h5,
+.alumni h6 {
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 }
-.marketing #impact .review-item-4 .caption .reviewer {
-  margin-top: 6px;
-  text-align: left;
+.alumni p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
 }
-.marketing #impact .review-item-5 .caption {
-  top: 0;
-  left: 17%;
-  right: 10px;
-  bottom: auto;
+.alumni section {
+  padding: 100px 0;
 }
-.marketing #impact .review-item-6 .caption {
-  top: 0;
-  left: 10px;
-  right: 62%;
-  bottom: auto;
+.alumni aside {
+  padding: 50px 0;
 }
-.marketing #impact .review-item-6 .caption .reviewer {
-  margin-top: 6px;
-  text-align: left;
+.alumni .bg-primary {
+  background-color: #F05F40;
 }
-.marketing #impact .review-item-7 .caption {
-  top: 0;
-  left: 62%;
-  right: 10px;
-  bottom: auto;
+.alumni .bg-dark {
+  background-color: #222;
+  color: white;
 }
-.marketing #impact .review-item-7 .caption .reviewer {
-  margin-top: 6px;
-  text-align: left;
+.alumni .text-faded {
+  color: rgba(255, 255, 255, 0.7);
 }
-@media (min-width: 992px) {
-  .marketing #impact .review-item-4 {
-    display: none;
+.alumni header {
+  position: relative;
+  width: 100%;
+  min-height: auto;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  background-position: center;
+  background-image: url('../img/full_view_of_south_square.png');
+  text-align: center;
+  color: white;
+}
+.alumni header .header-content {
+  position: relative;
+  text-align: center;
+  padding: 100px 15px 100px;
+  width: 100%;
+}
+.alumni header .header-content .header-content-inner h1 {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.alumni header .header-content .header-content-inner hr {
+  margin: 30px auto;
+}
+.alumni header .header-content .header-content-inner p {
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  margin-bottom: 50px;
+}
+@media (min-width: 768px) {
+  .alumni header {
+    min-height: 100%;
   }
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  .marketing #impact .review-item-5 {
-    height: 474px;
-    overflow: hidden;
+  .alumni header .header-content {
+    position: relative;
+    padding: 100px 15px 100px;
   }
-  .marketing #impact .review-item-5 img {
-    width: 100%;
+  .alumni header .header-content .header-content-inner {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
   }
-}
-@media (max-width: 767px) {
-  .marketing #impact .reviews {
-    max-width: 400px;
-    display: block;
+  .alumni header .header-content .header-content-inner p {
+    font-size: 18px;
+    max-width: 80%;
     margin-left: auto;
     margin-right: auto;
   }
 }
-.marketing #signup table {
-  boarder: 1px solid #ddd;
+.alumni .section-heading {
+  margin-top: 0;
 }
-.marketing #signup table thead th {
+.alumni .service-box {
+  max-width: 400px;
+  margin: 50px auto 0;
+}
+@media (min-width: 992px) {
+  .alumni .service-box {
+    margin: 20px auto 0;
+  }
+}
+.alumni .service-box p {
+  margin-bottom: 0;
+}
+.alumni .portfolio-box {
+  position: relative;
+  display: block;
+  max-width: 650px;
+  margin: 0 auto;
+}
+.alumni .portfolio-box .portfolio-box-caption {
+  color: white;
+  opacity: 0;
+  display: block;
+  background: rgba(240, 95, 64, 0.9);
+  position: absolute;
+  bottom: 0;
   text-align: center;
-  background-color: #777777;
-  color: #fff;
-  padding-top: 12px;
-  padding-bottom: 32px;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s;
 }
-.marketing #signup table thead th h2 {
+.alumni .portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.alumni .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
+.alumni .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  padding: 0 15px;
+}
+.alumni .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+}
+.alumni .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+  font-size: 18px;
+}
+.alumni .portfolio-box:hover .portfolio-box-caption {
+  opacity: 1;
+}
+@media (min-width: 768px) {
+  .alumni .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
+    font-size: 16px;
+  }
+  .alumni .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+    font-size: 22px;
+  }
+}
+.alumni .no-gutter > [class*='col-'] {
+  padding-right: 0;
+  padding-left: 0;
+}
+.alumni .btn-default {
+  color: #222;
+  background-color: white;
+  border-color: white;
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s;
+}
+.alumni .btn-default:focus,
+.alumni .btn-default.focus {
+  color: #222;
+  background-color: #e6e6e6;
+  border-color: #bfbfbf;
+}
+.alumni .btn-default:hover {
+  color: #222;
+  background-color: #e6e6e6;
+  border-color: #e0e0e0;
+}
+.alumni .btn-default:active,
+.alumni .btn-default.active,
+.open > .dropdown-toggle.alumni .btn-default {
+  color: #222;
+  background-color: #e6e6e6;
+  border-color: #e0e0e0;
+}
+.alumni .btn-default:active:hover,
+.alumni .btn-default.active:hover,
+.open > .dropdown-toggle.alumni .btn-default:hover,
+.alumni .btn-default:active:focus,
+.alumni .btn-default.active:focus,
+.open > .dropdown-toggle.alumni .btn-default:focus,
+.alumni .btn-default:active.focus,
+.alumni .btn-default.active.focus,
+.open > .dropdown-toggle.alumni .btn-default.focus {
+  color: #222;
+  background-color: #d4d4d4;
+  border-color: #bfbfbf;
+}
+.alumni .btn-default:active,
+.alumni .btn-default.active,
+.open > .dropdown-toggle.alumni .btn-default {
+  background-image: none;
+}
+.alumni .btn-default.disabled:hover,
+.alumni .btn-default[disabled]:hover,
+fieldset[disabled] .alumni .btn-default:hover,
+.alumni .btn-default.disabled:focus,
+.alumni .btn-default[disabled]:focus,
+fieldset[disabled] .alumni .btn-default:focus,
+.alumni .btn-default.disabled.focus,
+.alumni .btn-default[disabled].focus,
+fieldset[disabled] .alumni .btn-default.focus {
+  background-color: white;
+  border-color: white;
+}
+.alumni .btn-default .badge {
+  color: white;
+  background-color: #222;
+}
+.alumni .btn-default:hover,
+.alumni .btn-default:focus,
+.alumni .btn-default.focus,
+.alumni .btn-default:active,
+.alumni .btn-default.active,
+.open > .dropdown-toggle.alumni .btn-default {
+  color: #222;
+  background-color: #f2f2f2;
+  border-color: #ededed;
+}
+.alumni .btn-default:active,
+.alumni .btn-default.active,
+.open > .dropdown-toggle.alumni .btn-default {
+  background-image: none;
+}
+.alumni .btn-default.disabled,
+.alumni .btn-default[disabled],
+fieldset[disabled] .alumni .btn-default,
+.alumni .btn-default.disabled:hover,
+.alumni .btn-default[disabled]:hover,
+fieldset[disabled] .alumni .btn-default:hover,
+.alumni .btn-default.disabled:focus,
+.alumni .btn-default[disabled]:focus,
+fieldset[disabled] .alumni .btn-default:focus,
+.alumni .btn-default.disabled.focus,
+.alumni .btn-default[disabled].focus,
+fieldset[disabled] .alumni .btn-default.focus,
+.alumni .btn-default.disabled:active,
+.alumni .btn-default[disabled]:active,
+fieldset[disabled] .alumni .btn-default:active,
+.alumni .btn-default.disabled.active,
+.alumni .btn-default[disabled].active,
+fieldset[disabled] .alumni .btn-default.active {
+  background-color: white;
+  border-color: white;
+}
+.alumni .btn-default .badge {
+  color: white;
+  background-color: #222;
+}
+.alumni .btn-primary {
+  color: white;
+  background-color: #F05F40;
+  border-color: #F05F40;
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s;
+}
+.alumni .btn-primary:focus,
+.alumni .btn-primary.focus {
+  color: white;
+  background-color: #eb3812;
+  border-color: #a4270d;
+}
+.alumni .btn-primary:hover {
+  color: white;
+  background-color: #eb3812;
+  border-color: #e13612;
+}
+.alumni .btn-primary:active,
+.alumni .btn-primary.active,
+.open > .dropdown-toggle.alumni .btn-primary {
+  color: white;
+  background-color: #eb3812;
+  border-color: #e13612;
+}
+.alumni .btn-primary:active:hover,
+.alumni .btn-primary.active:hover,
+.open > .dropdown-toggle.alumni .btn-primary:hover,
+.alumni .btn-primary:active:focus,
+.alumni .btn-primary.active:focus,
+.open > .dropdown-toggle.alumni .btn-primary:focus,
+.alumni .btn-primary:active.focus,
+.alumni .btn-primary.active.focus,
+.open > .dropdown-toggle.alumni .btn-primary.focus {
+  color: white;
+  background-color: #c93110;
+  border-color: #a4270d;
+}
+.alumni .btn-primary:active,
+.alumni .btn-primary.active,
+.open > .dropdown-toggle.alumni .btn-primary {
+  background-image: none;
+}
+.alumni .btn-primary.disabled:hover,
+.alumni .btn-primary[disabled]:hover,
+fieldset[disabled] .alumni .btn-primary:hover,
+.alumni .btn-primary.disabled:focus,
+.alumni .btn-primary[disabled]:focus,
+fieldset[disabled] .alumni .btn-primary:focus,
+.alumni .btn-primary.disabled.focus,
+.alumni .btn-primary[disabled].focus,
+fieldset[disabled] .alumni .btn-primary.focus {
+  background-color: #F05F40;
+  border-color: #F05F40;
+}
+.alumni .btn-primary .badge {
+  color: #F05F40;
+  background-color: white;
+}
+.alumni .btn-primary:hover,
+.alumni .btn-primary:focus,
+.alumni .btn-primary.focus,
+.alumni .btn-primary:active,
+.alumni .btn-primary.active,
+.open > .dropdown-toggle.alumni .btn-primary {
+  color: white;
+  background-color: #ee4b28;
+  border-color: #ed431f;
+}
+.alumni .btn-primary:active,
+.alumni .btn-primary.active,
+.open > .dropdown-toggle.alumni .btn-primary {
+  background-image: none;
+}
+.alumni .btn-primary.disabled,
+.alumni .btn-primary[disabled],
+fieldset[disabled] .alumni .btn-primary,
+.alumni .btn-primary.disabled:hover,
+.alumni .btn-primary[disabled]:hover,
+fieldset[disabled] .alumni .btn-primary:hover,
+.alumni .btn-primary.disabled:focus,
+.alumni .btn-primary[disabled]:focus,
+fieldset[disabled] .alumni .btn-primary:focus,
+.alumni .btn-primary.disabled.focus,
+.alumni .btn-primary[disabled].focus,
+fieldset[disabled] .alumni .btn-primary.focus,
+.alumni .btn-primary.disabled:active,
+.alumni .btn-primary[disabled]:active,
+fieldset[disabled] .alumni .btn-primary:active,
+.alumni .btn-primary.disabled.active,
+.alumni .btn-primary[disabled].active,
+fieldset[disabled] .alumni .btn-primary.active {
+  background-color: #F05F40;
+  border-color: #F05F40;
+}
+.alumni .btn-primary .badge {
+  color: #F05F40;
+  background-color: white;
+}
+.alumni .btn {
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  border: none;
+  border-radius: 300px;
+  font-weight: 700;
   text-transform: uppercase;
 }
-.marketing #signup table tbody td {
-  padding-left: 16px;
-  padding-right: 16px;
+.alumni .btn-xl {
+  padding: 15px 30px;
 }
-.marketing #signup table .price {
-  font-size: 7em;
-  line-height: 1;
-  margin-left: -0.25em;
+.alumni .call-to-action h2 {
+  margin: 0 auto 20px;
 }
-.marketing #signup table .price span {
-  font-size: .5em;
-  vertical-align: super;
-}
-.marketing #signup table a.btn {
-  padding: 10px 16px;
-  font-size: 18px;
-  line-height: 1.3333333;
-  border-radius: 6px;
-  display: block;
-  width: 100%;
-  background-color: #777777;
-  color: #fff;
-}
-.marketing #signup .package-basic table thead th {
-  background-color: #337ab7;
-}
-.marketing #signup .package-basic table .btn {
-  color: #fff;
-  background-color: #337ab7;
-  border-color: #2e6da4;
-  -webkit-transition: all 0.35s;
-  -moz-transition: all 0.35s;
-  transition: all 0.35s;
-}
-.marketing #signup .package-basic table .btn:focus,
-.marketing #signup .package-basic table .btn.focus {
-  color: #fff;
-  background-color: #286090;
-  border-color: #122b40;
-}
-.marketing #signup .package-basic table .btn:hover {
-  color: #fff;
-  background-color: #286090;
-  border-color: #204d74;
-}
-.marketing #signup .package-basic table .btn:active,
-.marketing #signup .package-basic table .btn.active,
-.open > .dropdown-toggle.marketing #signup .package-basic table .btn {
-  color: #fff;
-  background-color: #286090;
-  border-color: #204d74;
-}
-.marketing #signup .package-basic table .btn:active:hover,
-.marketing #signup .package-basic table .btn.active:hover,
-.open > .dropdown-toggle.marketing #signup .package-basic table .btn:hover,
-.marketing #signup .package-basic table .btn:active:focus,
-.marketing #signup .package-basic table .btn.active:focus,
-.open > .dropdown-toggle.marketing #signup .package-basic table .btn:focus,
-.marketing #signup .package-basic table .btn:active.focus,
-.marketing #signup .package-basic table .btn.active.focus,
-.open > .dropdown-toggle.marketing #signup .package-basic table .btn.focus {
-  color: #fff;
-  background-color: #204d74;
-  border-color: #122b40;
-}
-.marketing #signup .package-basic table .btn:active,
-.marketing #signup .package-basic table .btn.active,
-.open > .dropdown-toggle.marketing #signup .package-basic table .btn {
-  background-image: none;
-}
-.marketing #signup .package-basic table .btn.disabled:hover,
-.marketing #signup .package-basic table .btn[disabled]:hover,
-fieldset[disabled] .marketing #signup .package-basic table .btn:hover,
-.marketing #signup .package-basic table .btn.disabled:focus,
-.marketing #signup .package-basic table .btn[disabled]:focus,
-fieldset[disabled] .marketing #signup .package-basic table .btn:focus,
-.marketing #signup .package-basic table .btn.disabled.focus,
-.marketing #signup .package-basic table .btn[disabled].focus,
-fieldset[disabled] .marketing #signup .package-basic table .btn.focus {
-  background-color: #337ab7;
-  border-color: #2e6da4;
-}
-.marketing #signup .package-basic table .btn .badge {
-  color: #337ab7;
-  background-color: #fff;
-}
-.marketing #signup .package-basic table .btn:hover,
-.marketing #signup .package-basic table .btn:focus,
-.marketing #signup .package-basic table .btn.focus,
-.marketing #signup .package-basic table .btn:active,
-.marketing #signup .package-basic table .btn.active,
-.open > .dropdown-toggle.marketing #signup .package-basic table .btn {
-  color: #fff;
-  background-color: #2e6da4;
-  border-color: #265a88;
-}
-.marketing #signup .package-basic table .btn:active,
-.marketing #signup .package-basic table .btn.active,
-.open > .dropdown-toggle.marketing #signup .package-basic table .btn {
-  background-image: none;
-}
-.marketing #signup .package-basic table .btn.disabled,
-.marketing #signup .package-basic table .btn[disabled],
-fieldset[disabled] .marketing #signup .package-basic table .btn,
-.marketing #signup .package-basic table .btn.disabled:hover,
-.marketing #signup .package-basic table .btn[disabled]:hover,
-fieldset[disabled] .marketing #signup .package-basic table .btn:hover,
-.marketing #signup .package-basic table .btn.disabled:focus,
-.marketing #signup .package-basic table .btn[disabled]:focus,
-fieldset[disabled] .marketing #signup .package-basic table .btn:focus,
-.marketing #signup .package-basic table .btn.disabled.focus,
-.marketing #signup .package-basic table .btn[disabled].focus,
-fieldset[disabled] .marketing #signup .package-basic table .btn.focus,
-.marketing #signup .package-basic table .btn.disabled:active,
-.marketing #signup .package-basic table .btn[disabled]:active,
-fieldset[disabled] .marketing #signup .package-basic table .btn:active,
-.marketing #signup .package-basic table .btn.disabled.active,
-.marketing #signup .package-basic table .btn[disabled].active,
-fieldset[disabled] .marketing #signup .package-basic table .btn.active {
-  background-color: #337ab7;
-  border-color: #2e6da4;
-}
-.marketing #signup .package-basic table .btn .badge {
-  color: #337ab7;
-  background-color: #fff;
-}
-.marketing #signup .package-premium table thead th {
-  background-color: #5cb85c;
-}
-.marketing #signup .package-premium table .btn {
-  color: #fff;
-  background-color: #5cb85c;
-  border-color: #4cae4c;
-  -webkit-transition: all 0.35s;
-  -moz-transition: all 0.35s;
-  transition: all 0.35s;
-}
-.marketing #signup .package-premium table .btn:focus,
-.marketing #signup .package-premium table .btn.focus {
-  color: #fff;
-  background-color: #449d44;
-  border-color: #255625;
-}
-.marketing #signup .package-premium table .btn:hover {
-  color: #fff;
-  background-color: #449d44;
-  border-color: #398439;
-}
-.marketing #signup .package-premium table .btn:active,
-.marketing #signup .package-premium table .btn.active,
-.open > .dropdown-toggle.marketing #signup .package-premium table .btn {
-  color: #fff;
-  background-color: #449d44;
-  border-color: #398439;
-}
-.marketing #signup .package-premium table .btn:active:hover,
-.marketing #signup .package-premium table .btn.active:hover,
-.open > .dropdown-toggle.marketing #signup .package-premium table .btn:hover,
-.marketing #signup .package-premium table .btn:active:focus,
-.marketing #signup .package-premium table .btn.active:focus,
-.open > .dropdown-toggle.marketing #signup .package-premium table .btn:focus,
-.marketing #signup .package-premium table .btn:active.focus,
-.marketing #signup .package-premium table .btn.active.focus,
-.open > .dropdown-toggle.marketing #signup .package-premium table .btn.focus {
-  color: #fff;
-  background-color: #398439;
-  border-color: #255625;
-}
-.marketing #signup .package-premium table .btn:active,
-.marketing #signup .package-premium table .btn.active,
-.open > .dropdown-toggle.marketing #signup .package-premium table .btn {
-  background-image: none;
-}
-.marketing #signup .package-premium table .btn.disabled:hover,
-.marketing #signup .package-premium table .btn[disabled]:hover,
-fieldset[disabled] .marketing #signup .package-premium table .btn:hover,
-.marketing #signup .package-premium table .btn.disabled:focus,
-.marketing #signup .package-premium table .btn[disabled]:focus,
-fieldset[disabled] .marketing #signup .package-premium table .btn:focus,
-.marketing #signup .package-premium table .btn.disabled.focus,
-.marketing #signup .package-premium table .btn[disabled].focus,
-fieldset[disabled] .marketing #signup .package-premium table .btn.focus {
-  background-color: #5cb85c;
-  border-color: #4cae4c;
-}
-.marketing #signup .package-premium table .btn .badge {
-  color: #5cb85c;
-  background-color: #fff;
-}
-.marketing #signup .package-premium table .btn:hover,
-.marketing #signup .package-premium table .btn:focus,
-.marketing #signup .package-premium table .btn.focus,
-.marketing #signup .package-premium table .btn:active,
-.marketing #signup .package-premium table .btn.active,
-.open > .dropdown-toggle.marketing #signup .package-premium table .btn {
-  color: #fff;
-  background-color: #4cae4c;
-  border-color: #419641;
-}
-.marketing #signup .package-premium table .btn:active,
-.marketing #signup .package-premium table .btn.active,
-.open > .dropdown-toggle.marketing #signup .package-premium table .btn {
-  background-image: none;
-}
-.marketing #signup .package-premium table .btn.disabled,
-.marketing #signup .package-premium table .btn[disabled],
-fieldset[disabled] .marketing #signup .package-premium table .btn,
-.marketing #signup .package-premium table .btn.disabled:hover,
-.marketing #signup .package-premium table .btn[disabled]:hover,
-fieldset[disabled] .marketing #signup .package-premium table .btn:hover,
-.marketing #signup .package-premium table .btn.disabled:focus,
-.marketing #signup .package-premium table .btn[disabled]:focus,
-fieldset[disabled] .marketing #signup .package-premium table .btn:focus,
-.marketing #signup .package-premium table .btn.disabled.focus,
-.marketing #signup .package-premium table .btn[disabled].focus,
-fieldset[disabled] .marketing #signup .package-premium table .btn.focus,
-.marketing #signup .package-premium table .btn.disabled:active,
-.marketing #signup .package-premium table .btn[disabled]:active,
-fieldset[disabled] .marketing #signup .package-premium table .btn:active,
-.marketing #signup .package-premium table .btn.disabled.active,
-.marketing #signup .package-premium table .btn[disabled].active,
-fieldset[disabled] .marketing #signup .package-premium table .btn.active {
-  background-color: #5cb85c;
-  border-color: #4cae4c;
-}
-.marketing #signup .package-premium table .btn .badge {
-  color: #5cb85c;
-  background-color: #fff;
-}
-.marketing #signup .package-pro table thead th {
-  background-color: #d9534f;
-}
-.marketing #signup .package-pro table .btn {
-  color: #fff;
-  background-color: #d9534f;
-  border-color: #d43f3a;
-  -webkit-transition: all 0.35s;
-  -moz-transition: all 0.35s;
-  transition: all 0.35s;
-}
-.marketing #signup .package-pro table .btn:focus,
-.marketing #signup .package-pro table .btn.focus {
-  color: #fff;
-  background-color: #c9302c;
-  border-color: #761c19;
-}
-.marketing #signup .package-pro table .btn:hover {
-  color: #fff;
-  background-color: #c9302c;
-  border-color: #ac2925;
-}
-.marketing #signup .package-pro table .btn:active,
-.marketing #signup .package-pro table .btn.active,
-.open > .dropdown-toggle.marketing #signup .package-pro table .btn {
-  color: #fff;
-  background-color: #c9302c;
-  border-color: #ac2925;
-}
-.marketing #signup .package-pro table .btn:active:hover,
-.marketing #signup .package-pro table .btn.active:hover,
-.open > .dropdown-toggle.marketing #signup .package-pro table .btn:hover,
-.marketing #signup .package-pro table .btn:active:focus,
-.marketing #signup .package-pro table .btn.active:focus,
-.open > .dropdown-toggle.marketing #signup .package-pro table .btn:focus,
-.marketing #signup .package-pro table .btn:active.focus,
-.marketing #signup .package-pro table .btn.active.focus,
-.open > .dropdown-toggle.marketing #signup .package-pro table .btn.focus {
-  color: #fff;
-  background-color: #ac2925;
-  border-color: #761c19;
-}
-.marketing #signup .package-pro table .btn:active,
-.marketing #signup .package-pro table .btn.active,
-.open > .dropdown-toggle.marketing #signup .package-pro table .btn {
-  background-image: none;
-}
-.marketing #signup .package-pro table .btn.disabled:hover,
-.marketing #signup .package-pro table .btn[disabled]:hover,
-fieldset[disabled] .marketing #signup .package-pro table .btn:hover,
-.marketing #signup .package-pro table .btn.disabled:focus,
-.marketing #signup .package-pro table .btn[disabled]:focus,
-fieldset[disabled] .marketing #signup .package-pro table .btn:focus,
-.marketing #signup .package-pro table .btn.disabled.focus,
-.marketing #signup .package-pro table .btn[disabled].focus,
-fieldset[disabled] .marketing #signup .package-pro table .btn.focus {
-  background-color: #d9534f;
-  border-color: #d43f3a;
-}
-.marketing #signup .package-pro table .btn .badge {
-  color: #d9534f;
-  background-color: #fff;
-}
-.marketing #signup .package-pro table .btn:hover,
-.marketing #signup .package-pro table .btn:focus,
-.marketing #signup .package-pro table .btn.focus,
-.marketing #signup .package-pro table .btn:active,
-.marketing #signup .package-pro table .btn.active,
-.open > .dropdown-toggle.marketing #signup .package-pro table .btn {
-  color: #fff;
-  background-color: #d43f3a;
-  border-color: #c12e2a;
-}
-.marketing #signup .package-pro table .btn:active,
-.marketing #signup .package-pro table .btn.active,
-.open > .dropdown-toggle.marketing #signup .package-pro table .btn {
-  background-image: none;
-}
-.marketing #signup .package-pro table .btn.disabled,
-.marketing #signup .package-pro table .btn[disabled],
-fieldset[disabled] .marketing #signup .package-pro table .btn,
-.marketing #signup .package-pro table .btn.disabled:hover,
-.marketing #signup .package-pro table .btn[disabled]:hover,
-fieldset[disabled] .marketing #signup .package-pro table .btn:hover,
-.marketing #signup .package-pro table .btn.disabled:focus,
-.marketing #signup .package-pro table .btn[disabled]:focus,
-fieldset[disabled] .marketing #signup .package-pro table .btn:focus,
-.marketing #signup .package-pro table .btn.disabled.focus,
-.marketing #signup .package-pro table .btn[disabled].focus,
-fieldset[disabled] .marketing #signup .package-pro table .btn.focus,
-.marketing #signup .package-pro table .btn.disabled:active,
-.marketing #signup .package-pro table .btn[disabled]:active,
-fieldset[disabled] .marketing #signup .package-pro table .btn:active,
-.marketing #signup .package-pro table .btn.disabled.active,
-.marketing #signup .package-pro table .btn[disabled].active,
-fieldset[disabled] .marketing #signup .package-pro table .btn.active {
-  background-color: #d9534f;
-  border-color: #d43f3a;
-}
-.marketing #signup .package-pro table .btn .badge {
-  color: #d9534f;
-  background-color: #fff;
+.alumni .text-primary {
+  color: #F05F40;
 }
