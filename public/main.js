@@ -28,6 +28,7 @@ var LocalForage = require('./views/db/localForage.js');
 var ControlPanel = require('./views/controlPanel.js');
 var Ecommerce = require('./views/ecommerce.js');
 var QuickStart = require('./views/quickstart.js');
+var Alumni = require('./views/alumni.js');
 var Dummy = require('./views/dummy.js');
 
 $(document).ready(function() {
@@ -56,6 +57,7 @@ var contextMap = {
 	// "3d": Dummy,
 	// "SignIn": SignIn,
 	"QuickStart": QuickStart,
+	"Alumni": Alumni,
 	"other": Dummy,
 };
 
