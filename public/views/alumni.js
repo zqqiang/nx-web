@@ -7,7 +7,7 @@ var AlumniView = require('../components/alumni.react');
 var Alumni = Marionette.ItemView.extend({
     template: false,
     id: 'alumni-main',
-    className: 'alumni',
+    className: 'stylish-portfolio',
     onShow: function() {
         var neg = $('.main-header').outerHeight() + $('.main-footer').outerHeight();
         var window_height = $(window).height();

@@ -9938,3 +9938,198 @@ fieldset[disabled] .alumni .btn-primary.active {
 .alumni .text-primary {
   color: #F05F40;
 }
+/*!
+ * Start Bootstrap - Stylish Portfolio Bootstrap Theme (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+/* Global Styles */
+.stylish-portfolio {
+  /* Custom Button Styles */
+  /* Custom Horizontal Rule */
+  /* Side Menu */
+  /* Header */
+  /* About */
+  /* Services */
+  /* Callout */
+  /* Portfolio */
+  /* Call to Action */
+  /* Map */
+  /* Footer */
+}
+.stylish-portfolio html,
+.stylish-portfolio body {
+  width: 100%;
+  height: 100%;
+}
+.stylish-portfolio body {
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.stylish-portfolio .text-vertical-center {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  padding: 500px 15px 500px;
+}
+.stylish-portfolio .text-vertical-center h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 4.5em;
+  font-weight: 700;
+}
+.stylish-portfolio .btn-dark {
+  border-radius: 0;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.stylish-portfolio .btn-dark:hover,
+.stylish-portfolio .btn-dark:focus,
+.stylish-portfolio .btn-dark:active {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.stylish-portfolio .btn-light {
+  border-radius: 0;
+  color: #333;
+  background-color: #ffffff;
+}
+.stylish-portfolio .btn-light:hover,
+.stylish-portfolio .btn-light:focus,
+.stylish-portfolio .btn-light:active {
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.stylish-portfolio hr.small {
+  max-width: 100px;
+}
+.stylish-portfolio #sidebar-wrapper {
+  z-index: 1000;
+  position: fixed;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  margin-right: -250px;
+  overflow-y: auto;
+  background: #222;
+  -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -ms-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+.stylish-portfolio .sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.stylish-portfolio .sidebar-nav li {
+  text-indent: 20px;
+  line-height: 40px;
+}
+.stylish-portfolio .sidebar-nav li a {
+  display: block;
+  text-decoration: none;
+  color: #999;
+}
+.stylish-portfolio .sidebar-nav li a:hover {
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+}
+.stylish-portfolio .sidebar-nav li a:active,
+.stylish-portfolio .sidebar-nav li a:focus {
+  text-decoration: none;
+}
+.stylish-portfolio .sidebar-nav > .sidebar-brand {
+  height: 55px;
+  font-size: 18px;
+  line-height: 55px;
+}
+.stylish-portfolio .sidebar-nav > .sidebar-brand a {
+  color: #999;
+}
+.stylish-portfolio .sidebar-nav > .sidebar-brand a:hover {
+  color: #fff;
+  background: none;
+}
+.stylish-portfolio #menu-toggle {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+.stylish-portfolio #sidebar-wrapper.active {
+  right: 250px;
+  width: 250px;
+  -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -ms-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+.stylish-portfolio .toggle {
+  margin: 5px 5px 0 0;
+}
+.stylish-portfolio .header {
+  display: table;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url(../img/bg.jpg) no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+.stylish-portfolio .about {
+  padding: 50px 0;
+}
+.stylish-portfolio .services {
+  padding: 50px 0;
+}
+.stylish-portfolio .service-item {
+  margin-bottom: 30px;
+}
+.stylish-portfolio .callout {
+  display: table;
+  width: 100%;
+  height: 400px;
+  color: #fff;
+  background: url(../img/callout.jpg) no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+.stylish-portfolio .portfolio {
+  padding: 50px 0;
+}
+.stylish-portfolio .portfolio-item {
+  margin-bottom: 30px;
+}
+.stylish-portfolio .img-portfolio {
+  margin: 0 auto;
+}
+.stylish-portfolio .img-portfolio:hover {
+  opacity: 0.8;
+}
+.stylish-portfolio .call-to-action {
+  padding: 50px 0;
+}
+.stylish-portfolio .call-to-action .btn {
+  margin: 10px;
+}
+.stylish-portfolio .map {
+  height: 500px;
+}
+@media (max-width: 768px) {
+  .stylish-portfolio .map {
+    height: 75%;
+  }
+}
+.stylish-portfolio footer {
+  padding: 100px 0;
+}
