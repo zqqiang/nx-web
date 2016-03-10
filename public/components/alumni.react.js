@@ -23,7 +23,9 @@ var About = React.createClass({
                     <div className="row">
                         <div className="col-lg-12 text-center">
                             <h2>Nankai University Vancouver Alumni is a big family!</h2>
-                            <p className="lead">We have <a target="_blank" href="javascript:void(0);">{this.props.alumni}</a> alumni from <a target="_blank" href="http://www.nankai.edu.cn/">Nankai University</a> now.</p>
+                            <p className="lead">
+                                We have <a target="_blank" href="javascript:void(0);">{this.props.alumni}</a> alumni from <a target="_blank" href="http://www.nankai.edu.cn/">Nankai University</a> now.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -91,7 +93,7 @@ var AlumniView = React.createClass({
                 <Header />
                 <About alumni="500+" />
                 <Services items={ServiceItems} />
-                </div>
+            </div>
         );
     }
 });
