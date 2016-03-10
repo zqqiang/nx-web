@@ -6,7 +6,7 @@ var Header = React.createClass({
             <header id="top" className="header">
                 <div className="text-vertical-center">
                     <h1>Nankai University</h1>
-                    <h3>Vancouver Alumin</h3>
+                    <h3>Vancouver Alumni</h3>
                     <br />
                     <a href="#about" className="btn btn-dark btn-lg">Start From 2016</a>
                 </div>
@@ -22,8 +22,8 @@ var About = React.createClass({
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12 text-center">
-                            <h2>Nankai University Vancouver Alumin is a big family!</h2>
-                            <p className="lead">We have <a target="_blank" href="javascript:void(0);">{this.props.alumnus}</a> alumnus from <a target="_blank" href="http://www.nankai.edu.cn/">Nankai University</a> now.</p>
+                            <h2>Nankai University Vancouver Alumni is a big family!</h2>
+                            <p className="lead">We have <a target="_blank" href="javascript:void(0);">{this.props.alumni}</a> alumni from <a target="_blank" href="http://www.nankai.edu.cn/">Nankai University</a> now.</p>
                         </div>
                     </div>
                 </div>
@@ -34,6 +34,11 @@ var About = React.createClass({
 
 var Services = React.createClass({
     render: function() {
+        var items = [];
+        this.props.items.forEach(function(item) {
+            items.push(<ServiceItem item={item}/>);
+        }.bind(this));
+
         return (
             <section id="services" className="services bg-primary">
                 <div className="container">
@@ -42,7 +47,7 @@ var Services = React.createClass({
                             <h2>Our Services</h2>
                             <hr className="small" />
                             <div className="row">
-                                <ServiceItem item={this.props.item}/>
+                                {items}
                             </div>
                         </div>
                     </div>
@@ -53,21 +58,18 @@ var Services = React.createClass({
 });
 
 var ServiceItem = React.createClass({
-    getIcon: function() {
-        return 'fa fa-cloud fa-stack-1x text-primary';
-    },
     render: function() {
         return (
             <div className="col-md-3 col-sm-6">
                 <div className="service-item">
                     <span className="fa-stack fa-4x">
                         <i className="fa fa-circle fa-stack-2x"></i>
-                        <i className={this.getIcon()}></i>
+                        <i className={'fa fa-' + this.props.item.icon + ' fa-stack-1x text-primary'}></i>
                     </span>
                     <h4>
                         <strong>{this.props.item.name}</strong>
                     </h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <p>{this.props.item.desc}</p>
                     <a href="javascript:void(0);" className="btn btn-light">Learn More</a>
                 </div>
             </div>
@@ -75,14 +77,21 @@ var ServiceItem = React.createClass({
     }
 });
 
+var ServiceItems = [
+    { name: 'Finance', icon: 'money', desc: 'You can disscuss finance topics here.' },
+    { name: 'Car', icon: 'car', desc: 'You can disscuss car traveling topics here.' },
+    { name: 'IT', icon: 'laptop', desc: 'You can disscuss IT technology topics here.' },
+    { name: 'Baby', icon: 'users', desc: 'You can disscuss baby nursing topics here.' },
+];
+
 var AlumniView = React.createClass({
     render: function() {
         return (
             <div>
                 <Header />
-                <About alumnus="500+" />
-                <Services item={{name:'Finance', icon:'cloud'}} />
-            </div>
+                <About alumni="500+" />
+                <Services items={ServiceItems} />
+                </div>
         );
     }
 });
