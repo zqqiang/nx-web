@@ -79,6 +79,29 @@ var ServiceItem = React.createClass({
     }
 });
 
+var Footer = React.createClass({
+    render: function() {
+        return (
+            <footer>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-10 col-lg-offset-1 text-center">
+                            <h4><strong>Nankai University Alumni</strong></h4>
+                            <p>Burnaby<br />British Columbia, CA</p>
+                            <ul className="list-unstyled">
+                                <li><i className="fa fa-phone fa-fw"></i> (604) 500-1661</li>
+                                <li><i className="fa fa-envelope-o fa-fw"></i>  <a href="mailto:name@example.com">name@example.com</a></li>
+                            </ul>
+                            <hr className="small" />
+                            <p className="text-muted">Copyright &copy; Your Website 2016</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        );
+    }
+});
+
 var ServiceItems = [
     { name: 'Finance', icon: 'money', desc: 'You can disscuss finance topics here.' },
     { name: 'Car', icon: 'car', desc: 'You can disscuss car traveling topics here.' },
@@ -93,6 +116,7 @@ var AlumniView = React.createClass({
                 <Header />
                 <About alumni="500+" />
                 <Services items={ServiceItems} />
+                <Footer />
             </div>
         );
     }

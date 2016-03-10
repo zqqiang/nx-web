@@ -16,8 +16,8 @@ var Paragraph = React.createClass({
     render: function() {
         var rows = [];
         this.props.articles.forEach(function(article) {
-            rows.push(<Title title={article.title} />);
-            rows.push(<Content content={article.content} />);
+            rows.push(<Title title={article.title} key={article.title} />);
+            rows.push(<Content content={article.content} key={article.content} />);
         });
         return (<div>{rows}</div>);
     }
