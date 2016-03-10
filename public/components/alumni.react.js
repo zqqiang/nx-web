@@ -38,7 +38,7 @@ var Services = React.createClass({
     render: function() {
         var items = [];
         this.props.items.forEach(function(item) {
-            items.push(<ServiceItem item={item}/>);
+            items.push(<ServiceItem item={item} key={item.name} />);
         }.bind(this));
 
         return (
