@@ -15,24 +15,7 @@ var MenuNode = React.createClass({
     }
 });
 
-var MenuTree = React.createClass({
-    getInitialState: function() {
-        return { menuopen: true };
-    },
-    handleClick: function() {
-        this.setState({ menuopen: !this.state.menuopen });
-    },
-    componentDidMount: function() {
-        // var $el = this._ul;
-        // if (this.state.menuopen) {
-        //     $el.show();
-        // } else {
-        //     $el.hide();
-        // }
-    },
-    menuState: function() {
-        return this.state.menuopen ? ' menu-open' : '';
-    },
+var MenuTreeUl = React.createClass({
     render: function() {
         var nodes = [];
         this.props.nodes.forEach(function(node) {
@@ -40,14 +23,28 @@ var MenuTree = React.createClass({
         }.bind(this));
 
         return (
+            <ul className='treeview-menu'>
+                {nodes}
+            </ul>
+        );
+    }
+});
+
+var MenuTree = React.createClass({
+    getInitialState: function() {
+        return { menuopen: true };
+    },
+    handleClick: function() {
+        this.setState({ menuopen: !this.state.menuopen });
+    },
+    render: function() {
+        return (
             <li className="active treeview">
-        		<a href="javascript:void(0);" onClick={this.handleClick}>
-        			<i className={'fa fa-'+this.props.icon}></i> <span>{this.props.folder}</span> <i className="fa fa-angle-left pull-right"></i>
-        		</a>
-        		<ul className={'treeview-menu' + this.menuState()} ref={(c) => this._ul = c}>
-        			{nodes}
-        		</ul>
-        	</li>
+                <a href="javascript:void(0);" onClick={this.handleClick}>
+                    <i className={'fa fa-'+this.props.icon}></i> <span>{this.props.folder}</span> <i className="fa fa-angle-left pull-right"></i>
+                </a>
+                {this.state.menuopen ? <MenuTreeUl nodes={this.props.nodes} /> : null}
+            </li>
         );
     }
 });
@@ -67,10 +64,10 @@ var Sidebar = React.createClass({
     render: function() {
         return (
             <ul className="sidebar-menu">
-        		<li className="header">MAIN NAVIGATION</li>
-        		<MenuTree icon='dashboard' folder='Home' nodes={HomeNodes}/>
-        		<MenuTree icon='book' folder='Docs' nodes={DocsNodes}/>
-        	</ul>
+                <li className="header">MAIN NAVIGATION</li>
+                <MenuTree icon='dashboard' folder='Home' nodes={HomeNodes}/>
+                <MenuTree icon='book' folder='Docs' nodes={DocsNodes}/>
+            </ul>
         );
     }
 });
