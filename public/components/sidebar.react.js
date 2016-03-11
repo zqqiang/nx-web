@@ -1,3 +1,4 @@
+var $ = require('jquery');
 var React = require('react');
 
 var MenuNode = React.createClass({
@@ -15,6 +16,23 @@ var MenuNode = React.createClass({
 });
 
 var MenuTree = React.createClass({
+    getInitialState: function() {
+        return { menuopen: true };
+    },
+    handleClick: function() {
+        this.setState({ menuopen: !this.state.menuopen });
+    },
+    componentDidMount: function() {
+        // var $el = this._ul;
+        // if (this.state.menuopen) {
+        //     $el.show();
+        // } else {
+        //     $el.hide();
+        // }
+    },
+    menuState: function() {
+        return this.state.menuopen ? ' menu-open' : '';
+    },
     render: function() {
         var nodes = [];
         this.props.nodes.forEach(function(node) {
@@ -23,10 +41,10 @@ var MenuTree = React.createClass({
 
         return (
             <li className="active treeview">
-        		<a href="javascript:void(0);">
+        		<a href="javascript:void(0);" onClick={this.handleClick}>
         			<i className={'fa fa-'+this.props.icon}></i> <span>{this.props.folder}</span> <i className="fa fa-angle-left pull-right"></i>
         		</a>
-        		<ul className="treeview-menu">
+        		<ul className={'treeview-menu' + this.menuState()} ref={(c) => this._ul = c}>
         			{nodes}
         		</ul>
         	</li>
