@@ -2,16 +2,20 @@ var $ = require('jquery');
 var React = require('react');
 
 var MenuNode = React.createClass({
+    getInitialState: function() {
+        return { active: false }
+    },
+    handleClick: function() {
+        this.setState({ active: true });
+    },
     render: function() {
-        if (this.props.node.active) {
-            return (
-                <li className="active"><a href={'#' + this.props.node.href}><i className={'fa fa-' + this.props.node.icon}></i> {this.props.node.name}</a></li>
-            );
-        } else {
-            return (
-                <li><a href={'#' + this.props.node.href}><i className={'fa fa-' + this.props.node.icon}></i> {this.props.node.name}</a></li>
-            );
-        }
+        return (
+            <li className={this.state.active ? 'active' : ''} onClick={this.handleClick}>
+                <a href={'#' + this.props.node.href}>
+                    <i className={'fa fa-' + this.props.node.icon}></i> {this.props.node.name}
+                </a>
+            </li>
+        );
     }
 });
 
@@ -32,7 +36,7 @@ var MenuTreeUl = React.createClass({
 
 var MenuTree = React.createClass({
     getInitialState: function() {
-        return { menuopen: true };
+        return { menuopen: false };
     },
     handleClick: function() {
         this.setState({ menuopen: !this.state.menuopen });
@@ -50,14 +54,14 @@ var MenuTree = React.createClass({
 });
 
 var HomeNodes = [
-    { active: true, href: 'Creative', icon: 'circle-o', name: 'Creative' },
-    { active: false, href: 'Ecommerce', icon: 'circle-o', name: 'Ecommerce' },
-    { active: false, href: 'ControlPanel', icon: 'circle-o', name: 'ControlPanel' }
+    { href: 'Creative', icon: 'circle-o', name: 'Creative' },
+    { href: 'Ecommerce', icon: 'circle-o', name: 'Ecommerce' },
+    { href: 'ControlPanel', icon: 'circle-o', name: 'ControlPanel' }
 ];
 
 var DocsNodes = [
-    { active: false, href: 'QuickStart', icon: 'circle-o', name: 'Quick Start' },
-    { active: false, href: 'Alumni', icon: 'circle-o', name: 'Alumni' }
+    { href: 'QuickStart', icon: 'circle-o', name: 'Quick Start' },
+    { href: 'Alumni', icon: 'circle-o', name: 'Alumni' }
 ];
 
 var Sidebar = React.createClass({
@@ -65,8 +69,8 @@ var Sidebar = React.createClass({
         return (
             <ul className="sidebar-menu">
                 <li className="header">MAIN NAVIGATION</li>
-                <MenuTree icon='dashboard' folder='Home' nodes={HomeNodes}/>
-                <MenuTree icon='book' folder='Docs' nodes={DocsNodes}/>
+                <MenuTree icon='dashboard' folder='Home' nodes={HomeNodes} />
+                <MenuTree icon='book' folder='Docs' nodes={DocsNodes} />
             </ul>
         );
     }
