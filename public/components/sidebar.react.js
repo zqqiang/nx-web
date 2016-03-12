@@ -10,7 +10,7 @@ var MenuNode = React.createClass({
     },
     render: function() {
         return (
-            <li className={this.state.active ? 'active' : ''} onClick={this.handleClick}>
+            <li /*className={this.state.active ? 'active' : ''}*/ onClick={this.handleClick}>
                 <a href={'#' + this.props.node.href}>
                     <i className={'fa fa-' + this.props.node.icon}></i> {this.props.node.name}
                 </a>

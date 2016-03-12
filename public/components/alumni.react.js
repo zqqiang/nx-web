@@ -1,6 +1,12 @@
+var $ = require('jquery');
 var React = require('react');
 
 var Header = React.createClass({
+    handleClick: function() {
+        $('html, body').animate({
+            scrollTop: ($('#about').offset().top)
+        }, 1250, 'easeInOutExpo');
+    },
     render: function() {
         return (
             <header id="top" className="header">
@@ -8,7 +14,7 @@ var Header = React.createClass({
                     <h1>Nankai University</h1>
                     <h3>Vancouver Alumni</h3>
                     <br />
-                    <a href="#about" className="btn btn-dark btn-lg">Start From 2016</a>
+                    <a href='javascript:void(0);' className="btn btn-dark btn-lg" onClick={this.handleClick}>Start From 2016</a>
                 </div>
             </header>
         );

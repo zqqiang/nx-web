@@ -19,7 +19,7 @@ var Sidebar = Marionette.ItemView.extend({
             <SidebarView />,
             document.getElementById('sidebar')
         );
-    }
+    },
 });
 
 module.exports = Sidebar;
