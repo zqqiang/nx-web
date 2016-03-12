@@ -88,7 +88,7 @@ var ServiceItem = React.createClass({
                         <strong>{this.props.item.name}</strong>
                     </h4>
                     <p>{this.props.item.desc}</p>
-                    <a href="javascript:void(0);" className="btn btn-light">Learn More</a>
+                    <a href={'#' + this.props.item.name} className="btn btn-light">Learn More</a>
                 </div>
             </div>
         );
@@ -121,7 +121,7 @@ var Portfolio = React.createClass({
     render: function() {
         var items = [];
         this.props.items.forEach(function(item) {
-            items.push(<PortfolioBox item={item} key={item.name} />);
+            items.push(<PortfolioBox item={item} key={item.category} />);
         }.bind(this));
 
         return (
@@ -161,18 +161,18 @@ var Footer = React.createClass({
 
 var ServiceItems = [
     { name: 'Finance', icon: 'money', desc: 'You can disscuss finance topics here.' },
-    { name: 'Car', icon: 'car', desc: 'You can disscuss car traveling topics here.' },
-    { name: 'IT', icon: 'laptop', desc: 'You can disscuss IT technology topics here.' },
-    { name: 'Baby', icon: 'users', desc: 'You can disscuss baby nursing topics here.' },
+    { name: 'Car', icon: 'car', desc: 'You can disscuss car traveling here.' },
+    { name: 'IT', icon: 'laptop', desc: 'You can disscuss IT technology here.' },
+    { name: 'Activity', icon: 'users', desc: 'You can get activities review here.' },
 ];
 
 var PortfolioItems = [
-    { name: 'Project Name1', src: 'theme/project/img/portfolio/1.jpg', category: 'Category' },
-    { name: 'Project Name2', src: 'theme/project/img/portfolio/2.jpg', category: 'Category' },
-    { name: 'Project Name3', src: 'theme/project/img/portfolio/3.jpg', category: 'Category' },
-    { name: 'Project Name4', src: 'theme/project/img/portfolio/4.jpg', category: 'Category' },
-    { name: 'Project Name5', src: 'theme/project/img/portfolio/5.jpg', category: 'Category' },
-    { name: 'Project Name6', src: 'theme/project/img/portfolio/6.jpg', category: 'Category' },
+    { name: '投资理财', src: 'theme/project/img/alumni/1.jpg', category: 'Finance' },
+    { name: '运动健身', src: 'theme/project/img/alumni/2.jpg', category: 'SummerSports' },
+    { name: '冰雪户外', src: 'theme/project/img/alumni/3.jpg', category: 'WinterSports' },
+    { name: '自驾出行', src: 'theme/project/img/alumni/4.jpg', category: 'Driving' },
+    { name: '国际桥牌', src: 'theme/project/img/alumni/5.jpg', category: 'Bridge' },
+    { name: '育儿母婴', src: 'theme/project/img/alumni/6.jpg', category: 'Baby' },
 ];
 
 var AlumniView = React.createClass({
