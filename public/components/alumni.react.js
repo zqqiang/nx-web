@@ -22,9 +22,14 @@ var Header = React.createClass({
 });
 
 var About = React.createClass({
+    handleClick: function() {
+        $('html, body').animate({
+            scrollTop: ($('#services').offset().top)
+        }, 1250, 'easeInOutExpo');
+    },
     render: function() {
         return (
-            <section id="about" className="about">
+            <section id="about" className="about" onClick={this.handleClick}>
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12 text-center">
@@ -41,6 +46,11 @@ var About = React.createClass({
 });
 
 var Services = React.createClass({
+    handleClick: function() {
+        $('html, body').animate({
+            scrollTop: ($('#portfolio').offset().top)
+        }, 1250, 'easeInOutExpo');
+    },
     render: function() {
         var items = [];
         this.props.items.forEach(function(item) {
@@ -48,7 +58,7 @@ var Services = React.createClass({
         }.bind(this));
 
         return (
-            <section id="services" className="services bg-primary">
+            <section id="services" className="services bg-primary" onClick={this.handleClick}>
                 <div className="container">
                     <div className="row text-center">
                         <div className="col-lg-10 col-lg-offset-1">
