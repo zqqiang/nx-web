@@ -58,7 +58,7 @@ var Services = React.createClass({
         }.bind(this));
 
         return (
-            <section id="services" className="services bg-primary" onClick={this.handleClick}>
+            <section id="services" className="services bg-primary">
                 <div className="container">
                     <div className="row text-center">
                         <div className="col-lg-10 col-lg-offset-1">

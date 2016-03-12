@@ -29,59 +29,61 @@ var ControlPanel = require('./views/controlPanel.js');
 var Ecommerce = require('./views/ecommerce.js');
 var QuickStart = require('./views/quickstart.js');
 var Alumni = require('./views/alumni.js');
+var Activity = require('./views/activity.js');
 var Dummy = require('./views/dummy.js');
 
 $(document).ready(function() {
-	app.start({
-		msg: "start up"
-	});
+    app.start({
+        msg: "start up"
+    });
 });
 
 var contextMap = {
-	"": Creative,
-	// "Tour": Tour,
-	// "Stock": Stock,
-	"ControlPanel": ControlPanel,
-	// "Cloud": Cloud,
-	// "BubbleChart": BubbleChart,
-	// "Indexed": Indexed,
-	// "Pouch": Pouch,
-	"LocalForage": LocalForage,
-	"Creative": Creative,
-	'Ecommerce': Ecommerce,
-	// "Editors": Dummy,
-	// "Table": Table,
-	// "Dianping": Dianping,
-	// "Dashboard": Dashboard,
-	// "HighCharts": Dummy,
-	// "3d": Dummy,
-	// "SignIn": SignIn,
-	"QuickStart": QuickStart,
-	"Alumni": Alumni,
-	"other": Dummy,
+    "": Creative,
+    // "Tour": Tour,
+    // "Stock": Stock,
+    "ControlPanel": ControlPanel,
+    // "Cloud": Cloud,
+    // "BubbleChart": BubbleChart,
+    // "Indexed": Indexed,
+    // "Pouch": Pouch,
+    "LocalForage": LocalForage,
+    "Creative": Creative,
+    'Ecommerce': Ecommerce,
+    // "Editors": Dummy,
+    // "Table": Table,
+    // "Dianping": Dianping,
+    // "Dashboard": Dashboard,
+    // "HighCharts": Dummy,
+    // "3d": Dummy,
+    // "SignIn": SignIn,
+    "QuickStart": QuickStart,
+    "Alumni": Alumni,
+    "Activity": Activity,
+    "other": Dummy,
 };
 
 app.navigateTo = function(context, options) {
-	app.mainRegion.show(new contextMap[context](options));
+    app.mainRegion.show(new contextMap[context](options));
 };
 
 app.addInitializer(function(options) {
-	// app.md = new MobileDetect(window.navigator.userAgent);
+    // app.md = new MobileDetect(window.navigator.userAgent);
 
-	app.router = new Router();
+    app.router = new Router();
 
-	app.addRegions({
-		headerRegion: 'header[class="main-header"]',
-		sidebarRegion: 'aside[class="main-sidebar"]',
-		mainRegion: 'div[class="content-wrapper"]',
-		footerRegion: 'footer[role="contentinfo"]',
-	});
+    app.addRegions({
+        headerRegion: 'header[class="main-header"]',
+        sidebarRegion: 'aside[class="main-sidebar"]',
+        mainRegion: 'div[class="content-wrapper"]',
+        footerRegion: 'footer[role="contentinfo"]',
+    });
 
-	app.headerRegion.show(new Header());
-	app.sidebarRegion.show(new Sidebar());
-	// app.footerRegion.show(new Footer());
+    app.headerRegion.show(new Header());
+    app.sidebarRegion.show(new Sidebar());
+    // app.footerRegion.show(new Footer());
 
-	Backbone.history.start();
+    Backbone.history.start();
 });
 // 	}
 // );
