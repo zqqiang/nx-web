@@ -10,7 +10,7 @@ var MenuNode = React.createClass({
     },
     render: function() {
         return (
-            <li /*className={this.state.active ? 'active' : ''}*/ onClick={this.handleClick}>
+            <li onClick={this.handleClick}>
                 <a href={'#' + this.props.node.href}>
                     <i className={'fa fa-' + this.props.node.icon}></i> {this.props.node.name}
                 </a>
@@ -60,8 +60,11 @@ var HomeNodes = [
 ];
 
 var DocsNodes = [
-    { href: 'QuickStart', icon: 'circle-o', name: 'Quick Start' },
-    { href: 'Alumni', icon: 'circle-o', name: 'Alumni' }
+    { href: 'QuickStart', icon: 'circle-o', name: 'Quick Start' }
+];
+
+var AlumniNodes = [
+    { href: 'Alumni', icon: 'circle-o', name: 'AlumniWelcome' }
 ];
 
 var Sidebar = React.createClass({
@@ -71,6 +74,7 @@ var Sidebar = React.createClass({
                 <li className="header">MAIN NAVIGATION</li>
                 <MenuTree icon='dashboard' folder='Home' nodes={HomeNodes} />
                 <MenuTree icon='book' folder='Docs' nodes={DocsNodes} />
+                <MenuTree icon='graduation-cap' folder='Alumni' nodes={AlumniNodes} />
             </ul>
         );
     }
