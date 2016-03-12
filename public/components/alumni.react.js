@@ -85,6 +85,47 @@ var ServiceItem = React.createClass({
     }
 });
 
+var PortfolioBox = React.createClass({
+    render: function() {
+        return (
+            <div className="col-lg-4 col-sm-6">
+                <a href="javascript:void(0);" className="portfolio-box">
+                    <img src={this.props.item.src} className="img-responsive" alt="" />
+                    <div className="portfolio-box-caption">
+                        <div className="portfolio-box-caption-content">
+                            <div className="project-category text-faded">
+                                {this.props.item.category}
+                            </div>
+                            <div className="project-name">
+                                {this.props.item.name}
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        );
+    }
+});
+
+var Portfolio = React.createClass({
+    render: function() {
+        var items = [];
+        this.props.items.forEach(function(item) {
+            items.push(<PortfolioBox item={item} key={item.name} />);
+        }.bind(this));
+
+        return (
+            <section className="no-padding" id="portfolio">
+                <div className="container-fluid">
+                    <div className="row no-gutter">
+                        {items}
+                    </div>
+                </div>
+            </section>
+        );
+    }
+});
+
 var Footer = React.createClass({
     render: function() {
         return (
@@ -115,6 +156,15 @@ var ServiceItems = [
     { name: 'Baby', icon: 'users', desc: 'You can disscuss baby nursing topics here.' },
 ];
 
+var PortfolioItems = [
+    { name: 'Project Name1', src: 'theme/project/img/portfolio/1.jpg', category: 'Category' },
+    { name: 'Project Name2', src: 'theme/project/img/portfolio/2.jpg', category: 'Category' },
+    { name: 'Project Name3', src: 'theme/project/img/portfolio/3.jpg', category: 'Category' },
+    { name: 'Project Name4', src: 'theme/project/img/portfolio/4.jpg', category: 'Category' },
+    { name: 'Project Name5', src: 'theme/project/img/portfolio/5.jpg', category: 'Category' },
+    { name: 'Project Name6', src: 'theme/project/img/portfolio/6.jpg', category: 'Category' },
+];
+
 var AlumniView = React.createClass({
     render: function() {
         return (
@@ -122,6 +172,7 @@ var AlumniView = React.createClass({
                 <Header />
                 <About alumni="500+" />
                 <Services items={ServiceItems} />
+                <Portfolio items={PortfolioItems} />
                 <Footer />
             </div>
         );
