@@ -88,12 +88,27 @@ var LatestMembers = React.createClass({
     }
 });
 
+var DirectChat = React.createClass({
+    render: function(){
+        return (
+            <div class="box box-warning direct-chat direct-chat-warning">
+                
+            </div>
+        );
+    }
+});
+
 var Content = React.createClass({
     render: function() {
         return (
             <section className='content'>
                 <div className='row'>
-                    <LatestMembers />
+                    <div class="col-md-6">
+                        <DirectChat />
+                    </div>
+                    <div class="col-md-6">
+                        <LatestMembers />
+                    </div>
                 </div>
             </section>
         );
