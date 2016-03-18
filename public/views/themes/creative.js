@@ -20,7 +20,7 @@ var Creative = Marionette.ItemView.extend({
         // 	}
         // );
         // Initialize WOW.js Scrolling Animations
-        new WOW().init();
+        // new WOW().init();
     },
     clickMore: function(event) {
         $('html, body').animate({

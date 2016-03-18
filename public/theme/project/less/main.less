@@ -4,12 +4,12 @@
 @import url('http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic');
 // Ionicons
 @import url('https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css');
+// npm modules path
+@npm_modules: '../../../../node_modules';
 // Bootstrap
-@import '../../../bower_components/bootstrap/less/bootstrap.less';
+@import '@{npm_modules}/bootstrap/less/bootstrap.less';
 // font-awesome
-@import '../../../bower_components/font-awesome/css/font-awesome.min.css';
-// WOW
-@import '../../../bower_components/wow/css/libs/animate.css';
+@import '@{npm_modules}/font-awesome/less/font-awesome.less';
 // Skins
 @import '../css/_all-skins.min.css';
 // Mixins
