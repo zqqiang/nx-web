@@ -92,7 +92,7 @@ var UserListItem = React.createClass({
     }
 });
 
-var BoxBody = React.createClass({
+var BoxBodyUser = React.createClass({
     render: function() {
         var items = [];
         this.props.items.forEach(function(item) {
@@ -140,7 +140,44 @@ var LatestMembers = React.createClass({
         return (
             <div className="box box-danger">
                 <BoxHeader title='Latest Members' span={LastestMembersSpan} buttons={LatestMemebersButtons} />
-                <BoxBody items={LastestMembersItems} />
+                <BoxBodyUser items={LastestMembersItems} />
+            </div>
+        );
+    }
+});
+
+var ChatMessageLeft = React.createClass({
+    render: function() {
+        return (
+            <div className='direct-chat-msg'>
+                <div className='direct-chat-info clearfix'>
+                    <span className='direct-chat-name pull-left'>Alexander Pierce</span>
+                    <span className='direct-chat-timestamp pull-right'>23 Jan 2:00 pm</span>
+                </div>
+                <img className='direct-chat-img' src='theme/project/img/member/user1-128x128.jpg' alt='message user image' />
+                <div className='direct-chat-text'>
+                    Is this template really for free? That's unbelievable!
+                </div>
+            </div>
+        );
+    }
+});
+
+var ChatMessage = React.createClass({
+    render: function() {
+        return (
+            <div className='direct-chat-messages'>
+                <ChatMessageLeft />
+            </div>
+        );
+    }
+});
+
+var BoxBodyChat = React.createClass({
+    render: function() {
+        return (
+            <div className='box-body'>
+                <ChatMessage />
             </div>
         );
     }
@@ -151,6 +188,7 @@ var DirectChat = React.createClass({
         return (
             <div className="box box-warning direct-chat direct-chat-warning">
                 <BoxHeader title='Direct Chat' span={DirectChatSpan} buttons={DirectChatButtons} />
+                <BoxBodyChat />
             </div>
         );
     }
