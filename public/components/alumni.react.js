@@ -160,10 +160,10 @@ var Footer = React.createClass({
 });
 
 var ServiceItems = [
-    { name: 'Finance', icon: 'money', desc: 'You can disscuss finance topics here.' },
-    { name: 'Car', icon: 'car', desc: 'You can disscuss car traveling here.' },
-    { name: 'IT', icon: 'laptop', desc: 'You can disscuss IT technology here.' },
-    { name: 'Activity', icon: 'users', desc: 'You can get activities review here.' },
+    { name: 'Finance', icon: 'money', desc: 'You can disscuss finance topics.' },
+    { name: 'Car', icon: 'car', desc: 'You can disscuss car traveling.' },
+    { name: 'IT', icon: 'laptop', desc: 'You can disscuss IT technology.' },
+    { name: 'Activity', icon: 'users', desc: 'You can get activities review.' },
 ];
 
 var PortfolioItems = [
