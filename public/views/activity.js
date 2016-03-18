@@ -6,7 +6,7 @@ var ActivityView = require('../components/Activity.react');
 
 var Activity = Marionette.ItemView.extend({
     template: false,
-    id: 'activity',
+    id: 'activity-main',
     className: '',
     onShow: function() {
         var neg = $('.main-header').outerHeight() + $('.main-footer').outerHeight();
@@ -15,7 +15,7 @@ var Activity = Marionette.ItemView.extend({
 
         ReactDom.render(
             <ActivityView />,
-            document.getElementById('activity')
+            document.getElementById('activity-main')
         );
     }
 });
