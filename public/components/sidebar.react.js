@@ -7,6 +7,9 @@ var MenuNode = React.createClass({
     },
     handleClick: function() {
         this.setState({ active: true });
+        if ($('body').hasClass('sidebar-mini')) {
+            $('body').toggleClass('sidebar-open');
+        }
     },
     render: function() {
         return (
