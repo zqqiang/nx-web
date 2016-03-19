@@ -19,6 +19,7 @@
 var $ = global.jQuery = require('jquery');
 var Backbone = require('backbone');
 var Marionette = require('backbone.marionette');
+
 var Creative = require('./views/themes/creative.js');
 var app = require('./app.js');
 var Router = require('./router.js');
@@ -68,8 +69,6 @@ app.navigateTo = function(context, options) {
 };
 
 app.addInitializer(function(options) {
-    // app.md = new MobileDetect(window.navigator.userAgent);
-
     app.router = new Router();
 
     app.addRegions({
