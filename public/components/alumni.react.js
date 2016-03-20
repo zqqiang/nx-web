@@ -136,6 +136,72 @@ var Portfolio = React.createClass({
     }
 });
 
+var UserListItem = React.createClass({
+    render: function() {
+        return (
+            <li>
+              <img src={this.props.item.src} alt="User Image" />
+              <a className="users-list-name" href='javascript:void(0);'>{this.props.item.name}</a>
+              <span className="users-list-date">{this.props.item.date}</span>
+            </li>
+        );
+    }
+});
+
+var BoxBodyUser = React.createClass({
+    render: function() {
+        var items = [];
+        this.props.items.forEach(function(item) {
+            items.push(<UserListItem item={item} key={item.name} />);
+        });
+
+        return (
+            <div className="box-body no-padding">
+                <ul className="users-list clearfix">
+                    {items}
+                </ul>
+            </div>
+        );
+    }
+});
+
+var LastestMembersItems = [
+    { name: 'Alexander Pierce', date: 'Today', src: 'theme/project/img/member/user1-128x128.jpg' },
+    { name: 'Norman', date: 'Yesterday', src: 'theme/project/img/member/user8-128x128.jpg' },
+    { name: 'Jane', date: '12 Jan', src: 'theme/project/img/member/user7-128x128.jpg' },
+    { name: 'John', date: '12 Jan', src: 'theme/project/img/member/user6-128x128.jpg' },
+    { name: 'Alexander', date: '13 Jan', src: 'theme/project/img/member/user2-128x128.jpg' },
+    { name: 'Sarah', date: '14 Jan', src: 'theme/project/img/member/user5-128x128.jpg' },
+    { name: 'Nora', date: '15 Jan', src: 'theme/project/img/member/user4-128x128.jpg' },
+    { name: 'Nadia', date: '15 Jan', src: 'theme/project/img/member/user3-128x128.jpg' },
+];
+
+var LatestMembers = React.createClass({
+    render: function() {
+        return (
+            <div className="box box-danger">
+                <BoxBodyUser items={LastestMembersItems} />
+            </div>
+        );
+    }
+});
+
+var Members = React.createClass({
+    render: function(){
+        return (
+            <section id='members' className='no-padding'>
+                <div className="container-fluid">
+                    <div className="row no-gutter">
+                        <div className='col-lg-12'>
+                            <LatestMembers />
+                        </div>
+                    </div>
+                </div>
+            </section>
+        );
+    }
+});
+
 var Footer = React.createClass({
     render: function() {
         return (
@@ -160,10 +226,10 @@ var Footer = React.createClass({
 });
 
 var ServiceItems = [
-    { name: 'Finance', icon: 'money', desc: 'You can disscuss finance topics.' },
-    { name: 'Car', icon: 'car', desc: 'You can disscuss car traveling.' },
-    { name: 'IT', icon: 'laptop', desc: 'You can disscuss IT technology.' },
-    { name: 'Activity', icon: 'users', desc: 'You can get activities review.' },
+    { name: 'News', icon: 'newspaper-o', desc: 'Latest Announcement & News.' },
+    { name: 'Enterprises', icon: 'building', desc: 'Alumni Enterprises.' },
+    { name: 'Job', icon: 'laptop', desc: 'Job Offers.' },
+    { name: 'Friends', icon: 'users', desc: 'Nankai Friends & Queqiao.' },
 ];
 
 var PortfolioItems = [
@@ -183,6 +249,7 @@ var AlumniView = React.createClass({
                 <About alumni="500+" />
                 <Services items={ServiceItems} />
                 <Portfolio items={PortfolioItems} />
+                <Members />
                 <Footer />
             </div>
         );
