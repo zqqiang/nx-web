@@ -148,7 +148,7 @@ var UserListItem = React.createClass({
     }
 });
 
-var BoxBodyUser = React.createClass({
+var BoxBodyMembers = React.createClass({
     render: function() {
         var items = [];
         this.props.items.forEach(function(item) {
@@ -180,7 +180,8 @@ var LatestMembers = React.createClass({
     render: function() {
         return (
             <div className="box box-danger">
-                <BoxBodyUser items={LastestMembersItems} />
+                <h2 className='text-center'>Distinguished Alumni</h2>
+                <BoxBodyMembers items={LastestMembersItems} />
             </div>
         );
     }
@@ -233,12 +234,12 @@ var ServiceItems = [
 ];
 
 var PortfolioItems = [
-    { name: '投资理财', src: 'theme/project/img/alumni/1.jpg', category: 'Finance' },
-    { name: '运动健身', src: 'theme/project/img/alumni/2.jpg', category: 'SummerSports' },
-    { name: '冰雪户外', src: 'theme/project/img/alumni/3.jpg', category: 'WinterSports' },
-    { name: '自驾出行', src: 'theme/project/img/alumni/4.jpg', category: 'Driving' },
-    { name: '国际桥牌', src: 'theme/project/img/alumni/5.jpg', category: 'Bridge' },
-    { name: '育儿母婴', src: 'theme/project/img/alumni/6.jpg', category: 'Baby' },
+    { name: 'Investment & Enterprises Management', src: 'theme/project/img/alumni/1.jpg', category: 'Finance' },
+    { name: 'Golf & Mountain Climbing', src: 'theme/project/img/alumni/2.jpg', category: 'Sports' },
+    { name: 'Books Reading', src: 'theme/project/img/alumni/3.jpg', category: 'Reading' },
+    { name: 'Self Driving & Hiking', src: 'theme/project/img/alumni/4.jpg', category: 'Driving' },
+    { name: 'Photography & Bridge', src: 'theme/project/img/alumni/5.jpg', category: 'Hobby' },
+    { name: 'Baby Nursing & Health Care', src: 'theme/project/img/alumni/6.jpg', category: 'Health' },
 ];
 
 var AlumniView = React.createClass({
