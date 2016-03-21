@@ -1421,6 +1421,7 @@ ol ol {
 .list-unstyled,
 .chart-legend,
 .users-list,
+.enterprises-list,
 .contacts-list {
   padding-left: 0;
   list-style: none;
@@ -10876,6 +10877,7 @@ a:focus {
 .list-unstyled,
 .chart-legend,
 .users-list,
+.enterprises-list,
 .contacts-list {
   list-style: none;
   margin: 0;
@@ -11677,6 +11679,9 @@ a:focus {
 .modal .panel-body {
   color: #444;
 }
+.box-no-bottom {
+  margin-bottom: 0px;
+}
 /*
  * Component: Carousel
  * -------------------
@@ -12417,6 +12422,39 @@ fieldset[disabled] .alumni .btn-primary.active {
   text-overflow: ellipsis;
 }
 .users-list-date {
+  color: #999;
+  font-size: 12px;
+}
+/*
+ * Component: Enterprises List
+ * ---------------------
+ */
+.enterprises-list > li {
+  width: 25%;
+  float: left;
+  padding: 10px;
+  text-align: center;
+}
+.enterprises-list > li img {
+  max-width: 100%;
+  height: auto;
+}
+.enterprises-list > li > a:hover,
+.enterprises-list > li > a:hover .enterprises-list-name {
+  color: #999;
+}
+.enterprises-list-name,
+.enterprises-list-date {
+  display: block;
+}
+.enterprises-list-name {
+  font-weight: 600;
+  color: #444;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.enterprises-list-date {
   color: #999;
   font-size: 12px;
 }

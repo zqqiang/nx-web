@@ -1,0 +1,41 @@
+/*
+ * Component: Enterprises List
+ * ---------------------
+ */
+.enterprises-list {
+  &:extend(.list-unstyled);
+  > li {
+    width: 25%;
+    float: left;
+    padding: 10px;
+    text-align: center;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    > a:hover {
+      &,
+      .enterprises-list-name {
+        color: #999;
+      }
+    }
+  }
+}
+
+.enterprises-list-name,
+.enterprises-list-date {
+  display: block;
+}
+
+.enterprises-list-name {
+  font-weight: 600;
+  color: #444;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.enterprises-list-date {
+  color: #999;
+  font-size: 12px;
+}

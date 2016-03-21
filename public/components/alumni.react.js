@@ -179,7 +179,7 @@ var LastestMembersItems = [
 var LatestMembers = React.createClass({
     render: function() {
         return (
-            <div className="box box-danger">
+            <div className="box box-danger box-no-bottom">
                 <h2 className='text-center'>Distinguished Alumni</h2>
                 <BoxBodyMembers items={LastestMembersItems} />
             </div>
@@ -195,6 +195,65 @@ var Members = React.createClass({
                     <div className="row no-gutter">
                         <div className='col-lg-12'>
                             <LatestMembers />
+                        </div>
+                    </div>
+                </div>
+            </section>
+        );
+    }
+});
+
+var EnterpriseListItem = React.createClass({
+    render: function() {
+        return (
+            <li>
+                <img src={this.props.item.src} alt="Enterprise Image" />
+                <a className="enterprises-list-name" href='javascript:void(0);'>{this.props.item.name}</a>
+            </li>
+        );
+    }
+});
+
+var BoxBodyEnterprises = React.createClass({
+    render: function(){
+        var items = [];
+        this.props.items.forEach(function(item) {
+            items.push(<EnterpriseListItem item={item} key={item.name} />);
+        });
+
+        return (
+            <div className="box-body no-padding">
+                <ul className="enterprises-list clearfix">
+                    {items}
+                </ul>
+            </div>
+        );
+    }
+});
+
+var EnterpriseItems = [
+    { name: 'Big Feet', src: 'theme/project/img/enterprise/bigfeet.jpg' },
+];
+
+var Enterprise = React.createClass({
+    render: function() {
+        return (
+            <div className="box box-danger box-no-bottom">
+                <h2 className='text-center'>Alumni Enterprises</h2>
+                <BoxBodyEnterprises items={EnterpriseItems} />
+            </div>
+        );
+    }
+});
+
+var Enterprises = React.createClass({
+    render: function(){
+        return (
+            <section id='enterprises' className='no-padding'>
+                <div className="container-fluid">
+                    <div className="row no-gutter">
+                        <div className='col-lg-12'>
+                            <Enterprise />
                         </div>
                     </div>
                 </div>
@@ -251,6 +310,7 @@ var AlumniView = React.createClass({
                 <Services items={ServiceItems} />
                 <Portfolio items={PortfolioItems} />
                 <Members />
+                <Enterprises />
                 <Footer />
             </div>
         );
