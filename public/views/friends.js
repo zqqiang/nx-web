@@ -2,11 +2,11 @@ var $ = require('jquery');
 var Marionette = require('backbone.marionette');
 var React = require('react');
 var ReactDom = require('react-dom');
-var ActivityView = require('../components/Activity.react');
+var FriendsView = require('../components/Friends.react');
 
-var Activity = Marionette.ItemView.extend({
+var Friends = Marionette.ItemView.extend({
     template: false,
-    id: 'activity-main',
+    id: 'friends-main',
     className: '',
     onShow: function() {
         var neg = $('.main-header').outerHeight() + $('.main-footer').outerHeight();
@@ -14,10 +14,10 @@ var Activity = Marionette.ItemView.extend({
         $(".content-wrapper, .right-side").css('min-height', window_height - neg);
 
         ReactDom.render(
-            <ActivityView />,
-            document.getElementById('activity-main')
+            <FriendsView />,
+            document.getElementById('friends-main')
         );
     }
 });
 
-module.exports = Activity;
+module.exports = Friends;

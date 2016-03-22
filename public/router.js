@@ -30,7 +30,7 @@ var Router = Backbone.Router.extend({
         "ControlPanel": "showControlPanel",
         "QuickStart": "showQuickStart",
         "Alumni": "showAlumni",
-        "Activity": "showActivity",
+        "Friends": "showFriends",
         "*other": "defaultRouter",
     },
     showIndex: function() {
@@ -99,8 +99,8 @@ var Router = Backbone.Router.extend({
     showAlumni: function() {
         app.navigateTo("Alumni");
     },
-    showActivity: function() {
-        app.navigateTo("Activity");
+    showFriends: function() {
+        app.navigateTo("Friends");
     },
     defaultRouter: function(other) {
         app.navigateTo("other");

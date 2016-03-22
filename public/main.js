@@ -30,7 +30,7 @@ var ControlPanel = require('./views/controlPanel.js');
 var Ecommerce = require('./views/ecommerce.js');
 var QuickStart = require('./views/quickstart.js');
 var Alumni = require('./views/alumni.js');
-var Activity = require('./views/activity.js');
+var Friends = require('./views/friends.js');
 var Dummy = require('./views/dummy.js');
 
 $(document).ready(function() {
@@ -60,7 +60,7 @@ var contextMap = {
     // "SignIn": SignIn,
     "QuickStart": QuickStart,
     "Alumni": Alumni,
-    "Activity": Activity,
+    "Friends": Friends,
     "other": Dummy,
 };
 
