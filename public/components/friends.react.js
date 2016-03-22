@@ -61,46 +61,6 @@ var BoxHeader = React.createClass({
     }
 });
 
-// var UserListItem = React.createClass({
-//     render: function() {
-//         return (
-//             <li>
-//               <img src={this.props.item.src} alt="User Image" />
-//               <a className="users-list-name" href='javascript:void(0);'>{this.props.item.name}</a>
-//               <span className="users-list-date">{this.props.item.date}</span>
-//             </li>
-//         );
-//     }
-// });
-
-// var BoxBodyUser = React.createClass({
-//     render: function() {
-//         var items = [];
-//         this.props.items.forEach(function(item) {
-//             items.push(<UserListItem item={item} key={item.name} />);
-//         });
-
-//         return (
-//             <div className="box-body no-padding">
-//                 <ul className="users-list clearfix">
-//                     {items}
-//                 </ul>
-//             </div>
-//         );
-//     }
-// });
-
-// var LastestMembersItems = [
-//     { name: 'Alexander Pierce', date: 'Today', src: 'theme/project/img/member/user1-128x128.jpg' },
-//     { name: 'Norman', date: 'Yesterday', src: 'theme/project/img/member/user8-128x128.jpg' },
-//     { name: 'Jane', date: '12 Jan', src: 'theme/project/img/member/user7-128x128.jpg' },
-//     { name: 'John', date: '12 Jan', src: 'theme/project/img/member/user6-128x128.jpg' },
-//     { name: 'Alexander', date: '13 Jan', src: 'theme/project/img/member/user2-128x128.jpg' },
-//     { name: 'Sarah', date: '14 Jan', src: 'theme/project/img/member/user5-128x128.jpg' },
-//     { name: 'Nora', date: '15 Jan', src: 'theme/project/img/member/user4-128x128.jpg' },
-//     { name: 'Nadia', date: '15 Jan', src: 'theme/project/img/member/user3-128x128.jpg' },
-// ];
-
 var LatestMemebersButtons = [
     { toggle: '', title: '', widget: 'collapse', iclass: 'minus' },
     { toggle: '', title: '', widget: 'remove', iclass: 'times' },
@@ -115,17 +75,6 @@ var DirectChatButtons = [
 var LastestMembersSpan = { className: 'label label-danger', content: '8 New Members' };
 
 var DirectChatSpan = { toggle: 'tooltip', title: '3', className: 'badge bg-yellow', content: '3' }
-
-// var LatestMembers = React.createClass({
-//     render: function() {
-//         return (
-//             <div className="box box-danger">
-//                 <BoxHeader title='Latest Members' span={LastestMembersSpan} buttons={LatestMemebersButtons} />
-//                 <BoxBodyUser items={LastestMembersItems} />
-//             </div>
-//         );
-//     }
-// });
 
 var ChatMessageItem = React.createClass({
     render: function() {
