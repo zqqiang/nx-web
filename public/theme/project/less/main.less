@@ -6,12 +6,15 @@
 @import url('https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css');
 // npm modules path
 @npm_modules: '../../../../node_modules';
+// photoswipe
+@import (inline) '@{npm_modules}/photoswipe/dist/photoswipe.css';
+@import (inline) '@{npm_modules}/photoswipe/dist/default-skin/default-skin.css';
 // Bootstrap
 @import '@{npm_modules}/bootstrap/less/bootstrap.less';
 // font-awesome
 @import '@{npm_modules}/font-awesome/less/font-awesome.less';
 // Skins
-@import '../css/_all-skins.min.css';
+@import (inline) '../css/_all-skins.min.css';
 // Mixins
 @import 'mixins.less';
 // AdminLTE Mixins
