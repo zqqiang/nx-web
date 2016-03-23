@@ -99,7 +99,7 @@ var PortfolioBox = React.createClass({
     render: function() {
         return (
             <div className="col-lg-4 col-sm-6">
-                <a href="javascript:void(0);" className="portfolio-box">
+                <a href={'#' + this.props.item.hreflink} className="portfolio-box">
                     <img src={this.props.item.src} className="img-responsive" alt="" />
                     <div className="portfolio-box-caption">
                         <div className="portfolio-box-caption-content">
@@ -188,7 +188,7 @@ var LatestMembers = React.createClass({
 });
 
 var Members = React.createClass({
-    render: function(){
+    render: function() {
         return (
             <section id='members' className='no-padding'>
                 <div className="container-fluid">
@@ -215,7 +215,7 @@ var EnterpriseListItem = React.createClass({
 });
 
 var BoxBodyEnterprises = React.createClass({
-    render: function(){
+    render: function() {
         var items = [];
         this.props.items.forEach(function(item) {
             items.push(<EnterpriseListItem item={item} key={item.name} />);
@@ -247,7 +247,7 @@ var Enterprise = React.createClass({
 });
 
 var Enterprises = React.createClass({
-    render: function(){
+    render: function() {
         return (
             <section id='enterprises' className='no-padding'>
                 <div className="container-fluid">
@@ -297,7 +297,7 @@ var PortfolioItems = [
     { name: 'Golf & Mountain Climbing', src: 'theme/project/img/alumni/2.jpg', category: 'Sports' },
     { name: 'Books Reading', src: 'theme/project/img/alumni/3.jpg', category: 'Reading' },
     { name: 'Self Driving & Hiking', src: 'theme/project/img/alumni/4.jpg', category: 'Driving' },
-    { name: 'Photography & Bridge', src: 'theme/project/img/alumni/5.jpg', category: 'Hobby' },
+    { name: 'Photography & Bridge', src: 'theme/project/img/alumni/5.jpg', category: 'Hobby', hreflink: 'Gallery' },
     { name: 'Baby Nursing & Health Care', src: 'theme/project/img/alumni/6.jpg', category: 'Health' },
 ];
 
