@@ -33,6 +33,7 @@ var Router = Backbone.Router.extend({
         "Friends": "showFriends",
         "News": "showNews",
         "Gallery": "showGallery",
+        "QRCode": "showQRCode",
         "*other": "defaultRouter",
     },
     showIndex: function() {
@@ -109,6 +110,9 @@ var Router = Backbone.Router.extend({
     },
     showGallery: function() {
         app.navigateTo("Gallery");
+    },
+    showQRCode: function() {
+        app.navigateTo("QRCode");
     },
     defaultRouter: function(other) {
         app.navigateTo("other");
