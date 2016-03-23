@@ -32,6 +32,7 @@ var QuickStart = require('./views/quickstart.js');
 var Alumni = require('./views/alumni.js');
 var Friends = require('./views/friends.js');
 var News = require('./views/news.js');
+var Gallery = require('./views/gallery.js');
 var Dummy = require('./views/dummy.js');
 
 $(document).ready(function() {
@@ -63,6 +64,7 @@ var contextMap = {
     "Alumni": Alumni,
     "Friends": Friends,
     "News": News,
+    "Gallery": Gallery,
     "other": Dummy,
 };
 

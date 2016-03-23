@@ -32,6 +32,7 @@ var Router = Backbone.Router.extend({
         "Alumni": "showAlumni",
         "Friends": "showFriends",
         "News": "showNews",
+        "Gallery": "showGallery",
         "*other": "defaultRouter",
     },
     showIndex: function() {
@@ -105,6 +106,9 @@ var Router = Backbone.Router.extend({
     },
     showNews: function() {
         app.navigateTo("News");
+    },
+    showGallery: function() {
+        app.navigateTo("Gallery");
     },
     defaultRouter: function(other) {
         app.navigateTo("other");
