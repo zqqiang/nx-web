@@ -272,7 +272,7 @@ var Footer = React.createClass({
                             <h4><strong>Nankai University Alumni</strong></h4>
                             <p>Burnaby<br />British Columbia, CA</p>
                             <ul className="list-unstyled">
-                                <li><i className="fa fa-phone fa-fw"></i> (604) 500-1661</li>
+                                <li><i className="fa fa-phone fa-fw"></i> (604) 500-8888</li>
                                 <li><i className="fa fa-envelope-o fa-fw"></i>  <a href="mailto:name@example.com">name@example.com</a></li>
                             </ul>
                             <hr className="small" />
