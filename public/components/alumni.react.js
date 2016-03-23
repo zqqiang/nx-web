@@ -268,16 +268,25 @@ var Footer = React.createClass({
             <footer>
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-10 col-lg-offset-1 text-center">
-                            <h4><strong>Nankai University Alumni</strong></h4>
-                            <p>Burnaby<br />British Columbia, CA</p>
-                            <ul className="list-unstyled">
-                                <li><i className="fa fa-phone fa-fw"></i> (604) 500-8888</li>
-                                <li><i className="fa fa-envelope-o fa-fw"></i>  <a href="mailto:name@example.com">name@example.com</a></li>
-                            </ul>
-                            <hr className="small" />
-                            <p className="text-muted">Copyright &copy; Your Website 2016</p>
-                        </div>
+                        {/*<div className="col-lg-10 col-lg-offset-1 text-center">*/}
+                            <div className='col-sm-12 text-center'>
+                                <h4><strong>Nankai University Alumni</strong></h4>
+                            </div>
+                            <div className='col-md-4 col-md-offset-2 col-sm-12 text-center'>
+                                <img src="http://placehold.it/100x100/39CCCC/ffffff" alt="QR code" className="img-rounded" />
+                            </div>
+                            <div className='col-md-4 col-sm-12 text-center'>
+                                <p>Burnaby<br />British Columbia, CA</p>
+                                <ul className="list-unstyled">
+                                    <li><i className="fa fa-phone fa-fw"></i> (604) 500-8888</li>
+                                    <li><i className="fa fa-envelope-o fa-fw"></i>  <a href="mailto:name@example.com">name@example.com</a></li>
+                                </ul>
+                                <hr className="small" />                                
+                            </div>
+                            <div className='col-sm-12 text-center'>
+                                <p className="text-muted">Copyright &copy; Your Website 2016</p>
+                            </div>
+                        {/*</div>*/}
                     </div>
                 </div>
             </footer>
