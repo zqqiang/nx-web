@@ -46,8 +46,8 @@ var TimelineItem = React.createClass({
                   quora plaxo ideeli hulu weebly balihoo...
                 </div>
                 <div className="timeline-footer">
-                  <a className="btn btn-primary btn-xs">Read more</a>
-                  <a className="btn btn-danger btn-xs">Delete</a>
+                  <a href='#' className="btn btn-primary btn-xs">Read more</a>&nbsp;
+                  <a href='#' className="btn btn-danger btn-xs">Delete</a>
                 </div>
               </div>
             </li>
