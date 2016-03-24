@@ -139,7 +139,7 @@ var ThumbnailItem = React.createClass({
         return (
             <div className="col-sm-4 col-lg-4 col-md-4">
                 <div className="thumbnail">
-                    <img src="http://placehold.it/320x150/39CCCC/ffffff" alt="" />
+                    <img id={this.props.index} src={this.props.item.thumbnail} alt="" />
                     <div className="caption">
                         <h4 className="pull-right">{this.props.item.price}</h4>
                         <h4>
@@ -160,8 +160,8 @@ var ThumbnailItem = React.createClass({
 var Thumbnail = React.createClass({
     render: function() {
         var items = [];
-        this.props.items.forEach(function(item) {
-            items.push(<ThumbnailItem item={item} key={item.name} />);
+        this.props.items.forEach(function(item, index) {
+            items.push(<ThumbnailItem item={item} index={index} key={item.name} />);
         });
 
         return (
@@ -172,15 +172,6 @@ var Thumbnail = React.createClass({
     }
 });
 
-var GalleryItems = [
-    { price: '$24.99', name: 'First Product', description: 'xxxxxxxxxxxxxxx', reviews: '15', stars: '4' },
-    { price: '$24.99', name: 'Second Product', description: 'xxxxxxxxxxxxxxx', reviews: '16', stars: '5' },
-    { price: '$24.99', name: 'Third Product', description: 'xxxxxxxxxxxxxxx', reviews: '17', stars: '4' },
-    { price: '$24.99', name: 'Fourth Product', description: 'xxxxxxxxxxxxxxx', reviews: '18', stars: '3' },
-    { price: '$24.99', name: 'Fifth Product', description: 'xxxxxxxxxxxxxxx', reviews: '19', stars: '2' },
-    { price: '$24.99', name: 'Sixth Product', description: 'xxxxxxxxxxxxxxx', reviews: '20', stars: '1' },
-];
-
 var GalleryView = React.createClass({
     render: function() {
         return (
@@ -188,7 +179,7 @@ var GalleryView = React.createClass({
                 <div className="row">
                     <div className="col-md-12">
                         <Carousel />
-                        <Thumbnail items={GalleryItems} />
+                        <Thumbnail items={this.props.items} />
                     </div>
                 </div>
             </div>
@@ -201,7 +192,7 @@ var Gallery = React.createClass({
         return (
             <div >
                 <Pswp />
-                <GalleryView />
+                <GalleryView items={this.props.items} />
             </div>
         );
     }
