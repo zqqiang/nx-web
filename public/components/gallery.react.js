@@ -60,7 +60,7 @@ var PswpUI = React.createClass({
 });
 
 var Pswp = React.createClass({
-    render: function(){
+    render: function() {
         return (
             <div className="pswp" tabIndex="-1" role="dialog" aria-hidden="true">
                 <div className="pswp__bg"></div>
@@ -68,13 +68,13 @@ var Pswp = React.createClass({
                     <PswpContainer />
                     <PswpUI />
                 </div>
-            </div>            
+            </div>
         );
     }
 });
 
 var Carousel = React.createClass({
-    render: function(){
+    render: function() {
         return (
             <div className="row carousel-holder">
                 <div className="col-md-12">
@@ -103,27 +103,28 @@ var Carousel = React.createClass({
                         </a>
                     </div>                    
                 </div>
-            </div>            
+            </div>
         );
     }
 });
 
 var StarItem = React.createClass({
-    render: function(){
+    render: function() {
+        var icon = this.props.isgood === 'true' ? 'star' : 'star-o';
         return (
-            <i className={'fa fa-' + this.props.isgood === 'true' ? 'star' : 'star-o'}></i>
+            <i className={'fa fa-' + icon}></i>
         );
     }
 });
 
 var Star = React.createClass({
-    render: function(){
+    render: function() {
         var items = [];
         for (var i = 0; i < this.props.stars; ++i) {
             items.push(<StarItem isgood='true' key={i} />);
         }
         for (var i = 0; i < 5 - this.props.stars; ++i) {
-            items.push(<StarItem isgood='false' key={5-i} />);
+            items.push(<StarItem isgood='false' key={4-i} />);
         }
         return (
             <p>
@@ -134,7 +135,7 @@ var Star = React.createClass({
 });
 
 var ThumbnailItem = React.createClass({
-    render: function(){
+    render: function() {
         return (
             <div className="col-sm-4 col-lg-4 col-md-4">
                 <div className="thumbnail">
@@ -172,11 +173,16 @@ var Thumbnail = React.createClass({
 });
 
 var GalleryItems = [
-    {price:'$24.99', name:'First Product', description:'xxxxxxxxxxxxxxx', reviews:'15', stars:'4'}
+    { price: '$24.99', name: 'First Product', description: 'xxxxxxxxxxxxxxx', reviews: '15', stars: '4' },
+    { price: '$24.99', name: 'Second Product', description: 'xxxxxxxxxxxxxxx', reviews: '16', stars: '5' },
+    { price: '$24.99', name: 'Third Product', description: 'xxxxxxxxxxxxxxx', reviews: '17', stars: '4' },
+    { price: '$24.99', name: 'Fourth Product', description: 'xxxxxxxxxxxxxxx', reviews: '18', stars: '3' },
+    { price: '$24.99', name: 'Fifth Product', description: 'xxxxxxxxxxxxxxx', reviews: '19', stars: '2' },
+    { price: '$24.99', name: 'Sixth Product', description: 'xxxxxxxxxxxxxxx', reviews: '20', stars: '1' },
 ];
 
 var GalleryView = React.createClass({
-    render: function(){
+    render: function() {
         return (
             <div className='container ecommerce'>
                 <div className="row">
