@@ -59,8 +59,8 @@ var PswpUI = React.createClass({
     }
 });
 
-var Gallery = React.createClass({
-    render: function() {
+var Pswp = React.createClass({
+    render: function(){
         return (
             <div className="pswp" tabIndex="-1" role="dialog" aria-hidden="true">
                 <div className="pswp__bg"></div>
@@ -68,6 +68,16 @@ var Gallery = React.createClass({
                     <PswpContainer />
                     <PswpUI />
                 </div>
+            </div>            
+        );
+    }
+});
+
+var Gallery = React.createClass({
+    render: function() {
+        return (
+            <div >
+                <Pswp />
             </div>
         );
     }

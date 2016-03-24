@@ -10,15 +10,7 @@ var Gallery = Marionette.ItemView.extend({
     template: false,
     id: 'gallery-main',
     className: '',
-    onShow: function() {
-        var neg = $('.main-header').outerHeight() + $('.main-footer').outerHeight();
-        var window_height = $(window).height();
-        $(".content-wrapper, .right-side").css('min-height', window_height - neg);
-
-        ReactDom.render(<GalleryView / >,
-            document.getElementById('gallery-main')
-        );
-
+    pswpShow: function() {
         var pswpElement = document.querySelectorAll('.pswp')[0];
 
         // build items array
@@ -42,6 +34,20 @@ var Gallery = Marionette.ItemView.extend({
         // Initializes and opens PhotoSwipe
         var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
         gallery.init();
+
+        gallery.listen('close', this.pswpClose);
+    },
+    pswpClose: function() {
+
+    },
+    onShow: function() {
+        var neg = $('.main-header').outerHeight() + $('.main-footer').outerHeight();
+        var window_height = $(window).height();
+        $(".content-wrapper, .right-side").css('min-height', window_height - neg);
+
+        ReactDom.render( < GalleryView / > ,
+            document.getElementById('gallery-main')
+        );
     }
 });
 

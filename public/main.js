@@ -44,7 +44,7 @@ $(document).ready(function() {
 });
 
 var contextMap = {
-    "": Creative,
+    "": Alumni,
     // "Tour": Tour,
     // "Stock": Stock,
     "ControlPanel": ControlPanel,

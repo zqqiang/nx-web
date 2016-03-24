@@ -13479,7 +13479,8 @@ fieldset[disabled] .alumni .btn-primary.active {
 .login-box,
 .register-box {
   width: 360px;
-  margin: 0 auto;
+  margin: auto;
+  padding-top: 5%;
 }
 @media (max-width: 768px) {
   .login-box,
