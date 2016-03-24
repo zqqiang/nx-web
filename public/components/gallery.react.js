@@ -1,4 +1,5 @@
 var React = require('react');
+var Header = require('./header.react');
 
 var PswpContainer = React.createClass({
     render: function() {
@@ -192,6 +193,7 @@ var Gallery = React.createClass({
         return (
             <div >
                 <Pswp />
+                <Header title='Alumni' smalltitle='gallery' icon='newspaper-o' menu='Alumni' submenu='Gallery' />
                 <GalleryView items={this.props.items} />
             </div>
         );
