@@ -1,8 +1,8 @@
 // define(
-// 	[
-// 		'backbone', 'app'
-// 	],
-// 	function(Backbone, app) {
+//  [
+//      'backbone', 'app'
+//  ],
+//  function(Backbone, app) {
 var Backbone = require('backbone');
 var app = require('./app.js');
 
@@ -35,6 +35,7 @@ var Router = Backbone.Router.extend({
         "Gallery": "showGallery",
         "QRCode": "showQRCode",
         "Login": "showLogin",
+        "Salon": "showSalon",
         "*other": "defaultRouter",
     },
     showIndex: function() {
@@ -118,10 +119,13 @@ var Router = Backbone.Router.extend({
     showLogin: function() {
         app.navigateTo("Login");
     },
+    showSalon: function() {
+        app.navigateTo("Salon");
+    },
     defaultRouter: function(other) {
         app.navigateTo("other");
     }
 });
 module.exports = Router;
-// 	}
+//  }
 // );

@@ -34,6 +34,7 @@ var Friends = require('./views/friends.js');
 var News = require('./views/news.js');
 var Gallery = require('./views/gallery.js');
 var QRCode = require('./views/qrcode.js');
+var Salon = require('./views/salon.js');
 var Login = require('./views/login.js');
 var Dummy = require('./views/dummy.js');
 
@@ -68,6 +69,7 @@ var contextMap = {
     "News": News,
     "Gallery": Gallery,
     "QRCode": QRCode,
+    "Salon": Salon,
     "Login": Login,
     "other": Dummy,
 };

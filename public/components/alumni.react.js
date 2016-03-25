@@ -297,7 +297,7 @@ var Footer = React.createClass({
 
 var ServiceItems = [
     { name: 'News', icon: 'newspaper-o', desc: 'Latest Announcement & News.' },
-    { name: 'Enterprises', icon: 'building', desc: 'Alumni Enterprises.' },
+    { name: 'Salon', icon: 'building', desc: 'Business Salon.' },
     { name: 'Job', icon: 'laptop', desc: 'Job Offers.' },
     { name: 'Friends', icon: 'users', desc: 'Nankai Friends & Queqiao.' },
 ];

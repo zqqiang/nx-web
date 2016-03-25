@@ -58,7 +58,7 @@ var NewsView = React.createClass({
     render: function() {
         return (
             <div>
-                <Header title='News' smalltitle='timeline' icon='newspaper-o' menu='Services' submenu='News' />
+                <Header title='Services' smalltitle='News' icon='newspaper-o' menu='Services' submenu='News' />
                 <Content />
             </div>
         );
