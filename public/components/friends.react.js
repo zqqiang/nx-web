@@ -1,23 +1,6 @@
 var React = require('react');
 var Header = require('./header.react');
 
-// var ContentHeader = React.createClass({
-//     render: function() {
-//         return (
-//             <section className="content-header">
-//               <h1>
-//                 Alumni
-//                 <small>Version 1.0</small>
-//               </h1>
-//               <ol className="breadcrumb">
-//                 <li><a href="javascript:void(0);"><i className="fa fa-dashboard"></i> Alumni</a></li>
-//                 <li className="active">AlumniActivity</li>
-//               </ol>
-//             </section>
-//         );
-//     }
-// });
-
 var BoxHeaderSpan = React.createClass({
     render: function() {
         return (
@@ -96,8 +79,8 @@ var ChatMessageItem = React.createClass({
 var ChatMessage = React.createClass({
     render: function() {
         var items = [];
-        this.props.items.forEach(function(item) {
-            items.push(<ChatMessageItem item={item} key={item.name} />);
+        this.props.items.forEach(function(item, index) {
+            items.push(<ChatMessageItem item={item} key={index} />);
         });
         return (
             <div className='direct-chat-messages'>
@@ -108,8 +91,10 @@ var ChatMessage = React.createClass({
 });
 
 var ChatMessageItems = [
-    {direction: 'left', rdirection: 'right', name: 'Alexander Pierce', time: '23 Jan 2:00 pm', img: 'user1-128x128.jpg', text: 'Is this template really for free? That\'s unbelievable!'},
-    {direction: 'right', rdirection: 'left', name: 'Sarah Bullock', time: '23 Jan 2:05 pm', img: 'user3-128x128.jpg', text: 'You better believe it!'},
+    { direction: 'left', rdirection: 'right', name: 'Alexander Pierce', time: '23 Jan 2:00 pm', img: 'user1-128x128.jpg', text: 'Is this template really for free? That\'s unbelievable!' },
+    { direction: 'right', rdirection: 'left', name: 'Sarah Bullock', time: '23 Jan 2:05 pm', img: 'user3-128x128.jpg', text: 'You better believe it!' },
+    { direction: 'left', rdirection: 'right', name: 'Alexander Pierce', time: '23 Jan 2:00 pm', img: 'user1-128x128.jpg', text: 'Is this template really for free? That\'s unbelievable!' },
+    { direction: 'right', rdirection: 'left', name: 'Sarah Bullock', time: '23 Jan 2:05 pm', img: 'user3-128x128.jpg', text: 'You better believe it!' }
 ];
 
 var BoxBodyChat = React.createClass({
@@ -122,12 +107,30 @@ var BoxBodyChat = React.createClass({
     }
 });
 
+var BoxFooterChat = React.createClass({
+    render: function() {
+        return (
+            <div className="box-footer">
+              <form>
+                <div className="input-group">
+                  <input type="text" name="message" placeholder="Type Message ..." className="form-control" />
+                      <span className="input-group-btn">
+                        <button type="button" type="button" className="btn btn-warning btn-flat">Send</button>&nbsp;
+                      </span>
+                </div>
+              </form>
+            </div>
+        );
+    }
+});
+
 var DirectChat = React.createClass({
     render: function() {
         return (
             <div className="box box-warning direct-chat direct-chat-warning">
                 <BoxHeader title='Direct Chat' span={DirectChatSpan} buttons={DirectChatButtons} />
                 <BoxBodyChat />
+                <BoxFooterChat />
             </div>
         );
     }
