@@ -3,7 +3,6 @@ nxManager
 
 * This repository is a next generation central manager framework.  
 * The target is to make cloud product development very easy and effective.  
-* Also support mobile device management.  
 
 Table of Contents
 =================
@@ -83,6 +82,8 @@ FAQ
 
 Todo List
 =========
+
+* Publish as a lib  
 
 * Cookies  
 
