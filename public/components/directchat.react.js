@@ -107,11 +107,11 @@ var BoxBodyChat = React.createClass({
 });
 
 var BoxFooterChat = React.createClass({
-    handleChange: function(event) {
-        this.setState({ value: event.target.value });
+    handleClick: function() {
+        var input = this.refs.inputValue;
+        
     },
     render: function() {
-        var that = this;
         return (
             <div className="box-footer">
               <form>
@@ -121,13 +121,12 @@ var BoxFooterChat = React.createClass({
                     name="message" 
                     placeholder="Type Message ..." 
                     className="form-control"
-                    value={this.state.value}
-                    onChange={this.handleChange} />
+                    ref="inputValue" />
                   <span className="input-group-btn">
                     <button 
                         type="button" 
                         className="btn btn-warning btn-flat" 
-                        onClick={this.props.handleClick} >
+                        onClick={this.handleClick} >
                         Send
                     </button>&nbsp;
                   </span>
@@ -139,18 +138,12 @@ var BoxFooterChat = React.createClass({
 });
 
 var DirectChat = React.createClass({
-    getInitialState: function() {
-        return { value: 'Hello!' };
-    },
-    handleClick: function() {
-        
-    },
     render: function() {
         return (
             <div className="box box-warning direct-chat direct-chat-warning">
                 <BoxHeader title='Direct Chat' span={DirectChatSpan} buttons={DirectChatButtons} />
                 <BoxBodyChat />
-                <BoxFooterChat textInput={this.textInput} handleClick={this.handleClick} />
+                <BoxFooterChat />
             </div>
         );
     }
