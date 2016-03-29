@@ -107,6 +107,9 @@ var BoxBodyChat = React.createClass({
 });
 
 var BoxFooterChat = React.createClass({
+    handleChange: function(event) {
+        this.setState({ value: event.target.value });
+    },
     render: function() {
         var that = this;
         return (
@@ -118,9 +121,8 @@ var BoxFooterChat = React.createClass({
                     name="message" 
                     placeholder="Type Message ..." 
                     className="form-control"
-                    ref={function(input) {
-                        that.props.textInput = input;
-                    }} />
+                    value={this.state.value}
+                    onChange={this.handleChange} />
                   <span className="input-group-btn">
                     <button 
                         type="button" 
@@ -141,7 +143,7 @@ var DirectChat = React.createClass({
         return { value: 'Hello!' };
     },
     handleClick: function() {
-        this.textInput.focus();
+        
     },
     render: function() {
         return (
