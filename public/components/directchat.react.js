@@ -108,8 +108,8 @@ var BoxBodyChat = React.createClass({
 
 var BoxFooterChat = React.createClass({
     handleClick: function() {
-        var input = this.refs.inputValue;
-        
+        var input = this.refs.input;
+        console.log(input.value);
     },
     render: function() {
         return (
@@ -121,7 +121,7 @@ var BoxFooterChat = React.createClass({
                     name="message" 
                     placeholder="Type Message ..." 
                     className="form-control"
-                    ref="inputValue" />
+                    ref="input" />
                   <span className="input-group-btn">
                     <button 
                         type="button" 
