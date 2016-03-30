@@ -4,8 +4,7 @@ var Header = require('./header.react');
 var BoxWidget = React.createClass({
     render: function() {
         return (
-        	<div class="box box-widget">
-        		
+            <div className="box box-widget">
         	</div>
         );
     }
@@ -26,7 +25,10 @@ var Content = React.createClass({
 var Salon = React.createClass({
     render: function() {
         return (
-            <Header title='Services' smalltitle='Salon' icon='briefcase' menu='Services' submenu='Salon' /> < Content / >
+            <div>
+	            <Header title='Services' smalltitle='Salon' icon='briefcase' menu='Services' submenu='Salon' />
+	            <Content />
+            </div>
         );
     }
 });
