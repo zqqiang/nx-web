@@ -5,8 +5,8 @@ var WidgetUserHeader = React.createClass({
     render: function() {
         return (
             <div className="widget-user-header bg-aqua-active">
-              <h3 className="widget-user-username">Alexander Pierce</h3>
-              <h5 className="widget-user-desc">Founder &amp; CEO</h5>
+              <h3 className="widget-user-username">{this.props.header.name}</h3>
+              <h5 className="widget-user-desc">{this.props.header.desc}</h5>
             </div>
         );
     }
@@ -16,7 +16,7 @@ var WidgetUserImage = React.createClass({
     render: function() {
         return (
             <div className="widget-user-image">
-              <img className="img-circle" src="http://placehold.it/100x100/39CCCC/ffffff" alt="User Avatar" />
+              <img className="img-circle" src={this.props.image.src} alt={this.props.image.alt} />
             </div>
         );
     }
@@ -40,9 +40,9 @@ var BoxFooter = React.createClass({
         return (
             <div className="box-footer">
         		 <div className="row">
-        		 	<DescriptionBlock nums='1000' text='Members' />
-        		 	<DescriptionBlock nums='2000' text='Sales' />
-        		 	<DescriptionBlock nums='3000' text='Followers' />
+        		 	<DescriptionBlock nums={this.props.footer.members} text='Members' />
+        		 	<DescriptionBlock nums={this.props.footer.activities} text='Activities' />
+        		 	<DescriptionBlock nums={this.props.footer.followers} text='Followers' />
         		 </div>
         	</div>
         );
@@ -52,25 +52,41 @@ var BoxFooter = React.createClass({
 var SocialWidgets = React.createClass({
     render: function() {
         return (
-            <div className="box box-widget widget-user">
-				<WidgetUserHeader />
-				<WidgetUserImage />
-				<BoxFooter />
+            <div className="col-md-4">
+	            <div className="box box-widget widget-user">
+					<WidgetUserHeader header={this.props.widget.header} />
+					<WidgetUserImage image={this.props.widget.image} />
+					<BoxFooter footer={this.props.widget.footer} />
+				</div>
 			</div>
         );
     }
 });
 
+var widgets = [{
+    header: { name: 'Alexander Pierce', desc: 'Founder & CEO' },
+    footer: { members: 1000, activities: 2000, followers: 3000 },
+    image: { src: 'http://placehold.it/100x100/39CCCC/ffffff', alt: 'One' }
+}, {
+    header: { name: 'Alexander Pierce', desc: 'Founder & CEO' },
+    footer: { members: 1000, activities: 2000, followers: 3000 },
+    image: { src: 'http://placehold.it/100x100/39CCCC/ffffff', alt: 'One' }
+}, {
+    header: { name: 'Alexander Pierce', desc: 'Founder & CEO' },
+    footer: { members: 1000, activities: 2000, followers: 3000 },
+    image: { src: 'http://placehold.it/100x100/39CCCC/ffffff', alt: 'One' }
+}];
+
 var Content = React.createClass({
     render: function() {
+        var items = [];
+        widgets.forEach(function(widget, index) {
+            items.push(<SocialWidgets widget={widget} key={index} />);
+        });
         return (
             <section className="content">
                 <div className="row">
-                    <div className="col-md-4"></div>
-                    <div className="col-md-4">
-                    	<SocialWidgets />
-                    </div>
-                    <div className="col-md-4"></div>
+                   	{items}
                 </div>
             </section>
         );
