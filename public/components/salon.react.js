@@ -1,5 +1,6 @@
 var React = require('react');
 var Header = require('./header.react');
+var SalonStore = require('../stores/SalonStore');
 
 var UserBlock = React.createClass({
     render: function() {
@@ -90,7 +91,7 @@ var BoxPostFooter = React.createClass({
     render: function() {
         return (
             <div className="box-footer">
-                <form action="#" method="post">
+                <form action="javascript:void(0);" method="post">
                     <img className="img-responsive img-circle img-sm" src="http://placehold.it/128x128/DD4B39/ffffff" alt="Alt Text" />
                     <div className="img-push">
                         <input type="text" className="form-control input-sm" placeholder="Press enter to post comment" />
@@ -126,7 +127,22 @@ var Content = React.createClass({
     }
 });
 
+function getSalonState() {
+    return {
+        allSalons: SalonStore.getAll()
+    };
+}
+
 var Salon = React.createClass({
+    getInitialState: function() {
+        return getSalonState();
+    },
+    componentDidMount: function() {
+        SalonStore.addChangeListener(this._onChange);
+    },
+    componentWillUnmount: function() {
+        SalonStore.removeChangeListener(this._onChange);
+    },
     render: function() {
         return (
             <div>
@@ -134,6 +150,10 @@ var Salon = React.createClass({
                 <Content />
             </div>
         );
+    },
+    _onChange: function() {
+        this.setState(getSalonState());
+        console.log(this.states);
     }
 });
 
