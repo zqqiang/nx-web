@@ -6,7 +6,10 @@ var UserBlock = React.createClass({
         return (
             <div className="user-block">
                 <img className="img-circle" src="http://placehold.it/100x100/39CCCC/ffffff" alt="User Image" />
-                <span className="username"><a href="#">Jonathan Burke Jr.</a></span>
+                <span className="username">
+                    <a href="#">
+                    </a>
+                </span>
                 <span className="description">Shared publicly - 7:30 PM Today</span>
             </div>
         );

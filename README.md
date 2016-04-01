@@ -84,8 +84,8 @@ Todo List
 =========
 
 * Publish as a lib  
-
-* Cookies  
+* ES2015
+* i18n
 
 Features
 ========
