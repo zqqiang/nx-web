@@ -2,6 +2,8 @@ var React = require('react');
 var Header = require('./header.react');
 var SalonStore = require('../stores/SalonStore');
 
+var ENTER_KEY_CODE = 13;
+
 var UserBlock = React.createClass({
     render: function() {
         return (
@@ -88,18 +90,47 @@ var BoxFooter = React.createClass({
 });
 
 var BoxPostFooter = React.createClass({
+    getInitialState: function() {
+        return {
+            value: this.props.value || ''
+        };
+    },
     render: function() {
         return (
             <div className="box-footer">
                 <form action="javascript:void(0);" method="post">
                     <img className="img-responsive img-circle img-sm" src="http://placehold.it/128x128/DD4B39/ffffff" alt="Alt Text" />
                     <div className="img-push">
-                        <input type="text" className="form-control input-sm" placeholder="Press enter to post comment" />
+                        <input
+                            type="text" 
+                            className="form-control input-sm" 
+                            placeholder="Press enter to post comment" 
+                            onKeyDown={this._onKeyDown}
+                            value={this.state.value}
+                            onChange={this._onChange}
+                        />
                     </div>
                 </form>
             </div>
         );
-    }
+    },
+    _onKeyDown: function(event) {
+        if (event.keyCode == ENTER_KEY_CODE) {
+            this._save();
+        }
+    },
+    _save: function() {
+        // this.props.onSave(this.state.value);
+        console.log(this.state.value);
+        this.setState({
+            value: ''
+        });
+    },
+    _onChange: function(event) {
+        this.setState({
+            value: event.target.value
+        });
+    },
 });
 
 var BoxWidget = React.createClass({
