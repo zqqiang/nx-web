@@ -120,8 +120,7 @@ var BoxPostFooter = React.createClass({
         }
     },
     _save: function() {
-        // this.props.onSave(this.state.value);
-        console.log(this.state.value);
+        this.props.onSave(this.state.value);
         this.setState({
             value: ''
         });
@@ -140,9 +139,12 @@ var BoxWidget = React.createClass({
                 <BoxHeader />
                 <BoxBody />
                 <BoxFooter />
-                <BoxPostFooter />
+                <BoxPostFooter onSave={this._onSave} />
             </div>
         );
+    },
+    _onSave: function(text) {
+
     }
 });
 
