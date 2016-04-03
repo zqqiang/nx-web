@@ -1,6 +1,7 @@
 var React = require('react');
 var Header = require('./header.react');
 var SalonStore = require('../stores/SalonStore');
+var SalonActions = require('../actions/SalonActions');
 
 var ENTER_KEY_CODE = 13;
 
@@ -144,7 +145,7 @@ var BoxWidget = React.createClass({
         );
     },
     _onSave: function(text) {
-
+        SalonActions.updateText();
     }
 });
 
@@ -186,7 +187,6 @@ var Salon = React.createClass({
     },
     _onChange: function() {
         this.setState(getSalonState());
-        console.log(this.states);
     }
 });
 
