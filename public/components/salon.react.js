@@ -2,16 +2,28 @@ var React = require('react');
 var Header = require('./header.react');
 var SalonStore = require('../stores/SalonStore');
 var SalonActions = require('../actions/SalonActions');
+import { IntlProvider, FormattedNumber, FormattedPlural } from 'react-intl';
 
 var ENTER_KEY_CODE = 13;
 
 var UserBlock = React.createClass({
+    getInitialState: function() {
+        if (this.props.locale === 'en') {
+            return {
+                name: 'Jonathan Burke Jr.'
+            };
+        } else if (this.props.locale === 'cn') {
+            return {
+                name: '博可'
+            };
+        }
+    },
     render: function() {
         return (
             <div className="user-block">
                 <img className="img-circle" src="http://placehold.it/100x100/39CCCC/ffffff" alt="User Image" />
                 <span className="username">
-                    <a href="#">Jonathan Burke Jr.</a>
+                    <a href="#">{this.state.name}</a>
                 </span>
                 <span className="description">Shared publicly - 7:30 PM Today</span>
             </div>
@@ -41,7 +53,7 @@ var BoxHeader = React.createClass({
     render: function() {
         return (
             <div className="box-header with-border">
-                <UserBlock />
+                <UserBlock locale='en' />
                 <BoxTools />
             </div>
         );
