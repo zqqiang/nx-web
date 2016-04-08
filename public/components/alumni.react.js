@@ -1,5 +1,6 @@
 var $ = require('jquery');
 var React = require('react');
+var Easing = require('jquery.easing');
 
 var Header = React.createClass({
     handleClick: function() {

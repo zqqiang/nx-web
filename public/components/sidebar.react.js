@@ -67,7 +67,7 @@ var DocsNodes = [
 ];
 
 var AlumniNodes = [
-    { href: 'Alumni', icon: 'circle-o', name: 'AlumniWelcome' }
+    { href: 'Alumni', icon: 'circle-o', name: 'Welcome' }
 ];
 
 var Sidebar = React.createClass({
@@ -77,8 +77,6 @@ var Sidebar = React.createClass({
                 <section className="sidebar">
                     <ul className="sidebar-menu">
                         <li className="header">MAIN NAVIGATION</li>
-                        <MenuTree icon='dashboard' folder='Home' nodes={HomeNodes} />
-                        <MenuTree icon='book' folder='Docs' nodes={DocsNodes} />
                         <MenuTree icon='graduation-cap' folder='Alumni' nodes={AlumniNodes} />
                     </ul>
                 </section>

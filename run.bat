@@ -1,1 +1,1 @@
-watchify public\main.js -o public\bundle.js -t [ hbsfy -e html,htm ] -t [ babelify --presets [ es2015 react ] ] --debug -v  
+watchify public\main.js -o public\bundle.js -t [ babelify --presets [ es2015 react ] ] --debug -v  

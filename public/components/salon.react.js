@@ -186,7 +186,8 @@ var Salon = React.createClass({
         SalonStore.addChangeListener(this._onChange);
     },
     componentWillUnmount: function() {
-        SalonStore.removeChangeListener(this._onChange);
+        // todo:
+        // SalonStore.removeChangeListener(this._onChange);
     },
     render: function() {
         return (
