@@ -314,7 +314,7 @@ var PortfolioItems = [
 var AlumniView = React.createClass({
     render: function() {
         return (
-            <div>
+            <div className="stylish-portfolio">
                 <Header />
                 <About alumni="500+" />
                 <Services items={ServiceItems} />

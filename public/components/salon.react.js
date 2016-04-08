@@ -2,7 +2,6 @@ var React = require('react');
 var Header = require('./header.react');
 var SalonStore = require('../stores/SalonStore');
 var SalonActions = require('../actions/SalonActions');
-import { IntlProvider, FormattedNumber, FormattedPlural } from 'react-intl';
 
 var ENTER_KEY_CODE = 13;
 

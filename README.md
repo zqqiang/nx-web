@@ -84,7 +84,6 @@ Todo List
 =========
 
 * Publish as a lib  
-* ES2015
 * i18n
 
 Features

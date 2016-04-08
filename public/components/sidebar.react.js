@@ -73,12 +73,16 @@ var AlumniNodes = [
 var Sidebar = React.createClass({
     render: function() {
         return (
-            <ul className="sidebar-menu">
-                <li className="header">MAIN NAVIGATION</li>
-                <MenuTree icon='dashboard' folder='Home' nodes={HomeNodes} />
-                <MenuTree icon='book' folder='Docs' nodes={DocsNodes} />
-                <MenuTree icon='graduation-cap' folder='Alumni' nodes={AlumniNodes} />
-            </ul>
+            <aside className="main-sidebar">
+                <section className="sidebar">
+                    <ul className="sidebar-menu">
+                        <li className="header">MAIN NAVIGATION</li>
+                        <MenuTree icon='dashboard' folder='Home' nodes={HomeNodes} />
+                        <MenuTree icon='book' folder='Docs' nodes={DocsNodes} />
+                        <MenuTree icon='graduation-cap' folder='Alumni' nodes={AlumniNodes} />
+                    </ul>
+                </section>
+            </aside>
         );
     }
 });
