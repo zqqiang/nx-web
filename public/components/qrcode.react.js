@@ -1,3 +1,4 @@
+var $ = require('jquery');
 var React = require('react');
 var Header = require('./header.react');
 
@@ -26,11 +27,11 @@ var DescriptionBlock = React.createClass({
     render: function() {
         return (
             <div className="col-sm-4 border-right">
-				<div className="description-block">
-					<h5 className="description-header">{this.props.nums}</h5>
-					<span className="description-text">{this.props.text}</span>
-				</div>
-			</div>
+                <div className="description-block">
+                    <h5 className="description-header">{this.props.nums}</h5>
+                    <span className="description-text">{this.props.text}</span>
+                </div>
+            </div>
         );
     }
 });
@@ -39,12 +40,12 @@ var BoxFooter = React.createClass({
     render: function() {
         return (
             <div className="box-footer">
-        		 <div className="row">
-        		 	<DescriptionBlock nums={this.props.footer.members} text='Members' />
-        		 	<DescriptionBlock nums={this.props.footer.activities} text='Activities' />
-        		 	<DescriptionBlock nums={this.props.footer.followers} text='Followers' />
-        		 </div>
-        	</div>
+                 <div className="row">
+                    <DescriptionBlock nums={this.props.footer.members} text='Members' />
+                    <DescriptionBlock nums={this.props.footer.activities} text='Activities' />
+                    <DescriptionBlock nums={this.props.footer.followers} text='Followers' />
+                 </div>
+            </div>
         );
     }
 });
@@ -53,12 +54,12 @@ var SocialWidgets = React.createClass({
     render: function() {
         return (
             <div className="col-md-4">
-	            <div className="box box-widget widget-user">
-					<WidgetUserHeader header={this.props.widget.header} />
-					<WidgetUserImage image={this.props.widget.image} />
-					<BoxFooter footer={this.props.widget.footer} />
-				</div>
-			</div>
+                <div className="box box-widget widget-user">
+                    <WidgetUserHeader header={this.props.widget.header} />
+                    <WidgetUserImage image={this.props.widget.image} />
+                    <BoxFooter footer={this.props.widget.footer} />
+                </div>
+            </div>
         );
     }
 });
@@ -86,7 +87,7 @@ var Content = React.createClass({
         return (
             <section className="content">
                 <div className="row">
-                   	{items}
+                    {items}
                 </div>
             </section>
         );
@@ -95,11 +96,15 @@ var Content = React.createClass({
 
 var QRCode = React.createClass({
     render: function() {
+        var neg = $('.main-header').outerHeight() + $('.main-footer').outerHeight();
+        var window_height = $(window).height();
+        $(".content-wrapper, .right-side").css('min-height', window_height - neg);
+
         return (
             <div>
                 <Header title='Footer' smalltitle='QRCode' icon='newspaper-o' menu='Footer' submenu='QRCode' />
                 <Content />
-        	</div>
+            </div>
         );
     }
 });
