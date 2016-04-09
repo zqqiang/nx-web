@@ -9,10 +9,6 @@ var Gallery = require('./gallery.react');
 
 var Content = React.createClass({
     render: function() {
-        var neg = $('.main-header').outerHeight() + $('.main-footer').outerHeight();
-        var window_height = $(window).height();
-        $(".content-wrapper, .right-side").css('min-height', window_height - neg);
-
         return (
             <div className="content-wrapper">
 	            <Router history={hashHistory}>

@@ -314,6 +314,10 @@ var PortfolioItems = [
 
 var AlumniView = React.createClass({
     render: function() {
+        var neg = $('.main-header').outerHeight() + $('.main-footer').outerHeight();
+        var window_height = $(window).height();
+        $(".content-wrapper, .right-side").css('min-height', window_height - neg);
+                
         return (
             <div className="stylish-portfolio">
                 <Header />

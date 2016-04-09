@@ -1,3 +1,4 @@
+var $ = require('jquery');
 var React = require('react');
 var Header = require('./header.react');
 
@@ -190,6 +191,10 @@ var GalleryView = React.createClass({
 
 var Gallery = React.createClass({
     render: function() {
+        var neg = $('.main-header').outerHeight() + $('.main-footer').outerHeight();
+        var window_height = $(window).height();
+        $(".content-wrapper, .right-side").css('min-height', window_height - neg);
+
         return (
             <div >
                 <Pswp />

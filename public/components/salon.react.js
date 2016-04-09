@@ -1,3 +1,4 @@
+var $ = require('jquery');
 var React = require('react');
 var Header = require('./header.react');
 var SalonStore = require('../stores/SalonStore');
@@ -190,6 +191,10 @@ var Salon = React.createClass({
         // SalonStore.removeChangeListener(this._onChange);
     },
     render: function() {
+        var neg = $('.main-header').outerHeight() + $('.main-footer').outerHeight();
+        var window_height = $(window).height();
+        $(".content-wrapper, .right-side").css('min-height', window_height - neg);
+                
         return (
             <div>
                 <Header title='Services' smalltitle='Salon' icon='briefcase' menu='Services' submenu='Salon' />
