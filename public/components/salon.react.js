@@ -7,23 +7,21 @@ var SalonActions = require('../actions/SalonActions');
 var ENTER_KEY_CODE = 13;
 
 var UserBlock = React.createClass({
-    getInitialState: function() {
-        if (this.props.locale === 'en') {
-            return {
-                name: 'Jonathan Burke Jr.'
-            };
-        } else if (this.props.locale === 'cn') {
-            return {
-                name: '博可'
-            };
-        }
-    },
     render: function() {
+        var username;
+        if ('en' === this.props.locale) {
+            username = 'Jonathan Burke Jr.';
+        } else if ('cn' === this.props.locale) {
+            username = '张三';
+        }
+
+        console.log(this.props.locale);
+
         return (
             <div className="user-block">
                 <img className="img-circle" src="http://placehold.it/100x100/39CCCC/ffffff" alt="User Image" />
                 <span className="username">
-                    <a href="#">{this.state.name}</a>
+                    <a href="#">{username}</a>
                 </span>
                 <span className="description">Shared publicly - 7:30 PM Today</span>
             </div>
@@ -53,7 +51,7 @@ var BoxHeader = React.createClass({
     render: function() {
         return (
             <div className="box-header with-border">
-                <UserBlock locale='en' />
+                <UserBlock locale={this.props.locale} />
                 <BoxTools />
             </div>
         );
@@ -149,7 +147,7 @@ var BoxWidget = React.createClass({
     render: function() {
         return (
             <div className="box box-widget">
-                <BoxHeader />
+                <BoxHeader locale={this.props.locale} />
                 <BoxBody />
                 <BoxFooter />
                 <BoxPostFooter onSave={this._onSave} />
@@ -157,7 +155,8 @@ var BoxWidget = React.createClass({
         );
     },
     _onSave: function(text) {
-        SalonActions.updateText();
+        // SalonActions.updateText();
+        SalonActions.changeLocale('cn');
     }
 });
 
@@ -166,7 +165,7 @@ var Content = React.createClass({
         return (
             <section className="content">
                 <div className="row">
-                    <BoxWidget />
+                    <BoxWidget locale={this.props.locale} />
                 </div>
             </section>
         );
@@ -174,9 +173,7 @@ var Content = React.createClass({
 });
 
 function getSalonState() {
-    return {
-        allSalons: SalonStore.getAll()
-    };
+    return SalonStore.getAll();
 }
 
 var Salon = React.createClass({
@@ -194,11 +191,11 @@ var Salon = React.createClass({
         var neg = $('.main-header').outerHeight() + $('.main-footer').outerHeight();
         var window_height = $(window).height();
         $(".content-wrapper, .right-side").css('min-height', window_height - neg);
-                
+
         return (
             <div>
                 <Header title='Services' smalltitle='Salon' icon='briefcase' menu='Services' submenu='Salon' />
-                <Content />
+                <Content locale={this.state.locale} />
             </div>
         );
     },
