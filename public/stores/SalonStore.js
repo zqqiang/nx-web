@@ -4,7 +4,9 @@ var AppDispatcher = require('../dispatcher/AppDispatcher');
 var SalonConstants = require('../constants/SalonConstants');
 
 var CHANGE_EVENT = 'change';
-var _salons = {};
+var _salons = {
+    locale: 'cn'
+};
 
 function update(udpates) {
     _salons = assign({}, _salons, udpates);
