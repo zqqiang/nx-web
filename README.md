@@ -21,19 +21,10 @@ Prepare
 Linux
 -----
 
-sudo apt-get install nodejs  
-sudo apt-get install npm  
-sudo npm install -g supervisor  
-sudo npm install -g browserify  
-sudo npm install -g less  
-
 Windows
 -------
 
 download nodejs from [http://nodejs.org/download/](http://nodejs.org/download/)  
-npm install -g supervisor  
-npm install -g browserify  
-npm install -g less  
 
 [Back to TOC](#table-of-contents)
 
@@ -54,44 +45,20 @@ browse localhost:3000
 Libs
 ====
 
-* Backbones.js Marionette.js Underscore.js Handlebars.js D3.js
-* Bootstraps CSS3 HTML5
-* Node.js Express.js Cheerio.js
-* MongoDB Mongoose.js IndexedDB pouchdb localforage  
-* AdminLTE Creative  
-* React.js  
 
 [Back to TOC](#table-of-contents)
 
 Directory
 =========
 
-* db: use mongoose to connect mongodb, some configuration
-* model: mongoose model
-* public: Server GUI
-* routes: 
-
-[Back to TOC](#table-of-contents)
-
-FAQ
-===
-
-1. Move to Issues  
-
 [Back to TOC](#table-of-contents)
 
 Todo List
 =========
 
-* Publish as a lib  
-* i18n
+* Flux => Redux
 
 Features
 ========
-
-* Support Android CRUD Operation with mongoose.js
-* Add dianping api query script for get business infomation to mongodb
-* Use bootstrap to support mobile GUI
-* Add High-Stock to analysis stock price
 
 [Back to TOC](#table-of-contents)
