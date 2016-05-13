@@ -31,14 +31,8 @@ download nodejs from [http://nodejs.org/download/](http://nodejs.org/download/)
 Quick Start
 =====
 
-First download nxManager  
-unzip nxManager & cd nxManager  
-npm install  
-cd public  
-cd ../  
-supervisor app.js  
-run.bat  
-browse localhost:3000  
+* npm install
+* npm start
 
 [Back to TOC](#table-of-contents)
 
@@ -57,6 +51,7 @@ Todo List
 =========
 
 * Flux => Redux
+* ES2015
 
 Features
 ========

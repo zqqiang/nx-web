@@ -1,1 +1,0 @@
-watchify public\main.js -o public\bundle.js -t [ babelify --presets [ es2015 react ] ] --debug -v  
