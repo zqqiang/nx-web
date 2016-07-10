@@ -51,7 +51,6 @@ Todo List
 =========
 
 * Flux => Redux
-* ES2015
 
 Features
 ========
