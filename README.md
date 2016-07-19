@@ -9,7 +9,6 @@ Table of Contents
 
 * [Prepare](#prepare)
 * [Start](#start)
-* [Libs](#libs)
 * [Directory](#directory)
 * [FAQ](#faq)
 * [Todo List](#todo-list)
@@ -18,13 +17,6 @@ Table of Contents
 Prepare
 =======
 
-Linux
------
-
-Windows
--------
-
-download nodejs from [http://nodejs.org/download/](http://nodejs.org/download/)  
 
 [Back to TOC](#table-of-contents)
 
@@ -33,12 +25,6 @@ Quick Start
 
 * npm install
 * npm start
-
-[Back to TOC](#table-of-contents)
-
-Libs
-====
-
 
 [Back to TOC](#table-of-contents)
 
