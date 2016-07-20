@@ -2,7 +2,9 @@ var $ = require('jquery');
 var React = require('react');
 var Header = require('./header.react');
 var SalonStore = require('../stores/SalonStore');
-var SalonActions = require('../actions/SalonActions');
+
+import { connect } from 'react-redux'
+import { addComment } from '../actions/'
 
 var ENTER_KEY_CODE = 13;
 
@@ -143,29 +145,27 @@ var BoxPostFooter = React.createClass({
     },
 });
 
-var BoxWidget = React.createClass({
-    render: function() {
-        return (
-            <div className="box box-widget">
-                <BoxHeader locale={this.props.locale} />
-                <BoxBody />
-                <BoxFooter />
-                <BoxPostFooter onSave={this._onSave} />
-            </div>
-        );
-    },
-    _onSave: function(text) {
-        // SalonActions.updateText();
-        SalonActions.changeLocale('cn');
-    }
-});
+let BoxWidget = ({ dispatch }) => {
+    return (
+        <div className="box box-widget">
+            <BoxHeader />
+            <BoxBody />
+            <BoxFooter />
+            <BoxPostFooter onSave={(text) => {
+                dispatch(addComment(text));
+            }} />
+        </div>
+    );
+}
+
+BoxWidget = connect()(BoxWidget);
 
 var Content = React.createClass({
     render: function() {
         return (
             <section className="content">
                 <div className="row">
-                    <BoxWidget locale={this.props.locale} />
+                    <BoxWidget />
                 </div>
             </section>
         );
@@ -195,7 +195,7 @@ var Salon = React.createClass({
         return (
             <div>
                 <Header title='Services' smalltitle='Salon' icon='briefcase' menu='Services' submenu='Salon' />
-                <Content locale={this.state.locale} />
+                <Content />
             </div>
         );
     },
