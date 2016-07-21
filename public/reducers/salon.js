@@ -1,8 +1,8 @@
 const salon = (state = {}, action) => {
     switch (action.type) {
-        case 'CHANGE_LANG':
+        case 'ADD_COMMENT':
             return {
-                language: action.language
+                comment: action.comment
             }
         default:
             return state

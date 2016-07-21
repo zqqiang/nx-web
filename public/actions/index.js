@@ -1,6 +1,6 @@
-export const addComment = (text) => {
+export const addComment = (comment) => {
     return {
         type: 'ADD_COMMENT',
-        text
+        comment
     }
 }

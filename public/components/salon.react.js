@@ -1,7 +1,6 @@
 var $ = require('jquery');
 var React = require('react');
 var Header = require('./header.react');
-var SalonStore = require('../stores/SalonStore');
 
 import { connect } from 'react-redux'
 import { addComment } from '../actions/'
@@ -10,20 +9,11 @@ var ENTER_KEY_CODE = 13;
 
 var UserBlock = React.createClass({
     render: function() {
-        var username;
-        if ('en' === this.props.locale) {
-            username = 'Jonathan Burke Jr.';
-        } else if ('cn' === this.props.locale) {
-            username = '张三';
-        }
-
-        console.log(this.props.locale);
-
         return (
             <div className="user-block">
                 <img className="img-circle" src="http://placehold.it/100x100/39CCCC/ffffff" alt="User Image" />
                 <span className="username">
-                    <a href="#">{username}</a>
+                    <a href="#">{}</a>
                 </span>
                 <span className="description">Shared publicly - 7:30 PM Today</span>
             </div>
@@ -53,7 +43,7 @@ var BoxHeader = React.createClass({
     render: function() {
         return (
             <div className="box-header with-border">
-                <UserBlock locale={this.props.locale} />
+                <UserBlock />
                 <BoxTools />
             </div>
         );
@@ -151,8 +141,8 @@ let BoxWidget = ({ dispatch }) => {
             <BoxHeader />
             <BoxBody />
             <BoxFooter />
-            <BoxPostFooter onSave={(text) => {
-                dispatch(addComment(text));
+            <BoxPostFooter onSave={(comment) => {
+                dispatch(addComment(comment));
             }} />
         </div>
     );
@@ -172,21 +162,7 @@ var Content = React.createClass({
     }
 });
 
-function getSalonState() {
-    return SalonStore.getAll();
-}
-
 var Salon = React.createClass({
-    getInitialState: function() {
-        return getSalonState();
-    },
-    componentDidMount: function() {
-        SalonStore.addChangeListener(this._onChange);
-    },
-    componentWillUnmount: function() {
-        // todo:
-        // SalonStore.removeChangeListener(this._onChange);
-    },
     render: function() {
         var neg = $('.main-header').outerHeight() + $('.main-footer').outerHeight();
         var window_height = $(window).height();
@@ -198,9 +174,6 @@ var Salon = React.createClass({
                 <Content />
             </div>
         );
-    },
-    _onChange: function() {
-        this.setState(getSalonState());
     }
 });
 
