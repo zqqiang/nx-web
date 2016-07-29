@@ -4,7 +4,7 @@ import { Router, Route, hashHistory } from 'react-router'
 
 var Alumni = require('./alumni.react');
 var News = require('./news.react');
-var Salon = require('./salon.react');
+var Salon = require('../containers/salon');
 var Gallery = require('./gallery.react');
 var QRCode = require('./qrcode.react');
 
