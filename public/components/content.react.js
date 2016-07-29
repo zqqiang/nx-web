@@ -4,9 +4,11 @@ import { Router, Route, hashHistory } from 'react-router'
 
 var Alumni = require('./alumni.react');
 var News = require('./news.react');
-var Salon = require('../containers/salon');
+var Salon = require('./salon.react');
 var Gallery = require('./gallery.react');
 var QRCode = require('./qrcode.react');
+
+import AddTodo from '../containers/AddTodo'
 
 var Content = React.createClass({
     render: function() {
@@ -19,6 +21,7 @@ var Content = React.createClass({
                     <Route path="/Salon" component={Salon}/>
                     <Route path="/Gallery" component={Gallery}/>
                     <Route path="/QRCode" component={QRCode}/>
+                    <Route path="/AddTodo" component={AddTodo}/>
 				</Router>
         	</div>
         );

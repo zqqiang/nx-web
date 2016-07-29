@@ -159,32 +159,19 @@ var Content = React.createClass({
     }
 });
 
-// var Salon = React.createClass({
-//     render: function() {
-//         var neg = $('.main-header').outerHeight() + $('.main-footer').outerHeight();
-//         var window_height = $(window).height();
-//         $(".content-wrapper, .right-side").css('min-height', window_height - neg);
+var Salon = React.createClass({
+    render: function() {
+        var neg = $('.main-header').outerHeight() + $('.main-footer').outerHeight();
+        var window_height = $(window).height();
+        $(".content-wrapper, .right-side").css('min-height', window_height - neg);
 
-//         return (
-//             <div>
-//                 <Header title='Services' smalltitle='Salon' icon='briefcase' menu='Services' submenu='Salon' />
-//                 <Content />
-//             </div>
-//         );
-//     }
-// });
+        return (
+            <div>
+                <Header title='Services' smalltitle='Salon' icon='briefcase' menu='Services' submenu='Salon' />
+                <Content />
+            </div>
+        );
+    }
+});
 
-const Salon = ({ comment }) => {
-    var neg = $('.main-header').outerHeight() + $('.main-footer').outerHeight();
-    var window_height = $(window).height();
-    $(".content-wrapper, .right-side").css('min-height', window_height - neg);
-
-    return (
-        <div>
-            <Header title='Services' smalltitle='Salon' icon='briefcase' menu='Services' submenu='Salon' />
-            <Content />
-        </div>
-    );
-}
-
-export default Salon
+module.exports = Salon;
