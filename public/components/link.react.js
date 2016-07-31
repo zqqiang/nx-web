@@ -1,11 +1,10 @@
 import React, { PropTypes } from 'react'
 
-const Link = ({ active, children, onClick }) => {
-  console.log(active);
-  console.log(children);
+const Link = ({ comment, onClick }) => {
+  console.log(comment);
 
-  if (active) {
-    return <span>{children}</span>
+  if (comment) {
+    return <span>{comment}</span>
   }
 
   return (
@@ -15,13 +14,11 @@ const Link = ({ active, children, onClick }) => {
          onClick()
        }}
     >
-      {children}
     </a>
   )
 }
 
 Link.propTypes = {
-  active: PropTypes.bool.isRequired,
   onClick: PropTypes.func.isRequired
 }
 

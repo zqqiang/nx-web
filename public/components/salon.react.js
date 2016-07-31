@@ -140,9 +140,7 @@ let BoxWidget = ({ dispatch }) => {
             <BoxHeader />
             <BoxBody />
             <BoxFooter />
-            <BoxPostFooter onSave={(comment) => {
-                dispatch(addComment(comment));
-            }} />
+            <BoxPostFooter onSave={(comment) => {}} />
         </div>
     );
 }
@@ -174,4 +172,18 @@ var Salon = React.createClass({
     }
 });
 
+// const Salon = ({ comment, onClick }) => {
+//     var neg = $('.main-header').outerHeight() + $('.main-footer').outerHeight();
+//     var window_height = $(window).height();
+//     $(".content-wrapper, .right-side").css('min-height', window_height - neg);
+
+//     return (
+//         <div>
+//             <Header title='Services' smalltitle='Salon' icon='briefcase' menu='Services' submenu='Salon' />
+//             <Content />
+//         </div>
+//     );
+// }
+
 module.exports = Salon;
+// export default Salon;

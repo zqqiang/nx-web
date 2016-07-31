@@ -8,8 +8,6 @@ var Salon = require('./salon.react');
 var Gallery = require('./gallery.react');
 var QRCode = require('./qrcode.react');
 
-import AddTodo from '../containers/AddTodo'
-
 var Content = React.createClass({
     render: function() {
         return (
@@ -21,7 +19,6 @@ var Content = React.createClass({
                     <Route path="/Salon" component={Salon}/>
                     <Route path="/Gallery" component={Gallery}/>
                     <Route path="/QRCode" component={QRCode}/>
-                    <Route path="/AddTodo" component={AddTodo}/>
 				</Router>
         	</div>
         );
