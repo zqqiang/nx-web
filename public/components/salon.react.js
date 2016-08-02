@@ -1,53 +1,8 @@
 var $ = require('jquery');
 var React = require('react');
 var Header = require('./header.react');
-
-import { addComment } from '../actions/'
-
-var ENTER_KEY_CODE = 13;
-
-var UserBlock = React.createClass({
-    render: function() {
-        return (
-            <div className="user-block">
-                <img className="img-circle" src="http://placehold.it/100x100/39CCCC/ffffff" alt="User Image" />
-                <span className="username">
-                    <a href="#">{}</a>
-                </span>
-                <span className="description">Shared publicly - 7:30 PM Today</span>
-            </div>
-        );
-    }
-});
-
-var BoxTools = React.createClass({
-    render: function() {
-        return (
-            <div className="box-tools">
-                <button type="button" className="btn btn-box-tool" data-toggle="tooltip" title="Mark as read">
-                    <i className="fa fa-circle-o"></i>
-                </button>
-                <button type="button" className="btn btn-box-tool" data-widget="collapse">
-                    <i className="fa fa-minus"></i>
-                </button>
-                <button type="button" className="btn btn-box-tool" data-widget="remove">
-                    <i className="fa fa-times"></i>
-                </button>
-            </div>
-        );
-    }
-});
-
-var BoxHeader = React.createClass({
-    render: function() {
-        return (
-            <div className="box-header with-border">
-                <UserBlock />
-                <BoxTools />
-            </div>
-        );
-    }
-});
+import BoxHeader from '../containers/salon/boxHeader'
+import BoxPostFooter from '../containers/salon/boxPostFooter'
 
 var BoxBody = React.createClass({
     render: function() {
@@ -91,56 +46,13 @@ var BoxFooter = React.createClass({
     }
 });
 
-var BoxPostFooter = React.createClass({
-    getInitialState: function() {
-        return {
-            value: this.props.value || ''
-        };
-    },
-    render: function() {
-        return (
-            <div className="box-footer">
-                <form action="javascript:void(0);" method="post">
-                    <img className="img-responsive img-circle img-sm" src="http://placehold.it/128x128/DD4B39/ffffff" alt="Alt Text" />
-                    <div className="img-push">
-                        <input
-                            type="text" 
-                            className="form-control input-sm" 
-                            placeholder="Press enter to post comment" 
-                            onKeyDown={this._onKeyDown}
-                            value={this.state.value}
-                            onChange={this._onChange}
-                        />
-                    </div>
-                </form>
-            </div>
-        );
-    },
-    _onKeyDown: function(event) {
-        if (event.keyCode == ENTER_KEY_CODE) {
-            this._save();
-        }
-    },
-    _save: function() {
-        this.props.onSave(this.state.value);
-        this.setState({
-            value: ''
-        });
-    },
-    _onChange: function(event) {
-        this.setState({
-            value: event.target.value
-        });
-    },
-});
-
-let BoxWidget = ({ dispatch }) => {
+let BoxWidget = () => {
     return (
         <div className="box box-widget">
             <BoxHeader />
             <BoxBody />
             <BoxFooter />
-            <BoxPostFooter onSave={(comment) => {}} />
+            <BoxPostFooter />
         </div>
     );
 }
@@ -172,18 +84,4 @@ var Salon = React.createClass({
     }
 });
 
-// const Salon = ({ comment, onClick }) => {
-//     var neg = $('.main-header').outerHeight() + $('.main-footer').outerHeight();
-//     var window_height = $(window).height();
-//     $(".content-wrapper, .right-side").css('min-height', window_height - neg);
-
-//     return (
-//         <div>
-//             <Header title='Services' smalltitle='Salon' icon='briefcase' menu='Services' submenu='Salon' />
-//             <Content />
-//         </div>
-//     );
-// }
-
 module.exports = Salon;
-// export default Salon;
