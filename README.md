@@ -36,7 +36,7 @@ Directory
 Todo List
 =========
 
-* Flux => Redux
+* 
 
 Features
 ========

@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import Header from '../../components/salon/boxHeader.react'
 
 const mapStateToProps = (state, ownProps) => {
-    console.log(state);
     return {
         comment: state.salon.comment
     }

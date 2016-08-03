@@ -101,7 +101,7 @@ var QRCode = React.createClass({
         $(".content-wrapper, .right-side").css('min-height', window_height - neg);
 
         return (
-            <div>
+            <div className="content-wrapper">
                 <Header title='Footer' smalltitle='QRCode' icon='newspaper-o' menu='Footer' submenu='QRCode' />
                 <Content />
             </div>

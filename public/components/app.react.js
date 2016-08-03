@@ -8,12 +8,13 @@ var Content = require('./content.react');
 // <!-- <div class="content-wrapper"></div> -->
 // <!-- <footer role="contentinfo"></footer> -->
 
+// <MainHeader />
+// <Sidebar />
+                
 var Wrapper = React.createClass({
     render: function() {
         return (
         	<div className="wrapper-body">
-        		<MainHeader />
-        		<Sidebar />
         		<Content />
         	</div>
         );

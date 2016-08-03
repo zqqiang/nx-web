@@ -252,7 +252,7 @@ var Gallery = React.createClass({
         $(".content-wrapper, .right-side").css('min-height', window_height - neg);
 
         return (
-            <div >
+            <div className="content-wrapper">
                 <Pswp />
                 <Header title='Alumni' smalltitle='gallery' icon='newspaper-o' menu='Alumni' submenu='Gallery' />
                 <GalleryView items={GalleryItems} />

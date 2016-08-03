@@ -62,7 +62,7 @@ var NewsView = React.createClass({
         $(".content-wrapper, .right-side").css('min-height', window_height - neg);
               
         return (
-            <div>
+            <div className="content-wrapper">
                 <Header title='Services' smalltitle='News' icon='newspaper-o' menu='Services' submenu='News' />
                 <Content />
             </div>

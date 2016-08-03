@@ -8,19 +8,21 @@ var Salon = require('./salon.react');
 var Gallery = require('./gallery.react');
 var QRCode = require('./qrcode.react');
 
+import Home from './home.react'
+
+// content-wrapper
+
 var Content = React.createClass({
     render: function() {
         return (
-            <div className="content-wrapper">
-	            <Router history={hashHistory}>
-                    <Route path="/" component={Alumni}/>
-                    <Route path="/Alumni" component={Alumni}/>
-                    <Route path="/News" component={News}/>
-                    <Route path="/Salon" component={Salon}/>
-                    <Route path="/Gallery" component={Gallery}/>
-                    <Route path="/QRCode" component={QRCode}/>
-				</Router>
-        	</div>
+            <Router history={hashHistory}>
+                <Route path="/" component={Home}/>
+                <Route path="/Alumni" component={Alumni}/>
+                <Route path="/News" component={News}/>
+                <Route path="/Salon" component={Salon}/>
+                <Route path="/Gallery" component={Gallery}/>
+                <Route path="/QRCode" component={QRCode}/>
+			</Router>
         );
     }
 });

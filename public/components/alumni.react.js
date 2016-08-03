@@ -317,16 +317,18 @@ var AlumniView = React.createClass({
         var neg = $('.main-header').outerHeight() + $('.main-footer').outerHeight();
         var window_height = $(window).height();
         $(".content-wrapper, .right-side").css('min-height', window_height - neg);
-                
+
         return (
-            <div className="stylish-portfolio">
-                <Header />
-                <About alumni="500+" />
-                <Services items={ServiceItems} />
-                <Portfolio items={PortfolioItems} />
-                <Members />
-                <Enterprises />
-                <Footer />
+            <div className="content-wrapper">
+                <div className="stylish-portfolio">
+                    <Header />
+                    <About alumni="500+" />
+                    <Services items={ServiceItems} />
+                    <Portfolio items={PortfolioItems} />
+                    <Members />
+                    <Enterprises />
+                    <Footer />
+                </div>
             </div>
         );
     }

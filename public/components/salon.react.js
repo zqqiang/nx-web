@@ -76,7 +76,7 @@ var Salon = React.createClass({
         $(".content-wrapper, .right-side").css('min-height', window_height - neg);
 
         return (
-            <div>
+            <div className="content-wrapper">
                 <Header title='Services' smalltitle='Salon' icon='briefcase' menu='Services' submenu='Salon' />
                 <Content />
             </div>
