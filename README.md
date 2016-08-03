@@ -36,7 +36,7 @@ Directory
 Todo List
 =========
 
-* 
+* Add self page
 
 Features
 ========
