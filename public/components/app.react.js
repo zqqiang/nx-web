@@ -14,9 +14,7 @@ var Content = require('./content.react');
 var Wrapper = React.createClass({
     render: function() {
         return (
-        	<div className="wrapper-body">
-        		<Content />
-        	</div>
+        	<Content />
         );
     }
 });
