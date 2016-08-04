@@ -19,7 +19,7 @@ function Alumni() {
 function Profile({ profile }) {
     return (
         <div className="text-center">
-            <a href="#Profile">{profile} User Profile</a>
+            <a href={"#Profile/" + profile} >{profile} User Profile</a>
         </div>
     )
 }

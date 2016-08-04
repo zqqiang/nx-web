@@ -10,6 +10,8 @@ var QRCode = require('./qrcode.react');
 
 import Home from './home.react'
 import NoMatch from './nomatch.react'
+import BillQiang from './profile/billqiang.react'
+import EllaFan from './profile/ellafan.react'
 
 // content-wrapper
 
@@ -23,6 +25,10 @@ var Content = React.createClass({
                 <Route path="/Salon" component={Salon}/>
                 <Route path="/Gallery" component={Gallery}/>
                 <Route path="/QRCode" component={QRCode}/>
+                <Route path="Profile" >
+                    <Route path="BillQiang" component={BillQiang} />
+                    <Route path="EllaFan" component={EllaFan} />
+                </Route>
                 <Route path="*" component={NoMatch}/>
 			</Router>
         );
