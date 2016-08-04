@@ -9,6 +9,7 @@ var Gallery = require('./gallery.react');
 var QRCode = require('./qrcode.react');
 
 import Home from './home.react'
+import NoMatch from './nomatch.react'
 
 // content-wrapper
 
@@ -22,6 +23,7 @@ var Content = React.createClass({
                 <Route path="/Salon" component={Salon}/>
                 <Route path="/Gallery" component={Gallery}/>
                 <Route path="/QRCode" component={QRCode}/>
+                <Route path="*" component={NoMatch}/>
 			</Router>
         );
     }
