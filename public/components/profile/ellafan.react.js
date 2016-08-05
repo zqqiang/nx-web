@@ -1,4 +1,5 @@
-var React = require('react');
+import React from 'react'
+import { Tabs, Tab } from 'react-bootstrap'
 
 function ProfileImage() {
     return (
@@ -86,46 +87,83 @@ function AboutMe() {
     )
 }
 
-function Tabs() {
-    return (
-        <ul className="nav nav-tabs">
-            <li className="active"><a href="#activity" data-toggle="tab">Activity</a></li>
-            <li><a href="#timeline" data-toggle="tab">Timeline</a></li>
-            <li><a href="#settings" data-toggle="tab">Settings</a></li>
-        </ul>
-    )
-}
-
-function Post() {
+function Background() {
     return (
         <div className="post">
-            
+            <div className="user-block">
+                <img className="img-circle img-bordered-sm" src="http://placehold.it/128x128/DD4B39/ffffff" alt="user image" />
+                <span className="username">
+                    <a href="#">Ella Fan</a>
+                    <a href="#" className="pull-right btn-box-tool"><i className="fa fa-times"></i></a>
+                </span>
+                <span className="description">Credit Analyst at Volkswagen Finance</span>
+            </div>
+            <ul>
+                <li>Rational, results-driven financial industry professional</li>
+                <li>more than seven years of banking, auto finance institutions work experience</li>
+                <li>Have rich experience on credit investigations</li>
+                <li>proficient knowledge of operational and credit risk management principals</li>
+                <li>Very familiar with the policies, rules and regulations of the financial sector</li>
+                <li>with a strong ability to identify business risks and credit risks</li>
+                <li>Also a team leader with outstanding problem solving skills, ability to work under pressure</li>
+                <li>Personal strengths and core competencies</li>
+            </ul>
+            <ul className="list-inline">
+                <li><a href="javascript:void(0);" className="link-black text-sm"><i className="fa fa-share margin-r-5"></i> Share</a></li>
+                <li><a href="javascript:void(0);" className="link-black text-sm"><i className="fa fa-thumbs-o-up margin-r-5"></i> Like</a></li>
+                <li className="pull-right">
+                    <a href="javascript:void(0);" className="link-black text-sm"><i className="fa fa-comments-o margin-r-5"></i> Comments (0)</a>
+                </li>
+            </ul>
+            <input className="form-control input-sm" type="text" placeholder="Type a comment" />            
         </div>
     )
 }
 
-function TabPane() {
+function Timeline() {
     return (
-        <div className="active tab-pane" id="activity">
-            <Post />
-        </div>
-    )
-}
-
-function TabContents() {
-    return (
-        <div className="tab-content">
-            <TabPane />
-        </div>
+        <ul className="timeline timeline-inverse">
+            <li className="time-label">
+                <span className="bg-red">
+                    Jan. 2013
+                </span>
+            </li>
+            <li>
+                <i className="fa fa-envelope bg-blue"></i>
+                <div className="timeline-item">
+                    <span className="time"><i className="fa fa-clock-o"></i> Beijing City, China</span>
+                    <h3 className="timeline-header"><a href="#">Credit Analyst</a> Volkswagen finance</h3>
+                    <div className="timeline-body">
+                        <ol>
+                            <li>Responsible for credit risk assessment and conduct comprehensive review of the dealers</li>
+                            <li>Analyze and find sales, industry rankings, poor repayment records case, avoid credit losses</li>
+                            <li>Analysis dealer's financial statements and related information</li>
+                            <li>Comment on the wholesale loan applications to ensure the validity, completeness and compliance of the material submitted</li>
+                            <li>Monitoring the implementation of the dealer financing business control</li>
+                            <li>give guidance and supervision to dealers to improve financial management, standardize the use of financial support, security dealers funding</li>
+                            <li>Gather and analyze Volkswagen’s financial services data to help improve corporate banking and credit management system</li>
+                            <li>Assist financial business development and design of new products</li>
+                            <li>responsible for business operations and collect information to provide a reliable basis for the development of new products and improving existing financing products</li>
+                            <li>Improve staffs’understanding of credit laws and regulations</li>
+                            <li>in accordance with the requirements of daily management of the loan and help supervise the implementation of the risk management measures</li>
+                        </ol>
+                    </div>
+                    <div className="timeline-footer">
+                        <a className="btn btn-primary btn-xs">Read more</a>&nbsp;
+                    </div>
+                </div>
+            </li>            
+        </ul>
     )
 }
 
 function NavTabs() {
     return (
-        <div className="nav-tabs-custom">
-            <Tabs />
-            <TabContents />
-        </div>
+        <Tabs defaultActiveKey={2} className="nav-tabs-custom" >
+            <Tab eventKey={1} title="Background"><Background /></Tab>
+            <Tab eventKey={2} title="Experience"><Timeline /></Tab>
+            <Tab eventKey={3} title="Settings">Tab 3 content</Tab>
+        </Tabs>
     )
 }
 
