@@ -120,38 +120,85 @@ function Background() {
     )
 }
 
+function TimelineItemRow({ text }) {
+    return (<li>{text}</li>)
+}
+
+function TimelineItem({ icon, color, city, title, company, description, button }) {
+    let rows = [];
+    description.forEach((item, index) => {
+        rows.push(<TimelineItemRow text={item} key={index}/>)
+    })
+    return (
+        <li>
+            <i className={"fa fa-" + icon + " bg-" + color}></i>
+            <div className="timeline-item">
+                <span className="time"><i className="fa fa-clock-o"></i> {city}</span>
+                <h3 className="timeline-header"><a href="#">{title}</a> {company}</h3>
+                <div className="timeline-body">
+                    <ol>{rows}</ol>
+                </div>
+                <div className="timeline-footer">
+                    <a className={"btn btn-" + button + " btn-xs"}>Read more</a>
+                </div>
+            </div>
+        </li>
+    )
+}
+
+function Timelabel({ color, time }) {
+    return (
+        <li className="time-label">
+            <span className={"bg-" + color}>
+                {time}
+            </span>
+        </li>
+    )
+}
+
 function Timeline() {
     return (
         <ul className="timeline timeline-inverse">
-            <li className="time-label">
-                <span className="bg-red">
-                    Jan. 2013
-                </span>
-            </li>
+            <Timelabel color="red" time="Jan. 2013"/>
+            <TimelineItem
+                icon="envelope"
+                color="blue"
+                city="Beijing, China"
+                title="Credit Analyst"
+                company="Volkswagen finance"
+                description={[
+                    "Responsible for credit risk assessment and conduct comprehensive review of the dealers",
+                    "Analyze and find sales, industry rankings, poor repayment records case, avoid credit losses",
+                    "Analysis dealer's financial statements and related information",
+                    "Comment on the wholesale loan applications to ensure the validity, completeness and compliance of the material submitted",
+                    "Monitoring the implementation of the dealer financing business control",
+                    "give guidance and supervision to dealers to improve financial management, standardize the use of financial support, security dealers funding",
+                    "Gather and analyze Volkswagen’s financial services data to help improve corporate banking and credit management system",
+                    "Assist financial business development and design of new products",
+                    "responsible for business operations and collect information to provide a reliable basis for the development of new products and improving existing financing products",
+                    "Improve staffs’understanding of credit laws and regulations",
+                    "in accordance with the requirements of daily management of the loan and help supervise the implementation of the risk management measures"
+                ]}
+                button="danger"
+            />
+            <Timelabel color="green" time="Sep. 2011"/>
+            <TimelineItem 
+                icon="comments" 
+                color="yellow"
+                city="Tianjin, China"
+                title="Investment Backoffice Accountant"
+                company="Heng An Standard Life"
+                description={[
+                    "Responsible for process bonds, funds and other financial products, assist in analysis of investment products",
+                    "Responsible for investment valuation, according to the scale of investment, calculated investment price and investment assets",
+                    "Overall responsibility for the production and submission of the report of the work, including the cash flow statement, balance sheet, income statement",
+                    "Ensure the accuracy of finishing work on a daily basis, archiving company documents, reports, statistics and other accounting information",
+                    "Audit daily expense reimbursement vouchers, write documents to assist treasurers handle internal business transactions"
+                ]}
+                button="warning"
+            />
             <li>
-                <i className="fa fa-envelope bg-blue"></i>
-                <div className="timeline-item">
-                    <span className="time"><i className="fa fa-clock-o"></i> Beijing City, China</span>
-                    <h3 className="timeline-header"><a href="#">Credit Analyst</a> Volkswagen finance</h3>
-                    <div className="timeline-body">
-                        <ol>
-                            <li>Responsible for credit risk assessment and conduct comprehensive review of the dealers</li>
-                            <li>Analyze and find sales, industry rankings, poor repayment records case, avoid credit losses</li>
-                            <li>Analysis dealer's financial statements and related information</li>
-                            <li>Comment on the wholesale loan applications to ensure the validity, completeness and compliance of the material submitted</li>
-                            <li>Monitoring the implementation of the dealer financing business control</li>
-                            <li>give guidance and supervision to dealers to improve financial management, standardize the use of financial support, security dealers funding</li>
-                            <li>Gather and analyze Volkswagen’s financial services data to help improve corporate banking and credit management system</li>
-                            <li>Assist financial business development and design of new products</li>
-                            <li>responsible for business operations and collect information to provide a reliable basis for the development of new products and improving existing financing products</li>
-                            <li>Improve staffs’understanding of credit laws and regulations</li>
-                            <li>in accordance with the requirements of daily management of the loan and help supervise the implementation of the risk management measures</li>
-                        </ol>
-                    </div>
-                    <div className="timeline-footer">
-                        <a className="btn btn-primary btn-xs">Read more</a>&nbsp;
-                    </div>
-                </div>
+                <i className="fa fa-clock-o bg-gray"></i>
             </li>            
         </ul>
     )
