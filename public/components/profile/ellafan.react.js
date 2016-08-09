@@ -156,6 +156,14 @@ function Timelabel({ color, time }) {
     )
 }
 
+function TimeEnd() {
+    return (
+        <li>
+            <i className="fa fa-clock-o bg-gray"></i>
+        </li>
+    )
+}
+
 function Timeline() {
     return (
         <ul className="timeline timeline-inverse">
@@ -197,10 +205,45 @@ function Timeline() {
                 ]}
                 button="warning"
             />
-            <li>
-                <i className="fa fa-clock-o bg-gray"></i>
-            </li>            
+            <Timelabel color="red" time="Jul. 2008"/>
+            <TimelineItem
+                icon="envelope"
+                color="blue"
+                city="Tianjin, China"
+                title="Customer Relationship Manager"
+                company="Shenzhen Development Bank"
+                description={[
+                    "Audit client financial needs, industry or customer analysis, operational status, write investigation reports, complete credit rating",
+                    "Collect information form survey report, provide necessary info for credit decisions, analyze and solve problems found in vetting",
+                    "Communicate and coordinate project discussions until the project successfully",
+                    "Responsible for the implementation of the inspection of the condition of the correct assessment for the credit risk",
+                    "Responsible for loan management work, regular loans after visits, track usage per customer and repayment of a loan, including the repayment amount and punctuality",
+                    "Understand its recent financial position and writing credit report",
+                    "Participated in the work of more than 30 customer loans, including mortgages alley Group, Ltd. Tianjin Shun maritime transport security to guarantee the loan, a good credit risk control, No arrears"
+                ]}
+                button="danger"
+            />
+            <TimeEnd />         
         </ul>
+    )
+}
+
+function Contacting() {
+    return (
+        <section className="invoice">
+            <div className="row invoice-info">
+                <div className="col-sm-4 invoice-col">
+                    To
+                    <address>
+                        <strong>Ruijia Fan</strong><br />
+                        4058 Pine St<br />
+                        Burnaby, BC V5G 1Z5<br />
+                        Phone: (604) 446-8039<br />
+                        Email: frj0412942@aliyun.com
+                    </address>
+                </div>                
+            </div>
+        </section>
     )
 }
 
@@ -209,7 +252,8 @@ function NavTabs() {
         <Tabs defaultActiveKey={2} className="nav-tabs-custom" >
             <Tab eventKey={1} title="Background"><Background /></Tab>
             <Tab eventKey={2} title="Experience"><Timeline /></Tab>
-            <Tab eventKey={3} title="Settings">Tab 3 content</Tab>
+            <Tab eventKey={3} title="Contacting"><Contacting /></Tab>
+            <Tab eventKey={4} title="Project">financial modeling project</Tab>
         </Tabs>
     )
 }
