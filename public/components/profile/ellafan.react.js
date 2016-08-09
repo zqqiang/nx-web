@@ -7,7 +7,7 @@ function ProfileImage() {
             <div className="box-body box-profile">
                 <img 
                     className="profile-user-img img-responsive img-circle" 
-                    src="http://placehold.it/128x128/DD4B39/ffffff" 
+                    src="/theme/project/img/member/ella-128x128.jpg" 
                     alt="User profile picture"
                 />
 
