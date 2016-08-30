@@ -22,7 +22,7 @@ var Content = React.createClass({
 var ActivityView = React.createClass({
     render: function() {
         return (
-            <div>
+            <div className="content-wrapper">
                 <Header title='Services' smalltitle='Friends' icon='users' menu='Services' submenu='Friends' />
                 <Content />
             </div>
