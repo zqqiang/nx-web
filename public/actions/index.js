@@ -4,3 +4,10 @@ export const addComment = (comment) => {
         comment: comment
     }
 }
+
+export const postMessage = (message, type) => {
+    return {
+        type: type,
+        message: message
+    }
+}
