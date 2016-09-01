@@ -32,13 +32,15 @@ var BoxTools = React.createClass({
     }
 });
 
-const BoxHeader = ({ comment }) => {
-    return (
-        <div className="box-header with-border">
-            <UserBlock comment={comment} />
-            <BoxTools />
-        </div>
-    );
-}
+const BoxHeader = React.createClass({
+    render: function() {
+        return (
+            <div className="box-header with-border">
+                <UserBlock comment={this.props.comment} />
+                <BoxTools />
+            </div>
+        )
+    }
+})
 
 export default BoxHeader

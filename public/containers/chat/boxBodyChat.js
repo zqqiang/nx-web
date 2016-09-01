@@ -4,7 +4,7 @@ import BoxBody from '../../components/chat/boxBodyChat.react'
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        messages: state.chat.messages
+        messages: state.chats
     }
 }
 

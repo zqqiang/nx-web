@@ -3,9 +3,7 @@ import { connect } from 'react-redux'
 import Header from '../../components/salon/boxHeader.react'
 
 const mapStateToProps = (state, ownProps) => {
-    return {
-        comment: state.salon.comment
-    }
+    return state.salon
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => {

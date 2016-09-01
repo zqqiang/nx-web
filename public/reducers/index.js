@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux'
 import salon from './salon'
-import chat from './chat'
+import chats from './chats'
 
 const reducers = combineReducers({
     salon,
-    chat
+    chats
 })
 
 export default reducers
