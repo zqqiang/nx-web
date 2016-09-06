@@ -3,6 +3,8 @@ var React = require('react');
 var Login = React.createClass({
     render: function() {
         return (
+        	<div className="lockscreen">
+        	<div className="lockscreen-wrapper">
 			<div className="login-box">
 			  <div className="login-logo">
 			    <a href="../../index2.html"><b>Admin</b>LTE</a>
@@ -10,7 +12,7 @@ var Login = React.createClass({
 			  <div className="login-box-body">
 			    <p className="login-box-msg">Sign in to start your session</p>
 
-			    <form action="../../index2.html" method="post">
+			    <form method="post">
 			      <div className="form-group has-feedback">
 			        <input type="email" className="form-control" placeholder="Email" />
 			        <span className="glyphicon glyphicon-envelope form-control-feedback"></span>
@@ -45,6 +47,8 @@ var Login = React.createClass({
 			    <a href="register.html" className="text-center">Register a new membership</a>
 
 			  </div>
+			</div>
+			</div>
 			</div>
         );
     }

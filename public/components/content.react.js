@@ -9,6 +9,7 @@ var Gallery = require('./gallery.react');
 var Friends = require('./friends.react');
 var QRCode = require('./qrcode.react');
 
+import Login from './login.react'
 import Home from './home.react'
 import NoMatch from './nomatch.react'
 import BillQiang from './profile/billqiang.react'
@@ -20,7 +21,8 @@ var Content = React.createClass({
     render: function() {
         return (
             <Router history={hashHistory}>
-                <Route path="/" component={Home}/>
+                <Route path="/" component={Login}/>
+                <Route path="/Home" component={Home}/>
                 <Route path="/Alumni" component={Alumni}/>
                 <Route path="/News" component={News}/>
                 <Route path="/Salon" component={Salon}/>
