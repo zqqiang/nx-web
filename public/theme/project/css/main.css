@@ -16156,6 +16156,106 @@ fieldset[disabled] .btn-yahoo.active {
   color: #720e9e;
   background-color: #fff;
 }
+.btn-wechat {
+  color: #fff;
+  background-color: #00D30D;
+  border-color: rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s;
+}
+.btn-wechat:focus,
+.btn-wechat.focus {
+  color: #fff;
+  background-color: #00a00a;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+.btn-wechat:hover {
+  color: #fff;
+  background-color: #00a00a;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+.btn-wechat:active,
+.btn-wechat.active,
+.open > .dropdown-toggle.btn-wechat {
+  color: #fff;
+  background-color: #00a00a;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+.btn-wechat:active:hover,
+.btn-wechat.active:hover,
+.open > .dropdown-toggle.btn-wechat:hover,
+.btn-wechat:active:focus,
+.btn-wechat.active:focus,
+.open > .dropdown-toggle.btn-wechat:focus,
+.btn-wechat:active.focus,
+.btn-wechat.active.focus,
+.open > .dropdown-toggle.btn-wechat.focus {
+  color: #fff;
+  background-color: #007c08;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+.btn-wechat:active,
+.btn-wechat.active,
+.open > .dropdown-toggle.btn-wechat {
+  background-image: none;
+}
+.btn-wechat.disabled:hover,
+.btn-wechat[disabled]:hover,
+fieldset[disabled] .btn-wechat:hover,
+.btn-wechat.disabled:focus,
+.btn-wechat[disabled]:focus,
+fieldset[disabled] .btn-wechat:focus,
+.btn-wechat.disabled.focus,
+.btn-wechat[disabled].focus,
+fieldset[disabled] .btn-wechat.focus {
+  background-color: #00D30D;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+.btn-wechat .badge {
+  color: #00D30D;
+  background-color: #fff;
+}
+.btn-wechat:hover,
+.btn-wechat:focus,
+.btn-wechat.focus,
+.btn-wechat:active,
+.btn-wechat.active,
+.open > .dropdown-toggle.btn-wechat {
+  color: #fff;
+  background-color: #00ba0b;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+.btn-wechat:active,
+.btn-wechat.active,
+.open > .dropdown-toggle.btn-wechat {
+  background-image: none;
+}
+.btn-wechat.disabled,
+.btn-wechat[disabled],
+fieldset[disabled] .btn-wechat,
+.btn-wechat.disabled:hover,
+.btn-wechat[disabled]:hover,
+fieldset[disabled] .btn-wechat:hover,
+.btn-wechat.disabled:focus,
+.btn-wechat[disabled]:focus,
+fieldset[disabled] .btn-wechat:focus,
+.btn-wechat.disabled.focus,
+.btn-wechat[disabled].focus,
+fieldset[disabled] .btn-wechat.focus,
+.btn-wechat.disabled:active,
+.btn-wechat[disabled]:active,
+fieldset[disabled] .btn-wechat:active,
+.btn-wechat.disabled.active,
+.btn-wechat[disabled].active,
+fieldset[disabled] .btn-wechat.active {
+  background-color: #00D30D;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+.btn-wechat .badge {
+  color: #00D30D;
+  background-color: #fff;
+}
 /*
  * Component: Button
  * -----------------
