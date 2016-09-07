@@ -20,7 +20,7 @@ function LoginForm() {
 					</div>
 				</div>
 				<div className="col-xs-4">
-					<button type="submit" className="btn btn-primary btn-block btn-flat">Sign In</button>
+					<a href="#Home" className="btn btn-primary btn-block btn-flat">Sign In</a>
 				</div>
 			</div>
 		</div>
@@ -44,7 +44,7 @@ function LoginBoxBody() {
 			</div>
 
 			<a href="javascript:void(0);">I forgot my password</a><br />
-			<a href="#Register" className="text-center">Register a new membership</a>
+			<a href="javascript:void(0);" className="text-center">Register a new membership</a>
 
 		</div>
 	)
