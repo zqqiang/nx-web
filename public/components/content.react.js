@@ -9,7 +9,7 @@ var Gallery = require('./gallery.react');
 var Friends = require('./friends.react');
 var QRCode = require('./qrcode.react');
 
-import Login from './login.react'
+import Login from '../containers/login'
 import Home from './home.react'
 import NoMatch from './nomatch.react'
 import BillQiang from './profile/billqiang.react'
@@ -34,7 +34,7 @@ var Content = React.createClass({
                     <Route path="EllaFan" component={EllaFan} />
                 </Route>
                 <Route path="*" component={NoMatch}/>
-			</Router>
+            </Router>
         );
     }
 });
