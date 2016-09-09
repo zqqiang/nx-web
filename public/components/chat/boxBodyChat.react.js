@@ -12,7 +12,7 @@ var ChatMessageItem = React.createClass({
         return (
             <div className={'direct-chat-msg ' + this.props.item.direction}>
                 <div className="direct-chat-info clearfix">
-                    <span className={'direct-chat-name pull-' + this.props.item.direction}>{this.props.item.name}</span>
+                    <span className={'direct-chat-name pull-' + this.props.item.direction}>{this.props.user}</span>
                     <span className={'direct-chat-timestamp pull-' + this.props.item.rdirection}>{this.props.item.time}</span>
                 </div>
                 <img className="direct-chat-img" src={'theme/project/img/member/' + this.props.item.img} alt="message user image" />
@@ -27,8 +27,9 @@ var ChatMessageItem = React.createClass({
 var ChatMessage = React.createClass({
     render: function() {
         var items = [];
+        let user = this.props.user;
         this.props.items.forEach(function(item, index) {
-            items.push(<ChatMessageItem item={item} key={index} />);
+            items.push(<ChatMessageItem item={item} key={index} user={user} />);
         });
         return (
             <div className='direct-chat-messages'>
@@ -42,7 +43,7 @@ let BoxBodyChat = React.createClass({
     render: function() {
         return (
             <div className='box-body'>
-                <ChatMessage items={this.props.messages} />
+                <ChatMessage items={this.props.messages} user={this.props.user} />
             </div>
         );
     }
