@@ -1,5 +1,5 @@
 const Login = (state = {}, action) => {
-    switch(action.type) {
+    switch (action.type) {
         case 'USER_LOGIN':
             return {
                 user: action.user,

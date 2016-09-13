@@ -4,6 +4,7 @@ import { userLogin } from '../actions'
 import LoginComponent from '../components/login.react'
 
 const mapStateToProps = (state) => {
+    console.log(state);
     return {
 
     }
@@ -11,8 +12,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        onHandleChange: (event) => {
-            dispatch(userLogin(event.target.value))
+        onHandleClick: (user, password) => {
+            dispatch(userLogin(user, password))
         }
     }
 }

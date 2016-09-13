@@ -12,9 +12,10 @@ export const postMessage = (message, type) => {
     }
 }
 
-export const userLogin = (user) => {
+export const userLogin = (user, password) => {
     return {
         type: 'USER_LOGIN',
-        user
+        user,
+        password
     }
 }
