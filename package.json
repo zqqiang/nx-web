@@ -7,7 +7,7 @@
     "watch-css": "lessc public/theme/project/less/main.less public/theme/project/css/main.css",
     "watch-js": "watchify public/main.js -o public/bundle.js -t [ babelify --presets [ es2015 react ] ] -dv",
     "watch": "npm run watch-js | npm run watch-css",
-    "start": "node app.js"
+    "start": "supervisor app.js"
   },
   "main": "app.js",
   "dependencies": {
@@ -37,6 +37,7 @@
     "react-redux": "^4.4.5",
     "react-router": "^2.0.1",
     "redux": "^3.5.2",
+    "redux-thunk": "^2.1.0",
     "serve-favicon": "^2.3.0",
     "string": "~2.2.0",
     "underscore": "~1.7.0",

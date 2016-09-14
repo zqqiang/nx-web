@@ -5,6 +5,18 @@ const Login = (state = {}, action) => {
                 user: action.user,
                 password: action.password
             }
+        case 'REQUEST_POSTS':
+            return {
+                isFetching: true,
+                didInvalidate: false
+            }
+        case 'RECEIVE_POSTS':
+            return {
+                isFetching: false,
+                didInvalidate: false,
+                items: action.posts,
+                lastUpdated: action.receivedAt
+            }
         default:
             return state
     }

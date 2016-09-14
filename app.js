@@ -15,6 +15,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(favicon(__dirname + '/public/theme/project/img/favicon.ico'));
 
+let Login = require('./routes/login');
+
+app.use('/Login', Login);
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
