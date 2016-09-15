@@ -1,6 +1,6 @@
 var $ = require('jquery');
 var React = require('react');
-import { Router, Route, hashHistory } from 'react-router'
+import { Router, Route, browserHistory } from 'react-router'
 
 var Alumni = require('./alumni.react');
 var News = require('./news.react');
@@ -20,7 +20,7 @@ import EllaFan from './profile/ellafan.react'
 var Content = React.createClass({
     render: function() {
         return (
-            <Router history={hashHistory}>
+            <Router history={browserHistory}>
                 <Route path="/" component={Login}/>
                 <Route path="/Home" component={Home}/>
                 <Route path="/Alumni" component={Alumni}/>

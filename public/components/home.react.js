@@ -1,4 +1,5 @@
 var React = require('react');
+import { browserHistory } from 'react-router'
 
 function Logo() {
     return (
@@ -11,7 +12,7 @@ function Logo() {
 function Alumni() {
     return (
         <div className="text-center">
-         <a href="#Alumni">Nankai University Vancouver Alumni</a>
+         <a href="javascript:void(0);" onClick={() => {browserHistory.push('/Alumni')}} >Nankai University Vancouver Alumni</a>
        </div>
     )
 }
@@ -19,7 +20,7 @@ function Alumni() {
 function Profile({ profile }) {
     return (
         <div className="text-center">
-            <a href={"#Profile/" + profile} >{profile} User Profile</a>
+            <a href="javascript:void(0);" onClick={() => {browserHistory.push('/Profile/' + profile)}} >{profile} User Profile</a>
         </div>
     )
 }

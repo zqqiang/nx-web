@@ -1,6 +1,7 @@
 var $ = require('jquery');
 var React = require('react');
 var Easing = require('jquery.easing');
+import { browserHistory } from 'react-router'
 
 var Header = React.createClass({
     handleClick: function() {
@@ -89,7 +90,11 @@ var ServiceItem = React.createClass({
                         <strong>{this.props.item.name}</strong>
                     </h4>
                     <p>{this.props.item.desc}</p>
-                    <a href={'#' + this.props.item.name} className="btn btn-light">Learn More</a>
+                    <a 
+                        href="javascript:void(0);" 
+                        className="btn btn-light" 
+                        onClick={() => {browserHistory.push('/' + this.props.item.name)}} >Learn More
+                    </a>
                 </div>
             </div>
         );
@@ -100,7 +105,11 @@ var PortfolioBox = React.createClass({
     render: function() {
         return (
             <div className="col-lg-4 col-sm-6">
-                <a href={'#' + this.props.item.hreflink} className="portfolio-box">
+                <a 
+                    href="javascript:void(0);" 
+                    className="portfolio-box" 
+                    onClick={() => {browserHistory.push('/' + this.props.item.hreflink)}}
+                >
                     <img src={this.props.item.src} className="img-responsive" alt="" />
                     <div className="portfolio-box-caption">
                         <div className="portfolio-box-caption-content">

@@ -1,3 +1,5 @@
+import { browserHistory } from 'react-router'
+
 export const addComment = (comment) => {
     return {
         type: 'ADD_COMMENT',
@@ -19,6 +21,9 @@ const requestPosts = () => {
 }
 
 const receivePosts = (json) => {
+    if ('success' === json.result) {
+        browserHistory.push('/Home')
+    }
     return {
         type: 'RECEIVE_POSTS',
         posts: json,
