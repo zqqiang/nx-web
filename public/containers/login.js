@@ -2,9 +2,10 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { userLogin } from '../actions'
 import LoginComponent from '../components/login.react'
+let debug = require('debug')('public:containers:login');
 
 const mapStateToProps = (state) => {
-    console.log(state);
+    debug(state);
     return {
 
     }

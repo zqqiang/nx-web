@@ -8,11 +8,13 @@ import { createStore, applyMiddleware } from 'redux'
 import reducers from './reducers/'
 import thunkMiddleware from 'redux-thunk'
 
+localStorage.debug = 'public:*'
+
 let store = createStore(reducers, applyMiddleware(thunkMiddleware))
 
 ReactDOM.render(
     <Provider store={store}>
-    	<App />
-  	</Provider>,
+        <App />
+    </Provider>,
     document.getElementById('wrapper')
 )
