@@ -41,6 +41,23 @@ function Experience({ icon, title, description }) {
     )
 }
 
+function Education() {
+    return (
+        <div>
+            <strong><i className={"fa fa-book margin-r-5"}></i> Education</strong>
+            <p className="text-muted">British Columbia Institute of Technology</p>
+            <p className="text-muted">Certificate, Applied Data Analytics</p>
+            <p className="text-muted">2016 – 2017</p>
+            <p className="text-muted">COMP-1630-HY4 - Relational Database & SQL - 35597 - Lecture/Lab Combo (Grades: 83/92)</p>
+            <hr />
+            <p className="text-muted">Nankai University</p>
+            <p className="text-muted">Bachelor's degree, Finance, General</p>
+            <p className="text-muted">2004 – 2008</p>
+            <hr />
+        </div>
+    )
+}
+
 let cscUrl = 'https://www.linkedin.com/redir/redirect?url=https%3A%2F%2Fwww%2Ecsi%2Eca%2Fstudent%2Fverify%2FstudentBadge%2Edo%3Fcid%3DMzU4NDQ0NA%3D%3D&urlhash=ycDK&trk=profile_certification_company_title'
 let sasAdvancedUrl = 'https://www.linkedin.com/redir/redirect?url=https%3A%2F%2Fwww%2Eyouracclaim%2Ecom%2Fbadges%2F1682ab90-dbb5-47a3-8a64-44a42ffa1d6a%2Flinked_in_profile&urlhash=eM3R&trk=profile_certification_company_title'
 let sasBaseUrl = 'https://www.linkedin.com/redir/redirect?url=https%3A%2F%2Fwww%2Eyouracclaim%2Ecom%2Fbadges%2Fc4a64ce6-0983-4f3c-9978-c86aff60c4dd%2Flinked_in_profile&urlhash=wnc3&trk=profile_certification_company_title'
@@ -79,7 +96,7 @@ function AboutMe() {
                 <h3 className="box-title">About Me</h3>
             </div>
             <div className="box-body">
-                <Experience icon="book" title="Education" description="B.S. in Finance from the Nankai University at Tianjin China" />
+                <Education />
                 <Experience icon="map-marker" title="Location" description="Burnaby, British Columbia" />
                 <Skills />
             </div>
@@ -107,6 +124,7 @@ function Background() {
                 <li>with a strong ability to identify business risks and credit risks</li>
                 <li>Also a team leader with outstanding problem solving skills, ability to work under pressure</li>
                 <li>Personal strengths and core competencies</li>
+                <li>Data Analysis abilities with SAS, SQL tools</li>
             </ul>
             <ul className="list-inline">
                 <li><a href="javascript:void(0);" className="link-black text-sm"><i className="fa fa-share margin-r-5"></i> Share</a></li>
