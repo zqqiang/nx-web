@@ -40,8 +40,10 @@
     "redux-thunk": "^2.1.0",
     "serve-favicon": "^2.3.0",
     "string": "~2.2.0",
+    "supervisor": "^0.12.0",
     "underscore": "~1.7.0",
-    "utf8": "~2.0.0"
+    "utf8": "~2.0.0",
+    "watchify": "^3.7.0"
   },
   "browser": {
     "slimscroll": "./node_modules/jquery-slimscroll/jquery.slimscroll.min.js"

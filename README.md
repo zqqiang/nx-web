@@ -23,7 +23,13 @@ Prepare
 Quick Start
 =====
 
+1. For User
 * npm install
+* npm start
+
+2. For Developer
+* npm install
+* npm run watch-js
 * npm start
 
 [Back to TOC](#table-of-contents)
