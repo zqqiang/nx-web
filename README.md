@@ -42,10 +42,10 @@ Directory
 Todo List
 =========
 
-* add self page (self resume, technical blog, project link)
-* a website that enables people to sign for a cause
+* a website that enables people to sign for a cause (OAuth2.0)
 * comment/chat about a topic in common
 * security (login, certificate)
+* add self page (self resume, technical blog, project link)
 
 Features
 ========
