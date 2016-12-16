@@ -23,11 +23,11 @@ Prepare
 Quick Start
 =====
 
-1. For User
+### For User
 * npm install
 * npm start
 
-2. For Developer
+### For Developer
 * npm install
 * npm run watch-js
 * npm start
