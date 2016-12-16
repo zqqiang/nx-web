@@ -42,7 +42,10 @@ Directory
 Todo List
 =========
 
-* Add self page
+* add self page (self resume, technical blog, project link)
+* a website that enables people to sign for a cause
+* comment/chat about a topic in common
+* security (login, certificate)
 
 Features
 ========
