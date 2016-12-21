@@ -76,10 +76,8 @@ const LoginBody = ({onHandleClick}) => (
 
 const LoginComponent = ({onHandleClick}) => {
     return (
-        <div className="lockscreen">
-            <div className="lockscreen-wrapper">
-                <LoginBody onHandleClick={onHandleClick} />
-            </div>
+        <div className="login-page">
+            <LoginBody onHandleClick={onHandleClick} />
         </div>
     )
 }
