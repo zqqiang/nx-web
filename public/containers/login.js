@@ -1,11 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { userLogin } from '../actions'
+import { userLogin, googleLogin } from '../actions'
 import LoginComponent from '../components/login.react'
-let debug = require('debug')('public:containers:login');
 
 const mapStateToProps = (state) => {
-    debug(state);
     return {
 
     }
@@ -15,6 +13,9 @@ const mapDispatchToProps = (dispatch) => {
     return {
         onHandleClick: (user, password) => {
             dispatch(userLogin(user, password))
+        },
+        onHandleGoogleClick: () => {
+            dispatch(googleLogin())
         }
     }
 }

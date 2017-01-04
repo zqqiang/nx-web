@@ -53,3 +53,10 @@ export const userLogin = (user, password) => {
             .then(json => dispatch(receivePosts(json)))
     }
 }
+
+export const googleLogin = () => {
+    return () => {
+        console.log("Google Login");
+        browserHistory.push('/GoogleLogin')
+    }
+}

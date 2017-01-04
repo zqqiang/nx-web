@@ -41,7 +41,7 @@ LoginForm.propTypes = {
     onHandleClick: PropTypes.func.isRequired
 }
 
-const LoginBoxBody = ({onHandleClick}) => (
+const LoginBoxBody = ({onHandleClick, onHandleGoogleClick}) => (
     <div className="login-box-body">
         <p className="login-box-msg">Sign in to start your session</p>
         <LoginForm onHandleClick={onHandleClick} />
@@ -51,7 +51,7 @@ const LoginBoxBody = ({onHandleClick}) => (
             <a href="javascript:void(0);" className="btn btn-block btn-social btn-facebook btn-flat">
                 <i className="fa fa-facebook"></i> Sign in using Facebook
             </a>
-            <a href="javascript:void(0);" className="btn btn-block btn-social btn-google btn-flat">
+            <a href="javascript:void(0);" className="btn btn-block btn-social btn-google btn-flat" onClick={onHandleGoogleClick}>
                 <i className="fa fa-google-plus"></i> Sign in using Google+
             </a>
             <a href="javascript:void(0);" className="btn btn-block btn-social btn-wechat btn-flat">
@@ -65,19 +65,19 @@ const LoginBoxBody = ({onHandleClick}) => (
     </div>
 )
 
-const LoginBody = ({onHandleClick}) => (
+const LoginBody = ({onHandleClick, onHandleGoogleClick}) => (
     <div className="login-box">
         <div className="login-logo">
             <a href="javascript:void(0);"><b>nx</b>-manager</a>
         </div>
-        <LoginBoxBody onHandleClick={onHandleClick} />
+        <LoginBoxBody onHandleClick={onHandleClick} onHandleGoogleClick={onHandleGoogleClick}/>
     </div>
 )
 
-const LoginComponent = ({onHandleClick}) => {
+const LoginComponent = ({onHandleClick, onHandleGoogleClick}) => {
     return (
         <div className="login-page">
-            <LoginBody onHandleClick={onHandleClick} />
+            <LoginBody onHandleClick={onHandleClick} onHandleGoogleClick={onHandleGoogleClick}/>
         </div>
     )
 }
