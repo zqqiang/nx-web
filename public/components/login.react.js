@@ -68,7 +68,7 @@ const LoginBoxBody = ({onHandleClick}) => (
 const LoginBody = ({onHandleClick}) => (
     <div className="login-box">
         <div className="login-logo">
-            <a href="javascript:void(0);"><b>nx</b>Manager</a>
+            <a href="javascript:void(0);"><b>nx</b>-manager</a>
         </div>
         <LoginBoxBody onHandleClick={onHandleClick} />
     </div>
