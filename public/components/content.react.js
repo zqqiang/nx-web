@@ -10,6 +10,7 @@ var Friends = require('./friends.react');
 var QRCode = require('./qrcode.react');
 
 import Login from '../containers/login'
+import GoogleLogin from '../containers/google'
 import Home from './home.react'
 import NoMatch from './nomatch.react'
 import BillQiang from './profile/billqiang.react'
@@ -22,6 +23,7 @@ var Content = React.createClass({
         return (
             <Router history={browserHistory}>
                 <Route path="/" component={Login}/>
+                <Route path="/GoogleLogin" component={GoogleLogin}/>
                 <Route path="/Home" component={Home}/>
                 <Route path="/Alumni" component={Alumni}/>
                 <Route path="/News" component={News}/>
