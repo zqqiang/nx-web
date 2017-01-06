@@ -1,6 +1,14 @@
 import React, { PropTypes } from 'react'
 
 const Google = ({onHandleClick}) => {
+	componentWillMount = () => {
+        const script = document.createElement("script");
+
+        script.src = "https://apis.google.com/js/platform.js?onload=renderButton";
+        script.async = true;
+
+        document.body.appendChild(script);
+	},
     return (
         <div className="login-page">
 	        <div className="login-box">
