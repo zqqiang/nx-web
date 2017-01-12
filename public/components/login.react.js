@@ -74,12 +74,20 @@ const LoginBody = ({onHandleClick, onHandleGoogleClick}) => (
     </div>
 )
 
-const LoginComponent = ({onHandleClick, onHandleGoogleClick}) => {
-    return (
-        <div className="login-page">
-            <LoginBody onHandleClick={onHandleClick} onHandleGoogleClick={onHandleGoogleClick}/>
-        </div>
-    )
+class LoginComponent extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    componentDidMount() {
+
+    }
+    render() {
+        return (
+            <div className="login-page">
+                <LoginBody onHandleClick={this.props.onHandleClick} onHandleGoogleClick={this.props.onHandleGoogleClick} />
+            </div>
+        )
+    }
 }
 
 export default LoginComponent
