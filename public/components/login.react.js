@@ -72,6 +72,8 @@ const LoginBody = ({onHandleClick, onHandleGoogleClick}) => (
 class LoginComponent extends React.Component {
     constructor(props) {
         super(props);
+        this.onLoad = this.onLoad.bind(this);
+        this.attachSignin = this.attachSignin.bind(this);
     }
     componentDidMount() {
         const fjs = document.getElementsByTagName('script')[0];
@@ -82,21 +84,21 @@ class LoginComponent extends React.Component {
         js.onload = this.onLoad;
     }
     onLoad() {
+        let self = this;
         window.gapi.load('auth2', () => {
             window.gapi.auth2.init({
-                client_id: 'qiangzhaoqing.apps.googleusercontent.com',
+                client_id: '556944696832-pmg36d0kb3rlm6ntcljq3pt94cefhpb9.apps.googleusercontent.com',
                 cookiepolicy: 'single_host_origin'
             })
+            window.gapi.signin2.render('my-signin2', {
+                'scope': 'profile email',
+                'width': 320,
+                'height': 34,
+                'longtitle': true,
+                'theme': 'dark'
+            });
+            self.attachSignin(document.getElementById('my-signin2'));
         })
-        window.gapi.signin2.render('my-signin2', {
-        'scope': 'profile email',
-        'width': 320,
-        'height': 34,
-        'longtitle': true,
-        'theme': 'dark',
-        'onsuccess': this.onSuccess,
-        'onfailure': this.onFailure
-      });
     }
     render() {
         return (
@@ -107,6 +109,10 @@ class LoginComponent extends React.Component {
                 />
             </div>
         )
+    }
+    attachSignin(element) {
+        let auth2 = window.gapi.auth2.getAuthInstance();
+        auth2.attachClickHandler(element, {}, this.onSuccess, this.onFailure);
     }
     onSuccess(googleUser) {
         console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
