@@ -54,9 +54,24 @@ export const userLogin = (user, password) => {
     }
 }
 
-export const googleLogin = () => {
-    return () => {
-        // browserHistory.push('/GoogleLogin')
-        console.log('Google Login');
+export const googleUserLogin = (googleUser) => {
+    const user = googleUser.getBasicProfile().getName()
+    return (dispatch) => {
+        dispatch(requestPosts())
+        let options = {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                'Origin': '',
+                'Host': 'localhost'
+            },
+            body: JSON.stringify({
+                'client_id': user,
+            })
+        }
+        return fetch('/Login', options)
+            .then(response => response.json())
+            .then(json => dispatch(receivePosts(json)))
     }
 }

@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 
-const LoginForm = ({onHandleClick}) => {
+const LoginForm = ({ onHandleClick }) => {
     let user
     let password
 
@@ -41,15 +41,15 @@ LoginForm.propTypes = {
     onHandleClick: PropTypes.func.isRequired
 }
 
-const LoginBoxBody = ({onHandleClick, onHandleGoogleClick}) => (
+const LoginBoxBody = ({ onHandleClick }) => (
     <div className="login-box-body">
         <p className="login-box-msg">Sign in to start your session</p>
         <LoginForm onHandleClick={onHandleClick} />
 
         <div className="social-auth-links text-center">
             <p>- OR -</p>
-            <div id="my-signin2"></div>
-            <a href="javascript:void(0);" className="btn btn-block btn-social btn-wechat btn-flat">
+            <div id="google-signin"></div>
+            <a href="javascript:void(0);" className="btn btn-block btn-social btn-wechat btn-flat" >
                 <i className="fa fa-weixin"></i> Sign in using Wechat
             </a>
         </div>
@@ -60,65 +60,55 @@ const LoginBoxBody = ({onHandleClick, onHandleGoogleClick}) => (
     </div>
 )
 
-const LoginBody = ({onHandleClick, onHandleGoogleClick}) => (
+const LoginBody = ({ onHandleClick }) => (
     <div className="login-box">
         <div className="login-logo">
             <a href="javascript:void(0);"><b>nx</b>-manager</a>
         </div>
-        <LoginBoxBody onHandleClick={onHandleClick} onHandleGoogleClick={onHandleGoogleClick}/>
+        <LoginBoxBody onHandleClick={onHandleClick} />
     </div>
 )
 
 class LoginComponent extends React.Component {
     constructor(props) {
         super(props);
-        this.onLoad = this.onLoad.bind(this);
-        this.attachSignin = this.attachSignin.bind(this);
     }
     componentDidMount() {
+        const loginSuccess = this.props.onHandleGoogleLogin;
         const fjs = document.getElementsByTagName('script')[0];
         let js = fjs;
         js = document.createElement('script');
         js.src = '//apis.google.com/js/client:platform.js';
         fjs.parentNode.insertBefore(js, fjs);
-        js.onload = this.onLoad;
-    }
-    onLoad() {
-        let self = this;
-        window.gapi.load('auth2', () => {
-            window.gapi.auth2.init({
-                client_id: '556944696832-pmg36d0kb3rlm6ntcljq3pt94cefhpb9.apps.googleusercontent.com',
-                cookiepolicy: 'single_host_origin'
+        js.onload = function() {
+            window.gapi.load('auth2', () => {
+                window.gapi.auth2.init({
+                    client_id: '556944696832-pmg36d0kb3rlm6ntcljq3pt94cefhpb9.apps.googleusercontent.com',
+                    cookiepolicy: 'single_host_origin'
+                })
+                window.gapi.signin2.render('google-signin', {
+                    'scope': 'profile email',
+                    'width': 320,
+                    'height': 34,
+                    'longtitle': true,
+                    'theme': 'dark',
+                });
+                let element = document.getElementById('google-signin');
+                let auth2 = window.gapi.auth2.getAuthInstance();
+                auth2.attachClickHandler(element, {}, loginSuccess, (error) => {
+                    console.log(error);
+                });
             })
-            window.gapi.signin2.render('my-signin2', {
-                'scope': 'profile email',
-                'width': 320,
-                'height': 34,
-                'longtitle': true,
-                'theme': 'dark'
-            });
-            self.attachSignin(document.getElementById('my-signin2'));
-        })
+        };
     }
     render() {
         return (
             <div className="login-page">
                 <LoginBody 
                     onHandleClick={this.props.onHandleClick} 
-                    onHandleGoogleClick={this.props.onHandleGoogleClick} 
                 />
             </div>
         )
-    }
-    attachSignin(element) {
-        let auth2 = window.gapi.auth2.getAuthInstance();
-        auth2.attachClickHandler(element, {}, this.onSuccess, this.onFailure);
-    }
-    onSuccess(googleUser) {
-        console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
-    }
-    onFailure(error) {
-        console.log(error);
     }
 }
 
