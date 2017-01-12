@@ -48,12 +48,7 @@ const LoginBoxBody = ({onHandleClick, onHandleGoogleClick}) => (
 
         <div className="social-auth-links text-center">
             <p>- OR -</p>
-            <a href="javascript:void(0);" className="btn btn-block btn-social btn-facebook btn-flat">
-                <i className="fa fa-facebook"></i> Sign in using Facebook
-            </a>
-            <a href="javascript:void(0);" className="btn btn-block btn-social btn-google btn-flat" onClick={onHandleGoogleClick}>
-                <i className="fa fa-google-plus"></i> Sign in using Google+
-            </a>
+            <div id="my-signin2"></div>
             <a href="javascript:void(0);" className="btn btn-block btn-social btn-wechat btn-flat">
                 <i className="fa fa-weixin"></i> Sign in using Wechat
             </a>
@@ -79,14 +74,45 @@ class LoginComponent extends React.Component {
         super(props);
     }
     componentDidMount() {
-
+        const fjs = document.getElementsByTagName('script')[0];
+        let js = fjs;
+        js = document.createElement('script');
+        js.src = '//apis.google.com/js/client:platform.js';
+        fjs.parentNode.insertBefore(js, fjs);
+        js.onload = this.onLoad;
+    }
+    onLoad() {
+        window.gapi.load('auth2', () => {
+            window.gapi.auth2.init({
+                client_id: 'qiangzhaoqing.apps.googleusercontent.com',
+                cookiepolicy: 'single_host_origin'
+            })
+        })
+        window.gapi.signin2.render('my-signin2', {
+        'scope': 'profile email',
+        'width': 320,
+        'height': 34,
+        'longtitle': true,
+        'theme': 'dark',
+        'onsuccess': this.onSuccess,
+        'onfailure': this.onFailure
+      });
     }
     render() {
         return (
             <div className="login-page">
-                <LoginBody onHandleClick={this.props.onHandleClick} onHandleGoogleClick={this.props.onHandleGoogleClick} />
+                <LoginBody 
+                    onHandleClick={this.props.onHandleClick} 
+                    onHandleGoogleClick={this.props.onHandleGoogleClick} 
+                />
             </div>
         )
+    }
+    onSuccess(googleUser) {
+        console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+    }
+    onFailure(error) {
+        console.log(error);
     }
 }
 

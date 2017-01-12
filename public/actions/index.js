@@ -57,5 +57,6 @@ export const userLogin = (user, password) => {
 export const googleLogin = () => {
     return () => {
         // browserHistory.push('/GoogleLogin')
+        console.log('Google Login');
     }
 }
