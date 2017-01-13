@@ -25,16 +25,17 @@ function Profile({ profile }) {
     )
 }
 
-function Footer() {
+function Footer({ info }) {
     return (
         <div className="lockscreen-footer text-center">
          Copyright &copy; 2016-2017 <b><a href="javascript:void(0);" className="text-black">ZhaoqingQiang Studio</a></b><br />
-         All rights reserved
+         All rights reserved<br />
+         Login user count: {info}
        </div>
     )
 }
 
-export default function Home() {
+export default function Home({loginCount}) {
     return (
         <div className="lockscreen">
             <div className="lockscreen-wrapper">
@@ -42,7 +43,7 @@ export default function Home() {
                 <Alumni />
                 <Profile profile="BillQiang" />
                 <Profile profile="EllaFan" />
-                <Footer />
+                <Footer info={loginCount} />
             </div>
         </div>
     );

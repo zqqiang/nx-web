@@ -10,7 +10,7 @@ var Friends = require('./friends.react');
 var QRCode = require('./qrcode.react');
 
 import Login from '../containers/login'
-import Home from './home.react'
+import Home from '../containers/home'
 import NoMatch from './nomatch.react'
 import BillQiang from './profile/billqiang.react'
 import EllaFan from './profile/ellafan.react'
