@@ -35,16 +35,26 @@ function Footer({ info }) {
     )
 }
 
-export default function Home({loginCount}) {
-    return (
-        <div className="lockscreen">
-            <div className="lockscreen-wrapper">
-                <Logo />
-                <Alumni />
-                <Profile profile="BillQiang" />
-                <Profile profile="EllaFan" />
-                <Footer info={loginCount} />
+class Home extends React.Component {
+    constructor(props) {
+        super(props)
+    }
+    componentDidMount() {
+        this.props.onLoadLoginUsers()
+    }
+    render() {
+        return (
+            <div className="lockscreen">
+                <div className="lockscreen-wrapper">
+                    <Logo />
+                    <Alumni />
+                    <Profile profile="BillQiang" />
+                    <Profile profile="EllaFan" />
+                    <Footer info={this.props.loginUsersCount} />
+                </div>
             </div>
-        </div>
-    );
+        )
+    }
 }
+
+export default Home

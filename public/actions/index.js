@@ -78,3 +78,11 @@ export const googleUserLogin = (googleUser) => {
         user: user
     }
 }
+
+export const loadLoginUsers = () => {
+
+    return {
+        type: 'LOAD_USERS',
+        loginUsersCount: 100
+    }
+}

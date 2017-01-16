@@ -1,17 +1,25 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import {} from '../actions'
+import { loadLoginUsers } from '../actions'
 import HomeComponent from '../components/home.react'
 
 const mapStateToProps = (state) => {
-    console.log(state)
     return {
-        loginCount: state.loginCount
+        loginUsersCount: state.home.loginUsersCount
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        onLoadLoginUsers: () => {
+            dispatch(loadLoginUsers())
+        }
     }
 }
 
 const Home = connect(
-    mapStateToProps
+    mapStateToProps,
+    mapDispatchToProps
 )(HomeComponent)
 
 export default Home
