@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { loadLoginUsers } from '../actions'
 import HomeComponent from '../components/home.react'
+import DB from '../../db/pouchdb'
 
 const mapStateToProps = (state) => {
     return {
@@ -12,7 +13,12 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         onLoadLoginUsers: () => {
-            dispatch(loadLoginUsers())
+            DB.allDocs()
+                .then((result) => {
+                    dispatch(loadLoginUsers(result.total_rows))
+                }).then((err) => {
+                    if (err) console.log(err)
+                })
         }
     }
 }

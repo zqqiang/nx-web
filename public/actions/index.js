@@ -1,7 +1,4 @@
-import PouchDB from 'pouchdb'
 import { browserHistory } from 'react-router'
-
-const db = new PouchDB('nxmanager')
 
 export const addComment = (comment) => {
     return {
@@ -57,32 +54,17 @@ export const userLogin = (user, password) => {
     }
 }
 
-export const googleUserLogin = (googleUser) => {
-    const user = googleUser.getBasicProfile().getName()
-
-    db.put({
-        _id: new Date().toISOString(),
-        user: user
-    }, (err, result) => {
-        if (err) {
-            console.log(err)
-        } else {
-            console.log(result)
-        }
-    })
-
+export const googleUserLogin = (user) => {
     browserHistory.push('/Home')
-
     return {
         type: 'USER_LOGIN',
         user: user
     }
 }
 
-export const loadLoginUsers = () => {
-
+export const loadLoginUsers = (total_rows) => {
     return {
         type: 'LOAD_USERS',
-        loginUsersCount: 100
+        loginUsersCount: total_rows
     }
 }
