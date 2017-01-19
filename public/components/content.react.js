@@ -2,7 +2,7 @@ var $ = require('jquery');
 var React = require('react');
 import { Router, Route, browserHistory } from 'react-router'
 
-var Alumni = require('./alumni.react');
+// var Alumni = require('./alumni.react');
 var News = require('./news.react');
 var Salon = require('./salon.react');
 var Gallery = require('./gallery.react');
@@ -14,6 +14,7 @@ import Home from '../containers/home'
 import NoMatch from './nomatch.react'
 import BillQiang from './profile/billqiang.react'
 import EllaFan from './profile/ellafan.react'
+import Alumni from '../containers/alumni'
 
 // content-wrapper
 

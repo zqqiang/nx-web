@@ -6,7 +6,7 @@ import DB from '../../db/pouchdb'
 
 const mapStateToProps = (state) => {
     return {
-        loginUsersCount: state.home.loginUsersCount
+        loginUsersCount: state.home.loginUsersCount,
     }
 }
 

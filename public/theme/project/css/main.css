@@ -14220,15 +14220,6 @@ fieldset[disabled] .alumni .btn-primary.active {
 .pagination.pagination-flat > li > a {
   border-radius: 0 !important;
 }
-.navbar {
-  background-color: #3c8dbc;
-  margin-bottom: 0;
-  border: none;
-  position: relative;
-}
-.navbar.navbar-custom-menu {
-  float: right;
-}
 /*
  * Component: Form
  * ---------------

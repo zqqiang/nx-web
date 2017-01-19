@@ -9,11 +9,20 @@ class Nav extends React.Component {
     }
     render() {
         return (
-            <nav className="navbar navbar-static-top">
-                <div className="navbar-custom-menu">
-                    Admin
-                </div>
-            </nav>
+            <header className="main-header">
+                <nav className="navbar navbar-static-top">
+                    <div className="navbar-custom-menu">
+                        <ul className="nav navbar-nav">
+                            <li className="dropdown user user-menu">
+                                <a href="javascript:void(0);" className="dropdown-toggle" data-toggle="dropdown">
+                                    <img src="theme/project/img/member/user2-128x128.jpg" className="user-image" alt="User Image" />
+                                    <span className="hidden-xs">{this.props.user}</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
         )
     }
 }
@@ -336,8 +345,11 @@ var PortfolioItems = [
     { name: 'Baby Nursing & Health Care', src: 'theme/project/img/alumni/6.jpg', category: 'Health' },
 ];
 
-var AlumniView = React.createClass({
-    render: function() {
+class Alumni extends React.Component {
+    constructor(props) {
+        super(props)
+    }
+    render() {
         var neg = $('.main-header').outerHeight() + $('.main-footer').outerHeight();
         var window_height = $(window).height();
         $(".content-wrapper, .right-side").css('min-height', window_height - neg);
@@ -345,7 +357,7 @@ var AlumniView = React.createClass({
         return (
             <div className="content-wrapper">
                 <div className="stylish-portfolio">
-                    <Nav />
+                    <Nav user={this.props.user}/>
                     <Header />
                     <About alumni="500+" />
                     <Services items={ServiceItems} />
@@ -355,8 +367,8 @@ var AlumniView = React.createClass({
                     <Footer />
                 </div>
             </div>
-        );
+        )
     }
-});
+}
 
-module.exports = AlumniView;
+export default Alumni
