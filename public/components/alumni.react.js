@@ -3,6 +3,21 @@ var React = require('react');
 var Easing = require('jquery.easing');
 import { browserHistory } from 'react-router'
 
+class Nav extends React.Component {
+    constructor(props) {
+        super(props)
+    }
+    render() {
+        return (
+            <nav className="navbar navbar-static-top">
+                <div className="navbar-custom-menu">
+                    Admin
+                </div>
+            </nav>
+        )
+    }
+}
+
 var Header = React.createClass({
     handleClick: function() {
         $('html, body').animate({
@@ -330,6 +345,7 @@ var AlumniView = React.createClass({
         return (
             <div className="content-wrapper">
                 <div className="stylish-portfolio">
+                    <Nav />
                     <Header />
                     <About alumni="500+" />
                     <Services items={ServiceItems} />
