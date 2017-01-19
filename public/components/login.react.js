@@ -85,6 +85,12 @@ class LoginComponent extends React.Component {
                 window.gapi.auth2.init({
                     client_id: '556944696832-pmg36d0kb3rlm6ntcljq3pt94cefhpb9.apps.googleusercontent.com',
                     cookiepolicy: 'single_host_origin'
+                }).then(() => {
+                    let element = document.getElementById('google-signin');
+                    let auth2 = window.gapi.auth2.getAuthInstance();
+                    auth2.attachClickHandler(element, {}, loginSuccess, (error) => {
+                        console.log(error);
+                    });
                 })
                 window.gapi.signin2.render('google-signin', {
                     'scope': 'profile email',
@@ -92,11 +98,6 @@ class LoginComponent extends React.Component {
                     'height': 34,
                     'longtitle': true,
                     'theme': 'dark',
-                });
-                let element = document.getElementById('google-signin');
-                let auth2 = window.gapi.auth2.getAuthInstance();
-                auth2.attachClickHandler(element, {}, loginSuccess, (error) => {
-                    console.log(error);
                 });
             })
         };
