@@ -6,8 +6,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch-css": "lessc public/theme/project/less/main.less public/theme/project/css/main.css",
     "watch-js": "watchify public/main.js -o public/bundle.js -t [ babelify --presets [ es2015 react ] ] -dv",
-    "watch": "npm run watch-js | npm run watch-css",
-    "start": "supervisor app.js"
+    "start-db": "pouchdb-server --port 5984",
+    "start": "supervisor app.js | npm run start-db | npm run watch-js"
   },
   "main": "app.js",
   "dependencies": {
