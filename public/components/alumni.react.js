@@ -317,6 +317,7 @@ var Footer = React.createClass({
                                 <li><i className="fa fa-phone fa-fw"></i> (604) 500-8888</li>
                                 <li><i className="fa fa-envelope-o fa-fw"></i>  <a href="mailto:name@example.com">name@example.com</a></li>
                             </ul>
+                            <img src="theme/project/img/credit/paypal2.png" alt="Paypal" />
                             <hr className="small" />
                         </div>
                         <div className='col-sm-12 text-center'>
