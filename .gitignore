@@ -4,9 +4,9 @@ nxManager.sublime-project
 nxManager.sublime-workspace
 npm-debug.log
 tttc..
-_replicator/
-_users/
 log.txt
-pouch__all_dbs__/
-nxmanager
-config.json
+db/_replicator/
+db/_users/
+db/pouch__all_dbs__/
+db/nxmanager
+db/config.json

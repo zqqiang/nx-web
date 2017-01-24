@@ -13,6 +13,7 @@ Table of Contents
 * [FAQ](#faq)
 * [Todo List](#todo-list)
 * [Features](#features)
+* [Release Notes](#release-notes)
 
 Prepare
 =======
@@ -42,12 +43,20 @@ Directory
 Todo List
 =========
 
-* a website that enables people to sign for a cause (OAuth2.0)
+* paypal support
 * comment/chat about a topic in common
 * security (login, certificate)
 * add self page (self resume, technical blog, project link)
 
 Features
 ========
+
+
+Release Notes
+=============
+
+### 0.0.1
+* google login support
+
 
 [Back to TOC](#table-of-contents)
