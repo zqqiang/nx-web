@@ -30,8 +30,7 @@ Quick Start
 
 ### For Developer
 * npm install
-* npm run watch-js
-* npm start
+* npm run dev
 
 [Back to TOC](#table-of-contents)
 
@@ -57,6 +56,7 @@ Release Notes
 
 ### 0.0.1
 * google login support
+* pouchdb and couchdb
 
 
 [Back to TOC](#table-of-contents)

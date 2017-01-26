@@ -7,7 +7,8 @@
     "watch-css": "lessc public/theme/project/less/main.less public/theme/project/css/main.css",
     "watch-js": "watchify public/main.js -o public/bundle.js -t [ babelify --presets [ es2015 react ] ] -dv",
     "start-db": "pouchdb-server -d ./db --port 5984",
-    "start": "supervisor app.js | npm run start-db | npm run watch-js"
+    "dev": "supervisor app.js | npm run start-db | npm run watch-js",
+    "start": "supervisor app.js | npm run start-db"
   },
   "main": "app.js",
   "dependencies": {
