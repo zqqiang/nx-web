@@ -1,6 +1,8 @@
 var $ = require('jquery');
 var React = require('react');
 var Easing = require('jquery.easing');
+var client = require('braintree-web/client');
+var paypal = require('braintree-web/paypal');
 import { browserHistory } from 'react-router'
 
 class Nav extends React.Component {
@@ -296,8 +298,56 @@ var Enterprises = React.createClass({
     }
 });
 
-var Footer = React.createClass({
-    render: function() {
+class Footer extends React.Component {
+    constructor(props) {
+        super(props)
+
+        // Create a Client component
+        client.create({
+            authorization: 'TOKEN'
+        }, function(clientErr, clientInstance) {
+            if (clientErr) console.log(clientErr);
+
+            // Create PayPal component
+            paypal.create({
+                client: clientInstance
+            }, function(err, paypalInstance) {
+                if (err) console.log(err);
+                if (paypalInstance) {
+                    this.paypalInstance = paypalInstance;
+                }
+            });
+        });
+    }
+    onClick() {
+        console.log('click paypal');
+        if (this.paypalInstance) {
+            // Tokenize here!
+            this.paypalInstance.tokenize({
+                flow: 'checkout', // Required
+                amount: 10.00, // Required
+                currency: 'USD', // Required
+                locale: 'en_US',
+                enableShippingAddress: true,
+                shippingAddressEditable: false,
+                shippingAddressOverride: {
+                    recipientName: 'Scruff McGruff',
+                    line1: '1234 Main St.',
+                    line2: 'Unit 1',
+                    city: 'Chicago',
+                    countryCode: 'US',
+                    postalCode: '60652',
+                    state: 'IL',
+                    phone: '123.456.7890'
+                }
+            }, function(err, tokenizationPayload) {
+                // Tokenization complete
+                // Send tokenizationPayload.nonce to server
+                console.log('Tokenization complete');
+            });
+        }
+    }
+    render() {
         return (
             <footer>
                 <div className="container">
@@ -317,7 +367,11 @@ var Footer = React.createClass({
                                 <li><i className="fa fa-phone fa-fw"></i> (604) 500-8888</li>
                                 <li><i className="fa fa-envelope-o fa-fw"></i>  <a href="mailto:name@example.com">name@example.com</a></li>
                             </ul>
-                            <img src="theme/project/img/credit/paypal2.png" alt="Paypal" />
+                            <img 
+                                src="theme/project/img/credit/paypal2.png" 
+                                alt="Paypal" 
+                                onClick={this.onClick.bind(this)}
+                            />
                             <hr className="small" />
                         </div>
                         <div className='col-sm-12 text-center'>
@@ -328,7 +382,7 @@ var Footer = React.createClass({
             </footer>
         );
     }
-});
+};
 
 var ServiceItems = [
     { name: 'News', icon: 'newspaper-o', desc: 'Latest Announcement & News.' },
