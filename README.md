@@ -1,2 +1,2 @@
 # nx-web
-Most Modern Web Demo Collection
+Modern Web Demo

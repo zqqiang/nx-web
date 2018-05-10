@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./components/app.jsx";
+import Creative from "./components/creative.jsx";
 
 ReactDOM.render(
-  <App />,
+  <Creative />,
   document.getElementById("app")
 );
