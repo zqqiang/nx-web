@@ -1,12 +1,1 @@
-node_modules/
-public/bower_components/
-nxManager.sublime-project
-nxManager.sublime-workspace
-npm-debug.log
-tttc..
-log.txt
-db/_replicator/
-db/_users/
-db/pouch__all_dbs__/
-db/nxmanager
-db/config.json
+node_modules
