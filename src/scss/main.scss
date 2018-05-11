@@ -1,3 +1,8 @@
 @import 'vars/colors';
-
-@import 'component/navigation';
+@import 'vars/breakpoints';
+@import 'mixins/breakpoint';
+@import 'base/base';
+@import 'utility/grid';
+@import 'utility/spacing';
+@import 'utility/reboot';
+@import 'component/navbar';
