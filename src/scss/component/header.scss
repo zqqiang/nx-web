@@ -1,0 +1,25 @@
+header.masthead {
+    @include breakpoint-min($bp-large) {
+        height: 100vh;
+        min-height: 650px;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    h1 {
+        font-size: 2rem;
+        @include breakpoint-min($bp-xlarge) {
+            font-size: 4rem;
+        }
+        @include breakpoint-min($bp-large) {
+            font-size: 3rem;
+        }
+    }
+    padding-top: 10rem;
+    padding-bottom: calc(10rem - 56px);
+    background-image: url(../img/header.jpg);
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
