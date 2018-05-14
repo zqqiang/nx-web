@@ -14,6 +14,16 @@ header.masthead {
             font-size: 3rem;
         }
     }
+    hr {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    p {
+        font-weight: 300;
+        @include breakpoint-min($bp-medium) {
+            font-size: 1.15rem;
+        }
+    }
     padding-top: 10rem;
     padding-bottom: calc(10rem - 56px);
     background-image: url(../img/header.jpg);
@@ -22,4 +32,10 @@ header.masthead {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+
+hr {
+    max-width: 50px;
+    border-width: 3px;
+    border-color: #f05f40;
 }

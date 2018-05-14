@@ -33,3 +33,11 @@
         max-width: 83.333333%;
     }
 }
+
+.col-lg-8 {
+    @include breakpoint-min($bp-large) {
+        -ms-flex: 0 0 66.666667%;
+        flex: 0 0 66.666667%;
+        max-width: 66.666667%;
+    }
+}

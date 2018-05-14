@@ -5,6 +5,4 @@ import Creative from "./components/creative.jsx";
 import "./scss/main.scss"
 
 ReactDOM.render(
-  <Creative />,
-  document.getElementById("app")
-);
+  <Creative/>, document.getElementById("app"));
