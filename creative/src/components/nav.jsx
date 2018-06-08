@@ -1,8 +1,25 @@
 import React, {Component} from "react"
 
 class Nav extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            shrink: ""
+        }
+        this.handleScroll = this
+            .handleScroll
+            .bind(this)
+    }
     handleScroll(event) {
-        console.log("scroll...")
+        let offset = document
+            .getElementById(`mainNav`)
+            .getBoundingClientRect();
+        console.log(offset.top)
+        if (offset.top > 100) {
+            this.setState({shrink: "navbar-shrink"})
+        } else {
+            this.setState({shrink: ""})
+        }
     }
     componentDidMount() {
         window.addEventListener("scroll", this.handleScroll)
@@ -12,7 +29,9 @@ class Nav extends Component {
     }
     render() {
         return (
-            <nav className="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <nav
+                className={"navbar navbar-expand-lg navbar-light fixed-top " + this.state.shrink}
+                id="mainNav">
                 <div className="container">
                     <a className="navbar-brand js-scroll-trigger" href="#page-top">Start Creative</a>
                     <button
