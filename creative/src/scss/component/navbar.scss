@@ -14,7 +14,7 @@
     transition: all .2s;
     .navbar-brand {
         @include breakpoint-min($bp-large) {
-            // color: rgba(255, 255, 255, .7);
+            color: rgba(255, 255, 255, .7);
         }
         font-weight: 700;
         text-transform: uppercase;
@@ -28,7 +28,7 @@
         >li.nav-item {
             >a.nav-link {
                 @include breakpoint-min($bp-large) {
-                    // color: rgba(255,255,255,.7);
+                    color: rgba(255,255,255,.7);
                     padding: .5rem 1rem;
                 }
                 font-size: .9rem;
