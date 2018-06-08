@@ -1,6 +1,15 @@
 import React, {Component} from "react"
 
 class Nav extends Component {
+    handleScroll(event) {
+        console.log("scroll...")
+    }
+    componentDidMount() {
+        window.addEventListener("scroll", this.handleScroll)
+    }
+    componentWillUnmount() {
+        window.removeEventListener("scroll", this.handleScroll)
+    }
     render() {
         return (
             <nav className="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
