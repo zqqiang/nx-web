@@ -11,15 +11,16 @@ class Nav extends Component {
             .bind(this)
     }
     handleScroll(event) {
-        let offset = document
-            .getElementById(`mainNav`)
-            .getBoundingClientRect();
-        console.log(offset.top)
-        if (offset.top > 100) {
+        // todo: not working
+        /*
+        let offsetTop = document
+            .getElementById(`mainNav`).offsetTop;
+        if (offsetTop > 100) {
             this.setState({shrink: "navbar-shrink"})
         } else {
             this.setState({shrink: ""})
         }
+        */
     }
     componentDidMount() {
         window.addEventListener("scroll", this.handleScroll)
