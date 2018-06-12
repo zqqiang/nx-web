@@ -3,6 +3,7 @@ import Nav from "./nav.jsx"
 import Header from "./header.jsx"
 import About from "./about.jsx"
 import Services from "./services.jsx"
+import Portfolio from "./portfolio";
 
 class Creative extends Component {
     render() {
@@ -12,6 +13,7 @@ class Creative extends Component {
                 <Header/>
                 <About/>
                 <Services/>
+                <Portfolio/>
             </div>
         )
     }

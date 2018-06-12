@@ -1,6 +1,23 @@
 import React, {Component} from "react"
 
 class Services extends Component {
+    componentDidMount() {
+        window.sr = ScrollReveal()
+        sr.reveal('.sr-icons', {
+            duration: 600,
+            scale: 0.3,
+            distance: '0px'
+        }, 200)
+        sr.reveal('.sr-button', {
+            duration: 1000,
+            delay: 200
+        })
+        sr.reveal('.sr-contact', {
+            duration: 600,
+            scale: 0.3,
+            distance: '0px'
+        }, 300)
+    }
     render() {
         return (
             <section id="services">
