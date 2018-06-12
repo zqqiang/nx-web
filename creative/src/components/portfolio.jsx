@@ -1,7 +1,22 @@
 import React, {Component} from "react"
 
 class Portfolio extends Component {
-    componentDidMount() {}
+    componentDidMount() {
+        $('.popup-gallery').magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            tLoading: 'Loading image #%curr%...',
+            mainClass: 'mfp-img-mobile',
+            gallery: {
+                enabled: true,
+                navigateByImgClick: true,
+                preload: [0, 1]
+            },
+            image: {
+                tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
+            }
+        });
+    }
     render() {
         return (
             <section className="p-0" id="portfolio">
