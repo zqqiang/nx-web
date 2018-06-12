@@ -4,6 +4,8 @@ import Header from "./header.jsx"
 import About from "./about.jsx"
 import Services from "./services.jsx"
 import Portfolio from "./portfolio";
+import Text from "./text";
+import Contact from "./contact";
 
 class Creative extends Component {
     render() {
@@ -14,6 +16,8 @@ class Creative extends Component {
                 <About/>
                 <Services/>
                 <Portfolio/>
+                <Text/>
+                <Contact/>
             </div>
         )
     }
