@@ -27,7 +27,7 @@
     "webpack-dev-server": "^3.1.4"
   },
   "scripts": {
-    "dev": "webpack-dev-server --mode development",
+    "start": "webpack-dev-server --open --mode development",
     "build": "cross-env NODE_ENV=production webpack -p"
   },
   "repository": {
