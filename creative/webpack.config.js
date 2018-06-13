@@ -3,7 +3,6 @@ const webpack = require("webpack");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-    // entry: "./src/main.js",
     module: {
         rules: [
             {
@@ -16,12 +15,11 @@ module.exports = {
             }, {
                 test: /\.scss$/,
                 use: [
-                    // fallback to style-loader in development
                     process.env.NODE_ENV !== 'production'
                         ? 'style-loader'
                         : MiniCssExtractPlugin.loader,
-                    "css-loader", // translates CSS into CommonJS
-                    "sass-loader" // compiles Sass to CSS
+                    "css-loader",
+                    "sass-loader"
                 ]
             }, {
                 test: /\.(gif|png|jpe?g|svg)$/i,
@@ -40,7 +38,6 @@ module.exports = {
         extensions: ['*', '.js', '.jsx']
     },
     output: {
-        // path: path.resolve(__dirname, "public"),
         filename: "bundle.js"
     },
     devServer: {
@@ -49,11 +46,6 @@ module.exports = {
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
-        new MiniCssExtractPlugin({
-            // Options similar to the same options in webpackOptions.output both options are
-            // optional
-            filename: "[name].css",
-            chunkFilename: "[id].css"
-        })
+        new MiniCssExtractPlugin({filename: "[name].css", chunkFilename: "[id].css"})
     ]
 };
