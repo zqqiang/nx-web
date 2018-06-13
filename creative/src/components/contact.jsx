@@ -21,7 +21,7 @@ class Contact extends Component {
                         <div className="col-lg-4 mr-auto text-center">
                             <i className="far fa-envelope fa-3x mb-3 sr-contact"></i>
                             <p>
-                                <a href="mailto:your-email@your-domain.com">feedback@startbootstrap.com</a>
+                                <a href="mailto:your-email@your-domain.com">qiqitech@gmail.com</a>
                             </p>
                         </div>
                     </div>

@@ -48,7 +48,7 @@ class Nav extends Component {
                 className={"navbar navbar-expand-lg navbar-light fixed-top " + this.state.shrink}
                 id="mainNav">
                 <div className="container">
-                    <a className="navbar-brand js-scroll-trigger" href="#page-top">Start Creative</a>
+                    <a className="navbar-brand js-scroll-trigger" href="#page-top">Web Demo</a>
                     <button
                         className="navbar-toggler navbar-toggler-right"
                         type="button"
