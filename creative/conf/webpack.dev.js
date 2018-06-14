@@ -13,9 +13,7 @@ module.exports = merge(common, {
             }
         ]
     },
-    plugins: [
-        new webpack.HotModuleReplacementPlugin(),
-    ],
+    plugins: [new webpack.HotModuleReplacementPlugin()],
     devServer: {
         contentBase: path.join(__dirname, '../dist'),
         port: 3000
