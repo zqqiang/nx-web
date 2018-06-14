@@ -1,3 +1,6 @@
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
     module: {
         rules: [
@@ -26,5 +29,9 @@ module.exports = {
     },
     output: {
         filename: "bundle.js"
-    }
+    },
+    plugins: [
+        new CleanWebpackPlugin(['dist']),
+        new HtmlWebpackPlugin({title: `QiQi Tech`, template: `src/index.html`})
+    ]
 };
