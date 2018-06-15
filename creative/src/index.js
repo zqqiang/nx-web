@@ -6,6 +6,8 @@ import Creative from "./components/creative.jsx";
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import 'jquery.easing'
+
 import "./scss/creative.scss";
 
 ReactDOM.render(

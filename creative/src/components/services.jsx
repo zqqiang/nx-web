@@ -1,4 +1,7 @@
 import React, {Component} from "react"
+import ScrollReveal from "scrollreveal"
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
+import faGem from '@fortawesome/fontawesome-free-regular/faGem'
 
 class Services extends Component {
     componentDidMount() {
@@ -33,7 +36,7 @@ class Services extends Component {
                     <div className="row">
                         <div className="col-lg-3 col-md-6 text-center">
                             <div className="service-box mt-5 mx-auto">
-                                <i className="fa fa-4x fa-gem text-primary mb-3 sr-icons"></i>
+                                <FontAwesomeIcon icon={faGem} size="4x" className="text-primary mb-3 sr-icons" />
                                 <h3 className="mb-3">Sturdy Templates</h3>
                                 <p className="text-muted mb-0">Our templates are updated regularly so they don't break.</p>
                             </div>
