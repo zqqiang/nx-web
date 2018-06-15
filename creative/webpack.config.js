@@ -1,5 +1,6 @@
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require("webpack");
 
 module.exports = {
     module: {
@@ -35,6 +36,7 @@ module.exports = {
     },
     plugins: [
         new CleanWebpackPlugin(['dist']),
-        new HtmlWebpackPlugin({title: `QiQi Tech`, template: `src/index.html`})
+        new HtmlWebpackPlugin({title: `QiQi Tech`, template: `src/index.html`}),
+        new webpack.ProvidePlugin({$: 'jquery', jQuery: 'jquery'})
     ]
 };
