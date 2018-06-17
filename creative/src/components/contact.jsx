@@ -1,6 +1,17 @@
 import React, {Component} from "react"
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
+import {faPhone} from '@fortawesome/fontawesome-free-solid'
+import {faEnvelope} from '@fortawesome/fontawesome-free-regular'
 
 class Contact extends Component {
+    componentDidMount()
+    {
+        sr.reveal('.sr-contact', {
+            duration: 600,
+            scale: 0.3,
+            distance: '0px'
+        }, 300)
+    }
     render() {
         return (
             <section id="contact">
@@ -15,11 +26,11 @@ class Contact extends Component {
                     </div>
                     <div className="row">
                         <div className="col-lg-4 ml-auto text-center">
-                            <i className="fa fa-phone fa-3x mb-3 sr-contact"></i>
+                            <FontAwesomeIcon icon={faPhone} size="3x" className="mb-3 sr-contact"/>
                             <p>123-456-6789</p>
                         </div>
                         <div className="col-lg-4 mr-auto text-center">
-                            <i className="far fa-envelope fa-3x mb-3 sr-contact"></i>
+                            <FontAwesomeIcon icon={faEnvelope} size="3x" className="mb-3 sr-contact"/>
                             <p>
                                 <a href="mailto:your-email@your-domain.com">qiqitech@gmail.com</a>
                             </p>
