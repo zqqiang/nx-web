@@ -8,6 +8,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import 'jquery.easing'
 
+import 'magnific-popup'
+import 'magnific-popup/dist/magnific-popup.css'
+
 import "./scss/creative.scss";
 
 ReactDOM.render(
