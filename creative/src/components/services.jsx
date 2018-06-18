@@ -1,7 +1,8 @@
 import React, {Component} from "react"
 import ScrollReveal from "scrollreveal"
-import FontAwesomeIcon from '@fortawesome/react-fontawesome'
-import {faGem, faPaperPlane, faNewspaper, faHeart} from '@fortawesome/fontawesome-free-regular'
+// import FontAwesomeIcon from '@fortawesome/react-fontawesome' import {faGem,
+// faPaperPlane, faNewspaper, faHeart} from
+// '@fortawesome/fontawesome-free-regular'
 
 class Services extends Component {
     componentDidMount() {
@@ -27,37 +28,28 @@ class Services extends Component {
                     <div className="row">
                         <div className="col-lg-3 col-md-6 text-center">
                             <div className="service-box mt-5 mx-auto">
-                                <FontAwesomeIcon icon={faGem} size="4x" className="text-primary mb-3 sr-icons"/>
+                                <i className="fas fa-gem fa-4x text-primary mb-3 sr-icons"></i>
                                 <h3 className="mb-3">Sturdy Templates</h3>
                                 <p className="text-muted mb-0">Our templates are updated regularly so they don't break.</p>
                             </div>
                         </div>
                         <div className="col-lg-3 col-md-6 text-center">
                             <div className="service-box mt-5 mx-auto">
-                                <FontAwesomeIcon
-                                    icon={faPaperPlane}
-                                    size="4x"
-                                    className="text-primary mb-3 sr-icons"/>
+                                <i className="fas fa-paper-plane fa-4x text-primary mb-3 sr-icons"></i>
                                 <h3 className="mb-3">Ready to Ship</h3>
                                 <p className="text-muted mb-0">You can use this theme as is, or you can make changes!</p>
                             </div>
                         </div>
                         <div className="col-lg-3 col-md-6 text-center">
                             <div className="service-box mt-5 mx-auto">
-                                <FontAwesomeIcon
-                                    icon={faNewspaper}
-                                    size="4x"
-                                    className="text-primary mb-3 sr-icons"/>
+                                <i className="fas fa-newspaper fa-4x text-primary mb-3 sr-icons"></i>
                                 <h3 className="mb-3">Up to Date</h3>
                                 <p className="text-muted mb-0">We update dependencies to keep things fresh.</p>
                             </div>
                         </div>
                         <div className="col-lg-3 col-md-6 text-center">
                             <div className="service-box mt-5 mx-auto">
-                                <FontAwesomeIcon
-                                    icon={faHeart}
-                                    size="4x"
-                                    className="text-primary mb-3 sr-icons"/>
+                                <i className="fas fa-heart fa-4x text-primary mb-3 sr-icons"></i>
                                 <h3 className="mb-3">Made with Love</h3>
                                 <p className="text-muted mb-0">You have to make your websites with love these days!</p>
                             </div>

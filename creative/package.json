@@ -4,12 +4,7 @@
   "description": "web demo",
   "main": "index.js",
   "dependencies": {
-    "@fortawesome/fontawesome": "^1.1.8",
-    "@fortawesome/fontawesome-free-regular": "^5.0.13",
-    "@fortawesome/fontawesome-free-solid": "^5.0.13",
-    "@fortawesome/react-fontawesome": "0.0.20",
     "bootstrap": "^4.1.1",
-    "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",
     "jquery.easing": "^1.4.1",
     "magnific-popup": "^1.1.0",
