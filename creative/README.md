@@ -2,7 +2,7 @@
 QiQi Tech Creative demo is a single page website using React.js Sass Bootstrap and Webpack.js.
 
 ## Status
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/zqqiang/nx-web/blob/master/creative/LICENSE)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)]()
 
 ## Usage
 
