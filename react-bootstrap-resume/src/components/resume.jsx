@@ -4,6 +4,7 @@ import Nav from "./nav.jsx"
 import About from "./about.jsx"
 import Experience from "./experience";
 import Education from "./education";
+import Skill from "./skill";
 
 class Resume extends Component {
     render() {
@@ -14,6 +15,7 @@ class Resume extends Component {
                     <About/>
                     <Experience/>
                     <Education/>
+                    <Skill/>
                 </div>
             </div>
         )
