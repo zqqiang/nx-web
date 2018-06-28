@@ -5,6 +5,8 @@ import About from "./about.jsx"
 import Experience from "./experience";
 import Education from "./education";
 import Skill from "./skill";
+import Interest from "./interest";
+import Award from "./award";
 
 class Resume extends Component {
     render() {
@@ -16,6 +18,8 @@ class Resume extends Component {
                     <Experience/>
                     <Education/>
                     <Skill/>
+                    <Interest/>
+                    <Award/>
                 </div>
             </div>
         )
