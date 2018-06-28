@@ -3,13 +3,34 @@ import React, {Component} from "react"
 import Ella from "../img/ella.png"
 
 class Nav extends Component {
+    componentDidMount() {
+        $('a.js-scroll-trigger[href*="#"]:not([href="#"])')
+            .click(function () {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length
+                        ? target
+                        : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html, body').animate({
+                            scrollTop: (target.offset().top)
+                        }, 1000, "easeInOutExpo");
+                        return false;
+                    }
+                }
+            });
+        $('.js-scroll-trigger').click(function () {
+            $('.navbar-collapse').collapse('hide');
+        });
+        $('body').scrollspy({target: '#sideNav'});
+    }
     render() {
         return (
             <nav
                 className="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"
                 id="sideNav">
                 <a className="navbar-brand js-scroll-trigger" href="#page-top">
-                    <span className="d-block d-lg-none">QiQi Tech Web</span>
+                    <span className="d-block d-lg-none">Ella Fan</span>
                     <span className="d-none d-lg-block">
                         <img
                             className="img-fluid img-profile rounded-circle mx-auto mb-2"

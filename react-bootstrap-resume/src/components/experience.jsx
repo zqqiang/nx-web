@@ -13,17 +13,17 @@ class Experience extends Component {
                         <div className="resume-content mr-auto">
                             <h3 className="mb-0">Applied Data Analytics</h3>
                             <div className="subheading mb-3">British Columbia Institute of Technology</div>
-                            <p>COMP-1630-HY4 - Relational Database & SQL - 35597 - Lecture/Lab Combo </p>
+                            <p>COMP 1630 - Relational Database & SQL - 35597 - Lecture/Lab Combo </p>
                             <p>COMP 2256 - Visual Analytics for Business Intelligence with Tableau </p>
                             <p>COMP 2362 - Microsoft Excel Advanced </p>
-                            <p>COMP 1060-Statistics for Data Analysis</p>
-                            <p>COMP2831- Business Analysis&Systems Design</p>
-                            <p>COMP 3838 Data Warehouse Foundations for Business Intelligence</p>
-                            <p>COMP 3839 Data Quality Improvement</p>
-                            <p>COMP 2854 Data Analytics Fundamentals</p>
-                            <p>COMP 3060 Advanced Statistics For Data Analysis</p>
-                            <p>COMP 4679 Business Intelligence with SSRS SQL Server Reporting Services</p>
-                            <p>COMP 3704 Applied IT Security Fundamentals</p>
+                            <p>COMP 1060 - Statistics for Data Analysis</p>
+                            <p>COMP 2831 - Business Analysis & Systems Design</p>
+                            <p>COMP 3838 - Data Warehouse Foundations for Business Intelligence</p>
+                            <p>COMP 3839 - Data Quality Improvement</p>
+                            <p>COMP 2854 - Data Analytics Fundamentals</p>
+                            <p>COMP 3060 - Advanced Statistics For Data Analysis</p>
+                            <p>COMP 4679 - Business Intelligence with SSRS SQL Server Reporting Services</p>
+                            <p>COMP 3704 - Applied IT Security Fundamentals</p>
                         </div>
                         <div className="resume-date text-md-right">
                             <span className="text-primary">2016 - Now</span>

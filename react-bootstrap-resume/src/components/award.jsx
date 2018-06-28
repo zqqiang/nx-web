@@ -9,7 +9,7 @@ class Award extends Component {
                     <ul className="fa-ul mb-0">
                         <li>
                             <i className="fa-li fa fa-trophy text-warning"></i>
-                            BCIT - Applied Data Analytics
+                            BCIT - Applied Data Analytics Certificate
                         </li>
                         <li>
                             <i className="fa-li fa fa-trophy text-warning"></i>
