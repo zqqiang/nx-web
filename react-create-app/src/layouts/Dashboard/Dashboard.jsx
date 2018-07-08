@@ -3,11 +3,19 @@ import PropTypes from 'prop-types';
 
 import withStyles from '@material-ui/core/styles/withStyles';
 
+import Sidebar from 'components/Sidebar/Sidebar.jsx';
+
 import dashboardStyle from 'assets/jss/material-dashboard-react/views/dashboardStyle.jsx';
 
 class App extends React.Component {
   render() {
-    return <div>Dashboard</div>;
+    const { classes } = this.props;
+
+    return (
+      <div className={classes.wrapper}>
+        <Sidebar />
+      </div>
+    );
   }
 }
 
