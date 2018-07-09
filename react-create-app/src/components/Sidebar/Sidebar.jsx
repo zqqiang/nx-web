@@ -9,7 +9,14 @@ import Drawer from '@material-ui/core/Drawer';
 const Sidebar = ({ ...props }) => {
   const { classes } = props;
 
-  var brand = <div className={classes.logo}>Logo</div>;
+  var brand = (
+    <div className={classes.logo}>
+      <a href="" className={classes.logoLink}>
+        <div className={classes.logoImage} />
+      </a>
+    </div>
+  );
+
   return (
     <div>
       <Hidden mdUp>
