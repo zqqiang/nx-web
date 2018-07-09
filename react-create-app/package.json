@@ -17,12 +17,13 @@
   },
   "scripts": {
     "precommit": "lint-staged",
-    "start": "react-scripts start",
+    "start": "cross-env NODE_PATH=./src react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "cross-env": "^5.2.0",
     "husky": "^0.14.3",
     "lint-staged": "^7.2.0",
     "prettier": "^1.13.7"
