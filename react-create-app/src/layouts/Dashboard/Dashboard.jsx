@@ -5,15 +5,16 @@ import withStyles from '@material-ui/core/styles/withStyles';
 
 import Sidebar from 'components/Sidebar/Sidebar.jsx';
 
-import dashboardStyle from 'assets/jss/material-dashboard-react/views/dashboardStyle.jsx';
+import dashboardStyle from 'assets/jss/material-dashboard-react/layouts/dashboardStyle.jsx';
+
+import logo from 'assets/img/reactlogo.png';
 
 class App extends React.Component {
   render() {
-    const { classes } = this.props;
-
+    const { classes, ...rest } = this.props;
     return (
       <div className={classes.wrapper}>
-        <Sidebar />
+        <Sidebar logoText={'QiQi Tech'} logo={logo} {...rest} />
       </div>
     );
   }
