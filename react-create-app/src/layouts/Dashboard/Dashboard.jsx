@@ -4,6 +4,7 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 
 import withStyles from '@material-ui/core/styles/withStyles';
 
+import Header from 'components/Header/Header.jsx';
 import Sidebar from 'components/Sidebar/Sidebar.jsx';
 
 import dashboardRoutes from 'routes/dashboard.jsx';
@@ -30,13 +31,14 @@ class App extends React.Component {
       <div className={classes.wrapper}>
         <Sidebar
           routes={dashboardRoutes}
-          logoText={'QiQi Tech'}
+          logoText={'React Cloud'}
           logo={logo}
           image={image}
           color="blue"
           {...rest}
         />
         <div className={classes.mainPanel} ref="mainPanel">
+          <Header routes={dashboardRoutes} {...rest} />
           <div className={classes.content}>
             <div className={classes.container}>{switchRoutes}</div>
           </div>
