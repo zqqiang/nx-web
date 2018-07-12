@@ -1,20 +1,20 @@
 import Dashboard from '@material-ui/icons/Dashboard';
 import Person from '@material-ui/icons/Person';
 
-import DashboardPage from 'views/Dashboard/Dashboard.jsx';
+import SettingsPage from 'views/System/Settings.jsx';
 
 const dashboardRoutes = [
   {
-    path: '/dashboard',
-    sidebarName: 'Dashboard',
-    navbarName: 'Material Dashboard',
+    path: '/settings',
+    sidebarName: 'Settings',
+    navbarName: 'System Settings',
     icon: Dashboard,
-    component: DashboardPage
+    component: SettingsPage
   },
   {
-    path: '/user',
-    sidebarName: 'User Profile',
-    navbarName: 'Profile',
+    path: '/administrator',
+    sidebarName: 'Administrator',
+    navbarName: 'System Administrator',
     icon: Person
     // component: UserProfile
   }
