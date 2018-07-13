@@ -9,6 +9,8 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
+import Radio from '@material-ui/core/Radio';
+import RadioGroup from '@material-ui/core/RadioGroup';
 
 import Button from 'components/CustomButtons/Button.jsx';
 import Card from 'components/Card/Card.jsx';
@@ -18,14 +20,27 @@ import CardFooter from 'components/Card/CardFooter.jsx';
 
 import withStyles from '@material-ui/core/styles/withStyles';
 
-const styles = theme => ({});
+const styles = theme => ({
+  root: {
+    display: 'flex',
+    flexWrap: 'wrap'
+  },
+  formControl: {
+    margin: theme.spacing.unit,
+    minWidth: 120
+  },
+  group: {
+    margin: `${theme.spacing.unit}px 0`
+  }
+});
 
 class Settings extends React.Component {
   state = {
     httpPort: 80,
     httpsPort: 443,
     redirectToHttps: true,
-    timezone: 4
+    timezone: 4,
+    server: 'fortiguard'
   };
   handleChange = name => event => {
     const value =
@@ -47,7 +62,7 @@ class Settings extends React.Component {
               <CardBody>
                 <Grid container>
                   <GridItem xs={12} sm={12} md={12}>
-                    <FormControl className={''}>
+                    <FormControl className={classes.formControl}>
                       <InputLabel htmlFor="timezone">Time Zone</InputLabel>
                       <Select
                         value={this.state.timezone}
@@ -67,7 +82,7 @@ class Settings extends React.Component {
                     <TextField
                       id="http-port"
                       label="HTTP Port"
-                      className={classes.textField}
+                      className={classes.formControl}
                       value={this.state.httpPort}
                       onChange={this.handleChange('httpPort')}
                       margin="normal"
@@ -77,7 +92,7 @@ class Settings extends React.Component {
                     <TextField
                       id="https-port"
                       label="HTTPS Port"
-                      className={classes.textField}
+                      className={classes.formControl}
                       value={this.state.httpsPort}
                       onChange={this.handleChange('httpsPort')}
                       margin="normal"
@@ -95,6 +110,32 @@ class Settings extends React.Component {
                       }
                       label="Redirect to HTTPS"
                     />
+                  </GridItem>
+                  <GridItem xs={12} sm={12} md={12}>
+                    <FormControl
+                      component="fieldset"
+                      required
+                      className={classes.formControl}
+                    >
+                      <RadioGroup
+                        aria-label="server"
+                        name="server"
+                        className={classes.group}
+                        value={this.state.server}
+                        onChange={this.handleChange('server')}
+                      >
+                        <FormControlLabel
+                          value="fortiguard"
+                          control={<Radio />}
+                          label="Use FortiGuard Server"
+                        />
+                        <FormControlLabel
+                          value="specify"
+                          control={<Radio />}
+                          label="Specify"
+                        />
+                      </RadioGroup>
+                    </FormControl>
                   </GridItem>
                 </Grid>
               </CardBody>
