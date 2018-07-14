@@ -20,19 +20,7 @@ import CardFooter from 'components/Card/CardFooter.jsx';
 
 import withStyles from '@material-ui/core/styles/withStyles';
 
-const styles = theme => ({
-  root: {
-    display: 'flex',
-    flexWrap: 'wrap'
-  },
-  formControl: {
-    margin: theme.spacing.unit,
-    minWidth: 120
-  },
-  group: {
-    margin: `${theme.spacing.unit}px 0`
-  }
-});
+const styles = theme => ({});
 
 class Settings extends React.Component {
   state = {
@@ -50,19 +38,19 @@ class Settings extends React.Component {
     this.setState({ [name]: value });
   };
   render() {
-    const { classes } = this.props;
+    // const { classes } = this.props;
     return (
       <div>
         <Grid container>
           <GridItem xs={12} sm={12} md={8}>
             <Card>
               <CardHeader color="info">
-                <h4 className={classes.cardTitleWhite}>Edit Settings</h4>
+                <h4 className={''}>Edit Settings</h4>
               </CardHeader>
               <CardBody>
                 <Grid container>
                   <GridItem xs={12} sm={12} md={12}>
-                    <FormControl className={classes.formControl}>
+                    <FormControl className={''}>
                       <InputLabel htmlFor="timezone">Time Zone</InputLabel>
                       <Select
                         value={this.state.timezone}
@@ -82,7 +70,7 @@ class Settings extends React.Component {
                     <TextField
                       id="http-port"
                       label="HTTP Port"
-                      className={classes.formControl}
+                      className={''}
                       value={this.state.httpPort}
                       onChange={this.handleChange('httpPort')}
                       margin="normal"
@@ -92,7 +80,7 @@ class Settings extends React.Component {
                     <TextField
                       id="https-port"
                       label="HTTPS Port"
-                      className={classes.formControl}
+                      className={''}
                       value={this.state.httpsPort}
                       onChange={this.handleChange('httpsPort')}
                       margin="normal"
@@ -112,26 +100,23 @@ class Settings extends React.Component {
                     />
                   </GridItem>
                   <GridItem xs={12} sm={12} md={12}>
-                    <FormControl
-                      component="fieldset"
-                      required
-                      className={classes.formControl}
-                    >
+                    <FormControl component="fieldset" required className={''}>
                       <RadioGroup
                         aria-label="server"
                         name="server"
-                        className={classes.group}
+                        className={''}
                         value={this.state.server}
                         onChange={this.handleChange('server')}
+                        row
                       >
                         <FormControlLabel
                           value="fortiguard"
-                          control={<Radio />}
+                          control={<Radio color="primary" />}
                           label="Use FortiGuard Server"
                         />
                         <FormControlLabel
                           value="specify"
-                          control={<Radio />}
+                          control={<Radio color="primary" />}
                           label="Specify"
                         />
                       </RadioGroup>
