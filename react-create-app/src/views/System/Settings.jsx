@@ -102,7 +102,12 @@ class Settings extends React.Component {
                     />
                   </GridItem>
                   <GridItem xs={12} sm={12} md={12}>
-                    <FormControl component="fieldset" required className={''}>
+                    <FormControl
+                      component="fieldset"
+                      required
+                      className={''}
+                      disabled={!this.state.syncWithNtpServer}
+                    >
                       <RadioGroup
                         aria-label="server"
                         name="server"
@@ -133,15 +138,19 @@ class Settings extends React.Component {
                       onChange={this.handleChange('syncInterval')}
                       margin="normal"
                       helperText="(1 - 1440 mins)"
+                      disabled={!this.state.syncWithNtpServer}
                     />
-                    <TextField
-                      id="server-domain"
-                      label="Server"
-                      className={classes.textField}
-                      value={this.state.serverDomain}
-                      onChange={this.handleChange('serverDomain')}
-                      margin="normal"
-                    />
+                    {this.state.server === 'specify' && (
+                      <TextField
+                        id="server-domain"
+                        label="Server"
+                        className={classes.textField}
+                        value={this.state.serverDomain}
+                        onChange={this.handleChange('serverDomain')}
+                        margin="normal"
+                        disabled={!this.state.syncWithNtpServer}
+                      />
+                    )}
                   </GridItem>
                   <GridItem xs={12} sm={12} md={12}>
                     <Typography variant="headline" component="h2">
@@ -205,6 +214,7 @@ class Settings extends React.Component {
                       value={this.state.idleTimeout}
                       onChange={this.handleChange('idleTimeout')}
                       margin="normal"
+                      helperText="Minutes (1 - 480)"
                     />
                   </GridItem>
                 </Grid>
