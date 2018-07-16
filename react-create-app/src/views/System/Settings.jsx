@@ -11,6 +11,7 @@ import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
+import Typography from '@material-ui/core/Typography';
 
 import Button from 'components/CustomButtons/Button.jsx';
 import Card from 'components/Card/Card.jsx';
@@ -20,15 +21,31 @@ import CardFooter from 'components/Card/CardFooter.jsx';
 
 import withStyles from '@material-ui/core/styles/withStyles';
 
-const styles = theme => ({});
+const styles = theme => ({
+  select: {
+    marginTop: '16px',
+    marginBottom: '8px'
+  },
+  textField: {
+    marginLeft: theme.spacing.unit,
+    marginRight: theme.spacing.unit,
+    width: 200
+  }
+});
 
 class Settings extends React.Component {
   state = {
     httpPort: 80,
     httpsPort: 443,
+    telnetPort: 23,
+    sshPort: 22,
+    idleTimeout: 480,
     redirectToHttps: true,
     timezone: 4,
-    server: 'fortiguard'
+    server: 'fortiguard',
+    serverDomain: '',
+    syncWithNtpServer: false,
+    syncInterval: 200
   };
   handleChange = name => event => {
     const value =
@@ -38,7 +55,7 @@ class Settings extends React.Component {
     this.setState({ [name]: value });
   };
   render() {
-    // const { classes } = this.props;
+    const { classes } = this.props;
     return (
       <div>
         <Grid container>
@@ -50,7 +67,12 @@ class Settings extends React.Component {
               <CardBody>
                 <Grid container>
                   <GridItem xs={12} sm={12} md={12}>
-                    <FormControl className={''}>
+                    <Typography variant="headline" component="h2">
+                      System Time
+                    </Typography>
+                  </GridItem>
+                  <GridItem xs={12} sm={12} md={12}>
+                    <FormControl className={classes.select}>
                       <InputLabel htmlFor="timezone">Time Zone</InputLabel>
                       <Select
                         value={this.state.timezone}
@@ -67,36 +89,16 @@ class Settings extends React.Component {
                     </FormControl>
                   </GridItem>
                   <GridItem xs={12} sm={12} md={12}>
-                    <TextField
-                      id="http-port"
-                      label="HTTP Port"
-                      className={''}
-                      value={this.state.httpPort}
-                      onChange={this.handleChange('httpPort')}
-                      margin="normal"
-                    />
-                  </GridItem>
-                  <GridItem xs={12} sm={12} md={12}>
-                    <TextField
-                      id="https-port"
-                      label="HTTPS Port"
-                      className={''}
-                      value={this.state.httpsPort}
-                      onChange={this.handleChange('httpsPort')}
-                      margin="normal"
-                    />
-                  </GridItem>
-                  <GridItem xs={12} sm={12} md={12}>
                     <FormControlLabel
                       control={
                         <Checkbox
-                          checked={this.state.redirectToHttps}
-                          onChange={this.handleChange('redirectToHttps')}
-                          value="redirectToHttps"
+                          checked={this.state.syncWithNtpServer}
+                          onChange={this.handleChange('syncWithNtpServer')}
+                          value="syncWithNtpServer"
                           color="primary"
                         />
                       }
-                      label="Redirect to HTTPS"
+                      label="Synchronize with NTP Server"
                     />
                   </GridItem>
                   <GridItem xs={12} sm={12} md={12}>
@@ -121,6 +123,89 @@ class Settings extends React.Component {
                         />
                       </RadioGroup>
                     </FormControl>
+                  </GridItem>
+                  <GridItem xs={12} sm={12} md={12}>
+                    <TextField
+                      id="sync-interval"
+                      label="Sync Interval"
+                      className={classes.textField}
+                      value={this.state.syncInterval}
+                      onChange={this.handleChange('syncInterval')}
+                      margin="normal"
+                      helperText="(1 - 1440 mins)"
+                    />
+                    <TextField
+                      id="server-domain"
+                      label="Server"
+                      className={classes.textField}
+                      value={this.state.serverDomain}
+                      onChange={this.handleChange('serverDomain')}
+                      margin="normal"
+                    />
+                  </GridItem>
+                  <GridItem xs={12} sm={12} md={12}>
+                    <Typography variant="headline" component="h2">
+                      Administration Settings
+                    </Typography>
+                  </GridItem>
+                  <GridItem xs={12} sm={12} md={12}>
+                    <TextField
+                      id="http-port"
+                      label="HTTP Port"
+                      className={classes.textField}
+                      value={this.state.httpPort}
+                      onChange={this.handleChange('httpPort')}
+                      margin="normal"
+                    />
+                  </GridItem>
+                  <GridItem xs={12} sm={12} md={12}>
+                    <FormControlLabel
+                      control={
+                        <Checkbox
+                          checked={this.state.redirectToHttps}
+                          onChange={this.handleChange('redirectToHttps')}
+                          value="redirectToHttps"
+                          color="primary"
+                        />
+                      }
+                      label="Redirect to HTTPS"
+                    />
+                  </GridItem>
+                  <GridItem xs={12} sm={12} md={12}>
+                    <TextField
+                      id="https-port"
+                      label="HTTPS Port"
+                      className={classes.textField}
+                      value={this.state.httpsPort}
+                      onChange={this.handleChange('httpsPort')}
+                      margin="normal"
+                    />
+                  </GridItem>
+                  <GridItem xs={12} sm={12} md={12}>
+                    <TextField
+                      id="telnet-port"
+                      label="Telnet Port"
+                      className={classes.textField}
+                      value={this.state.telnetPort}
+                      onChange={this.handleChange('telnetPort')}
+                      margin="normal"
+                    />
+                    <TextField
+                      id="ssh-port"
+                      label="SSH Port"
+                      className={classes.textField}
+                      value={this.state.sshPort}
+                      onChange={this.handleChange('sshPort')}
+                      margin="normal"
+                    />
+                    <TextField
+                      id="idle-timeout"
+                      label="Idle Timeout"
+                      className={classes.textField}
+                      value={this.state.idleTimeout}
+                      onChange={this.handleChange('idleTimeout')}
+                      margin="normal"
+                    />
                   </GridItem>
                 </Grid>
               </CardBody>
