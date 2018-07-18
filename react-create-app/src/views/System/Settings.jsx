@@ -20,7 +20,7 @@ import CardBody from 'components/Card/CardBody.jsx';
 import CardFooter from 'components/Card/CardFooter.jsx';
 
 import withStyles from '@material-ui/core/styles/withStyles';
-// import { inject, observer } from "../../../node_modules/mobx-react";
+import { inject, observer } from 'mobx-react';
 
 const styles = theme => ({
   select: {
@@ -34,8 +34,8 @@ const styles = theme => ({
   }
 });
 
-// const Settings = inject("SettingsStore")(observer());
-
+@inject('settingsStore')
+@observer
 class Settings extends React.Component {
   state = {
     httpPort: 80,
@@ -165,8 +165,8 @@ class Settings extends React.Component {
                       id="http-port"
                       label="HTTP Port"
                       className={classes.textField}
-                      value={this.state.httpPort}
-                      onChange={this.handleChange('httpPort')}
+                      value={this.props.settingsStore.httpPort}
+                      // onChange={this.handleChange("httpPort")}
                       margin="normal"
                     />
                   </GridItem>

@@ -9,6 +9,7 @@
     "mobx": "^5.0.3",
     "mobx-react": "^5.2.3",
     "react": "^16.4.1",
+    "react-app-rewire-mobx": "^1.0.8",
     "react-dom": "^16.4.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4"
@@ -21,15 +22,16 @@
   },
   "scripts": {
     "precommit": "lint-staged",
-    "start": "cross-env NODE_PATH=./src react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "start": "cross-env NODE_PATH=./src react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test --env=jsdom",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
     "cross-env": "^5.2.0",
     "husky": "^0.14.3",
     "lint-staged": "^7.2.0",
-    "prettier": "^1.13.7"
+    "prettier": "^1.13.7",
+    "react-app-rewired": "^1.5.2"
   }
 }
