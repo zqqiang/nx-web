@@ -23,6 +23,7 @@ const Sidebar = ({ ...props }) => {
   var links = (
     <List className={classes.list}>
       {routes.map((prop, key) => {
+        if (prop.redirect) return null;
         var activePro = ' ';
         var listItemClasses;
         listItemClasses = classNames({

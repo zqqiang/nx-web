@@ -17,6 +17,7 @@ const dashboardRoutes = [
     navbarName: 'System Administrator',
     icon: Person
     // component: UserProfile
-  }
+  },
+  { redirect: true, path: '/', to: '/settings', navbarName: 'Redirect' }
 ];
 export default dashboardRoutes;
