@@ -38,7 +38,7 @@ const styles = theme => ({
 @observer
 class Settings extends React.Component {
   state = {
-    httpPort: 80,
+    // httpPort: 80,
     httpsPort: 443,
     telnetPort: 23,
     sshPort: 22,
@@ -57,8 +57,10 @@ class Settings extends React.Component {
         : event.target.value;
     this.setState({ [name]: value });
   };
+  changeHttpPort = e => this.props.settingsStore.setHttpPort(e.target.value);
   render() {
     const { classes } = this.props;
+    const {httpPort} = this.props.settingsStore;
     return (
       <div>
         <Grid container>
@@ -165,8 +167,8 @@ class Settings extends React.Component {
                       id="http-port"
                       label="HTTP Port"
                       className={classes.textField}
-                      value={this.props.settingsStore.httpPort}
-                      // onChange={this.handleChange("httpPort")}
+                      value={httpPort}
+                      onChange={this.changeHttpPort}
                       margin="normal"
                     />
                   </GridItem>
