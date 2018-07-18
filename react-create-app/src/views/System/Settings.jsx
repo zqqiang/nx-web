@@ -20,6 +20,7 @@ import CardBody from 'components/Card/CardBody.jsx';
 import CardFooter from 'components/Card/CardFooter.jsx';
 
 import withStyles from '@material-ui/core/styles/withStyles';
+// import { inject, observer } from "../../../node_modules/mobx-react";
 
 const styles = theme => ({
   select: {
@@ -32,6 +33,8 @@ const styles = theme => ({
     width: 200
   }
 });
+
+// const Settings = inject("SettingsStore")(observer());
 
 class Settings extends React.Component {
   state = {
