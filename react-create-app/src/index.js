@@ -11,9 +11,11 @@ import registerServiceWorker from 'registerServiceWorker';
 import indexRoutes from 'routes/index.jsx';
 
 import settingsStore from 'stores/settingsStore';
+import userStore from 'stores/userStore';
 
 const stores = {
-  settingsStore
+  settingsStore,
+  userStore
 };
 
 const hist = createBrowserHistory();
