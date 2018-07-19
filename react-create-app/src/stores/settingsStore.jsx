@@ -1,61 +1,91 @@
 import { observable, action } from 'mobx';
+import agent from '../agent';
 
 export class SettingsStore {
-  @observable httpPort = 80;
-  @observable httpsPort = 443;
-  @observable telnetPort = 23;
-  @observable sshPort = 22;
-  @observable idleTimeout = 480;
-  @observable redirectToHttps = true;
-  @observable timezone = 4;
-  @observable server = 'fortiguard';
-  @observable serverDomain = '';
-  @observable syncWithNtpServer = false;
-  @observable syncInterval = 200;
+  @observable inProgress = false;
+  @observable errors = undefined;
+
+  @observable
+  values = {
+    httpPort: 80,
+    httpsPort: 443,
+    telnetPort: 23,
+    sshPort: 22,
+    idleTimeout: 480,
+    redirectToHttps: true,
+    timezone: 4,
+    server: 'fortiguard',
+    serverDomain: '',
+    syncWithNtpServer: false,
+    syncInterval: 200
+  };
 
   @action
   setHttpPort(port) {
-    this.httpPort = port;
+    this.values.httpPort = port;
   }
   @action
   setHttpsPort(port) {
-    this.httpsPort = port;
+    this.values.httpsPort = port;
   }
   @action
   setTelnetPort(port) {
-    this.telnetPort = port;
+    this.values.telnetPort = port;
   }
   @action
   setSshPort(port) {
-    this.sshPort = port;
+    this.values.sshPort = port;
   }
   @action
   setIdleTimeout(timeout) {
-    this.idleTimeout = timeout;
+    this.values.idleTimeout = timeout;
   }
   @action
   setRedirectToHttps(redirect) {
-    this.redirectToHttps = redirect;
+    this.values.redirectToHttps = redirect;
   }
   @action
   setTimezone(timezone) {
-    this.timezone = timezone;
+    this.values.timezone = timezone;
   }
   @action
   setServer(server) {
-    this.server = server;
+    this.values.server = server;
   }
   @action
   setServerDomain(domain) {
-    this.serverDomain = domain;
+    this.values.serverDomain = domain;
   }
   @action
   setSyncWithNtpServer(sync) {
-    this.syncWithNtpServer = sync;
+    this.values.syncWithNtpServer = sync;
   }
   @action
   setSyncInterval(interval) {
-    this.syncInterval = interval;
+    this.values.syncInterval = interval;
+  }
+
+  @action
+  save() {
+    this.inProgress = true;
+    this.errors = undefined;
+
+    return agent.Settings.save(this.values)
+      .then(({ body }) => {
+        console.log(body);
+      })
+      .catch(
+        action(err => {
+          this.errors =
+            err.response && err.response.body && err.response.body.errors;
+          throw err;
+        })
+      )
+      .finally(
+        action(() => {
+          this.inProgress = false;
+        })
+      );
   }
 }
 

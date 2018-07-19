@@ -54,21 +54,13 @@ class Settings extends React.Component {
     this.props.settingsStore.setSyncInterval(e.target.value);
   changeSyncWithNtpServer = e =>
     this.props.settingsStore.setSyncWithNtpServer(e.target.checked);
+  handleSave = e => {
+    e.preventDefault();
+    this.props.settingsStore.save();
+  };
   render() {
     const { classes } = this.props;
-    const {
-      httpPort,
-      httpsPort,
-      timezone,
-      syncWithNtpServer,
-      server,
-      syncInterval,
-      serverDomain,
-      redirectToHttps,
-      telnetPort,
-      sshPort,
-      idleTimeout
-    } = this.props.settingsStore;
+    const { values } = this.props.settingsStore;
     return (
       <div>
         <Grid container>
@@ -88,7 +80,7 @@ class Settings extends React.Component {
                     <FormControl className={classes.select}>
                       <InputLabel htmlFor="timezone">Time Zone</InputLabel>
                       <Select
-                        value={timezone}
+                        value={values.timezone}
                         onChange={this.changeTimezone}
                         inputProps={{ name: 'timezone', id: 'timezone' }}
                       >
@@ -105,7 +97,7 @@ class Settings extends React.Component {
                     <FormControlLabel
                       control={
                         <Checkbox
-                          checked={syncWithNtpServer}
+                          checked={values.syncWithNtpServer}
                           onChange={this.changeSyncWithNtpServer}
                           value="syncWithNtpServer"
                           color="primary"
@@ -119,13 +111,13 @@ class Settings extends React.Component {
                       component="fieldset"
                       required
                       className={''}
-                      disabled={!syncWithNtpServer}
+                      disabled={!values.syncWithNtpServer}
                     >
                       <RadioGroup
                         aria-label="server"
                         name="server"
                         className={''}
-                        value={server}
+                        value={values.server}
                         onChange={this.changeServer}
                         row
                       >
@@ -147,21 +139,21 @@ class Settings extends React.Component {
                       id="sync-interval"
                       label="Sync Interval"
                       className={classes.textField}
-                      value={syncInterval}
+                      value={values.syncInterval}
                       onChange={this.changeSyncInterval}
                       margin="normal"
                       helperText="(1 - 1440 mins)"
-                      disabled={!syncWithNtpServer}
+                      disabled={!values.syncWithNtpServer}
                     />
-                    {server === 'specify' && (
+                    {values.server === 'specify' && (
                       <TextField
                         id="server-domain"
                         label="Server"
                         className={classes.textField}
-                        value={serverDomain}
+                        value={values.serverDomain}
                         onChange={this.changeServerDomain}
                         margin="normal"
-                        disabled={!syncWithNtpServer}
+                        disabled={!values.syncWithNtpServer}
                       />
                     )}
                   </GridItem>
@@ -175,7 +167,7 @@ class Settings extends React.Component {
                       id="http-port"
                       label="HTTP Port"
                       className={classes.textField}
-                      value={httpPort}
+                      value={values.httpPort}
                       onChange={this.changeHttpPort}
                       margin="normal"
                     />
@@ -184,7 +176,7 @@ class Settings extends React.Component {
                     <FormControlLabel
                       control={
                         <Checkbox
-                          checked={redirectToHttps}
+                          checked={values.redirectToHttps}
                           onChange={this.changeRedirectToHttps}
                           value="redirectToHttps"
                           color="primary"
@@ -198,7 +190,7 @@ class Settings extends React.Component {
                       id="https-port"
                       label="HTTPS Port"
                       className={classes.textField}
-                      value={httpsPort}
+                      value={values.httpsPort}
                       onChange={this.changeHttpsPort}
                       margin="normal"
                     />
@@ -208,7 +200,7 @@ class Settings extends React.Component {
                       id="telnet-port"
                       label="Telnet Port"
                       className={classes.textField}
-                      value={telnetPort}
+                      value={values.telnetPort}
                       onChange={this.changeTelnetPort}
                       margin="normal"
                     />
@@ -216,7 +208,7 @@ class Settings extends React.Component {
                       id="ssh-port"
                       label="SSH Port"
                       className={classes.textField}
-                      value={sshPort}
+                      value={values.sshPort}
                       onChange={this.changeSshPort}
                       margin="normal"
                     />
@@ -224,7 +216,7 @@ class Settings extends React.Component {
                       id="idle-timeout"
                       label="Idle Timeout"
                       className={classes.textField}
-                      value={idleTimeout}
+                      value={values.idleTimeout}
                       onChange={this.changeIdleTimeout}
                       margin="normal"
                       helperText="Minutes (1 - 480)"
@@ -233,7 +225,9 @@ class Settings extends React.Component {
                 </Grid>
               </CardBody>
               <CardFooter>
-                <Button color="info">Save</Button>
+                <Button color="info" onClick={this.handleSave}>
+                  Save
+                </Button>
               </CardFooter>
             </Card>
           </GridItem>

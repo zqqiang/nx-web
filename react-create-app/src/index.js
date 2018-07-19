@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import promiseFinally from 'promise.prototype.finally';
 import { createBrowserHistory } from 'history';
 import { Router, Route, Switch } from 'react-router-dom';
 import { Provider } from 'mobx-react';
@@ -17,6 +18,8 @@ const stores = {
   settingsStore,
   userStore
 };
+
+promiseFinally.shim();
 
 const hist = createBrowserHistory();
 

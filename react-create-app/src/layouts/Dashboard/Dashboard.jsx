@@ -30,7 +30,8 @@ const switchRoutes = (
 class App extends React.Component {
   render() {
     const { classes, ...rest } = this.props;
-    if (!this.props.userStore.currentUser) {
+    // temporary disable login page
+    if (false && !this.props.userStore.currentUser) {
       return <div>Login Page</div>;
     } else {
       return (
