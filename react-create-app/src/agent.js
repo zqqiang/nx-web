@@ -3,7 +3,7 @@ import _superagent from 'superagent';
 
 const superagent = superagentPromise(_superagent, global.Promise);
 
-const API_ROOT = 'https://localhost:3000/api';
+const API_ROOT = 'http://localhost:8080/api';
 
 const handleErrors = err => {
   if (err && err.response && err.response.status === 401) {
@@ -18,7 +18,6 @@ const tokenPlugin = req => {
   //   if (commonStore.token) {
   //     req.set("authorization", `Token ${commonStore.token}`);
   //   }
-  console.log(`tokenPlugin...`);
 };
 
 const requests = {

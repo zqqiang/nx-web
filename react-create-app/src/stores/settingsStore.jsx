@@ -71,8 +71,8 @@ export class SettingsStore {
     this.errors = undefined;
 
     return agent.Settings.save(this.values)
-      .then(({ body }) => {
-        console.log(body);
+      .then(settings => {
+        console.log(settings);
       })
       .catch(
         action(err => {

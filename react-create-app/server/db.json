@@ -1,0 +1,17 @@
+{
+  "settings": {
+    "settings": {
+      "httpPort": 80,
+      "httpsPort": 443,
+      "telnetPort": 23,
+      "sshPort": 22,
+      "idleTimeout": 480,
+      "redirectToHttps": true,
+      "timezone": 4,
+      "server": "fortiguard",
+      "serverDomain": "",
+      "syncWithNtpServer": false,
+      "syncInterval": 200
+    }
+  }
+}
