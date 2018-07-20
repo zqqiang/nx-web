@@ -34,7 +34,7 @@ const styles = theme => ({
   }
 });
 
-@inject('settingsStore')
+@inject('settingsStore', 'timezonesStore')
 @observer
 class Settings extends React.Component {
   changeHttpPort = e => this.props.settingsStore.setHttpPort(e.target.value);
@@ -58,9 +58,14 @@ class Settings extends React.Component {
     e.preventDefault();
     this.props.settingsStore.save();
   };
+  componentDidMount() {
+    this.props.timezonesStore.loadTimezones();
+  }
   render() {
     const { classes } = this.props;
     const { values } = this.props.settingsStore;
+    const { timezones } = this.props.timezonesStore;
+
     return (
       <div>
         <Grid container>
@@ -84,12 +89,15 @@ class Settings extends React.Component {
                         onChange={this.changeTimezone}
                         inputProps={{ name: 'timezone', id: 'timezone' }}
                       >
-                        <MenuItem value={4}>
-                          (GMT-8:00)Pacific Time(US & Canada){' '}
-                        </MenuItem>
-                        <MenuItem value={55}>
-                          (GMT+8:00)Beijing,ChongQing,HongKong
-                        </MenuItem>
+                        {timezones.length &&
+                          timezones.length !== 0 &&
+                          timezones.map(timezone => {
+                            return (
+                              <MenuItem value={timezone.id}>
+                                {timezone.text}
+                              </MenuItem>
+                            );
+                          })}
                       </Select>
                     </FormControl>
                   </GridItem>

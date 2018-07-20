@@ -51,6 +51,11 @@ const Settings = {
   save: settings => requests.put('/settings', { settings })
 };
 
+const Timezones = {
+  all: () => requests.get('/timezones')
+};
+
 export default {
-  Settings
+  Settings,
+  Timezones
 };

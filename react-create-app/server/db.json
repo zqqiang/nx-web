@@ -13,5 +13,17 @@
       "syncWithNtpServer": false,
       "syncInterval": 200
     }
+  },
+  "timezones": {
+    "timezones": [
+      {
+        "id": 1,
+        "text": ""
+      },
+      {
+        "id": 2,
+        "text": ""
+      }
+    ]
   }
 }

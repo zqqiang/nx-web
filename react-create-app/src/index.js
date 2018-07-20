@@ -12,10 +12,12 @@ import registerServiceWorker from 'registerServiceWorker';
 import indexRoutes from 'routes/index.jsx';
 
 import settingsStore from 'stores/settingsStore';
+import timezonesStore from 'stores/timezonesStore';
 import userStore from 'stores/userStore';
 
 const stores = {
   settingsStore,
+  timezonesStore,
   userStore
 };
 
