@@ -93,7 +93,7 @@ class Settings extends React.Component {
                           timezones.length !== 0 &&
                           timezones.map(timezone => {
                             return (
-                              <MenuItem value={timezone.id}>
+                              <MenuItem value={timezone.id} key={timezone.id}>
                                 {timezone.text}
                               </MenuItem>
                             );

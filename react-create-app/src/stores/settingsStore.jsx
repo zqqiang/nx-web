@@ -13,7 +13,7 @@ export class SettingsStore {
     sshPort: 22,
     idleTimeout: 480,
     redirectToHttps: true,
-    timezone: 4,
+    timezone: '55',
     server: 'fortiguard',
     serverDomain: '',
     syncWithNtpServer: false,

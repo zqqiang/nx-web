@@ -17,13 +17,70 @@
   "timezones": {
     "timezones": [
       {
-        "id": 1,
-        "text": ""
+        "text": "(GMT+1:00)Amsterdam,Berlin,Bern,Rome,Stockholm,Vienna ",
+        "id": "26"
       },
       {
-        "id": 2,
-        "text": ""
-      }
+        "text": "(GMT+1:00)Belgrade,Bratislava,Budapest,Ljubljana,Prague ",
+        "id": "27"
+      },
+      { "text": "(GMT+1:00)Brussels,Copenhagen,Madrid,Paris ", "id": "28" },
+      { "text": "(GMT+1:00)Namibia ", "id": "78" },
+      { "text": "(GMT+1:00)Sarajevo,Skopje,Warsaw,Zagreb ", "id": "29" },
+      { "text": "(GMT+1:00)West Central Africa ", "id": "30" },
+      { "text": "(GMT+2:00)Athens,Sofia ", "id": "31" },
+      { "text": "(GMT+2:00)Istanbul ", "id": "85" },
+      { "text": "(GMT+2:00)Bucharest  ", "id": "32" },
+      { "text": "(GMT+2:00)Cairo ", "id": "33" },
+      { "text": "(GMT+2:00)Harare,Pretoria ", "id": "34" },
+      { "text": "(GMT+2:00)Helsinki,Riga,Tallinn ", "id": "35" },
+      { "text": "(GMT+2:00)Jerusalem ", "id": "36" },
+      { "text": "(GMT+3:00)Baghdad ", "id": "37" },
+      { "text": "(GMT+3:00)Kuwait,Riyadh ", "id": "38" },
+      { "text": "(GMT+3:00)Moscow ", "id": "83" },
+      { "text": "(GMT+3:00)Minsk ", "id": "84" },
+      { "text": "(GMT+3:00)Nairobi ", "id": "40" },
+      { "text": "(GMT+3:30)Tehran ", "id": "41" },
+      { "text": "(GMT+4:00)Abu Dhabi,Muscat ", "id": "42" },
+      { "text": "(GMT+4:00)Baku ", "id": "43" },
+      { "text": "(GMT+3:00)St.Petersburg,Volgograd ", "id": "39" },
+      { "text": "(GMT+4:30)Kabul ", "id": "44" },
+      { "text": "(GMT+5:00)Islamabad,Karachi,Tashkent ", "id": "46" },
+      { "text": "(GMT+5:30)Kolkata,Chennai,Mumbai,New Delhi ", "id": "47" },
+      { "text": "(GMT+5:30)Sri Jayawardenepara ", "id": "51" },
+      { "text": "(GMT+5:45)Kathmandu ", "id": "48" },
+      { "text": "(GMT+5:00)Ekaterinburg ", "id": "45" },
+      { "text": "(GMT+6:00)Almaty,Novosibirsk ", "id": "49" },
+      { "text": "(GMT+6:00)Astana,Dhaka ", "id": "50" },
+      { "text": "(GMT+6:30)Rangoon ", "id": "52" },
+      { "text": "(GMT+7:00)Bangkok,Hanoi,Jakarta ", "id": "53" },
+      { "text": "(GMT+7:00)Krasnoyarsk ", "id": "54" },
+      {
+        "text": "(GMT+8:00)Beijing,ChongQing,HongKong,Urumgi,Irkutsk ",
+        "id": "55"
+      },
+      { "text": "(GMT+8:00)Ulaan Bataar ", "id": "56" },
+      { "text": "(GMT+8:00)Kuala Lumpur,Singapore ", "id": "57" },
+      { "text": "(GMT+8:00)Perth ", "id": "58" },
+      { "text": "(GMT+8:00)Taipei ", "id": "59" },
+      { "text": "(GMT+9:00)Osaka,Sapporo,Tokyo,Seoul ", "id": "60" },
+      { "text": "(GMT+9:30)Adelaide ", "id": "62" },
+      { "text": "(GMT+9:30)Darwin ", "id": "63" },
+      { "text": "(GMT+9:00)Yakutsk ", "id": "61" },
+      { "text": "(GMT+10:00)Brisbane ", "id": "64" },
+      { "text": "(GMT+10:00)Canberra,Melbourne,Sydney ", "id": "65" },
+      { "text": "(GMT+10:00)Guam,Port Moresby ", "id": "66" },
+      { "text": "(GMT+10:00)Hobart ", "id": "67" },
+      { "text": "(GMT+10:00)Vladivostok ", "id": "68" },
+      { "text": "(GMT+10:00)Magadan ", "id": "69" },
+      { "text": "(GMT+11:00)Solomon Is.,New Caledonia ", "id": "70" },
+      { "text": "(GMT+12:00)Auckland,Wellington ", "id": "71" },
+      { "text": "(GMT+12:00)Fiji,Kamchatka,Marshall Is. ", "id": "72" },
+      { "text": "(GMT+12:00)Eniwetok,Kwajalein ", "id": "0" },
+      { "text": "(GMT+12:45)Chatham Islands ", "id": "82" },
+      { "text": "(GMT+13:00)Nuku'alofa ", "id": "73" },
+      { "text": "(GMT+13:00)Samoa ", "id": "86" },
+      { "text": "(GMT+14:00)Kiritimati ", "id": "76" }
     ]
   }
 }

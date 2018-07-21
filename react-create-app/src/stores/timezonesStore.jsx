@@ -2,7 +2,8 @@ import { observable, computed, action } from 'mobx';
 import agent from 'agent';
 
 export class TimezonesStore {
-  @observable timezonesRegistry = observable.map();
+  @observable isLoading = false;
+  @observable timezonesRegistry = new Map();
 
   @computed
   get timezones() {
@@ -12,14 +13,21 @@ export class TimezonesStore {
 
   @action
   loadTimezones() {
-    return agent.Timezones.all().then(
-      action(({ timezones }) => {
-        this.timezonesRegistry.clear();
-        timezones.forEach(timezone => {
-          this.timezonesRegistry.set(timezone.id, timezone);
-        });
-      })
-    );
+    this.isLoading = true;
+    return agent.Timezones.all()
+      .then(
+        action(({ timezones }) => {
+          this.timezonesRegistry.clear();
+          timezones.forEach(timezone =>
+            this.timezonesRegistry.set(timezone.id, timezone)
+          );
+        })
+      )
+      .finally(
+        action(() => {
+          this.isLoading = false;
+        })
+      );
   }
 }
 
