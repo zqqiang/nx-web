@@ -8,6 +8,7 @@ React Create App demo is a single page website using [create-react-app](https://
 
 #### Npm Scripts
 - `npm start` 
+- `npm run server` 
 - `npm run build` 
 
 ## Highlight
