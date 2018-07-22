@@ -3,6 +3,7 @@ import agent from 'agent';
 
 export class SettingsStore {
   @observable inProgress = false;
+  @observable isSaved = false;
   @observable errors = undefined;
 
   @observable
@@ -69,6 +70,7 @@ export class SettingsStore {
   save() {
     this.inProgress = true;
     this.errors = undefined;
+    this.isSaved = false;
 
     return agent.Settings.save(this.values)
       .then(settings => {})
@@ -82,6 +84,7 @@ export class SettingsStore {
       .finally(
         action(() => {
           this.inProgress = false;
+          this.isSaved = true;
         })
       );
   }

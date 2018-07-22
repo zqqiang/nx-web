@@ -12,6 +12,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import Typography from '@material-ui/core/Typography';
+import Update from '@material-ui/icons/Update';
 
 import Button from 'components/CustomButtons/Button.jsx';
 import Card from 'components/Card/Card.jsx';
@@ -31,6 +32,16 @@ const styles = theme => ({
     marginLeft: theme.spacing.unit,
     marginRight: theme.spacing.unit,
     width: 200
+  },
+  typography: {
+    marginTop: '16px',
+    marginBottom: '8px'
+  },
+  stats: {
+    color: '#999999',
+    display: ' inline-flex',
+    fontSize: '12px',
+    lineHeight: '22px'
   }
 });
 
@@ -58,17 +69,18 @@ class Settings extends React.Component {
     e.preventDefault();
     this.props.settingsStore.save();
   };
+  handleClick = e => (this.props.settingsStore.isSaved = false);
   componentDidMount() {
     this.props.timezonesStore.loadTimezones();
   }
   render() {
     const { classes } = this.props;
-    const { values } = this.props.settingsStore;
+    const { values, isSaved } = this.props.settingsStore;
     const { timezones } = this.props.timezonesStore;
 
     return (
       <div>
-        <Grid container>
+        <Grid container onClick={this.handleClick}>
           <GridItem xs={12} sm={12} md={8}>
             <Card>
               <CardHeader color="info">
@@ -77,7 +89,11 @@ class Settings extends React.Component {
               <CardBody>
                 <Grid container>
                   <GridItem xs={12} sm={12} md={12}>
-                    <Typography variant="headline" component="h2">
+                    <Typography
+                      variant="headline"
+                      component="h2"
+                      className={classes.typography}
+                    >
                       System Time
                     </Typography>
                   </GridItem>
@@ -165,7 +181,11 @@ class Settings extends React.Component {
                     )}
                   </GridItem>
                   <GridItem xs={12} sm={12} md={12}>
-                    <Typography variant="headline" component="h2">
+                    <Typography
+                      variant="headline"
+                      component="h2"
+                      className={classes.typography}
+                    >
                       Administration Settings
                     </Typography>
                   </GridItem>
@@ -232,6 +252,12 @@ class Settings extends React.Component {
                 <Button color="info" onClick={this.handleSave}>
                   Save
                 </Button>
+                {isSaved && (
+                  <div className={classes.stats}>
+                    <Update />
+                    Just Saved
+                  </div>
+                )}
               </CardFooter>
             </Card>
           </GridItem>
