@@ -146,7 +146,6 @@ class Settings extends React.Component {
                     <TextField
                       id="sync-interval"
                       label="Sync Interval"
-                      className={classes.textField}
                       value={values.syncInterval}
                       onChange={this.changeSyncInterval}
                       margin="normal"
@@ -174,7 +173,6 @@ class Settings extends React.Component {
                     <TextField
                       id="http-port"
                       label="HTTP Port"
-                      className={classes.textField}
                       value={values.httpPort}
                       onChange={this.changeHttpPort}
                       margin="normal"
@@ -197,13 +195,10 @@ class Settings extends React.Component {
                     <TextField
                       id="https-port"
                       label="HTTPS Port"
-                      className={classes.textField}
                       value={values.httpsPort}
                       onChange={this.changeHttpsPort}
                       margin="normal"
                     />
-                  </GridItem>
-                  <GridItem xs={12} sm={12} md={12}>
                     <TextField
                       id="telnet-port"
                       label="Telnet Port"
@@ -212,10 +207,11 @@ class Settings extends React.Component {
                       onChange={this.changeTelnetPort}
                       margin="normal"
                     />
+                  </GridItem>
+                  <GridItem xs={12} sm={12} md={12}>
                     <TextField
                       id="ssh-port"
                       label="SSH Port"
-                      className={classes.textField}
                       value={values.sshPort}
                       onChange={this.changeSshPort}
                       margin="normal"

@@ -8,9 +8,9 @@
       "idleTimeout": 480,
       "redirectToHttps": true,
       "timezone": "55",
-      "server": "fortiguard",
+      "server": "specify",
       "serverDomain": "",
-      "syncWithNtpServer": false,
+      "syncWithNtpServer": true,
       "syncInterval": 200
     }
   },
