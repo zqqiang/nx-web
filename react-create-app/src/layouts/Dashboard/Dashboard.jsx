@@ -13,7 +13,7 @@ import dashboardStyle from 'assets/jss/material-dashboard-react/layouts/dashboar
 
 import logo from 'assets/img/reactlogo.png';
 import image from 'assets/img/sidebar-4.jpg';
-import { inject, observer } from 'mobx-react';
+import { observer } from 'mobx-react';
 
 const switchRoutes = (
   <Switch>
@@ -25,34 +25,28 @@ const switchRoutes = (
   </Switch>
 );
 
-@inject('userStore')
 @observer
 class App extends React.Component {
   render() {
     const { classes, ...rest } = this.props;
-    // temporary disable login page
-    if (false && !this.props.userStore.currentUser) {
-      return <div>Login Page</div>;
-    } else {
-      return (
-        <div className={classes.wrapper}>
-          <Sidebar
-            routes={dashboardRoutes}
-            logoText={'React Cloud'}
-            logo={logo}
-            image={image}
-            color="blue"
-            {...rest}
-          />
-          <div className={classes.mainPanel} ref="mainPanel">
-            <Header routes={dashboardRoutes} {...rest} />
-            <div className={classes.content}>
-              <div className={classes.container}>{switchRoutes}</div>
-            </div>
+    return (
+      <div className={classes.wrapper}>
+        <Sidebar
+          routes={dashboardRoutes}
+          logoText={'React Cloud'}
+          logo={logo}
+          image={image}
+          color="blue"
+          {...rest}
+        />
+        <div className={classes.mainPanel} ref="mainPanel">
+          <Header routes={dashboardRoutes} {...rest} />
+          <div className={classes.content}>
+            <div className={classes.container}>{switchRoutes}</div>
           </div>
         </div>
-      );
-    }
+      </div>
+    );
   }
 }
 
