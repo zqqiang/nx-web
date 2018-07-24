@@ -1,8 +1,8 @@
-import Fos from 'layouts/Fos';
+import Cloud from 'layouts/Cloud';
 import Dashboard from 'layouts/Dashboard/Dashboard';
 
 const indexRoutes = [
-  { path: '/fos', component: Fos },
+  { path: '/cloud', component: Cloud },
   { path: '/', component: Dashboard }
 ];
 
