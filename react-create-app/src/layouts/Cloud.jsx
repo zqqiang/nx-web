@@ -4,13 +4,10 @@ import PropTypes from 'prop-types';
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles';
 import Drawer from '@material-ui/core/Drawer';
-import List from '@material-ui/core/List';
 import Typography from '@material-ui/core/Typography';
-import Divider from '@material-ui/core/Divider';
 
 import MainHeader from 'components/Header/MainHeader';
-
-// import appStyle from 'assets/jss/material-dashboard-pro-react/layouts/dashboardStyle.jsx';
+import ManagementList from 'components/List/ManagementList';
 
 const drawerWidth = 240;
 
@@ -49,9 +46,7 @@ class Cloud extends React.Component {
           }}
         >
           <div className={classes.toolbar} />
-          <List>List Top</List>
-          <Divider />
-          <List>List Bottom</List>
+          <ManagementList />
         </Drawer>
         <main className={classes.content}>
           <div className={classes.toolbar} />
