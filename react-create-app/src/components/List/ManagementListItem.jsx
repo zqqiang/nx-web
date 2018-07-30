@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import cx from 'classnames';
+
 import { withStyles } from '@material-ui/core/styles';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
@@ -7,23 +9,23 @@ import ListItemText from '@material-ui/core/ListItemText';
 
 import StarBorder from '@material-ui/icons/StarBorder';
 
-const styles = theme => ({
-  nested: {
-    paddingLeft: theme.spacing.unit * 4
-  }
-});
+const styles = theme => ({});
 
 class ManagementListItem extends React.Component {
-  handleClick = () => {};
-
+  activeRoute(routeName) {
+    console.log(routeName);
+    return this.props.name.indexOf(routeName) > -1 ? true : false;
+  }
   render() {
-    const { classes, name, active, onClick } = this.props;
+    const { name, active } = this.props;
+    const navLinkClasses = cx({ blue: this.activeRoute(name) });
+
     return (
-      <ListItem button className={classes.nested} onClick={onClick}>
+      <ListItem button className={''}>
         <ListItemIcon>
           {active === name ? <StarBorder /> : <div />}
         </ListItemIcon>
-        <ListItemText inset primary={name} />
+        <ListItemText primary={name} className={navLinkClasses} />
       </ListItem>
     );
   }
