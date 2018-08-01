@@ -1,9 +1,9 @@
-import Cloud from 'layouts/Cloud';
+import ManagementDashboard from 'layouts/Dashboard/ManagementDashboard';
 import Dashboard from 'layouts/Dashboard/Dashboard';
 
 const indexRoutes = [
-  { path: '/cloud', component: Cloud },
-  { path: '/', component: Dashboard }
+  { path: '/dashboard', component: Dashboard },
+  { path: '/', component: ManagementDashboard }
 ];
 
 export default indexRoutes;
