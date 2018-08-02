@@ -4,36 +4,49 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles';
-// import Drawer from "@material-ui/core/Drawer";
-// import Typography from "@material-ui/core/Typography";
 
-// import MainHeader from "components/Header/MainHeader";
 import ManagementSidebar from 'components/Sidebar/ManagementSidebar';
 
 import managementRoutes from 'routes/management';
 
-const drawerWidth = 240;
+import {
+  drawerWidth,
+  transition,
+  containerFluid
+} from 'assets/jss/material-dashboard-pro-react.jsx';
 
 const styles = theme => ({
-  root: {
-    flexGrow: 1,
-    height: 430,
-    zIndex: 1,
-    overflow: 'hidden',
+  wrapper: {
     position: 'relative',
-    display: 'flex'
+    top: '0',
+    height: '100vh',
+    '&:after': {
+      display: 'table',
+      clear: 'both',
+      content: '" "'
+    }
   },
-  drawerPaper: {
+  mainPanel: {
+    transitionProperty: 'top, bottom, width',
+    transitionDuration: '.2s, .2s, .35s',
+    transitionTimingFunction: 'linear, linear, ease',
+    [theme.breakpoints.up('md')]: {
+      width: `calc(100% - ${drawerWidth}px)`
+    },
+    overflow: 'auto',
     position: 'relative',
-    width: drawerWidth
+    float: 'right',
+    ...transition,
+    maxHeight: '100%',
+    width: '100%',
+    overflowScrolling: 'touch'
   },
   content: {
-    flexGrow: 1,
-    backgroundColor: theme.palette.background.default,
-    padding: theme.spacing.unit * 3,
-    minWidth: 0 // So the Typography noWrap works
+    marginTop: '70px',
+    padding: '30px 15px',
+    minHeight: 'calc(100vh - 123px)'
   },
-  toolbar: theme.mixins.toolbar
+  container: { ...containerFluid }
 });
 
 const switchRoutes = (
@@ -41,18 +54,34 @@ const switchRoutes = (
     {managementRoutes.map((prop, key) => {
       if (prop.redirect)
         return <Redirect from={prop.path} to={prop.pathTo} key={key} />;
+      if (prop.collapse)
+        return prop.views.map((prop, key) => {
+          return (
+            <Route path={prop.path} component={prop.component} key={key} />
+          );
+        });
       return <Route path={prop.path} component={prop.component} key={key} />;
     })}
   </Switch>
 );
 
 class Cloud extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      bgColor: 'white'
+    };
+  }
   render() {
-    const { classes } = this.props;
+    const { classes, ...rest } = this.props;
     const mainPanel = classes.mainPanel;
     return (
       <div className={classes.wrapper}>
-        <ManagementSidebar routes={managementRoutes} />
+        <ManagementSidebar
+          routes={managementRoutes}
+          bgColor={this.state.bgColor}
+          {...rest}
+        />
         <div className={mainPanel} ref="mainPanel">
           <div className={classes.content}>
             <div className={classes.container}>{switchRoutes}</div>
