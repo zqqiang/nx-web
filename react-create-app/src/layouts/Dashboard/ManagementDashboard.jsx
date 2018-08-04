@@ -69,7 +69,8 @@ class Cloud extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      bgColor: 'white'
+      bgColor: 'white',
+      color: 'blue'
     };
   }
   render() {
@@ -79,6 +80,7 @@ class Cloud extends React.Component {
       <div className={classes.wrapper}>
         <ManagementSidebar
           routes={managementRoutes}
+          color={this.state.color}
           bgColor={this.state.bgColor}
           {...rest}
         />

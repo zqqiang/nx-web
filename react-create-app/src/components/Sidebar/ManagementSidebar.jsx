@@ -59,9 +59,6 @@ class ManagementSidebar extends React.Component {
         [classes.sidebarWrapperWithPerfectScrollbar]:
           navigator.platform.indexOf('Win') > -1
       });
-    const navLinkClasses = classes.itemLink;
-    const itemIcon = classes.itemIcon;
-    const itemText = classes.itemText;
     const collapseItemText =
       classes.collapseItemText +
       ' ' +
@@ -76,6 +73,20 @@ class ManagementSidebar extends React.Component {
             return null;
           }
           if (prop.collapse) {
+            const navLinkClasses =
+              classes.itemLink +
+              ' ' +
+              cx({
+                [' ' + classes.collapseActive]: this.activeRoute(prop.path)
+              });
+            const itemText =
+              classes.itemText +
+              ' ' +
+              cx({
+                [classes.itemTextMini]:
+                  this.props.miniActive && this.state.miniActive
+              });
+            const itemIcon = classes.itemIcon;
             return (
               <ListItem key={key} className={classes.item}>
                 <NavLink
@@ -134,6 +145,20 @@ class ManagementSidebar extends React.Component {
               </ListItem>
             );
           }
+          const navLinkClasses =
+            classes.itemLink +
+            ' ' +
+            cx({
+              [' ' + classes[color]]: this.activeRoute(prop.path)
+            });
+          const itemText =
+            classes.itemText +
+            ' ' +
+            cx({
+              [classes.itemTextMini]:
+                this.props.miniActive && this.state.miniActive
+            });
+          const itemIcon = classes.itemIcon;
           return (
             <ListItem key={key} className={classes.item}>
               <NavLink to={prop.path} className={navLinkClasses}>
@@ -173,7 +198,16 @@ class ManagementSidebar extends React.Component {
 
 ManagementSidebar.propTypes = {
   classes: PropTypes.object.isRequired,
-  bgColor: PropTypes.oneOf(['white', 'black', 'blue'])
+  bgColor: PropTypes.oneOf(['white', 'black', 'blue']),
+  color: PropTypes.oneOf([
+    'white',
+    'red',
+    'orange',
+    'green',
+    'blue',
+    'purple',
+    'rose'
+  ])
 };
 
 export default withStyles(sidebarStyle)(ManagementSidebar);

@@ -15,6 +15,12 @@ const dashRoutes = [
         name: 'Settings',
         mini: 'S',
         component: Settings
+      },
+      {
+        path: '/system/administrator',
+        name: 'Administrator',
+        mini: 'A'
+        // component:
       }
     ]
   },
