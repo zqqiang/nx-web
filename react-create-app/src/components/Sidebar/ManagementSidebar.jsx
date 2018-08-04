@@ -180,7 +180,7 @@ class ManagementSidebar extends React.Component {
     return (
       <div ref="mainPanel">
         <Hidden smDown>
-          <MainHeader />
+          <MainHeader color={classes[color]} />
           <Drawer
             variant="permanent"
             open
@@ -206,7 +206,8 @@ ManagementSidebar.propTypes = {
     'green',
     'blue',
     'purple',
-    'rose'
+    'rose',
+    'cloud'
   ])
 };
 

@@ -70,7 +70,7 @@ class Cloud extends React.Component {
     super(props);
     this.state = {
       bgColor: 'white',
-      color: 'blue'
+      color: 'cloud'
     };
   }
   render() {

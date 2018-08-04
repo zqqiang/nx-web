@@ -37,9 +37,9 @@ const styles = theme => ({
 
 class MainHeader extends React.Component {
   render() {
-    const { classes } = this.props;
+    const { classes, color } = this.props;
     return (
-      <AppBar position="absolute" className={classes.appBar}>
+      <AppBar position="absolute" className={classes.appBar + ' ' + color}>
         <Toolbar>
           <Hidden mdUp>
             <IconButton
