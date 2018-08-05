@@ -6,11 +6,19 @@ import withStyles from '@material-ui/core/styles/withStyles';
 
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
-import Typography from '@material-ui/core/Typography';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import Collapse from '@material-ui/core/Collapse';
+
+import ChevronRight from '@material-ui/icons/ChevronRight';
+import ExpandMore from '@material-ui/icons/ExpandMore';
+import Folder from '@material-ui/icons/Folder';
 
 import MainHeader from 'components/Header/MainHeader';
+import Header from 'components/Header/Header';
 
 // import dashboardRoutes from "routes/dashboard";
 
@@ -29,7 +37,7 @@ const styles = theme => ({
   },
   drawerPaper: {
     position: 'relative',
-    width: drawerWidth
+    width: 240
   },
   content: {
     flexGrow: 1,
@@ -46,10 +54,11 @@ const styles = theme => ({
     fontWeight: 500,
     fontFamily: ['Roboto', 'Helvetica', 'Arial', 'sans-serif'],
     lineHeight: '1.16667em'
+  },
+  nested: {
+    paddingLeft: theme.spacing.unit * 4
   }
 });
-
-const drawerWidth = 240;
 
 // const switchRoutes = (
 //   <Switch>
@@ -63,11 +72,19 @@ const drawerWidth = 240;
 
 class App extends React.Component {
   state = {
-    value: 'fos'
+    value: 'fos',
+    open: true,
+    total: 3
   };
+
   handleChange = (event, value) => {
     this.setState({ value });
   };
+
+  handleClick = () => {
+    this.setState(state => ({ open: !state.open }));
+  };
+
   render() {
     const { classes } = this.props;
     const { value } = this.state;
@@ -87,25 +104,43 @@ class App extends React.Component {
       </Tabs>
     );
 
+    const list = (
+      <List component="nav">
+        <ListItem button onClick={this.handleClick}>
+          <ListItemIcon>
+            {this.state.open ? <ExpandMore /> : <ChevronRight />}
+          </ListItemIcon>
+          <ListItemText inset primary={'All (' + this.state.total + ')'} />
+        </ListItem>
+        <Collapse in={this.state.open} timeout="auto" unmountOnExit>
+          <List component="div" disablePadding>
+            <ListItem button className={classes.nested}>
+              <ListItemIcon>
+                <Folder />
+              </ListItemIcon>
+              <ListItemText
+                inset
+                primary={'<Default> (' + this.state.total + ')'}
+              />
+            </ListItem>
+          </List>
+        </Collapse>
+      </List>
+    );
+
     return (
       <div className={classes.root}>
         <MainHeader color={classes.blue} tabs={mainTabs} />
         <Drawer variant="permanent" classes={{ paper: classes.drawerPaper }}>
           <div className={classes.toolbar} />
-          <List />
+          {list}
         </Drawer>
-        {value === 'fos' && (
-          <main className={classes.content}>
-            <div className={classes.toolbar} />
-            <Typography noWrap>{'FortiGate Network'}</Typography>
-          </main>
-        )}
-        {value === 'ap' && (
-          <main className={classes.content}>
-            <div className={classes.toolbar} />
-            <Typography noWrap>{'FortiAP Network'}</Typography>
-          </main>
-        )}
+        <main className={classes.content}>
+          <div className={classes.toolbar} />
+          <Header />
+          {/* <Table /> */}
+          {/* <Footer /> */}
+        </main>
       </div>
     );
   }
