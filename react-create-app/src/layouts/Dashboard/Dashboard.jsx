@@ -4,16 +4,52 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 
 import withStyles from '@material-ui/core/styles/withStyles';
 
-import Header from 'components/Header/Header.jsx';
-import Sidebar from 'components/Sidebar/Sidebar.jsx';
+import Drawer from '@material-ui/core/Drawer';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import List from '@material-ui/core/List';
+import Typography from '@material-ui/core/Typography';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
 
 import dashboardRoutes from 'routes/dashboard.jsx';
 
-import dashboardStyle from 'assets/jss/material-dashboard-react/layouts/dashboardStyle.jsx';
+const styles = theme => ({
+  root: {
+    flexGrow: 1,
+    height: 430,
+    zIndex: 1,
+    overflow: 'hidden',
+    position: 'relative',
+    display: 'flex'
+  },
+  appBar: {
+    backgroundColor: '#2196F3',
+    zIndex: theme.zIndex.drawer + 1
+  },
+  drawerPaper: {
+    position: 'relative',
+    width: drawerWidth
+  },
+  content: {
+    flexGrow: 1,
+    backgroundColor: theme.palette.background.default,
+    padding: theme.spacing.unit * 3,
+    minWidth: 0 // So the Typography noWrap works
+  },
+  toolbar: theme.mixins.toolbar,
+  tabRoot: {
+    textTransform: 'initial'
+  },
+  tabLabel: {
+    fontSize: '1.3125rem',
+    fontWeight: 500,
+    fontFamily: ['Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+    lineHeight: '1.16667em'
+  }
+});
 
-import logo from 'assets/img/reactlogo.png';
-import image from 'assets/img/sidebar-4.jpg';
-import { observer } from 'mobx-react';
+const drawerWidth = 240;
 
 const switchRoutes = (
   <Switch>
@@ -25,26 +61,54 @@ const switchRoutes = (
   </Switch>
 );
 
-@observer
 class App extends React.Component {
+  state = {
+    value: 'fos'
+  };
+  handleChange = (event, value) => {
+    this.setState({ value });
+  };
   render() {
-    const { classes, ...rest } = this.props;
+    const { classes } = this.props;
+    const { value } = this.state;
+
     return (
-      <div className={classes.wrapper}>
-        <Sidebar
-          routes={dashboardRoutes}
-          logoText={'React Cloud'}
-          logo={logo}
-          image={image}
-          color="blue"
-          {...rest}
-        />
-        <div className={classes.mainPanel} ref="mainPanel">
-          <Header routes={dashboardRoutes} {...rest} />
-          <div className={classes.content}>
-            <div className={classes.container}>{switchRoutes}</div>
-          </div>
-        </div>
+      <div className={classes.root}>
+        <AppBar position="absolute" className={classes.appBar}>
+          <Toolbar>
+            <Typography variant="title" color="inherit" noWrap>
+              FortiCloud
+            </Typography>
+            <Tabs value={value} onChange={this.handleChange}>
+              <Tab
+                label="FortiGate Network"
+                value="fos"
+                classes={{ root: classes.tabRoot, label: classes.tabLabel }}
+              />
+              <Tab
+                label="FortiAP Network"
+                value="ap"
+                classes={{ root: classes.tabRoot, label: classes.tabLabel }}
+              />
+            </Tabs>
+          </Toolbar>
+        </AppBar>
+        <Drawer variant="permanent" classes={{ paper: classes.drawerPaper }}>
+          <div className={classes.toolbar} />
+          <List />
+        </Drawer>
+        {value === 'fos' && (
+          <main className={classes.content}>
+            <div className={classes.toolbar} />
+            <Typography noWrap>{'FortiGate Network'}</Typography>
+          </main>
+        )}
+        {value === 'ap' && (
+          <main className={classes.content}>
+            <div className={classes.toolbar} />
+            <Typography noWrap>{'FortiAP Network'}</Typography>
+          </main>
+        )}
       </div>
     );
   }
@@ -54,4 +118,4 @@ App.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
-export default withStyles(dashboardStyle)(App);
+export default withStyles(styles)(App);
