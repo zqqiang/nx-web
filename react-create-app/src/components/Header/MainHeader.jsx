@@ -20,9 +20,6 @@ import CloudQueue from '@material-ui/icons/CloudQueue';
 import Home from '@material-ui/icons/Home';
 
 const styles = theme => ({
-  root: {
-    flexGrow: 1
-  },
   flex: {
     flexGrow: 1
   },
@@ -32,12 +29,15 @@ const styles = theme => ({
   },
   appBar: {
     zIndex: theme.zIndex.drawer + 1
+  },
+  logo: {
+    margin: '0px 10px'
   }
 });
 
 class MainHeader extends React.Component {
   render() {
-    const { classes, color } = this.props;
+    const { classes, color, tabs } = this.props;
     return (
       <AppBar position="absolute" className={classes.appBar + ' ' + color}>
         <Toolbar>
@@ -55,16 +55,15 @@ class MainHeader extends React.Component {
               <CloudQueue />
             </IconButton>
           </Hidden>
-          <div className={classes.flex}>
-            <Typography variant="title" color="inherit">
-              FortiCloud
-              <Hidden smDown>
-                <IconButton aria-haspopup="true" color="inherit">
-                  <Home />
-                </IconButton>
-              </Hidden>
-            </Typography>
-          </div>
+          <Typography variant="title" color="inherit" className={classes.logo}>
+            FortiCloud
+          </Typography>
+          <Hidden smDown>
+            <IconButton aria-haspopup="true" color="inherit">
+              <Home />
+            </IconButton>
+          </Hidden>
+          <div className={classes.flex}>{tabs}</div>
           <Hidden smDown>
             <Button color="inherit">Account</Button>
             <IconButton aria-haspopup="true" color="inherit">
