@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import PerfectScrollbar from 'perfect-scrollbar';
 import { NavLink } from 'react-router-dom';
 import cx from 'classnames';
 
@@ -16,7 +17,22 @@ import MainHeader from 'components/Header/MainHeader';
 
 import sidebarStyle from 'assets/jss/material-dashboard-pro-react/components/sidebarStyle.jsx';
 
+var ps;
+
 class SidebarWrapper extends React.Component {
+  componentDidMount() {
+    if (navigator.platform.indexOf('Win') > -1) {
+      ps = new PerfectScrollbar(this.refs.sidebarWrapper, {
+        suppressScrollX: true,
+        suppressScrollY: false
+      });
+    }
+  }
+  componentWillUnmount() {
+    if (navigator.platform.indexOf('Win') > -1) {
+      ps.destroy();
+    }
+  }
   render() {
     const { className, links } = this.props;
     return (
@@ -30,7 +46,9 @@ class SidebarWrapper extends React.Component {
 class ManagementSidebar extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      miniActive: true
+    };
     this.activeRoute.bind(this);
   }
   activeRoute(routeName) {
@@ -182,6 +200,8 @@ class ManagementSidebar extends React.Component {
         <Hidden smDown>
           <MainHeader color={classes[color]} />
           <Drawer
+            onMouseOver={() => this.setState({ miniActive: false })}
+            onMouseOut={() => this.setState({ miniActive: true })}
             variant="permanent"
             open
             classes={{
