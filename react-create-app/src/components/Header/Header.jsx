@@ -40,6 +40,7 @@ class Header extends React.Component {
   };
   render() {
     const { classes } = this.props;
+    const { mode } = this.props;
 
     return (
       <FormGroup row>
@@ -70,36 +71,54 @@ class Header extends React.Component {
             />
             Search
           </Button>
-          <Button variant="outlined" className={classes.button}>
-            Add Filter
-            <ExpandMore />
-          </Button>
-          <span>Sort by</span>
-          <Button variant="outlined" className={classes.button}>
-            SN
-            <ExpandMore />
-          </Button>
+          {mode === 'fos' && (
+            <Button variant="outlined" size="small" className={classes.button}>
+              Add Filter
+              <ExpandMore />
+            </Button>
+          )}
+          {mode === 'fos' && <span>Sort by</span>}
+          {mode === 'fos' && (
+            <Button variant="outlined" size="small" className={classes.button}>
+              SN
+              <ExpandMore />
+            </Button>
+          )}
         </div>
         <Button color="primary" className={classes.button}>
           Inventory
         </Button>
-        <Button
-          variant="contained"
-          size="small"
-          color="primary"
-          className={classes.button}
-        >
-          Add FortiGate
-        </Button>
-        <Button
-          variant="contained"
-          size="small"
-          color="primary"
-          className={classes.button}
-        >
-          Group Management
-          <ExpandMore />
-        </Button>
+        {mode === 'fos' && (
+          <Button
+            variant="contained"
+            size="small"
+            color="primary"
+            className={classes.button}
+          >
+            Add FortiGate
+          </Button>
+        )}
+        {mode === 'fos' && (
+          <Button
+            variant="contained"
+            size="small"
+            color="primary"
+            className={classes.button}
+          >
+            Group Management
+            <ExpandMore />
+          </Button>
+        )}
+        {mode === 'ap' && (
+          <Button
+            variant="contained"
+            size="small"
+            color="primary"
+            className={classes.button}
+          >
+            Add FortiAP Network
+          </Button>
+        )}
       </FormGroup>
     );
   }

@@ -149,7 +149,7 @@ class App extends React.Component {
           </Drawer>
           <main className={classes.content}>
             <div className={classes.toolbar} />
-            <Header />
+            <Header mode={value} />
             {/* <Table /> */}
             {/* <Footer /> */}
           </main>
