@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 import withStyles from '@material-ui/core/styles/withStyles';
 
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
 import Tabs from '@material-ui/core/Tabs';
@@ -17,10 +18,20 @@ import ChevronRight from '@material-ui/icons/ChevronRight';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 import Folder from '@material-ui/icons/Folder';
 
+import blue from '@material-ui/core/colors/blue';
+import lightBlue from '@material-ui/core/colors/lightBlue';
+
 import MainHeader from 'components/Header/MainHeader';
 import Header from 'components/Header/Header';
 
 // import dashboardRoutes from "routes/dashboard";
+
+const theme = createMuiTheme({
+  palette: {
+    primary: blue,
+    secondary: lightBlue
+  }
+});
 
 const styles = theme => ({
   root: {
@@ -32,9 +43,9 @@ const styles = theme => ({
     top: '0',
     height: '100vh'
   },
-  blue: {
-    backgroundColor: '#2196F3'
-  },
+  // blue: {
+  //   backgroundColor: '#2196F3'
+  // },
   drawerPaper: {
     position: 'relative',
     width: 240
@@ -129,19 +140,21 @@ class App extends React.Component {
     );
 
     return (
-      <div className={classes.root}>
-        <MainHeader color={classes.blue} tabs={mainTabs} />
-        <Drawer variant="permanent" classes={{ paper: classes.drawerPaper }}>
-          <div className={classes.toolbar} />
-          {list}
-        </Drawer>
-        <main className={classes.content}>
-          <div className={classes.toolbar} />
-          <Header />
-          {/* <Table /> */}
-          {/* <Footer /> */}
-        </main>
-      </div>
+      <MuiThemeProvider theme={theme}>
+        <div className={classes.root}>
+          <MainHeader tabs={mainTabs} />
+          <Drawer variant="permanent" classes={{ paper: classes.drawerPaper }}>
+            <div className={classes.toolbar} />
+            {list}
+          </Drawer>
+          <main className={classes.content}>
+            <div className={classes.toolbar} />
+            <Header />
+            {/* <Table /> */}
+            {/* <Footer /> */}
+          </main>
+        </div>
+      </MuiThemeProvider>
     );
   }
 }
