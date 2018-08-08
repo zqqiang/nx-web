@@ -23,6 +23,7 @@ import lightBlue from '@material-ui/core/colors/lightBlue';
 
 import MainHeader from 'components/Header/MainHeader';
 import Header from 'components/Header/Header';
+import Table from 'components/Table/Table';
 
 // import dashboardRoutes from "routes/dashboard";
 
@@ -150,7 +151,7 @@ class App extends React.Component {
           <main className={classes.content}>
             <div className={classes.toolbar} />
             <Header mode={value} />
-            {/* <Table /> */}
+            <Table mode={value} />
             {/* <Footer /> */}
           </main>
         </div>
