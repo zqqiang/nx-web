@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
 
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles';
@@ -32,6 +33,15 @@ const styles = theme => ({
   },
   logo: {
     margin: '0px 10px'
+  },
+  link: {
+    color: 'inherit',
+    '&:hover': {
+      outline: 'none'
+    },
+    '&,&:hover,&:focus': {
+      color: 'inherit'
+    }
   }
 });
 
@@ -59,9 +69,11 @@ class MainHeader extends React.Component {
             FortiCloud
           </Typography>
           <Hidden smDown>
-            <IconButton aria-haspopup="true" color="inherit">
-              <Home />
-            </IconButton>
+            <NavLink to={`/`} className={classes.link}>
+              <IconButton aria-haspopup="true" color="inherit">
+                <Home />
+              </IconButton>
+            </NavLink>
           </Hidden>
           <div className={classes.flex}>{tabs}</div>
           <Hidden smDown>

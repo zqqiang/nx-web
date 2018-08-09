@@ -7,7 +7,7 @@
       "sshPort": 22,
       "idleTimeout": 480,
       "redirectToHttps": true,
-      "timezone": "57",
+      "timezone": "55",
       "server": "specify",
       "serverDomain": "",
       "syncWithNtpServer": true,

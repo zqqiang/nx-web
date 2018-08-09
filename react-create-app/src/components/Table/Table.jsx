@@ -20,6 +20,15 @@ const styles = theme => ({
   },
   table: {
     minWidth: 700
+  },
+  link: {
+    color: 'inherit',
+    '&:hover': {
+      outline: 'none'
+    },
+    '&,&:hover,&:focus': {
+      color: 'inherit'
+    }
   }
 });
 
@@ -117,9 +126,15 @@ class MainTable extends React.Component {
                 return (
                   <TableRow key={n.id}>
                     <TableCell component="th" scope="row">
-                      <NavLink to={`/management`}>{n.sn}</NavLink>
+                      <NavLink to={`/management`} className={classes.link}>
+                        {n.sn}
+                      </NavLink>
                     </TableCell>
-                    <TableCell>{n.name}</TableCell>
+                    <TableCell>
+                      <NavLink to={`/management`} className={classes.link}>
+                        {n.name}
+                      </NavLink>
+                    </TableCell>
                     <TableCell>{n.subAccount}</TableCell>
                     <TableCell>{n.firmware}</TableCell>
                     <TableCell>{n.status}</TableCell>
