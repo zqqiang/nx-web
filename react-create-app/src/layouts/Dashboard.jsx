@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import { Switch, Route, Redirect } from "react-router-dom";
 
 import withStyles from '@material-ui/core/styles/withStyles';
-
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
@@ -44,9 +42,6 @@ const styles = theme => ({
     top: '0',
     height: '100vh'
   },
-  // blue: {
-  //   backgroundColor: '#2196F3'
-  // },
   drawerPaper: {
     position: 'relative',
     width: 240
