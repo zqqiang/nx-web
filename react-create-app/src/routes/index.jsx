@@ -1,8 +1,8 @@
-import ManagementDashboard from 'layouts/Dashboard/ManagementDashboard';
-import Dashboard from 'layouts/Dashboard/Dashboard';
+import Management from 'layouts/Management';
+import Dashboard from 'layouts/Dashboard';
 
 const indexRoutes = [
-  { path: '/management', component: ManagementDashboard },
+  { path: '/management', component: Management },
   { path: '/', component: Dashboard }
 ];
 

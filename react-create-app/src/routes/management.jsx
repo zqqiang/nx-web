@@ -7,34 +7,34 @@ import Settings from 'views/System/Settings.jsx';
 const dashRoutes = [
   {
     collapse: true,
-    path: '/system',
+    path: '/management/system',
     name: 'System',
     state: 'openSystem',
     icon: SettingsIcon,
     views: [
       {
-        path: '/system/settings',
+        path: '/management/system/settings',
         name: 'Settings',
         mini: 'S',
         component: Settings
       },
       {
-        path: '/system/administrator',
+        path: '/management/system/administrator',
         name: 'Administrator',
         mini: 'A'
       },
       {
-        path: '/system/adminProfiles',
+        path: '/management/system/adminProfiles',
         name: 'Admin Profiles',
         mini: 'AP'
       },
       {
-        path: '/system/fortiGuard',
+        path: '/management/system/fortiGuard',
         name: 'ForktiGuard',
         mini: 'FG'
       },
       {
-        path: '/system/advanced',
+        path: '/management/system/advanced',
         name: 'Advanced',
         mini: 'A'
       }
@@ -42,38 +42,38 @@ const dashRoutes = [
   },
   {
     collapse: true,
-    path: '/network',
+    path: '/management/network',
     name: 'Network',
     state: 'openNetwork',
     icon: Dvr,
     views: [
       {
-        path: '/network/interfaces',
+        path: '/management/network/interfaces',
         name: 'Interfaces',
         mini: 'I'
       },
       {
-        path: '/network/dns',
+        path: '/management/network/dns',
         name: 'DNS',
         mini: 'D'
       },
       {
-        path: '/network/dnsServers',
+        path: '/management/network/dnsServers',
         name: 'DNS Servers',
         mini: 'DS'
       },
       {
-        path: '/network/staticRoutes',
+        path: '/management/network/staticRoutes',
         name: 'Static Routes',
         mini: 'SR'
       },
       {
-        path: '/network/policyRoutes',
+        path: '/management/network/policyRoutes',
         name: 'Policy Routes',
         mini: 'PR'
       },
       {
-        path: '/network/multicast',
+        path: '/management/network/multicast',
         name: 'Multicast',
         mini: 'M'
       }
@@ -81,54 +81,59 @@ const dashRoutes = [
   },
   {
     collapse: true,
-    path: '/policyObjects',
+    path: '/management/policyObjects',
     name: 'Policy & Objects',
     state: 'openPolicyObjects',
     icon: ArtTrack,
     views: [
       {
-        path: '/policyObjects/ipv4Policy',
+        path: '/management/policyObjects/ipv4Policy',
         name: 'IPv4 Policy',
         mini: 'IP'
       },
       {
-        path: '/policyObjects/addresses',
+        path: '/management/policyObjects/addresses',
         name: 'Addresses',
         mini: 'A'
       },
       {
-        path: '/policyObjects/services',
+        path: '/management/policyObjects/services',
         name: 'Services',
         mini: 'S'
       },
       {
-        path: '/policyObjects/schedules',
+        path: '/management/policyObjects/schedules',
         name: 'Schedules',
         mini: 'S'
       },
       {
-        path: '/policyObjects/virtualIps',
+        path: '/management/policyObjects/virtualIps',
         name: 'Virtual IPs',
         mini: 'VIP'
       },
       {
-        path: '/policyObjects/ipPools',
+        path: '/management/policyObjects/ipPools',
         name: 'IP Pools',
         mini: 'IP'
       },
       {
-        path: '/policyObjects/trafficShapers',
+        path: '/management/policyObjects/trafficShapers',
         name: 'Traffic Shapers',
         mini: 'TS'
       },
       {
-        path: '/policyObjects/trafficShapingPolicy',
+        path: '/management/policyObjects/trafficShapingPolicy',
         name: 'Traffic Shaping Policy',
         mini: 'TSP'
       }
     ]
   },
-  { redirect: true, path: '/', pathTo: '/system/settings', name: 'Settings' }
+  {
+    redirect: true,
+    path: '/management',
+    pathTo: '/management/system/settings',
+    name: 'Settings'
+  }
 ];
 
 export default dashRoutes;
