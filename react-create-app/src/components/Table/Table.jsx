@@ -22,17 +22,61 @@ const styles = theme => ({
 });
 
 let id = 0;
-function createData(name, calories, fat, carbs, protein) {
+function createData(
+  sn,
+  name,
+  subAccount,
+  firmware,
+  status,
+  latestReport,
+  lastLogUpload,
+  subscription
+) {
   id += 1;
-  return { id, name, calories, fat, carbs, protein };
+  return {
+    id,
+    sn,
+    name,
+    subAccount,
+    firmware,
+    status,
+    latestReport,
+    lastLogUpload,
+    subscription
+  };
 }
 
 const data = [
-  createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-  createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-  createData('Eclair', 262, 16.0, 24, 6.0),
-  createData('Cupcake', 305, 3.7, 67, 4.3),
-  createData('Gingerbread', 356, 16.0, 49, 3.9)
+  createData(
+    'FGT30E3U17023830',
+    'FGT30E3U17023830',
+    '<Default>',
+    'v5.6.3-1547',
+    '',
+    '',
+    '2018-08-08 17:58',
+    ''
+  ),
+  createData(
+    'FGT30E3U17023831',
+    'FGT30E3U17023831',
+    '<Default>',
+    'v5.6.4-1547',
+    '',
+    '',
+    '2018-08-08 17:58',
+    ''
+  ),
+  createData(
+    'FGT30E3U17023832',
+    'FGT30E3U17023832',
+    '<Default>',
+    'v5.6.5-1547',
+    '',
+    '',
+    '2018-08-08 17:58',
+    ''
+  )
 ];
 
 class MainTable extends React.Component {
@@ -42,13 +86,28 @@ class MainTable extends React.Component {
       <Paper className={classes.root}>
         <Table className={classes.table}>
           <TableHead>
-            <TableRow>
-              <TableCell>Dessert (100g serving)</TableCell>
-              <TableCell numeric>Calories</TableCell>
-              <TableCell numeric>Fat (g)</TableCell>
-              <TableCell numeric>Carbs (g)</TableCell>
-              <TableCell numeric>Protein (g)</TableCell>
-            </TableRow>
+            {mode === 'fos' && (
+              <TableRow>
+                <TableCell>SN</TableCell>
+                <TableCell>Name</TableCell>
+                <TableCell>Sub Account</TableCell>
+                <TableCell>Firmware</TableCell>
+                <TableCell>Status</TableCell>
+                <TableCell>Latest Report</TableCell>
+                <TableCell>Last Log Upload</TableCell>
+                <TableCell>Subscription</TableCell>
+              </TableRow>
+            )}
+            {mode === 'ap' && (
+              <TableRow>
+                <TableCell>Name</TableCell>
+                <TableCell>Sub Account</TableCell>
+                <TableCell>{`AP Up > 24 hrs`}</TableCell>
+                <TableCell>{`AP Up < 24 hrs`}</TableCell>
+                <TableCell>AP Down</TableCell>
+                <TableCell>{`SSID & Users`}</TableCell>
+              </TableRow>
+            )}
           </TableHead>
           <TableBody>
             {mode === 'fos' &&
@@ -56,12 +115,15 @@ class MainTable extends React.Component {
                 return (
                   <TableRow key={n.id}>
                     <TableCell component="th" scope="row">
-                      {n.name}
+                      {n.sn}
                     </TableCell>
-                    <TableCell numeric>{n.calories}</TableCell>
-                    <TableCell numeric>{n.fat}</TableCell>
-                    <TableCell numeric>{n.carbs}</TableCell>
-                    <TableCell numeric>{n.protein}</TableCell>
+                    <TableCell>{n.name}</TableCell>
+                    <TableCell>{n.subAccount}</TableCell>
+                    <TableCell>{n.firmware}</TableCell>
+                    <TableCell>{n.status}</TableCell>
+                    <TableCell>{n.latestReport}</TableCell>
+                    <TableCell>{n.lastLogUpload}</TableCell>
+                    <TableCell>{n.subscription}</TableCell>
                   </TableRow>
                 );
               })}

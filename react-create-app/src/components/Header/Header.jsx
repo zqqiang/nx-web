@@ -56,7 +56,9 @@ class Header extends React.Component {
             label="Including lower level"
           />
           <Input
-            placeholder="Search FortiGate"
+            placeholder={
+              mode === 'fos' ? 'Search FortiGate' : 'Search AP Network'
+            }
             className={classes.input}
             inputProps={{ 'aria-label': 'Description' }}
           />
