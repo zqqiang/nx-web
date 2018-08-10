@@ -6,16 +6,45 @@ import withStyles from '@material-ui/core/styles/withStyles';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 
-import PhoneIcon from '@material-ui/icons/Phone';
+import SearchIcon from '@material-ui/icons/Search';
+import FormatListBulletedIcon from '@material-ui/icons/FormatListBulleted';
+import DescriptionIcon from '@material-ui/icons/Description';
+import WarningIcon from '@material-ui/icons/Warning';
 
 const styles = theme => ({
   subHeader: {
     position: 'relative',
     top: '64px'
+  },
+  wrapper: {
+    width: '100%',
+    display: 'inline-flex',
+    alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'center'
+  },
+  labelContainer: {
+    paddingLeft: '6px',
+    paddingRight: '6px'
+  },
+  label: {
+    fontSize: '0.9rem',
+    textTransform: 'capitalize'
+  },
+  labelIcon: {
+    minHeight: '48px'
   }
 });
 
-const analysisTabs = ['FortiView', 'Logs', 'Reports', 'Event Mangement'];
+const analysisTabs = [
+  { label: 'FortiView', icon: <SearchIcon /> },
+  {
+    label: 'Logs',
+    icon: <FormatListBulletedIcon />
+  },
+  { label: 'Reports', icon: <DescriptionIcon /> },
+  { label: 'Event Mangement', icon: <WarningIcon /> }
+];
 
 class Analysis extends React.Component {
   handleChange = (event, value) => {
@@ -41,9 +70,15 @@ class Analysis extends React.Component {
             {analysisTabs.map((prop, key) => {
               return (
                 <Tab
-                  icon={<PhoneIcon />}
-                  label={prop}
-                  value={_.camelCase(prop)}
+                  icon={prop.icon}
+                  label={prop.label}
+                  value={_.camelCase(prop.label)}
+                  classes={{
+                    wrapper: classes.wrapper,
+                    labelContainer: classes.labelContainer,
+                    label: classes.label,
+                    labelIcon: classes.labelIcon
+                  }}
                   key={key}
                 />
               );
