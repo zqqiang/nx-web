@@ -55,7 +55,7 @@ class Analysis extends React.Component {
     const value =
       _.split(history.location.pathname, '/')[3] !== undefined
         ? _.split(history.location.pathname, '/')[3]
-        : _.camelCase(analysisTabs[0]);
+        : _.camelCase(analysisTabs[0].label);
 
     return (
       <div className={classes.subHeader}>
