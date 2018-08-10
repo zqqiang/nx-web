@@ -1,18 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { createBrowserHistory } from 'history';
+// import { createBrowserHistory } from "history";
+import { Switch, Route, Redirect, NavLink } from 'react-router-dom';
 
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import withStyles from '@material-ui/core/styles/withStyles';
-import Drawer from '@material-ui/core/Drawer';
 import blue from '@material-ui/core/colors/blue';
 import lightBlue from '@material-ui/core/colors/lightBlue';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 
 import MainHeader from 'components/Header/MainHeader';
+import fosRoutes from 'routes/fos';
 
-const hist = createBrowserHistory();
+// const hist = createBrowserHistory();
 
 const theme = createMuiTheme({
   palette: {
@@ -56,15 +57,25 @@ const styles = theme => ({
   }
 });
 
+const switchRoutes = (
+  <Switch>
+    {fosRoutes.map((prop, key) => {
+      if (prop.redirect)
+        return <Redirect from={prop.path} to={prop.pathTo} key={key} />;
+      return <Route path={prop.path} component={prop.component} key={key} />;
+    })}
+  </Switch>
+);
+
 class Fos extends React.Component {
   state = {
     value: 'analysis'
   };
   handleChange = (event, value) => {
     this.setState({ value });
-    hist.push({
-      pathname: `/fos/${value}`
-    });
+    // hist.push({
+    //   pathname: `/fos/${value}`
+    // });
   };
   render() {
     const { classes } = this.props;
@@ -72,11 +83,13 @@ class Fos extends React.Component {
 
     const fosTabs = (
       <Tabs value={value} onChange={this.handleChange}>
-        <Tab
-          label="Analysis"
-          value="analysis"
-          classes={{ root: classes.tabRoot, label: classes.tabLabel }}
-        />
+        <NavLink to={`/fos/${value}`}>
+          <Tab
+            label="Analysis"
+            value="analysis"
+            classes={{ root: classes.tabRoot, label: classes.tabLabel }}
+          />
+        </NavLink>
         <Tab
           label="Management"
           value="management"
@@ -94,12 +107,7 @@ class Fos extends React.Component {
       <MuiThemeProvider theme={theme}>
         <div className={classes.root}>
           <MainHeader tabs={fosTabs} />
-          <Drawer variant="permanent" classes={{ paper: classes.drawerPaper }}>
-            <div className={classes.toolbar} />
-          </Drawer>
-          <main className={classes.content}>
-            <div className={classes.toolbar} />
-          </main>
+          {switchRoutes}
         </div>
       </MuiThemeProvider>
     );
