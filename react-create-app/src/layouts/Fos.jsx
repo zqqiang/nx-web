@@ -69,14 +69,14 @@ const fosRoutes = (
 
 class Fos extends React.Component {
   handleChange = (event, value) => {
-    this.props.history.push(value);
+    this.props.history.push(`/fos/${value}`);
   };
   render() {
     const { classes, history } = this.props;
     const value =
-      history.location.pathname === '/fos'
-        ? '/fos/analysis'
-        : history.location.pathname;
+      _.split(history.location.pathname, '/')[2] !== undefined
+        ? _.split(history.location.pathname, '/')[2]
+        : _.camelCase(tabs[0]);
 
     const fosTabs = (
       <Tabs value={value} onChange={this.handleChange}>
@@ -84,7 +84,7 @@ class Fos extends React.Component {
           return (
             <Tab
               label={prop}
-              value={`/fos/` + _.camelCase(prop)}
+              value={_.camelCase(prop)}
               classes={{ root: classes.tabRoot, label: classes.tabLabel }}
               key={key}
             />
