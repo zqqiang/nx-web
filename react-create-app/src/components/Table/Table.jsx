@@ -126,12 +126,12 @@ class MainTable extends React.Component {
                 return (
                   <TableRow key={n.id}>
                     <TableCell component="th" scope="row">
-                      <NavLink to={`/fos/analysis`} className={classes.link}>
+                      <NavLink to={`/fos`} className={classes.link}>
                         {n.sn}
                       </NavLink>
                     </TableCell>
                     <TableCell>
-                      <NavLink to={`/fos/analysis`} className={classes.link}>
+                      <NavLink to={`/fos`} className={classes.link}>
                         {n.name}
                       </NavLink>
                     </TableCell>

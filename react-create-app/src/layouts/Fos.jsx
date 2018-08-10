@@ -73,9 +73,13 @@ class Fos extends React.Component {
   };
   render() {
     const { classes, history } = this.props;
+    const value =
+      history.location.pathname === '/fos'
+        ? '/fos/analysis'
+        : history.location.pathname;
 
     const fosTabs = (
-      <Tabs value={history.location.pathname} onChange={this.handleChange}>
+      <Tabs value={value} onChange={this.handleChange}>
         {tabs.map((prop, key) => {
           return (
             <Tab
