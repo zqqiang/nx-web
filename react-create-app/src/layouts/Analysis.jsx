@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
+import { Switch, Route, Redirect } from 'react-router-dom';
 
 import withStyles from '@material-ui/core/styles/withStyles';
 import Tabs from '@material-ui/core/Tabs';
@@ -13,6 +14,8 @@ import SearchIcon from '@material-ui/icons/Search';
 import FormatListBulletedIcon from '@material-ui/icons/FormatListBulleted';
 import DescriptionIcon from '@material-ui/icons/Description';
 import WarningIcon from '@material-ui/icons/Warning';
+
+import routes from 'routes/analysis';
 
 const styles = theme => ({
   subHeader: {
@@ -60,6 +63,16 @@ const analysisTabs = [
   { label: 'Event Mangement', icon: <WarningIcon /> }
 ];
 
+const analysisRoutes = (
+  <Switch>
+    {routes.map((prop, key) => {
+      if (prop.redirect)
+        return <Redirect from={prop.path} to={prop.pathTo} key={key} />;
+      return <Route path={prop.path} component={prop.component} key={key} />;
+    })}
+  </Switch>
+);
+
 class Analysis extends React.Component {
   state = {
     sn: 'FWF60E4Q16025515'
@@ -91,35 +104,40 @@ class Analysis extends React.Component {
       </FormControl>
     );
 
+    const header = (
+      <div className={classes.subHeaderFormGroup}>
+        {select}
+        <Tabs
+          value={value}
+          onChange={this.handleChange}
+          fullWidth
+          indicatorColor="secondary"
+          textColor="secondary"
+        >
+          {analysisTabs.map((prop, key) => {
+            return (
+              <Tab
+                icon={prop.icon}
+                label={prop.label}
+                value={_.camelCase(prop.label)}
+                classes={{
+                  wrapper: classes.wrapper,
+                  labelContainer: classes.labelContainer,
+                  label: classes.label,
+                  labelIcon: classes.labelIcon
+                }}
+                key={key}
+              />
+            );
+          })}
+        </Tabs>
+      </div>
+    );
+
     return (
       <div className={classes.subHeader}>
-        <div className={classes.subHeaderFormGroup}>
-          {select}
-          <Tabs
-            value={value}
-            onChange={this.handleChange}
-            fullWidth
-            indicatorColor="secondary"
-            textColor="secondary"
-          >
-            {analysisTabs.map((prop, key) => {
-              return (
-                <Tab
-                  icon={prop.icon}
-                  label={prop.label}
-                  value={_.camelCase(prop.label)}
-                  classes={{
-                    wrapper: classes.wrapper,
-                    labelContainer: classes.labelContainer,
-                    label: classes.label,
-                    labelIcon: classes.labelIcon
-                  }}
-                  key={key}
-                />
-              );
-            })}
-          </Tabs>
-        </div>
+        {header}
+        {analysisRoutes}
       </div>
     );
   }
