@@ -13,8 +13,6 @@ import Drawer from '@material-ui/core/Drawer';
 import Hidden from '@material-ui/core/Hidden';
 import Collapse from '@material-ui/core/Collapse';
 
-import MainHeader from 'components/Header/MainHeader';
-
 import sidebarStyle from 'assets/jss/material-dashboard-pro-react/components/sidebarStyle.jsx';
 
 var ps;
@@ -198,7 +196,7 @@ class ManagementSidebar extends React.Component {
     return (
       <div ref="mainPanel">
         <Hidden smDown>
-          <MainHeader color={classes[color]} />
+          {/* <MainHeader color={classes[color]} /> */}
           <Drawer
             onMouseOver={() => this.setState({ miniActive: false })}
             onMouseOut={() => this.setState({ miniActive: true })}
