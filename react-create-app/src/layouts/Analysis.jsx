@@ -60,7 +60,7 @@ const analysisTabs = [
     icon: <FormatListBulletedIcon />
   },
   { label: 'Reports', icon: <DescriptionIcon /> },
-  { label: 'Event Mangement', icon: <WarningIcon /> }
+  { label: 'Event Management', icon: <WarningIcon /> }
 ];
 
 const analysisRoutes = (
