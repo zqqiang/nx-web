@@ -28,6 +28,11 @@ const viewRoutes = [
         path: root + 'threats/topThreats',
         name: 'Top Threats',
         mini: 'TT'
+      },
+      {
+        path: root + 'threats/ips',
+        name: 'IPS',
+        mini: 'I'
       }
     ]
   }
