@@ -40,7 +40,7 @@ class SidebarWrapper extends React.Component {
   }
 }
 
-class FortiViewSidebar extends React.Component {
+class MenuSidebar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -210,7 +210,7 @@ class FortiViewSidebar extends React.Component {
   }
 }
 
-FortiViewSidebar.propTypes = {
+MenuSidebar.propTypes = {
   classes: PropTypes.object.isRequired,
   bgColor: PropTypes.oneOf(['white', 'black', 'blue']),
   color: PropTypes.oneOf([
@@ -225,4 +225,4 @@ FortiViewSidebar.propTypes = {
   ])
 };
 
-export default withStyles(sidebarStyle)(FortiViewSidebar);
+export default withStyles(sidebarStyle)(MenuSidebar);
