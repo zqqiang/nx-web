@@ -128,7 +128,10 @@ class SubHeaderDashboard extends React.Component {
 }
 
 SubHeaderDashboard.propTypes = {
-  classes: PropTypes.object.isRequired
+  classes: PropTypes.object.isRequired,
+  root: PropTypes.string.isRequired,
+  routes: PropTypes.array.isRequired,
+  tabs: PropTypes.array.isRequired
 };
 
 export default withStyles(styles)(SubHeaderDashboard);

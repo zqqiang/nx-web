@@ -21,7 +21,14 @@ const analysisTabs = [
 class Analysis extends React.Component {
   render() {
     const { ...rest } = this.props;
-    return <SubHeaderDashboard routes={routes} tabs={analysisTabs} {...rest} />;
+    return (
+      <SubHeaderDashboard
+        routes={routes}
+        tabs={analysisTabs}
+        root="/fos/analysis/"
+        {...rest}
+      />
+    );
   }
 }
 

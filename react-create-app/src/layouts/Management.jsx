@@ -22,7 +22,12 @@ class Management extends React.Component {
   render() {
     const { ...rest } = this.props;
     return (
-      <SubHeaderDashboard routes={routes} tabs={managementTabs} {...rest} />
+      <SubHeaderDashboard
+        routes={routes}
+        tabs={managementTabs}
+        root="/fos/management/"
+        {...rest}
+      />
     );
   }
 }
