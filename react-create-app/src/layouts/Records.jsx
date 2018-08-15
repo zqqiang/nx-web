@@ -1,12 +1,12 @@
 import React from 'react';
-import routes from 'routes/fortiView';
+import routes from 'routes/records';
 import MenuForm from 'layouts/MenuForm';
 
-class FortiView extends React.Component {
+class Records extends React.Component {
   render() {
     const { ...rest } = this.props;
     return <MenuForm routes={routes} {...rest} />;
   }
 }
 
-export default FortiView;
+export default Records;

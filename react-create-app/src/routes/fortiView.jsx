@@ -4,7 +4,7 @@ import AccountBoxIcon from '@material-ui/icons/AccountBox';
 
 const root = '/fos/analysis/fortiView/';
 
-const viewRoutes = [
+const fortiViewRoutes = [
   {
     path: root + 'summary',
     name: 'Summary',
@@ -38,4 +38,4 @@ const viewRoutes = [
   }
 ];
 
-export default viewRoutes;
+export default fortiViewRoutes;

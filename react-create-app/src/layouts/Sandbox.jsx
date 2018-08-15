@@ -1,25 +1,35 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-import withStyles from '@material-ui/core/styles/withStyles';
+import ComputerIcon from '@material-ui/icons/Computer';
+import WallpaperIcon from '@material-ui/icons/Wallpaper';
+import SearchIcon from '@material-ui/icons/Search';
+import SettingsIcon from '@material-ui/icons/Settings';
 
-const styles = theme => ({
-  subHeader: {
-    position: 'relative',
-    top: '64px'
-  }
-});
+import routes from 'routes/sandbox';
+import SubHeaderDashboard from 'layouts/SubHeaderDashboard';
+
+const sandboxTabs = [
+  { label: 'Dashboard', icon: <ComputerIcon /> },
+  {
+    label: 'Records',
+    icon: <WallpaperIcon />
+  },
+  { label: 'On-Demand', icon: <SearchIcon /> },
+  { label: 'Setting', icon: <SettingsIcon /> }
+];
 
 class Sandbox extends React.Component {
   render() {
-    const { classes } = this.props;
-
-    return <div className={classes.subHeader}>Sandbox</div>;
+    const { ...rest } = this.props;
+    return (
+      <SubHeaderDashboard
+        routes={routes}
+        tabs={sandboxTabs}
+        root="/fos/sandbox/"
+        {...rest}
+      />
+    );
   }
 }
 
-Sandbox.propTypes = {
-  classes: PropTypes.object.isRequired
-};
-
-export default withStyles(styles)(Sandbox);
+export default Sandbox;
