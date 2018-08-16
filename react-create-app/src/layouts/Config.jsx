@@ -1,6 +1,11 @@
 import React from 'react';
+import cx from 'classnames';
 import PropTypes from 'prop-types';
 import { Switch, Route, Redirect } from 'react-router-dom';
+
+// creates a beautiful scrollbar
+import PerfectScrollbar from 'perfect-scrollbar';
+import 'perfect-scrollbar/css/perfect-scrollbar.css';
 
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles';
@@ -19,7 +24,8 @@ const styles = theme => ({
   wrapper: {
     position: 'relative',
     top: '0',
-    height: '100vh',
+    // height: "100vh",
+    height: 'calc(100vh - 112px)',
     '&:after': {
       display: 'table',
       clear: 'both',
@@ -42,11 +48,13 @@ const styles = theme => ({
     overflowScrolling: 'touch'
   },
   content: {
-    // marginTop: "70px",
     padding: '30px 15px',
     minHeight: 'calc(100vh - 112px)'
   },
-  container: { ...containerFluid }
+  container: { ...containerFluid },
+  mainPanelWithPerfectScrollbar: {
+    overflow: 'hidden !important'
+  }
 });
 
 const switchRoutes = (
@@ -65,6 +73,8 @@ const switchRoutes = (
   </Switch>
 );
 
+var ps;
+
 class Config extends React.Component {
   constructor(props) {
     super(props);
@@ -73,9 +83,30 @@ class Config extends React.Component {
       color: 'cloud'
     };
   }
+  componentDidMount() {
+    if (navigator.platform.indexOf('Win') > -1) {
+      ps = new PerfectScrollbar(this.refs.mainPanel, {
+        suppressScrollX: true,
+        suppressScrollY: false
+      });
+      document.body.style.overflow = 'hidden';
+    }
+  }
+  componentWillUnmount() {
+    if (navigator.platform.indexOf('Win') > -1) {
+      ps.destroy();
+    }
+  }
   render() {
     const { classes, ...rest } = this.props;
-    const mainPanel = classes.mainPanel;
+    const mainPanel =
+      classes.mainPanel +
+      ' ' +
+      cx({
+        // [classes.mainPanelSidebarMini]: this.state.miniActive,
+        [classes.mainPanelWithPerfectScrollbar]:
+          navigator.platform.indexOf('Win') > -1
+      });
     return (
       <div className={classes.wrapper}>
         <ManagementSidebar
