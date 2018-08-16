@@ -10,7 +10,7 @@ import 'perfect-scrollbar/css/perfect-scrollbar.css';
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles';
 
-import ManagementSidebar from 'components/Sidebar/ManagementSidebar';
+import Sidebar from 'components/Sidebar/Sidebar';
 
 import routes from 'routes/config';
 
@@ -109,7 +109,7 @@ class Config extends React.Component {
       });
     return (
       <div className={classes.wrapper}>
-        <ManagementSidebar
+        <Sidebar
           routes={routes}
           color={this.state.color}
           bgColor={this.state.bgColor}

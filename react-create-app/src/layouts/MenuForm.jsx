@@ -5,7 +5,7 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles';
 
-import MenuSidebar from 'components/Sidebar/MenuSidebar';
+import Sidebar from 'components/Sidebar/Sidebar';
 
 import {
   drawerWidth,
@@ -71,7 +71,7 @@ class MenuForm extends React.Component {
 
     return (
       <div className={classes.wrapper}>
-        <MenuSidebar routes={routes} {...rest} />
+        <Sidebar routes={routes} {...rest} />
         <div className={classes.mainPanel}>
           <div className={classes.content}>
             <div className={classes.containder}>{switchRoutes}</div>

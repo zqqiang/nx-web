@@ -23,8 +23,6 @@ import MainHeader from 'components/Header/MainHeader';
 import Header from 'components/Header/Header';
 import Table from 'components/Table/Table';
 
-// import dashboardRoutes from "routes/dashboard";
-
 const theme = createMuiTheme({
   palette: {
     primary: blue,
