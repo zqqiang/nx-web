@@ -17,7 +17,8 @@ const styles = theme => ({
     width: '100%'
   },
   subHeaderFormGroup: {
-    display: 'flex'
+    display: 'flex',
+    backgroundColor: '#fff'
   },
   wrapper: {
     width: '100%',

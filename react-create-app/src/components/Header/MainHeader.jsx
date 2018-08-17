@@ -87,9 +87,11 @@ class MainHeader extends React.Component {
             <IconButton aria-haspopup="true" color="inherit">
               <Email />
             </IconButton>
-            <IconButton aria-haspopup="true" color="inherit">
-              <ExitToApp />
-            </IconButton>
+            <NavLink to={`/pages/login`} className={classes.link}>
+              <IconButton aria-haspopup="true" color="inherit">
+                <ExitToApp />
+              </IconButton>
+            </NavLink>
           </Hidden>
         </Toolbar>
       </AppBar>
