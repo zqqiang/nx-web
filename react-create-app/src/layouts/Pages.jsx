@@ -9,6 +9,8 @@ import pagesRoutes from 'routes/pages.jsx';
 
 import pagesStyle from 'assets/jss/material-dashboard-pro-react/layouts/pagesStyle.jsx';
 
+import bgImage from 'assets/img/register.jpeg';
+
 class Pages extends React.Component {
   render() {
     const { classes } = this.props;
@@ -27,7 +29,10 @@ class Pages extends React.Component {
                 );
               })}
             </Switch>
-            <div className={classes.fullPageBackground} />
+            <div
+              className={classes.fullPageBackground}
+              // style={{ backgroundImage: "url(" + bgImage + ")" }}
+            />
           </div>
         </div>
       </div>

@@ -8,6 +8,7 @@ import GridContainer from 'components/Grid/GridContainer';
 import GridItem from 'components/Grid/GridItem';
 import Card from 'components/Card/Card';
 import CardHeader from 'components/Card/CardHeader';
+import CardBody from 'components/Card/CardBody.jsx';
 
 import loginPageStyle from 'assets/jss/material-dashboard-pro-react/views/loginPageStyle.jsx';
 
@@ -22,10 +23,11 @@ class LoginPage extends React.Component {
               <Card login>
                 <CardHeader
                   className={`${classes.cardHeader} ${classes.textCenter}`}
-                  clolor="primary"
+                  color="rose"
                 >
                   <h4 className={classes.cardTitle}>Log in</h4>
                 </CardHeader>
+                <CardBody />
               </Card>
             </form>
           </GridItem>
