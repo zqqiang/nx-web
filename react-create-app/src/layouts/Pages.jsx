@@ -4,18 +4,31 @@ import { Switch, Route } from 'react-router-dom';
 
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import blue from '@material-ui/core/colors/blue';
+import lightBlue from '@material-ui/core/colors/lightBlue';
+
+import PagesHeader from 'components/Header/PagesHeader.jsx';
 
 import pagesRoutes from 'routes/pages.jsx';
 
 import pagesStyle from 'assets/jss/material-dashboard-pro-react/layouts/pagesStyle.jsx';
 
-import bgImage from 'assets/img/register.jpeg';
+// import bgImage from "assets/img/register.jpeg";
+
+const theme = createMuiTheme({
+  palette: {
+    primary: blue,
+    secondary: lightBlue
+  }
+});
 
 class Pages extends React.Component {
   render() {
-    const { classes } = this.props;
+    const { classes, ...rest } = this.props;
     return (
-      <div>
+      <MuiThemeProvider theme={theme}>
+        <PagesHeader {...rest} />
         <div className={classes.wrapper} ref="wrapper">
           <div className={classes.fullPage}>
             <Switch>
@@ -29,13 +42,10 @@ class Pages extends React.Component {
                 );
               })}
             </Switch>
-            <div
-              className={classes.fullPageBackground}
-              // style={{ backgroundImage: "url(" + bgImage + ")" }}
-            />
+            <div className={classes.fullPageBackground} />
           </div>
         </div>
-      </div>
+      </MuiThemeProvider>
     );
   }
 }
