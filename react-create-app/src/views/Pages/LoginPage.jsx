@@ -31,7 +31,7 @@ class LoginPage extends React.Component {
               <Card login>
                 <CardHeader
                   className={`${classes.cardHeader} ${classes.textCenter}`}
-                  color="primary"
+                  color="rose"
                 >
                   <h4 className={classes.cardTitle}>Login</h4>
                 </CardHeader>
@@ -64,7 +64,7 @@ class LoginPage extends React.Component {
                   />
                 </CardBody>
                 <CardFooter className={classes.justifyContentCenter}>
-                  <Button color="primary" simple size="lg" block>
+                  <Button color="rose" simple size="lg" block>
                     Login
                   </Button>
                 </CardFooter>

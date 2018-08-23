@@ -42,7 +42,6 @@ class Pages extends React.Component {
                 );
               })}
             </Switch>
-            <div className={classes.fullPageBackground} />
           </div>
         </div>
       </MuiThemeProvider>
