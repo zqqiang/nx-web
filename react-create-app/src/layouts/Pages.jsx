@@ -4,9 +4,6 @@ import { Switch, Route } from 'react-router-dom';
 
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles';
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import blue from '@material-ui/core/colors/blue';
-import lightBlue from '@material-ui/core/colors/lightBlue';
 
 import PagesHeader from 'components/Header/PagesHeader.jsx';
 import Footer from 'components/Footer/Footer.jsx';
@@ -17,18 +14,11 @@ import pagesStyle from 'assets/jss/material-dashboard-pro-react/layouts/pagesSty
 
 import bgImage from 'assets/img/vancouver_skyline.jpg';
 
-const theme = createMuiTheme({
-  palette: {
-    primary: blue,
-    secondary: lightBlue
-  }
-});
-
 class Pages extends React.Component {
   render() {
     const { classes, ...rest } = this.props;
     return (
-      <MuiThemeProvider theme={theme}>
+      <div>
         <PagesHeader {...rest} />
         <div className={classes.wrapper} ref="wrapper">
           <div
@@ -49,7 +39,7 @@ class Pages extends React.Component {
             <Footer white />
           </div>
         </div>
-      </MuiThemeProvider>
+      </div>
     );
   }
 }
