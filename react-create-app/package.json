@@ -44,5 +44,5 @@
     "prettier": "^1.13.7",
     "react-app-rewired": "^1.5.2"
   },
-  "homepage": "http://zqqiang.github.io/cloud-demo"
+  "homepage": "http://zqqiang.github.io/nx-web"
 }
