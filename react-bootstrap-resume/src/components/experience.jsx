@@ -42,8 +42,8 @@ class Experience extends Component {
               </p>
               <p>COMP 4254 - Advanced Topics in Data Analytics (Grade: A 91)</p>
               <p>COMP 3840 - Introduction to Big Data and Hadoop</p>
-              <p>BLAW 3205 - Internet and IT Law (In progress)</p>
-              <p>COMP 1288 - IT Project Management (In progress)</p>
+              <p>BLAW 3205 - Internet and IT Law</p>
+              <p>COMP 1288 - IT Project Management</p>
               <p>
                 COMP 4681 - Business Intelligence with SSAS, SQL Server Analysis
                 Services (Grade: A+ 97)
